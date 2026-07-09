@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasil Portfolio</title>
+  <meta
+    name="description"
+    content="Kasil이 진행한 프로젝트를 소개하는 포트폴리오 페이지입니다."
+  >
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container hero">
+      <p class="eyebrow">Portfolio Pages</p>
+      <h1>Kasil Portfolio</h1>
+      <p class="hero-text">
+        제가 진행했던 프로젝트들을 한 곳에서 보기 쉽게 정리한 포트폴리오입니다.
+        프로젝트마다 역할, 구현 내용, 사용 기술, 그리고 배운 점을 기록해두었습니다.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">프로젝트 보기</a>
+        <a class="button button-secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container intro-grid">
+        <div>
+          <p class="section-label">About</p>
+          <h2>어떤 작업을 했는지 빠르게 훑어볼 수 있게 구성했습니다.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            메인 페이지에서는 프로젝트의 핵심만 짧게 보여주고, 상세 페이지에서는
+            개발 배경과 구현 포인트를 정리하는 방식으로 만들었습니다.
+          </p>
+          <p>
+            지금 들어간 내용은 기본 템플릿이므로, 실제 프로젝트 정보와 이미지로
+            바꿔가며 채우면 바로 포트폴리오로 사용할 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Projects</p>
+            <h2>진행한 프로젝트</h2>
+          </div>
+          <p class="section-note">카드를 누르면 프로젝트 상세 페이지로 이동합니다.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card-body">
+              <p class="project-tag">Game / Interactive</p>
+              <h3>Lucid Diver</h3>
+              <p>
+                몰입감 있는 경험을 목표로 한 프로젝트라는 가정으로 넣어둔 예시입니다.
+                콘셉트, 인터랙션, 구현 포인트를 정리하는 용도로 쓰기 좋습니다.
+              </p>
+              <ul class="stack-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <a class="card-link" href="./projects/lucid-diver/index.html">자세히 보기</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-body">
+              <p class="project-tag">Game / Horror</p>
+              <h3>Darkdock</h3>
+              <p>
+                Enemy AI, 레벨 디자인, Animator 구조 개선을 담당한
+                3D 기반 2.5D 공포 탈출 게임입니다.
+              </p>
+              <ul class="stack-list">
+                <li>Unity</li>
+                <li>FSM</li>
+                <li>NavMesh</li>
+              </ul>
+            </div>
+            <a class="card-link" href="./projects/darkdock/index.html">자세히 보기</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-body">
+              <p class="project-tag">Visual / Branding</p>
+              <h3>Mosaic</h3>
+              <p>
+                디자인 결과물이나 프론트엔드 표현 중심 작업을 정리할 때 어울리는 템플릿
+                예시입니다.
+              </p>
+              <ul class="stack-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            <a class="card-link" href="./projects/mosaic/index.html">자세히 보기</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

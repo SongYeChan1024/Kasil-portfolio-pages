@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darkdock | Kasil Portfolio</title>
+  <meta
+    name="description"
+    content="Darkdock 프로젝트 소개 페이지입니다."
+  >
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <header class="detail-hero">
+    <div class="container detail-layout">
+      <div class="detail-panel">
+        <p class="eyebrow">Darkdock</p>
+        <h1>Enemy AI와 레벨 디자인을 중심으로 구현한 3D 기반 2.5D 공포 탈출 게임</h1>
+        <p class="hero-text">
+          Darkdock은 3D 환경 위에서 2.5D 방식으로 진행되는 공포 탈출 게임입니다. 저는 이 프로젝트에서
+          Enemy AI 구현, 레벨 디자인, Animator 구조 개선을 담당했고, 단순한 동작 구현을 넘어
+          상태 관리가 실제 플레이 감각에 얼마나 큰 영향을 주는지 직접 다뤄볼 수 있었습니다.
+        </p>
+        <div class="detail-actions">
+          <a class="button button-primary" href="https://github.com/Jin-o12/Project_TwoSlot" target="_blank" rel="noreferrer">GitHub 보기</a>
+          <a class="button button-secondary" href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">플레이 영상</a>
+          <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
+        </div>
+      </div>
+
+      <aside class="summary-grid">
+        <div class="meta-card">
+          <p class="meta-label">Duration</p>
+          <p>3주</p>
+        </div>
+        <div class="meta-card">
+          <p class="meta-label">Type</p>
+          <p>팀 프로젝트</p>
+        </div>
+        <div class="meta-card">
+          <p class="meta-label">Role</p>
+          <p>Enemy AI, Level Design, Animator</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="content-grid">
+        <section class="content-card">
+          <p class="section-label">Overview</p>
+          <h2>프로젝트 개요</h2>
+          <p>
+            Darkdock은 제한된 시야와 긴장감 있는 환경 속에서 탈출을 목표로 하는 공포 게임입니다.
+            발표 자료의 전체 콘셉트처럼 단순한 공포 연출보다 플레이어의 선택과 압박을 설계하는 데
+            초점을 두었고, 저는 그중에서도 적의 행동 구조와 플레이 흐름을 만드는 파트를 맡아 구현했습니다.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Tech Stack</p>
+          <h2>사용 기술</h2>
+          <ul class="meta-list">
+            <li>Unity</li>
+            <li>C#</li>
+            <li>FSM</li>
+            <li>NavMeshAgent</li>
+            <li>Animator Transition</li>
+            <li>Unity Scene 구성</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">My Role</p>
+          <h2>핵심 담당</h2>
+          <ul>
+            <li>Enemy AI 상태 구조 설계</li>
+            <li>NavMesh 기반 플레이어 추적 구현</li>
+            <li>공격 상태와 이동 상태 충돌 개선</li>
+            <li>레벨 디자인 구성</li>
+            <li>Animator 전환 조건 정리</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Implementation</p>
+          <h2>대표 구현</h2>
+          <ul>
+            <li>FSM 기반 적 상태 구조 설계</li>
+            <li>플레이어를 감지하고 추적하는 Enemy AI 구현</li>
+            <li>공격 상태와 이동 상태를 분리해 동작 충돌을 줄이는 구조 정리</li>
+            <li>Animator 파라미터와 전환 조건을 재정리해 상태 흐름 안정화</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Level Design</p>
+          <h2>레벨 디자인</h2>
+          <ul>
+            <li>적 배치와 이동 동선을 고려해 플레이어가 긴장감을 유지하도록 공간 구성</li>
+            <li>위협 요소가 한 번에 과도하게 몰리지 않도록 구간별 밀도를 조절</li>
+            <li>추적과 회피가 모두 드러날 수 있도록 씬 흐름과 구역 구조를 설계</li>
+            <li>AI의 동작이 잘 드러나는 레벨 구조를 함께 조정해 플레이 경험을 보완</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Troubleshooting</p>
+          <h2>대표 트러블슈팅</h2>
+          <p>
+            적이 공격 중에도 이동 로직이 동시에 실행되는 문제가 있었습니다. 원인을 확인해보니
+            Animator 전환 조건과 Enemy AI 상태 제어가 명확히 분리되지 않아, 공격 상태에 들어간 뒤에도
+            이동 판단이 함께 작동하고 있었습니다. 이를 해결하기 위해 FSM 기준으로 상태 우선순위를 다시
+            정리하고, 공격 중에는 이동 로직이 실행되지 않도록 제한했습니다. 그 결과 적의 추적과 공격 흐름이
+            더 안정적으로 동작하게 되었고 플레이 감각도 자연스러워졌습니다.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Learning</p>
+          <h2>배운 점</h2>
+          <p>
+            이 프로젝트를 통해 AI 구현에서 중요한 것은 단순히 적이 움직이고 공격하는 동작 자체보다,
+            각 상태가 어떤 우선순위로 전환되고 서로 충돌 없이 관리되는지라는 점을 배웠습니다. FSM 구조와
+            Animator 전환 조건을 함께 정리하면서 상태 관리가 게임의 완성도를 크게 좌우한다는 사실을
+            체감할 수 있었습니다.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Links</p>
+          <h2>관련 링크</h2>
+          <ul>
+            <li><a href="https://github.com/Jin-o12/Project_TwoSlot" target="_blank" rel="noreferrer">GitHub 저장소 보기</a></li>
+            <li><a href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">플레이 영상 보기</a></li>
+            <li>게임소개서 HTML: 추가 예정</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Project Context</p>
+          <h2>프로젝트 맥락</h2>
+          <p>
+            발표 자료 기준으로 Darkdock은 제약된 조작, 제한된 자원, 사운드 기반 긴장감, 단계적인 레벨 압박을
+            핵심으로 삼은 팀 프로젝트였습니다. 저는 그 안에서 플레이 경험의 중심축이 되는 Enemy AI와
+            Animator 상태 흐름, 그리고 레벨 구성 쪽을 맡아 게임의 리듬을 다듬는 역할에 집중했습니다.
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <a class="back-link" href="../../index.html">Kasil Portfolio 메인으로 돌아가기</a>
+    </div>
+  </footer>
+</body>
+</html>
