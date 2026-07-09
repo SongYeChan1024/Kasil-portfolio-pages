@@ -3,42 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mosaic | Kasil Portfolio</title>
+  <title>mos.A.I.c | Kasil Portfolio</title>
   <meta
     name="description"
-    content="Mosaic 프로젝트 소개 페이지입니다."
+    content="AI NPC와 함께 흩어진 기억을 복원하는 3D 퍼즐 어드벤처 mos.A.I.c 프로젝트 소개 페이지입니다."
   >
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body>
+<body class="mosaic-theme">
   <header class="detail-hero">
     <div class="container detail-layout">
       <div class="detail-panel">
-        <p class="eyebrow">Mosaic</p>
-        <h1>비주얼 중심 작업을 정리하기 쉬운 프로젝트 상세 템플릿</h1>
+        <p class="eyebrow">3D Puzzle Adventure with AI NPC</p>
+        <h1>mos.A.I.c</h1>
+        <p class="mosaic-subtitle">AI NPC와 대화하며 흩어진 기억을 복원해 나가는 에피소드형 3D 퍼즐 어드벤처</p>
         <p class="hero-text">
-          디자인 결과물이나 프론트엔드 표현이 중요한 작업은 이미지와 설명의 균형이 중요합니다.
-          이 템플릿은 그런 작업을 소개할 때 필요한 기본 설명 구조를 먼저 담아두었습니다.
+          mos.A.I.c는 잃어버린 기억을 가진 주인공이 기억 공간을 탐색하며 퍼즐과 대화를 통해 삶의 조각을 복원해 나가는 팀 프로젝트입니다.
+          이야기, 퍼즐, 사운드, AI NPC 상호작용이 따로 놀지 않도록 한 흐름 안에 묶는 데 초점을 두고 설계되었습니다.
         </p>
+        <div class="mosaic-facts">
+          <div class="mosaic-fact">
+            <span class="mosaic-fact-label">Period</span>
+            <span class="mosaic-fact-value">2026.03.16 - 2026.04.29</span>
+          </div>
+          <div class="mosaic-fact">
+            <span class="mosaic-fact-label">Team</span>
+            <span class="mosaic-fact-value">Team 모으미 / Team Moemi</span>
+          </div>
+          <div class="mosaic-fact">
+            <span class="mosaic-fact-label">Focus</span>
+            <span class="mosaic-fact-value">AI NPC, 기억 복원, 에피소드형 퍼즐 진행</span>
+          </div>
+        </div>
         <div class="detail-actions">
-          <a class="button button-primary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub 링크</a>
+          <a class="button button-primary" href="https://github.com/WooSeonghyeok/UnityProject_mozAIc" target="_blank" rel="noreferrer">GitHub 보기</a>
+          <a class="button button-secondary" href="https://app.notion.com/p/2-Mos-A-I-c-322a88c5418980729b37ddd77a03cf74?source=copy_link" target="_blank" rel="noreferrer">Notion 문서</a>
+          <a class="button button-secondary" href="https://youtube.com/watch?si=7UlzXbM8yDLmLV7z&v=jmPI6qiN4U0&feature=youtu.be" target="_blank" rel="noreferrer">시연 영상</a>
           <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
         </div>
       </div>
 
-      <aside class="summary-grid">
-        <div class="meta-card">
-          <p class="meta-label">Period</p>
-          <p>YYYY.MM - YYYY.MM</p>
-        </div>
-        <div class="meta-card">
-          <p class="meta-label">Role</p>
-          <p>Design / Frontend</p>
-        </div>
-        <div class="meta-card">
-          <p class="meta-label">Focus</p>
-          <p>Visual Storytelling</p>
-        </div>
+      <aside class="mosaic-hero-media">
+        <img src="../../assets/images/mosaic-cover.png" alt="mos.A.I.c 시작 화면 이미지">
       </aside>
     </div>
   </header>
@@ -50,8 +56,9 @@
           <p class="section-label">Overview</p>
           <h2>프로젝트 개요</h2>
           <p>
-            이 섹션에는 프로젝트가 전달하고 싶은 분위기나 시각적 방향성을 적으면 좋습니다.
-            브랜드, 사용자 감정, 화면 경험 같은 키워드를 함께 정리하면 더 선명해집니다.
+            플레이어는 기억을 잃은 주인공이 되어 기억 공간을 탐험하고, 각 에피소드에서 AI NPC와의 대화와 퍼즐 풀이를 통해
+            삶의 단편을 하나씩 되찾아갑니다. 퍼즐을 푸는 행위 자체보다 기억이 선명해지는 감정선과 관계의 복원이 함께 전개되도록
+            구조를 잡은 점이 이 프로젝트의 핵심입니다.
           </p>
         </section>
 
@@ -59,48 +66,88 @@
           <p class="section-label">Tech Stack</p>
           <h2>사용 기술</h2>
           <ul class="meta-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
+            <li>Unity</li>
+            <li>C#</li>
+            <li>Unity UI</li>
+            <li>JSON Data</li>
+            <li>Animator</li>
+            <li>SoundManager</li>
           </ul>
         </section>
 
         <section class="content-card">
-          <p class="section-label">Design Goals</p>
-          <h2>디자인 목표</h2>
+          <p class="section-label">Narrative</p>
+          <h2>에피소드 구성</h2>
           <ul>
-            <li>주제에 맞는 시각적 톤 만들기</li>
-            <li>콘텐츠를 읽기 쉽게 구조화하기</li>
-            <li>반응형에서도 흐름이 자연스럽게 유지되도록 구성하기</li>
+            <li>EP.0 미지로의 발돋움: 기억 여행의 시작을 여는 도입부</li>
+            <li>EP.1 별을 헤는 소녀: 어린 시절의 기억을 별과 발판 퍼즐로 복원</li>
+            <li>EP.2 사라진 그림: 색과 시점을 활용해 잊힌 창작의 기억을 연결</li>
+            <li>EP.3 멈춰버린 노래: 소리와 리듬을 단서로 사랑의 기억을 되짚기</li>
+            <li>EP.4 뒤섞인 이야기: 앞선 조각들을 하나의 기억으로 다시 엮는 마무리</li>
           </ul>
         </section>
 
         <section class="content-card">
-          <p class="section-label">Implementation</p>
-          <h2>구현 내용</h2>
-          <ul>
-            <li>페이지 레이아웃 설계</li>
-            <li>시각 계층 구조 조정</li>
-            <li>공통 스타일 시스템 적용</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Details</p>
-          <h2>표현 포인트</h2>
+          <p class="section-label">AI NPC</p>
+          <h2>대화 시스템 구성</h2>
           <p>
-            실제 프로젝트라면 컬러, 타이포그래피, 모션, 콘텐츠 배치 같은 포인트를 적어두면 좋습니다.
-            사용자가 무엇을 먼저 보게 하고 싶은지도 함께 설명할 수 있습니다.
+            NPC 대화는 단순 텍스트 출력이 아니라 각 캐릭터의 프로필과 진행 상황을 바탕으로 반응하도록 구성했습니다.
+            <code>PromptBuilder</code>, <code>ChatNPCManager</code>, <code>ServerChat</code>, <code>GameDialogueDatabase</code>
+            구조를 통해 JSON 기반 NPC 정보, 프롬프트 생성, 응답 요청, UI 출력 흐름이 연결되며 기억 복원이라는 주제를 상호작용 안으로 끌어왔습니다.
           </p>
         </section>
 
         <section class="content-card">
-          <p class="section-label">Retrospective</p>
-          <h2>회고</h2>
+          <p class="section-label">Puzzle Design</p>
+          <h2>대표 퍼즐 구성</h2>
+          <ul>
+            <li>EP.1: 별을 수집하고 색을 기억해 올바른 발판을 선택하는 퍼즐</li>
+            <li>EP.1: 빙판길 위에서 축 고정과 정지 판정을 이용한 슬라이딩 퍼즐</li>
+            <li>EP.2: 색을 혼합해 같은 색 발판에 착지하는 색상 매칭 퍼즐</li>
+            <li>EP.2: 시점 방향을 맞춰 조각을 결합하는 공간 퍼즐</li>
+            <li>EP.3: 소리를 듣고 악보 조각을 찾는 수집형 퍼즐과 리듬 점프 맵</li>
+            <li>EP.4: 조각과 색을 맞추며 최종 기억 완성도를 계산하는 통합 퍼즐</li>
+          </ul>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">System Design</p>
+          <h2>사운드와 진행 관리</h2>
           <p>
-            결과물의 완성도뿐 아니라 작업 과정에서 어떤 감각이 생겼는지, 다음에는 무엇을 보완하고 싶은지
-            정리해두면 포트폴리오의 깊이가 생깁니다.
+            프로젝트 전반의 사운드는 <code>SoundManager</code>, <code>SoundProfile</code>, <code>SoundController</code>,
+            <code>SoundTrigger</code>, <code>UISoundTrigger</code>로 나누어 중앙 집중식으로 관리했습니다. 저장과 불러오기는 JSON 데이터 구조를 기반으로 설계해
+            체크포인트, NPC 상태, 엔딩 조건과 태그 점수까지 이어지도록 구성했습니다.
           </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Troubleshooting</p>
+          <h2>대표 트러블슈팅</h2>
+          <p>
+            에피소드 2 로비 복귀 컷신에서 이미지 컷신과 텍스트 컷신이 겹치며 마우스 커서 잠금 UI가 중간에 풀리는 문제가 있었습니다.
+            원인은 이미지 컷신 종료 시점에 <code>CutsceneMode</code>가 해제되지만 텍스트 컷신은 아직 끝나지 않는 흐름 충돌이었습니다.
+            이를 해결하기 위해 해당 퍼즐 복귀 컷신에서는 이미지 컷신이 <code>CutsceneMode</code>를 해제하지 않도록 별도 bool 조건을 추가했고,
+            그 결과 컷신 흐름과 UI 상태가 안정적으로 유지되도록 정리했습니다.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Project Meaning</p>
+          <h2>이 프로젝트에서 보여준 점</h2>
+          <p>
+            mos.A.I.c는 퍼즐 하나하나를 따로 나열한 게임이 아니라, 기억 복원이라는 주제를 시스템으로 번역해 보려는 시도가 강한 프로젝트였습니다.
+            AI 대화, 에피소드 구조, 퍼즐, 사운드, 저장 데이터를 하나의 감정선 안에서 묶어내려 했다는 점이 이 작업의 가장 큰 특징입니다.
+          </p>
+        </section>
+
+        <section class="content-card">
+          <p class="section-label">Links</p>
+          <h2>관련 링크</h2>
+          <ul>
+            <li><a href="https://github.com/WooSeonghyeok/UnityProject_mozAIc" target="_blank" rel="noreferrer">GitHub 저장소 보기</a></li>
+            <li><a href="https://app.notion.com/p/2-Mos-A-I-c-322a88c5418980729b37ddd77a03cf74?source=copy_link" target="_blank" rel="noreferrer">Notion 문서 보기</a></li>
+            <li><a href="https://youtube.com/watch?si=7UlzXbM8yDLmLV7z&v=jmPI6qiN4U0&feature=youtu.be" target="_blank" rel="noreferrer">시연 영상 보기</a></li>
+          </ul>
         </section>
       </div>
     </div>
