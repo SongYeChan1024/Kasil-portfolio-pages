@@ -259,6 +259,20 @@ code {
   font-weight: 700;
 }
 
+.card-link-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+}
+
+.card-link-group .card-link {
+  border-top: 0;
+}
+
+.card-link-group .card-link + .card-link {
+  border-left: 1px solid var(--line);
+}
+
 .card-link:hover,
 .back-link:hover {
   background: rgba(43, 111, 88, 0.05);
@@ -897,6 +911,15 @@ body.mosaic-theme .back-link:hover {
     align-items: end;
     background:
       linear-gradient(180deg, rgba(4, 9, 14, 0.18), rgba(4, 9, 14, 0.9));
+  }
+
+  .card-link-group {
+    grid-template-columns: 1fr;
+  }
+
+  .card-link-group .card-link + .card-link {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
 }
 
