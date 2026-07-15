@@ -6,7 +6,7 @@
   <title>Kasil Portfolio</title>
   <meta
     name="description"
-    content="송예찬의 게임 프로젝트와 기획서를 정리한 포트폴리오 페이지입니다."
+    content="송예찬의 게임 기획, 팀 프로젝트, 개발 경험을 정리한 포트폴리오 페이지입니다."
   >
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -16,13 +16,13 @@
       <p class="eyebrow">Game Planning Portfolio</p>
       <h1>Kasil Portfolio</h1>
       <p class="hero-text">
-        Unity 프로젝트 경험과 게임 기획서를 함께 정리한 포트폴리오입니다.
-        구현 경험에서 배운 시스템 구조, 플레이 흐름, 레벨 구성 감각을 바탕으로
-        기획자로서의 사고 과정을 보여주는 페이지로 구성했습니다.
+        기획과 개발 사이의 간극을 좁히는 게임 기획자 송예찬의 포트폴리오입니다.
+        Unity 팀 프로젝트에서 PM, 시스템 기획, Gameplay Programming을 함께 경험하며
+        아이디어가 실제 플레이 흐름으로 이어지는 과정을 문서와 구현으로 정리했습니다.
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="#projects">프로젝트 보기</a>
-        <a class="button button-secondary" href="#planning">기획서 보기</a>
+        <a class="button button-primary" href="#planning">기획서 보기</a>
+        <a class="button button-secondary" href="#projects">팀 프로젝트 보기</a>
       </div>
     </div>
   </header>
@@ -31,44 +31,100 @@
     <section class="section">
       <div class="container intro-grid">
         <div>
-          <p class="section-label">About</p>
-          <h2>플레이 경험을 구조로 정리하는 게임 기획자를 지향합니다.</h2>
+          <p class="section-label">Profile</p>
+          <h2>플레이 경험을 구조화하고, 팀이 실행할 수 있는 형태로 정리합니다.</h2>
         </div>
         <div class="intro-copy">
           <p>
-            단순히 아이디어를 적는 것보다, 플레이어가 어떤 선택을 하고 어떤 감정을 느끼는지
-            시스템과 흐름으로 설계하는 일에 관심이 있습니다.
+            저는 단순히 아이디어를 제안하는 것보다, 플레이어가 어떤 선택을 하고 어떤 감정을 받는지
+            시스템, 화면 흐름, 일정, 구현 단위로 풀어내는 일에 관심이 있습니다.
           </p>
           <p>
-            팀 프로젝트에서는 구현을 직접 경험하며 Enemy AI, 레벨 디자인, UI/시스템 흐름을 다뤘고,
-            개인 기획서에서는 협동 PvE와 소셜 월드처럼 서로 다른 장르의 플레이 루프를 문서화했습니다.
+            팀 프로젝트에서는 일정표와 마일스톤 관리, QA와 회의록 정리, 기능 명세 작성,
+            Enemy AI와 튜토리얼, 아이템 루팅 흐름 구현을 함께 맡으며 기획과 개발의 연결 지점을 경험했습니다.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="projects">
+    <section class="section section-soft" id="planning">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-label">Projects</p>
-            <h2>진행 프로젝트</h2>
+            <p class="section-label">Game Design Documents</p>
+            <h2>기획서 일람</h2>
           </div>
-          <p class="section-note">카드를 누르면 프로젝트 상세 페이지로 이동합니다.</p>
+          <p class="section-note">개인 기획서의 핵심 콘셉트와 시스템 구조를 카드 형태로 정리했습니다.</p>
+        </div>
+
+        <div class="project-grid planning-grid">
+          <article class="project-card image-card">
+            <img src="./assets/images/planning/earth-164991-cover-anime.png" alt="지구-164991 청사진 각성자 표지">
+            <div class="project-card-body">
+              <p class="project-tag">Co-op PvE / System Planning</p>
+              <h3>지구-164991: 청사진 각성자</h3>
+              <p>
+                청사진 인벤토리를 전장에 펼쳐 여러 기물을 생성하고, 약점을 지닌 코어를 보호하며 싸우는 협동 PvE 기획서입니다.
+              </p>
+              <ul class="stack-list">
+                <li>청사진 인벤토리</li>
+                <li>협동 PvE</li>
+                <li>전술 배치</li>
+              </ul>
+            </div>
+            <div class="card-link-group">
+              <a class="card-link" href="./planning/earth-164991/index.html">기획서 보기</a>
+              <a class="card-link" href="./assets/docs/earth-164991-blueprint-awakeners-main-plan-v0.4.docx">원본 보기</a>
+            </div>
+          </article>
+
+          <article class="project-card image-card">
+            <img src="./assets/images/planning/pet-bloom-garden-cover.png" alt="Pet Bloom Garden 표지">
+            <div class="project-card-body">
+              <p class="project-tag">ZEPETO / World Planning</p>
+              <h3>Pet Bloom Garden</h3>
+              <p>
+                가상의 반려동물과 교감하고 포토존에서 추억을 남기는 ZEPETO 기반 소셜 월드 기획서입니다.
+              </p>
+              <ul class="stack-list">
+                <li>ZEPETO</li>
+                <li>펫 교감</li>
+                <li>포토존</li>
+              </ul>
+            </div>
+            <div class="card-link-group">
+              <a class="card-link" href="./planning/pet-bloom-garden/index.html">기획서 보기</a>
+              <a class="card-link" href="./assets/docs/pet-bloom-garden-main-plan-v1.0.docx">원본 보기</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Team Projects</p>
+            <h2>팀 프로젝트</h2>
+          </div>
+          <p class="section-note">카드를 누르면 각 프로젝트의 상세 페이지로 이동합니다.</p>
         </div>
 
         <div class="project-grid">
-          <article class="project-card">
+          <article class="project-card image-card">
+            <img src="./assets/images/lucid-diver/lobby-main.png" alt="침몽도시 루시드 다이버 로비 화면">
             <div class="project-card-body">
-              <p class="project-tag">Game / Interactive</p>
-              <h3>Lucid Diver</h3>
+              <p class="project-tag">Unity / Extraction RPG</p>
+              <h3>침몽도시: 루시드 다이버</h3>
               <p>
-                꿈과 잠수를 소재로 한 프로젝트 페이지입니다. 상세 내용은 추후 정리 예정입니다.
+                PM, 시스템 기획, Gameplay Programmer로 참여한 진행 중인 팀 프로젝트입니다.
+                P0/P0.5 범위 관리, 튜토리얼, VFX, 아이템 루팅, 일정 및 QA 문서화를 담당했습니다.
               </p>
               <ul class="stack-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+                <li>Unity</li>
+                <li>PM</li>
+                <li>System Design</li>
               </ul>
             </div>
             <a class="card-link" href="./projects/lucid-diver/index.html">자세히 보기</a>
@@ -95,7 +151,7 @@
               <p class="project-tag">Game / Puzzle Adventure</p>
               <h3>mos.A.I.c</h3>
               <p>
-                AI NPC와 대화하며 흩어진 기억을 복원해 나가는 에피소드형 3D 퍼즐 어드벤처 프로젝트입니다.
+                AI NPC와 대화하며 흩어진 기억을 복원해 나가는 3D 퍼즐 어드벤처 프로젝트입니다.
               </p>
               <ul class="stack-list">
                 <li>Unity</li>
@@ -109,56 +165,53 @@
       </div>
     </section>
 
-    <section class="section" id="planning">
+    <section class="section section-soft">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-label">Planning Documents</p>
-            <h2>기획서 일람</h2>
+            <p class="section-label">Technical Skills</p>
+            <h2>기술 및 협업 역량</h2>
           </div>
-          <p class="section-note">개인 기획서의 핵심 콘셉트와 시스템 구조를 정리했습니다.</p>
         </div>
-
-        <div class="project-grid planning-grid">
-          <article class="project-card image-card">
-            <img src="./assets/images/planning/earth-164991-cover-anime.png" alt="지구-164991 청사진 각성자 표지">
-            <div class="project-card-body">
-              <p class="project-tag">Co-op PvE / System Planning</p>
-              <h3>지구-164991: 청사진 각성자</h3>
-              <p>
-                청사진 인벤토리를 전장에 전개해 기물을 생성하고, 약점이 되는 코어를 보호하며 싸우는 협동 PvE 기획서입니다.
-              </p>
-              <ul class="stack-list">
-                <li>청사진 인벤토리</li>
-                <li>협동 PvE</li>
-                <li>전술 프레임</li>
-              </ul>
-            </div>
-            <div class="card-link-group">
-              <a class="card-link" href="./planning/earth-164991/index.html">기획서 보기</a>
-              <a class="card-link" href="./assets/docs/earth-164991-blueprint-awakeners-main-plan-v0.4.docx">원본 보기</a>
-            </div>
-          </article>
-
-          <article class="project-card image-card">
-            <img src="./assets/images/planning/pet-bloom-garden-cover.png" alt="Pet Bloom Garden 표지">
-            <div class="project-card-body">
-              <p class="project-tag">ZEPETO / World Planning</p>
-              <h3>Pet Bloom Garden</h3>
-              <p>
-                가상 펫과 교감하고 포토존에서 추억을 남기는 ZEPETO 기반 힐링형 소셜 월드 기획서입니다.
-              </p>
-              <ul class="stack-list">
-                <li>ZEPETO</li>
-                <li>펫 교감</li>
-                <li>포토존</li>
-              </ul>
-            </div>
-            <div class="card-link-group">
-              <a class="card-link" href="./planning/pet-bloom-garden/index.html">기획서 보기</a>
-              <a class="card-link" href="./assets/docs/pet-bloom-garden-main-plan-v1.0.docx">원본 보기</a>
-            </div>
-          </article>
+        <div class="content-grid">
+          <section class="content-card">
+            <h3>Planning</h3>
+            <ul>
+              <li>게임 콘셉트 기획</li>
+              <li>시스템 플로우 설계</li>
+              <li>기능 명세 작성</li>
+              <li>UI/UX 흐름 정리</li>
+              <li>QA 체크리스트 작성</li>
+            </ul>
+          </section>
+          <section class="content-card">
+            <h3>Development</h3>
+            <ul>
+              <li>Unity, C#, MonoBehaviour 생명주기 이해</li>
+              <li>FSM 기반 상태 제어</li>
+              <li>NavMesh 기반 추적 AI</li>
+              <li>JSON 기반 데이터 관리</li>
+              <li>Animator, UI, VFX 흐름 구성</li>
+            </ul>
+          </section>
+          <section class="content-card">
+            <h3>Project Management</h3>
+            <ul>
+              <li>마스터 일정 및 주간 마일스톤 관리</li>
+              <li>회의록, 개발일지, 작업 보드 정리</li>
+              <li>범위 통제와 기능 동결 기준 정리</li>
+              <li>버그 우선순위 분류와 RC 체크리스트 작성</li>
+            </ul>
+          </section>
+          <section class="content-card">
+            <h3>Collaboration</h3>
+            <ul>
+              <li>Notion 문서 관리</li>
+              <li>Git 기반 협업 학습 중</li>
+              <li>기획-개발 전달용 문서 작성</li>
+              <li>시연 동선과 발표 자료 관리</li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
