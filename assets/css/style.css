@@ -874,9 +874,9 @@ body.lucid-theme .container {
 }
 
 body.lucid-theme .detail-layout {
-  grid-template-columns: minmax(420px, 0.86fr) minmax(520px, 1.14fr);
-  gap: 24px;
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
 body.lucid-theme .section {
@@ -898,10 +898,12 @@ body.lucid-theme .meta-card {
 }
 
 body.lucid-theme .detail-panel {
-  min-height: clamp(580px, 78vh, 860px);
-  padding: clamp(36px, 5vw, 72px);
-  gap: 22px;
-  justify-content: center;
+  grid-template-columns: minmax(320px, 0.76fr) minmax(420px, 1fr);
+  min-height: auto;
+  padding: clamp(32px, 4.6vw, 64px);
+  gap: clamp(28px, 5vw, 72px);
+  justify-content: start;
+  align-items: center;
 }
 
 body.lucid-theme h1 {
@@ -924,6 +926,12 @@ body.lucid-theme .lucid-subtitle {
   line-height: 1.25;
 }
 
+body.lucid-theme .lucid-hero-heading,
+body.lucid-theme .lucid-hero-summary {
+  display: grid;
+  gap: 20px;
+}
+
 body.lucid-theme .hero-text {
   max-width: 58ch;
   color: #c0ccdc;
@@ -938,15 +946,15 @@ body.lucid-theme .eyebrow {
 
 body.lucid-theme .lucid-facts {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  width: min(100%, 620px);
+  width: min(100%, 960px);
   margin-top: 8px;
 }
 
 body.lucid-theme .lucid-fact {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
-  gap: 18px;
+  gap: 8px;
   padding-top: 12px;
   border-top: 1px solid rgba(118, 211, 255, 0.14);
 }
@@ -973,13 +981,13 @@ body.lucid-theme .lucid-showcase-image {
 }
 
 body.lucid-theme .lucid-hero-media {
-  min-height: clamp(580px, 78vh, 860px);
+  min-height: auto;
 }
 
 body.lucid-theme .lucid-hero-media img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
   filter: brightness(0.9) saturate(1.04);
 }
@@ -1096,17 +1104,16 @@ body.lucid-theme code {
     min-height: auto;
   }
 
-  body.lucid-theme .detail-layout,
   body.lucid-theme .lucid-showcase {
     grid-template-columns: 1fr;
   }
 
   body.lucid-theme .detail-panel {
-    min-height: auto;
+    grid-template-columns: 1fr;
   }
 
-  body.lucid-theme .lucid-hero-media {
-    min-height: 420px;
+  body.lucid-theme .lucid-facts {
+    grid-template-columns: 1fr;
   }
 
   .planning-grid {
@@ -1186,7 +1193,4 @@ body.lucid-theme code {
     gap: 6px;
   }
 
-  body.lucid-theme .lucid-hero-media {
-    min-height: 320px;
-  }
 }
