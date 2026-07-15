@@ -6,7 +6,7 @@
   <title>침몽도시: 루시드 다이버 | Kasil Portfolio</title>
   <meta
     name="description"
-    content="송예찬이 PM, 시스템 기획, Gameplay Programmer로 참여한 Unity 기반 PvE 익스트랙션 프로젝트 침몽도시: 루시드 다이버 소개 페이지입니다."
+    content="송예찬이 PM, 컨셉 기획, Gameplay Programmer로 참여한 Unity 기반 PvE 익스트랙션 프로젝트 침몽도시: 루시드 다이버 소개 페이지입니다."
   >
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
@@ -20,7 +20,7 @@
         <p class="hero-text">
           플레이어가 침몽도시에 진입해 전투와 파밍을 진행하고, 탈출 성공 후 회수한 보상이
           캐릭터 기록 해금과 다음 출격 준비로 이어지는 P0/P0.5 버티컬 슬라이스입니다.
-          저는 PM으로 일정과 산출물을 관리하면서, 튜토리얼·VFX·아이템·에너미 흐름의 기획 및 구현을 함께 담당했습니다.
+          저는 PM으로 일정과 산출물을 관리하면서, 컨셉 기획 초안과 튜토리얼·VFX·아이템·에너미 흐름의 구현을 함께 담당했습니다.
         </p>
 
         <div class="lucid-facts">
@@ -30,7 +30,7 @@
           </div>
           <div class="lucid-fact">
             <span class="lucid-fact-label">Role</span>
-            <span class="lucid-fact-value">PM / Gameplay / 시스템 기획 / 문서화</span>
+            <span class="lucid-fact-value">PM / Gameplay / 컨셉 기획 / 문서화</span>
           </div>
           <div class="lucid-fact">
             <span class="lucid-fact-label">Engine</span>
@@ -40,6 +40,7 @@
 
         <div class="detail-actions">
           <a class="button button-primary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개 보기</a>
+          <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">구현 GitHub</a>
           <a class="button button-secondary" href="https://github.com/Jin-o12/Document_LucidDiver" target="_blank" rel="noreferrer">문서 GitHub</a>
           <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
         </div>
@@ -76,14 +77,14 @@
         </section>
 
         <section class="content-card">
-          <p class="section-label">Game Design</p>
-          <h2>기획 산출물</h2>
+          <p class="section-label">Concept Design</p>
+          <h2>컨셉 기획 초안</h2>
           <ul>
-            <li>P0 최종 정의서와 시스템 명세서 기준 정리</li>
-            <li>로비, 출격 준비, 인게임, 결과창, 창고로 이어지는 화면 전이 흐름 정리</li>
-            <li>기억 파편, 동조율, 개인 심상 기록 해금 루프 설계</li>
-            <li>마나석, 회복약, 아티팩트, 아이템 박스 루팅 구조 정리</li>
-            <li>튜토리얼 6단계 안내 흐름과 조건 기반 진행 방식 정리</li>
+            <li>캐릭터 컨셉, 역할군, 전투 포지션 초안 작성</li>
+            <li>기본/전용 무장, 몬스터, 방어구, 아이템 및 오브젝트 컨셉 초안 작성</li>
+            <li>서브컬처 캐릭터 애착 요소와 동조/몽흔 반응 제안</li>
+            <li>프롤로그, 사이드스토리, 캐릭터 심층기획 초안 작성</li>
+            <li>P0 비주얼 리소스 요구사항 정리 및 팀 검수용 원본 문서 아카이빙</li>
           </ul>
         </section>
 
@@ -91,11 +92,12 @@
           <p class="section-label">Programming</p>
           <h2>구현 기록</h2>
           <ul>
-            <li>JSON 기반 튜토리얼 안내 데이터와 로컬 Repository 구조 구성</li>
-            <li><code>TutorialManager</code> 조건 진행, 이벤트 알림, 큐 기반 출력, 중복 출력 방지 구현</li>
-            <li>데이터 기반 VFX ID, Catalog, Context, Service, Runtime Pool 구조 구축</li>
-            <li>플레이어, 에너미, 아이템, 상자, 아티팩트, 탈출 이벤트 VFX 연결</li>
-            <li>상자 루팅과 아이템 설명 흐름을 <code>ItemBoxOpened</code> 이벤트 기준으로 분리</li>
+            <li>마우스 커서 조준 기반 히트스캔 무기 판정 구현</li>
+            <li>아이템 박스 상호작용, 상자 UI, 인벤토리 연동 및 픽업 흐름 구현</li>
+            <li>에너미 스폰 구조, 순찰/감지/추적 AI, 먹잇감 차단 이동 로직 구현</li>
+            <li>아티팩트 장착, 루팅, 장착 효과 적용 흐름 구현</li>
+            <li>데이터 기반 VFX Catalog, Runtime Pool, VFX 이벤트 연결 구조 구현</li>
+            <li>JSON 기반 튜토리얼 안내 데이터, <code>TutorialManager</code>, TutorialScene 진행 시스템 구현</li>
           </ul>
         </section>
       </div>
@@ -129,10 +131,11 @@
           <p class="section-label">Troubleshooting</p>
           <h2>대표 개선</h2>
           <ul>
-            <li>튜토리얼 완료 저장과 로비 이동 책임을 분리해 결과창 흐름과 충돌하지 않도록 정리</li>
-            <li>베타 병합 후 최신 튜토리얼 구조가 이전 카탈로그 구조로 되돌아갈 수 있는 디그레이션 감지</li>
-            <li>VFX 풀 반환 오류를 확인하고 Runtime Pool 기준으로 재사용 흐름 안정화</li>
-            <li>TutorialScene 전용 NavMesh를 구성해 LevelDesignScene과의 참조 충돌 가능성 축소</li>
+            <li>Addressables 중복 GUID 등록 오류와 알파 시연 전 툴팁 표시 오류 수정</li>
+            <li>에너미 벽 관통 및 충돌 판정 문제를 디버깅하고 순찰/추적 AI를 재설계</li>
+            <li>게임 종료 상태에서 전투 입력과 UI 입력이 남아 작동하는 문제 차단</li>
+            <li>VFX 풀 반환 중 중복 비활성화가 발생하지 않도록 Runtime Pool 흐름 수정</li>
+            <li>튜토리얼 Additive 씬 로드와 플레이어 초기화 흐름 수정</li>
           </ul>
         </section>
 
@@ -167,6 +170,7 @@
           <h2>관련 링크</h2>
           <div class="detail-actions">
             <a class="button button-primary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개 보기</a>
+            <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">구현 GitHub</a>
             <a class="button button-secondary" href="https://github.com/Jin-o12/Document_LucidDiver" target="_blank" rel="noreferrer">문서 GitHub</a>
             <a class="button button-secondary" href="../../index.html">포트폴리오 메인</a>
           </div>
