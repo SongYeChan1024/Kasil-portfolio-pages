@@ -3,184 +3,1293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>침몽도시: 루시드 다이버 | Kasil Portfolio</title>
+  <title>침몽도시: 루시드 다이버 | 송예찬 포트폴리오</title>
   <meta
     name="description"
-    content="송예찬이 PM, 컨셉 기획, Gameplay Programmer로 참여한 Unity 기반 PvE 익스트랙션 프로젝트 침몽도시: 루시드 다이버 소개 페이지입니다."
+    content="서브컬처 캐릭터 애착 요소와 PvE 익스트랙션의 전투·파밍·탈출 루프를 결합한 Unity 팀 프로젝트 침몽도시: 루시드 다이버의 최종 결과와 송예찬의 PM·기획·개발 기여를 소개합니다."
   >
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    :root {
+      --lucid-cyan: #69eaff;
+      --lucid-violet: #9d78ff;
+      --lucid-blue: #5aa7ff;
+      --lucid-ink: #050a14;
+      --lucid-panel: rgba(10, 19, 34, 0.9);
+      --lucid-line: rgba(105, 234, 255, 0.18);
+      --lucid-muted: #aabbd0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body.lucid-final {
+      background:
+        radial-gradient(circle at 78% 8%, rgba(72, 74, 185, 0.18), transparent 34rem),
+        radial-gradient(circle at 16% 38%, rgba(0, 190, 230, 0.09), transparent 32rem),
+        #050914;
+      color: #eff8ff;
+    }
+
+    body.lucid-final .section {
+      position: relative;
+    }
+
+    body.lucid-final .section-soft {
+      background: rgba(9, 16, 29, 0.72);
+      border-block: 1px solid rgba(105, 234, 255, 0.08);
+    }
+
+    body.lucid-final .container {
+      width: min(100% - 40px, 1400px);
+    }
+
+    .lucid-kicker {
+      color: var(--lucid-cyan);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .lucid-lead {
+      max-width: 76ch;
+      color: #c7d5e5;
+      font-size: clamp(1rem, 1.5vw, 1.18rem);
+      line-height: 1.82;
+    }
+
+    .lucid-final-hero {
+      min-height: 100svh;
+      display: grid;
+      align-items: center;
+      padding: 52px 0 64px;
+      overflow: hidden;
+    }
+
+    .lucid-final-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(5, 9, 20, 0.98) 0%, rgba(5, 9, 20, 0.88) 42%, rgba(5, 9, 20, 0.22) 78%),
+        linear-gradient(0deg, #050914 0%, transparent 28%);
+      z-index: 1;
+    }
+
+    .lucid-final-hero .container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(460px, 1.08fr);
+      gap: 52px;
+      align-items: center;
+    }
+
+    .lucid-hero-copy {
+      display: grid;
+      gap: 24px;
+    }
+
+    .lucid-hero-copy h1 {
+      margin: 0;
+      font-size: clamp(3.3rem, 7vw, 7.1rem);
+      line-height: 0.9;
+      letter-spacing: -0.075em;
+    }
+
+    .lucid-hero-copy h1 span {
+      display: block;
+      margin-top: 14px;
+      color: var(--lucid-cyan);
+      font-size: 0.3em;
+      letter-spacing: 0.08em;
+    }
+
+    .lucid-hero-one-line {
+      margin: 0;
+      max-width: 32ch;
+      color: #f3f7ff;
+      font-size: clamp(1.2rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.52;
+    }
+
+    .lucid-hero-note {
+      margin: 0;
+      color: var(--lucid-muted);
+      line-height: 1.75;
+    }
+
+    .lucid-facts-final {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .lucid-facts-final div {
+      min-height: 92px;
+      display: grid;
+      align-content: center;
+      gap: 7px;
+      padding: 16px;
+      border: 1px solid var(--lucid-line);
+      border-radius: 12px;
+      background: rgba(10, 19, 34, 0.68);
+    }
+
+    .lucid-facts-final dt {
+      color: #7993ad;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .lucid-facts-final dd {
+      margin: 0;
+      color: #f5f9ff;
+      font-size: 0.94rem;
+      font-weight: 750;
+      line-height: 1.42;
+    }
+
+    .lucid-hero-visual {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(105, 234, 255, 0.3);
+      border-radius: 18px;
+      background: #02050b;
+      box-shadow: 0 0 80px rgba(31, 121, 255, 0.16);
+    }
+
+    .lucid-hero-visual::after {
+      content: "FINAL BUILD";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 7px 11px;
+      border: 1px solid rgba(105, 234, 255, 0.45);
+      border-radius: 999px;
+      background: rgba(2, 8, 17, 0.78);
+      color: var(--lucid-cyan);
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+    }
+
+    .lucid-hero-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .lucid-hero-visual figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 16px;
+      color: #91a8bf;
+      font-size: 0.8rem;
+    }
+
+    .lucid-section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(300px, 1.25fr);
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .lucid-section-head h2 {
+      margin: 8px 0 0;
+      font-size: clamp(2.15rem, 4.2vw, 4.4rem);
+      letter-spacing: -0.055em;
+      line-height: 1.05;
+    }
+
+    .lucid-section-head p {
+      margin: 0;
+      color: #afbed0;
+      line-height: 1.8;
+    }
+
+    .lucid-video-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 18px;
+    }
+
+    .lucid-video-card,
+    .lucid-card,
+    .lucid-role-card,
+    .lucid-boundary {
+      border: 1px solid var(--lucid-line);
+      border-radius: 16px;
+      background: var(--lucid-panel);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+    }
+
+    .lucid-video-card {
+      overflow: hidden;
+    }
+
+    .lucid-video-embed {
+      position: relative;
+      display: grid;
+      place-items: center;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #02050b;
+    }
+
+    .lucid-video-card iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    .lucid-video-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background-position: center;
+      background-size: cover;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .lucid-video-fallback::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(2, 6, 14, 0.58);
+    }
+
+    .lucid-video-fallback span {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      padding: 18px 22px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 12px;
+      background: rgba(2, 8, 18, 0.78);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .lucid-video-fallback small {
+      color: #adbed1;
+      font-weight: 500;
+    }
+
+    .lucid-video-copy {
+      padding: 18px 20px 22px;
+    }
+
+    .lucid-video-copy h3 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    .lucid-video-copy p {
+      margin: 0;
+      color: #aab9ca;
+      line-height: 1.66;
+    }
+
+    .lucid-role-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .lucid-role-card {
+      min-height: 310px;
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      padding: 26px;
+    }
+
+    .lucid-role-card:nth-child(2),
+    .lucid-role-card:nth-child(3) {
+      background:
+        linear-gradient(150deg, rgba(76, 54, 148, 0.23), transparent 58%),
+        var(--lucid-panel);
+    }
+
+    .lucid-role-index {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(105, 234, 255, 0.38);
+      border-radius: 50%;
+      color: var(--lucid-cyan);
+      font-weight: 900;
+    }
+
+    .lucid-role-card h3 {
+      margin: 0;
+      font-size: 1.7rem;
+    }
+
+    .lucid-role-card p {
+      margin: 0;
+      color: #aebed0;
+      line-height: 1.7;
+    }
+
+    .lucid-role-card ul,
+    .lucid-card ul,
+    .lucid-boundary ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: #ced8e5;
+      line-height: 1.8;
+    }
+
+    .lucid-track-note {
+      margin: 18px 0 0;
+      padding: 16px 20px;
+      border-left: 3px solid var(--lucid-violet);
+      background: rgba(104, 72, 184, 0.11);
+      color: #c9d3e3;
+      line-height: 1.7;
+    }
+
+    .lucid-ai-story {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .lucid-ai-copy {
+      display: grid;
+      align-content: center;
+      gap: 20px;
+      padding: 34px;
+      border: 1px solid rgba(157, 120, 255, 0.26);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(147, 80, 255, 0.17), transparent 24rem),
+        var(--lucid-panel);
+    }
+
+    .lucid-ai-copy h3 {
+      margin: 0;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      letter-spacing: -0.045em;
+    }
+
+    .lucid-ai-copy p {
+      margin: 0;
+      color: #b9c5d6;
+      line-height: 1.82;
+    }
+
+    .lucid-ai-image {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(157, 120, 255, 0.24);
+      border-radius: 16px;
+      background: #02050b;
+    }
+
+    .lucid-ai-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+    }
+
+    .lucid-state-flow {
+      display: grid;
+      grid-template-columns: repeat(8, minmax(90px, 1fr));
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .lucid-state-flow button {
+      position: relative;
+      min-height: 78px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      border: 1px solid rgba(105, 234, 255, 0.22);
+      border-radius: 12px;
+      background: rgba(7, 21, 36, 0.9);
+      color: #dffaff;
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .lucid-state-flow button:hover,
+    .lucid-state-flow button:focus-visible,
+    .lucid-state-flow button.is-active {
+      z-index: 2;
+      transform: translateY(-4px);
+      border-color: rgba(105, 234, 255, 0.72);
+      background: rgba(18, 63, 83, 0.94);
+      outline: none;
+    }
+
+    .lucid-state-flow button:not(:last-child)::after {
+      content: "›";
+      position: absolute;
+      top: 50%;
+      right: -9px;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: var(--lucid-cyan);
+      font-size: 1.2rem;
+    }
+
+    .lucid-state-flow button:nth-last-child(3) {
+      border-color: rgba(255, 111, 99, 0.45);
+      color: #ffd6d0;
+    }
+
+    .lucid-state-detail {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+      gap: 18px;
+      margin-top: 18px;
+      padding: 20px;
+      border: 1px solid rgba(105, 234, 255, 0.2);
+      border-radius: 16px;
+      background: rgba(6, 16, 29, 0.92);
+    }
+
+    .lucid-state-detail-copy {
+      display: grid;
+      align-content: center;
+      gap: 13px;
+      padding: 10px;
+    }
+
+    .lucid-state-detail-copy h3 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+    }
+
+    .lucid-state-detail-copy p {
+      margin: 0;
+      color: #b4c3d4;
+      line-height: 1.75;
+    }
+
+    .lucid-state-detail-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .lucid-state-detail-media figure {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(105, 234, 255, 0.16);
+      border-radius: 12px;
+      background: #02050b;
+    }
+
+    .lucid-state-detail-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: contain;
+    }
+
+    .lucid-state-detail-media figcaption {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    .lucid-interactive-shell {
+      overflow: hidden;
+      border: 1px solid rgba(105, 234, 255, 0.3);
+      border-radius: 18px;
+      background: #020611;
+      box-shadow: 0 28px 100px rgba(0, 108, 185, 0.16);
+    }
+
+    .lucid-interactive-toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--lucid-line);
+      background: rgba(9, 20, 35, 0.98);
+    }
+
+    .lucid-interactive-toolbar strong {
+      font-size: 0.93rem;
+    }
+
+    .lucid-interactive-toolbar span {
+      color: #8299b0;
+      font-size: 0.78rem;
+    }
+
+    .lucid-interactive-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .lucid-mini-button {
+      appearance: none;
+      padding: 9px 13px;
+      border: 1px solid rgba(105, 234, 255, 0.28);
+      border-radius: 8px;
+      background: rgba(105, 234, 255, 0.08);
+      color: #eafcff;
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .lucid-interactive-stage {
+      position: relative;
+      min-height: 760px;
+    }
+
+    .lucid-interactive-stage iframe {
+      display: none;
+      width: 100%;
+      height: min(82vh, 980px);
+      min-height: 760px;
+      border: 0;
+      background: #030712;
+    }
+
+    .lucid-interactive-stage.is-loaded iframe {
+      display: block;
+    }
+
+    .lucid-interactive-cover {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px;
+      background:
+        linear-gradient(rgba(3, 8, 17, 0.7), rgba(3, 8, 17, 0.9)),
+        url("./enemy-ai-fsm/images/PM_EnemyAI_ConceptToRuntime.png") center / cover no-repeat;
+    }
+
+    .lucid-interactive-stage.is-loaded .lucid-interactive-cover {
+      display: none;
+    }
+
+    .lucid-interactive-cta {
+      max-width: 620px;
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+      padding: 34px;
+      border: 1px solid rgba(105, 234, 255, 0.25);
+      border-radius: 16px;
+      background: rgba(3, 10, 21, 0.9);
+      text-align: center;
+    }
+
+    .lucid-interactive-cta h3 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+    }
+
+    .lucid-interactive-cta p {
+      margin: 0;
+      color: #afc0d3;
+      line-height: 1.75;
+    }
+
+    .lucid-work-map {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .lucid-work-step {
+      position: relative;
+      min-height: 210px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+      padding: 26px;
+      border: 1px solid var(--lucid-line);
+      border-radius: 14px;
+      background: rgba(8, 18, 32, 0.88);
+    }
+
+    .lucid-work-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      width: 15px;
+      border-top: 1px solid var(--lucid-cyan);
+      opacity: 0.5;
+    }
+
+    .lucid-work-step strong {
+      color: var(--lucid-cyan);
+      font-size: 1.15rem;
+    }
+
+    .lucid-work-step p {
+      margin: 0;
+      color: #aebed1;
+      line-height: 1.7;
+    }
+
+    .lucid-two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .lucid-card,
+    .lucid-boundary {
+      padding: 26px;
+    }
+
+    .lucid-card h3,
+    .lucid-boundary h3 {
+      margin: 8px 0 14px;
+      font-size: 1.55rem;
+    }
+
+    .lucid-card p,
+    .lucid-boundary p {
+      margin: 0;
+      color: #acbdd0;
+      line-height: 1.75;
+    }
+
+    .lucid-trouble-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .lucid-trouble-grid .lucid-card {
+      display: grid;
+      align-content: start;
+      gap: 13px;
+    }
+
+    .lucid-problem {
+      color: #ff9b94;
+      font-weight: 800;
+    }
+
+    .lucid-solution {
+      color: #86f1df;
+      font-weight: 800;
+    }
+
+    .lucid-boundary-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .lucid-boundary.emphasis {
+      border-color: rgba(105, 234, 255, 0.33);
+      background:
+        linear-gradient(145deg, rgba(22, 87, 118, 0.18), transparent 55%),
+        var(--lucid-panel);
+    }
+
+    .lucid-link-footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 32px;
+      border: 1px solid var(--lucid-line);
+      border-radius: 16px;
+      background:
+        radial-gradient(circle at 88% 20%, rgba(105, 234, 255, 0.13), transparent 22rem),
+        var(--lucid-panel);
+    }
+
+    .lucid-link-footer h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.9rem, 3vw, 3rem);
+    }
+
+    .lucid-link-footer p {
+      margin: 0;
+      color: #a9bbce;
+    }
+
+    @media (max-width: 1080px) {
+      .lucid-final-hero .container,
+      .lucid-ai-story,
+      .lucid-video-grid,
+      .lucid-boundary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lucid-final-hero {
+        min-height: auto;
+      }
+
+      .lucid-section-head {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .lucid-role-grid,
+      .lucid-work-map,
+      .lucid-trouble-grid,
+      .lucid-state-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .lucid-work-step:not(:last-child)::after {
+        top: auto;
+        right: auto;
+        bottom: -15px;
+        left: 50%;
+        width: 0;
+        height: 15px;
+        border-top: 0;
+        border-left: 1px solid var(--lucid-cyan);
+      }
+
+      .lucid-state-flow {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      body.lucid-final .container {
+        width: min(100% - 24px, 1400px);
+      }
+
+      .lucid-final-hero {
+        padding-top: 34px;
+      }
+
+      .lucid-final-hero .container {
+        gap: 30px;
+      }
+
+      .lucid-hero-copy h1 {
+        font-size: clamp(3rem, 18vw, 5.2rem);
+      }
+
+      .lucid-facts-final,
+      .lucid-two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .lucid-state-flow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lucid-state-detail-media {
+        grid-template-columns: 1fr;
+      }
+
+      .lucid-state-detail-media img {
+        min-height: 220px;
+      }
+
+      .lucid-interactive-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lucid-interactive-actions {
+        justify-content: flex-start;
+      }
+
+      .lucid-interactive-stage,
+      .lucid-interactive-stage iframe {
+        min-height: 620px;
+      }
+
+      .lucid-link-footer {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body class="lucid-theme">
-  <header class="detail-hero lucid-hero">
-    <div class="container detail-layout">
-      <div class="detail-panel">
-        <div class="lucid-hero-heading">
-          <p class="eyebrow">Team REMnants · In Progress</p>
-          <h1>침몽도시:<br>루시드 다이버</h1>
-          <p class="lucid-subtitle">서브컬처 캐릭터 애착 루프와 PvE 익스트랙션 루프를 결합한 Unity 팀 프로젝트</p>
-        </div>
+<body class="lucid-theme lucid-final">
+  <header class="lucid-final-hero">
+    <div class="container">
+      <div class="lucid-hero-copy">
+        <p class="lucid-kicker">Team REMnants · Final Build</p>
+        <h1>침몽도시:<br>루시드 다이버<span>LUCID DIVER</span></h1>
+        <p class="lucid-hero-one-line">
+          서브컬처 캐릭터 애착 요소와 PvE 익스트랙션의 전투·파밍·탈출 루프를 결합한 아이소메트릭 액션 게임
+        </p>
+        <p class="lucid-hero-note">
+          저는 이 프로젝트에서 PM 업무와 기획·개발 업무를 병행했습니다.
+          일정과 협업 흐름을 관리하는 한편, 별도의 기획자·개발자 역할로 꿈식자의 컨셉과 AI를 설계하고 구현했습니다.
+        </p>
 
-        <div class="lucid-hero-summary">
-          <p class="hero-text">
-            플레이어가 침몽도시에 진입해 전투와 파밍을 진행하고, 탈출 성공 후 회수한 보상이
-            캐릭터 기록 해금과 다음 출격 준비로 이어지는 P0/P0.5 버티컬 슬라이스입니다.
-            저는 PM으로 일정과 산출물을 관리하면서, 컨셉 기획 초안과 튜토리얼·VFX·아이템·에너미 흐름의 구현을 함께 담당했습니다.
-          </p>
-
-          <div class="lucid-facts">
-            <div class="lucid-fact">
-              <span class="lucid-fact-label">Period</span>
-              <span class="lucid-fact-value">2026.06.11 - 2026.07.28</span>
-            </div>
-            <div class="lucid-fact">
-              <span class="lucid-fact-label">Role</span>
-              <span class="lucid-fact-value">PM / Gameplay / 컨셉 기획 / 문서화</span>
-            </div>
-            <div class="lucid-fact">
-              <span class="lucid-fact-label">Engine</span>
-              <span class="lucid-fact-value">Unity 2022.3.62f3 URP</span>
-            </div>
+        <dl class="lucid-facts-final">
+          <div>
+            <dt>Period</dt>
+            <dd>2026.06.11 — 2026.07.28</dd>
           </div>
-
-          <div class="detail-actions">
-            <a class="button button-primary" href="./enemy-ai-fsm/html/index.html">Enemy AI FSM 인터랙티브</a>
-            <a class="button button-primary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개 보기</a>
-            <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">구현 GitHub</a>
-            <a class="button button-secondary" href="https://github.com/Jin-o12/Document_LucidDiver" target="_blank" rel="noreferrer">문서 GitHub</a>
-            <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
+          <div>
+            <dt>Role</dt>
+            <dd>PM · 기획 · Gameplay 개발</dd>
           </div>
+          <div>
+            <dt>Engine</dt>
+            <dd>Unity 2022.3.62f3 · URP</dd>
+          </div>
+        </dl>
+
+        <div class="detail-actions">
+          <a class="button button-primary" href="#enemy-ai">대표 작업 보기</a>
+          <a class="button button-secondary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개</a>
+          <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">구현 GitHub</a>
+          <a class="button button-secondary" href="../../index.html">포트폴리오 메인</a>
         </div>
       </div>
 
-      <figure class="lucid-hero-media">
-        <img src="../../assets/images/lucid-diver/lobby-main.png" alt="침몽도시 루시드 다이버 로비 메인 화면">
+      <figure class="lucid-hero-visual">
+        <img
+          src="../../assets/images/lucid-diver/lucid-diver-final-thumbnail.gif"
+          alt="침몽도시 루시드 다이버의 PV, 탐색, 전투, 꿈식자 조우, 탈출 장면을 엮은 최종 프로젝트 썸네일"
+        >
+        <figcaption>
+          <span>PV · 탐색 · 전투 · 탈출</span>
+          <span>최종 프로젝트 하이라이트</span>
+        </figcaption>
       </figure>
     </div>
   </header>
 
   <main>
-    <section class="section">
-      <div class="container content-grid">
-        <section class="content-card">
-          <p class="section-label">Core Loop</p>
-          <h2>검증 목표</h2>
+    <section class="section" id="result">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">01 · Final Result</p>
+            <h2>기획에서 최종 시연까지</h2>
+          </div>
           <p>
-            최종 P0의 핵심 질문은 “익스트랙션 플레이로 회수한 보상이 캐릭터 애착 보상과 다음 출격 준비로 이어지는가”입니다.
-            이를 위해 기억 파편, 동조율, 개인 심상 기록, 창고 저장, 소지품 장착이 하나의 플레이 사이클 안에서 연결되도록 범위를 고정했습니다.
+            초기 P0 검증에 머물지 않고 전투·파밍·탈출, 결과 정산, 튜토리얼, 적 AI까지 연결한 최종 빌드를 완성했습니다.
+            전체 시연 영상과 대표 구현인 꿈식자 AI 영상을 통해 실제 플레이 결과를 먼저 확인할 수 있습니다.
           </p>
-        </section>
+        </div>
 
-        <section class="content-card">
-          <p class="section-label">Project Management</p>
-          <h2>PM 업무</h2>
-          <ul>
-            <li>마스터 일정, 주간 마일스톤, 일별 일정표 기준 정리</li>
-            <li>작업 보드와 티켓 생성, 블로커 기록, 진행률 관리</li>
-            <li>P0/P0.5 범위 통제, 기능 동결 기준과 수정 가능 항목 문서화</li>
-            <li>QA 시트 운영, 버그 우선순위 분류, RC 빌드 체크리스트 작성</li>
-            <li>발표 자료 취합, 시연 동선 체크리스트와 백업 자료 관리</li>
-          </ul>
-        </section>
+        <div class="lucid-video-grid">
+          <article class="lucid-video-card">
+            <div
+              class="lucid-video-embed"
+              data-youtube-id="H5T2-JR77X0"
+              data-youtube-title="침몽도시 루시드 다이버 전체 시연 영상"
+            ></div>
+            <div class="lucid-video-copy">
+              <h3>최종 시연 영상</h3>
+              <p>팀 프로젝트의 게임 루프와 최종 구현 범위를 한 번에 확인합니다.</p>
+            </div>
+          </article>
 
-        <section class="content-card">
-          <p class="section-label">Concept Design</p>
-          <h2>컨셉 기획 초안</h2>
-          <ul>
-            <li>캐릭터 컨셉, 역할군, 전투 포지션 초안 작성</li>
-            <li>기본/전용 무장, 몬스터, 방어구, 아이템 및 오브젝트 컨셉 초안 작성</li>
-            <li>서브컬처 캐릭터 애착 요소와 동조/몽흔 반응 제안</li>
-            <li>프롤로그, 사이드스토리, 캐릭터 심층기획 초안 작성</li>
-            <li>P0 비주얼 리소스 요구사항 정리 및 팀 검수용 원본 문서 아카이빙</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Programming</p>
-          <h2>구현 기록</h2>
-          <ul>
-            <li>마우스 커서 조준 기반 히트스캔 무기 판정 구현</li>
-            <li>아이템 박스 상호작용, 상자 UI, 인벤토리 연동 및 픽업 흐름 구현</li>
-            <li>에너미 스폰 구조, 순찰/감지/추적 AI, 먹잇감 차단 이동 로직 구현</li>
-            <li>아티팩트 장착, 루팅, 장착 효과 적용 흐름 구현</li>
-            <li>데이터 기반 VFX Catalog, Runtime Pool, VFX 이벤트 연결 구조 구현</li>
-            <li>JSON 기반 튜토리얼 안내 데이터, <code>TutorialManager</code>, TutorialScene 진행 시스템 구현</li>
-          </ul>
-        </section>
+          <article class="lucid-video-card">
+            <div
+              class="lucid-video-embed"
+              data-youtube-id="BxIWsNXTyWU"
+              data-youtube-title="꿈식자 Enemy AI 완성 결과 영상"
+            ></div>
+            <div class="lucid-video-copy">
+              <h3>꿈식자 AI 완성 결과</h3>
+              <p>랜덤 순찰, 감지, 조사, 추격, 2단 돌진 공격, 재탐색과 복귀가 이어지는 동작을 보여줍니다.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container lucid-showcase">
-        <figure class="lucid-showcase-image">
-          <img src="../../assets/images/lucid-diver/ingame-looting.png" alt="루시드 다이버 인게임 루팅 HUD 화면">
-        </figure>
-        <div class="lucid-showcase-copy">
-          <p class="section-label">UX Flow</p>
-          <h2>전투, 파밍, 정산으로 이어지는 플레이 흐름</h2>
+    <section class="section section-soft" id="roles">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">02 · Contribution</p>
+            <h2>세 역할, 하나의 결과</h2>
+          </div>
           <p>
-            인게임에서는 이동, 조준, 공격, 적 조우, 아이템 박스 루팅, 탈출이 하나의 흐름으로 이어집니다.
-            결과창에서는 획득한 기억 파편과 소모품이 각각 서사 보상과 다음 출격 준비로 분리 정산되도록 구성했습니다.
+            PM은 일정과 협업을 운영한 별도 트랙이며, 꿈식자 AI는 기획자·개발자로서 수행한 작업입니다.
+            역할을 섞어 표현하지 않고, 각 위치에서 어떤 결과를 만들었는지 구분했습니다.
           </p>
-          <ul class="meta-list">
-            <li>Extraction Loop</li>
-            <li>Character Attachment</li>
-            <li>Inventory UX</li>
-            <li>Result Flow</li>
-          </ul>
+        </div>
+
+        <div class="lucid-role-grid">
+          <article class="lucid-role-card">
+            <span class="lucid-role-index">01</span>
+            <h3>PM</h3>
+            <p>팀이 같은 우선순위와 일정을 바라보도록 업무 지도를 운영했습니다.</p>
+            <ul>
+              <li>전체 일정·주간 마일스톤·일별 일정 연결</li>
+              <li>우선순위와 이월 항목, 블로커 관리</li>
+              <li>일일·주간 개발 기록을 통한 업무 공유</li>
+              <li>시연 범위와 발표 자료 취합</li>
+            </ul>
+          </article>
+
+          <article class="lucid-role-card">
+            <span class="lucid-role-index">02</span>
+            <h3>기획자</h3>
+            <p>익스트랙션 장르 안에서 적이 플레이어를 실제로 사냥하는 존재가 되도록 설계했습니다.</p>
+            <ul>
+              <li>꿈과 기억을 먹는 포식자 ‘꿈식자’ 컨셉</li>
+              <li>기본 적 2~3마리의 무리 배회와 길목 압박</li>
+              <li>세계관 → 행동 → 플레이 경험 연결</li>
+              <li>프로젝트 초기 컨셉·캐릭터·원화 가이드 초안</li>
+            </ul>
+          </article>
+
+          <article class="lucid-role-card">
+            <span class="lucid-role-index">03</span>
+            <h3>개발자</h3>
+            <p>컨셉을 실제 플레이에서 읽히는 상태와 피드백으로 구현했습니다.</p>
+            <ul>
+              <li>꿈식자 FSM과 감지·조사·추격·공격 로직</li>
+              <li>튜토리얼 런타임과 단계 진행</li>
+              <li>체스트·픽업·인벤토리 연동</li>
+              <li>총구 화염·HDR·인벤토리 슬롯 강조</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="lucid-track-note">
+          PM이기 때문에 AI를 만든 것이 아니라, PM 업무를 병행하면서 별도의 기획자·개발자 역할로 꿈식자를 설계하고 구현했습니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="enemy-ai">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">03 · Representative Work</p>
+            <h2>꿈을 먹는 포식자를<br>행동하는 AI로</h2>
+          </div>
+          <p>
+            꿈식자를 단순한 이동 장애물이 아니라 악몽 속을 돌아다니며 플레이어의 꿈을 먹는 포식자로 정의했습니다.
+            그래서 기본 적이더라도 2~3마리가 서로 다른 경로로 배회하고, 감각 정보를 바탕으로 조사와 추격을 이어가며,
+            놓친 뒤에도 재탐색과 개별 복귀를 수행하도록 설계했습니다.
+          </p>
+        </div>
+
+        <div class="lucid-ai-story">
+          <div class="lucid-ai-copy">
+            <p class="lucid-kicker">Worldview → Behavior → Experience</p>
+            <h3>플레이어를 방해하는 적이 아니라, 플레이어를 사냥하는 존재</h3>
+            <p>
+              테스트용 더미 에너미를 기초로 삼아 실제 제작용 FSM을 설계하고 구현했습니다.
+              스폰 포인트와 패트롤 루트를 기반으로 움직이되 NavMesh 위 임의 지점을 선택해 매번 다른 순찰선을 만들고,
+              시야나 소리로 플레이어의 흔적을 얻으면 조사·추격·공격으로 상태를 전환합니다.
+            </p>
+            <ul>
+              <li>루트의 범위를 지키면서도 반복적으로 보이지 않는 랜덤 순찰</li>
+              <li>플레이어가 아닌 소음 앵커를 따라가는 조사</li>
+              <li>이동 방향을 예측해 길목을 압박하는 추격</li>
+              <li>전조 후 두 번 연속 돌진하는 공격과 피격 패널티</li>
+              <li>타깃 상실 시 재탐색 후 가장 가까운 개별 루트로 복귀</li>
+            </ul>
+          </div>
+
+          <figure class="lucid-ai-image">
+            <img
+              src="./enemy-ai-fsm/images/PM_EnemyAI_ConceptToRuntime.png"
+              alt="꿈을 먹는 무리형 포식자라는 세계관이 순찰, 감지, 조사, 추격, 공격, 탐색, 복귀 AI 행동으로 이어지는 설계"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+        <div class="lucid-state-flow" role="tablist" aria-label="꿈식자 FSM 상태 흐름">
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-state-preview="spawn">스폰</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="patrol">랜덤 순찰</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="detect">시야·소리 감지</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="investigate">조사</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="chase">추격</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="attack">2단 돌진 공격</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="search">재탐색</button>
+          <button type="button" role="tab" aria-selected="false" data-state-preview="return">개별 순찰 복귀</button>
+        </div>
+
+        <div class="lucid-state-detail" role="tabpanel" aria-live="polite">
+          <div class="lucid-state-detail-copy">
+            <p class="lucid-kicker" data-state-index>01 · SPAWN</p>
+            <h3 data-state-title>스폰 포인트에서 개별 순찰 시작</h3>
+            <p data-state-summary>
+              스폰 포인트에 연결된 패트롤 루트를 각 개체의 기준 경로로 저장하고, 2~3마리가 서로 다른 순찰을 시작합니다.
+            </p>
+            <p data-state-logic>
+              스폰 직후 같은 좌표로 뭉치지 않도록 개체별 시작 위치와 루트 기억을 분리합니다.
+            </p>
+          </div>
+          <div class="lucid-state-detail-media">
+            <figure>
+              <img
+                data-state-design
+                src="./enemy-ai-fsm/images/PM_EnemyAI_ConceptToRuntime.png"
+                alt="꿈식자 스폰과 전체 AI 설계 시각화"
+              >
+              <figcaption>설계 시각화</figcaption>
+            </figure>
+            <figure>
+              <img
+                data-state-gif
+                src="./enemy-ai-fsm/gifs/PM_EnemyAI_SpawnPatrol.gif"
+                alt="꿈식자 스폰 후 순찰을 시작하는 실제 플레이 GIF"
+              >
+              <figcaption>실제 플레이 GIF</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="interactive">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">04 · Interactive FSM</p>
+            <h2>상태를 눌러<br>설계와 구현 확인</h2>
+          </div>
+          <p>
+            아래 인터랙티브는 꿈식자의 상태 흐름, 설계 이미지, 실제 플레이 GIF, 관련 스크립트 설명을 한 화면에 연결한 포트폴리오 자료입니다.
+            초기 페이지 로딩을 가볍게 유지하기 위해 버튼을 눌렀을 때 실행됩니다.
+          </p>
+        </div>
+
+        <div class="lucid-interactive-shell">
+          <div class="lucid-interactive-toolbar">
+            <div>
+              <strong>꿈식자 Enemy AI FSM 인터랙티브</strong>
+              <span> · 클릭 후 내부에서 스크롤하거나 상태 노드를 선택하세요.</span>
+            </div>
+            <div class="lucid-interactive-actions">
+              <button class="lucid-mini-button" type="button" data-fsm-load>인터랙티브 시작</button>
+              <a class="lucid-mini-button" href="./enemy-ai-fsm/html/index.html" target="_blank" rel="noreferrer">새 창에서 전체 보기</a>
+            </div>
+          </div>
+
+          <div class="lucid-interactive-stage" data-fsm-stage>
+            <iframe
+              title="꿈식자 Enemy AI FSM 인터랙티브"
+              loading="lazy"
+              data-src="./enemy-ai-fsm/html/index.html"
+            ></iframe>
+            <div class="lucid-interactive-cover">
+              <div class="lucid-interactive-cta">
+                <p class="lucid-kicker">Interactive Portfolio</p>
+                <h3>꿈식자의 사고 흐름을 직접 탐색해 보세요</h3>
+                <p>
+                  순찰부터 복귀까지 각 상태를 선택하면 로직 설명, 시각 자료, 실제 플레이 GIF와 구현 근거를 확인할 수 있습니다.
+                </p>
+                <button class="button button-primary" type="button" data-fsm-load>인터랙티브 불러오기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pm-map">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">05 · PM Work Map</p>
+            <h2>계획을<br>팀의 공통 지도처럼</h2>
+          </div>
+          <p>
+            전체 일정표에서 이번 주 목표를 정하고, 이를 다시 일별 실행 항목으로 내렸습니다.
+            팀원의 일일 개발일지와 제가 작성한 주간 개발일지를 연결해, 현재 위치와 다음 작업을 누구나 확인할 수 있는 구조를 목표로 했습니다.
+          </p>
+        </div>
+
+        <div class="lucid-work-map">
+          <article class="lucid-work-step">
+            <strong>전체 일정표</strong>
+            <p>프로젝트 기간, 마감, 통합·QA 시점을 한 축에 배치해 큰 방향을 공유했습니다.</p>
+          </article>
+          <article class="lucid-work-step">
+            <strong>주별 마일스톤</strong>
+            <p>이번 주에 반드시 끝내야 할 기능과 이월 항목, 블로커를 정리했습니다.</p>
+          </article>
+          <article class="lucid-work-step">
+            <strong>일별 일정·개발일지</strong>
+            <p>팀원별 실행 작업과 결과를 기록하고 주간 개발일지로 다시 묶어 업무 공유를 이어갔습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="supporting-work">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">06 · Supporting Work</p>
+            <h2>대표 작업 밖의<br>실제 기여</h2>
+          </div>
+          <p>
+            대표 사례는 꿈식자 AI지만, 플레이어가 게임을 이해하고 루팅 결과를 확인하는 과정도 구현했습니다.
+            기획 소유와 구현 소유가 다른 경우에는 원 기획자를 분명하게 표시했습니다.
+          </p>
+        </div>
+
+        <div class="lucid-two-column">
+          <article class="lucid-card">
+            <p class="lucid-kicker">Tutorial Runtime</p>
+            <h3>기획서를 실제 플레이 단계로 연결</h3>
+            <p>
+              우성혁 CD와 장수영 CP의 튜토리얼 기획을 기준으로 JSON 데이터, 단계 진행, 조건 확인,
+              안내 UI와 TutorialScene 흐름을 실제 런타임에 연결했습니다.
+            </p>
+            <ul>
+              <li>튜토리얼 단계 데이터 로드와 진행 상태 관리</li>
+              <li>행동 조건 충족 시 다음 단계 전환</li>
+              <li>씬 로드·플레이어 초기화·안내 표시 흐름 안정화</li>
+            </ul>
+          </article>
+
+          <article class="lucid-card">
+            <p class="lucid-kicker">Gameplay Connection</p>
+            <h3>루팅과 피드백이 끊기지 않도록</h3>
+            <ul>
+              <li>아이템 박스 상호작용과 체스트 UI 연결</li>
+              <li>픽업 결과와 인벤토리 데이터 연동</li>
+              <li>인벤토리 장비 슬롯 하이라이트</li>
+              <li>총구 화염·HDR 조정으로 발사 피드백 가시성 강화</li>
+              <li>피격 시 HUD 흔들림, 5초 차감, 루시드 낙인 스택 피드백 정리</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="troubleshooting">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">07 · Troubleshooting</p>
+            <h2>보이는 현상보다<br>행동의 원인을 수정</h2>
+          </div>
+          <p>
+            AI가 멈추거나 여러 개체가 겹치는 문제를 단순 속도 조정으로 덮지 않고,
+            좌표 보정·접근점 분산·복귀 기준을 분리해 상태 전환 자체가 안정적으로 이어지도록 수정했습니다.
+          </p>
+        </div>
+
+        <div class="lucid-trouble-grid">
+          <article class="lucid-card">
+            <p class="lucid-kicker">Case 01</p>
+            <h3>조사 좌표 Stuck</h3>
+            <p><span class="lucid-problem">문제</span> 소음 좌표가 이동 불가능한 지점이면 조사 상태가 종료되지 않았습니다.</p>
+            <p><span class="lucid-solution">해결</span> 좌표를 NavMesh 위로 보정하고 조사 제한 시간을 추가해 다음 상태로 전환되게 했습니다.</p>
+          </article>
+
+          <article class="lucid-card">
+            <p class="lucid-kicker">Case 02</p>
+            <h3>군집 겹침</h3>
+            <p><span class="lucid-problem">문제</span> 여러 개체가 같은 목표 좌표에 몰려 실루엣과 길목 압박이 무너졌습니다.</p>
+            <p><span class="lucid-solution">해결</span> 개체별 접근 위치를 분산해 무리의 존재감은 유지하고 겹침은 줄였습니다.</p>
+          </article>
+
+          <article class="lucid-card">
+            <p class="lucid-kicker">Case 03</p>
+            <h3>상실 이후 복귀</h3>
+            <p><span class="lucid-problem">문제</span> 타깃을 잃은 개체가 공통 지점으로 몰리거나 즉시 순찰로 돌아가 부자연스러웠습니다.</p>
+            <p><span class="lucid-solution">해결</span> 재탐색을 거친 뒤 가장 가까운 개별 루트 지점으로 복귀하도록 기억 기준을 분리했습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="ownership">
+      <div class="container">
+        <div class="lucid-section-head">
+          <div>
+            <p class="lucid-kicker">08 · Ownership</p>
+            <h2>기여 범위를<br>정확하게 기록</h2>
+          </div>
+          <p>
+            포트폴리오의 설득력은 많이 했다는 표현보다 어디까지 책임졌는지 명확히 보이는 데서 나온다고 생각합니다.
+            직접 담당, 협업, 초안, 원 기획 기반 구현을 구분했습니다.
+          </p>
+        </div>
+
+        <div class="lucid-boundary-grid">
+          <article class="lucid-boundary emphasis">
+            <p class="lucid-kicker">Direct Ownership</p>
+            <h3>직접 설계·구현한 범위</h3>
+            <ul>
+              <li>꿈식자 컨셉, 행동 설계, 제작용 FSM과 AI 구현</li>
+              <li>랜덤 순찰·감지·조사·추격·공격·재탐색·개별 복귀</li>
+              <li>PM 일정 구조와 개발 기록 운영</li>
+              <li>체스트·픽업·인벤토리 연결, 튜토리얼 런타임 구현</li>
+            </ul>
+          </article>
+
+          <article class="lucid-boundary">
+            <p class="lucid-kicker">Collaboration & Drafts</p>
+            <h3>협업·원 기획·초안 범위</h3>
+            <ul>
+              <li>꿈식자 이미지·리깅·애니메이션 리소스는 팀 협업</li>
+              <li>AI 모듈 분리와 2회 공격 연동 일부는 TD와 협업</li>
+              <li>튜토리얼은 우성혁 CD·장수영 CP 기획 기반 구현</li>
+              <li>캐릭터·원화 가이드 등 초기 기획 문서는 채택 전 초안</li>
+              <li>프롤로그·인트로는 남해 PD 기존 기획을 이어받은 초안</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container content-grid">
-        <section class="content-card">
-          <p class="section-label">Troubleshooting</p>
-          <h2>대표 개선</h2>
-          <ul>
-            <li>Addressables 중복 GUID 등록 오류와 알파 시연 전 툴팁 표시 오류 수정</li>
-            <li>에너미 벽 관통 및 충돌 판정 문제를 디버깅하고 순찰/추적 AI를 재설계</li>
-            <li>게임 종료 상태에서 전투 입력과 UI 입력이 남아 작동하는 문제 차단</li>
-            <li>VFX 풀 반환 중 중복 비활성화가 발생하지 않도록 Runtime Pool 흐름 수정</li>
-            <li>튜토리얼 Additive 씬 로드와 플레이어 초기화 흐름 수정</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Documentation</p>
-          <h2>문서화 기준</h2>
-          <ul>
-            <li>최상위 SSOT 문서를 기준으로 구현 범위와 제외 범위를 고정</li>
-            <li>시스템 명세, 구현 명세, QA 체크리스트, 일정표를 분리 관리</li>
-            <li>개인 개발일지에 목표, 완료 작업, 결정 사항, 블로커를 일자별로 기록</li>
-            <li>코드 변경 기록과 비교 문서를 남겨 병합 전후 변경 원인을 추적</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Stack</p>
-          <h2>사용 기술</h2>
-          <ul class="meta-list">
-            <li>Unity</li>
-            <li>C#</li>
-            <li>FSM</li>
-            <li>NavMesh</li>
-            <li>JSON</li>
-            <li>Addressables</li>
-            <li>UI Drag & Drop</li>
-            <li>Runtime Pool</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Links</p>
-          <h2>관련 링크</h2>
-          <div class="detail-actions">
-            <a class="button button-primary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개 보기</a>
-            <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">구현 GitHub</a>
-            <a class="button button-secondary" href="https://github.com/Jin-o12/Document_LucidDiver" target="_blank" rel="noreferrer">문서 GitHub</a>
-            <a class="button button-secondary" href="../../index.html">포트폴리오 메인</a>
+      <div class="container">
+        <div class="lucid-link-footer">
+          <div>
+            <p class="lucid-kicker">Project Archive</p>
+            <h2>구현과 문서를 함께 확인하세요</h2>
+            <p>실행 결과, Unity 구현 기록, 문서 저장소를 각각 확인할 수 있습니다.</p>
           </div>
-        </section>
+          <div class="detail-actions">
+            <a class="button button-primary" href="https://lucid-diver-web.vercel.app/" target="_blank" rel="noreferrer">웹 소개</a>
+            <a class="button button-secondary" href="https://github.com/Jin-o12/UnityProject_LucidDiver" target="_blank" rel="noreferrer">Unity GitHub</a>
+            <a class="button button-secondary" href="https://github.com/Jin-o12/Document_LucidDiver" target="_blank" rel="noreferrer">문서 GitHub</a>
+            <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -190,5 +1299,165 @@
       <a class="back-link" href="../../index.html">Kasil Portfolio 메인으로 돌아가기</a>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const youtubeSlots = document.querySelectorAll("[data-youtube-id]");
+      youtubeSlots.forEach((slot) => {
+        const id = slot.dataset.youtubeId;
+        const title = slot.dataset.youtubeTitle;
+
+        if (window.location.protocol === "file:") {
+          const link = document.createElement("a");
+          link.className = "lucid-video-fallback";
+          link.href = `https://www.youtube.com/watch?v=${id}`;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.style.backgroundImage = `url("https://i.ytimg.com/vi/${id}/maxresdefault.jpg")`;
+          link.innerHTML = `<span>▶ YouTube에서 영상 보기<small>로컬 파일에서는 보안 정책상 플레이어 대신 링크를 표시합니다.</small></span>`;
+          slot.appendChild(link);
+          return;
+        }
+
+        const frame = document.createElement("iframe");
+        frame.src = `https://www.youtube.com/embed/${id}?rel=0`;
+        frame.title = title;
+        frame.loading = "lazy";
+        frame.referrerPolicy = "strict-origin-when-cross-origin";
+        frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        frame.allowFullscreen = true;
+        slot.appendChild(frame);
+      });
+
+      const stateData = {
+        spawn: {
+          index: "01 · SPAWN",
+          title: "스폰 포인트에서 개별 순찰 시작",
+          summary: "스폰 포인트에 연결된 패트롤 루트를 각 개체의 기준 경로로 저장하고, 2~3마리가 서로 다른 순찰을 시작합니다.",
+          logic: "스폰 직후 같은 좌표로 뭉치지 않도록 개체별 시작 위치와 루트 기억을 분리합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_ConceptToRuntime.png",
+          designAlt: "꿈식자 스폰과 전체 AI 설계 시각화",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_SpawnPatrol.gif",
+          gifAlt: "꿈식자 스폰 후 순찰을 시작하는 실제 플레이 GIF"
+        },
+        patrol: {
+          index: "02 · PATROL",
+          title: "루트를 지키되 매번 다른 랜덤 순찰",
+          summary: "패트롤 포인트 반경 안의 NavMesh 임의 지점을 선택하고, 이동 가능한 지점인지 검증한 뒤 다음 목적지로 사용합니다.",
+          logic: "정해진 루트의 범위를 벗어나지 않으면서도 정확히 같은 선을 반복하지 않는 순찰선을 만듭니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_RandomPatrolDiagram.png",
+          designAlt: "패트롤 포인트 반경을 활용한 랜덤 순찰 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Patrol.gif",
+          gifAlt: "꿈식자가 패트롤 루트 주변을 랜덤하게 순찰하는 실제 플레이 GIF"
+        },
+        detect: {
+          index: "03 · PERCEPTION",
+          title: "시야·근접·소리를 서로 다른 감지 입력으로 판정",
+          summary: "시야각과 거리, Raycast 차폐, 근접 인지 반경, 소리 인식 반경을 각각 판정해 유효한 정보를 FSM에 전달합니다.",
+          logic: "직접 보이면 추격, 소리만 확인되면 조사로 전환할 수 있도록 감지 결과의 종류를 구분합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_DetectionDesign_v4.png",
+          designAlt: "꿈식자의 시야각, 근접 인지 반경과 소리 인식 반경 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Detect.gif",
+          gifAlt: "꿈식자가 시야와 소리로 대상을 감지하는 실제 플레이 GIF"
+        },
+        investigate: {
+          index: "04 · INVESTIGATE",
+          title: "플레이어가 아니라 소음 앵커의 좌표를 조사",
+          summary: "플레이어 이동 중 생성된 소음 앵커가 청각 반경과 조건을 충족하면 해당 좌표를 조사 목적지로 선택합니다.",
+          logic: "조사 좌표는 NavMesh 위로 보정하고 제한 시간 안에 단서를 찾지 못하면 재탐색 또는 복귀로 전환합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_InvestigateDesign_v2.png",
+          designAlt: "소음 앵커와 청각 반경이 교차해 조사를 시작하는 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Investigate.gif",
+          gifAlt: "꿈식자가 소음 앵커의 좌표를 조사하는 실제 플레이 GIF"
+        },
+        chase: {
+          index: "05 · CHASE",
+          title: "현재 위치만 따라가지 않고 이동 방향을 예측",
+          summary: "타깃의 현재 좌표와 이동 벡터를 이용해 예상 지점을 계산하고, 개체별 접근 위치를 분산합니다.",
+          logic: "여러 개체가 한 점에 겹치지 않으면서 플레이어가 향하는 길목을 압박하도록 추격 목적지를 갱신합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_ChaseDesign.png",
+          designAlt: "플레이어 이동 방향을 예측해 길목을 압박하는 추격 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Chase.gif",
+          gifAlt: "꿈식자가 플레이어의 이동 방향을 예측해 추격하는 실제 플레이 GIF"
+        },
+        attack: {
+          index: "06 · ATTACK",
+          title: "전조 후 이어지는 두 번의 돌진 공격",
+          summary: "공격 방향을 고정하는 전조 뒤 1차와 2차 돌진을 연속 수행하고, 각 피격은 독립적으로 판정합니다.",
+          logic: "1회 피격 시 시간 5초 차감과 루시드 낙인 스택을 적용해 공격을 회피해야 하는 이유를 명확히 만들었습니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_AttackDesign_v2.png",
+          designAlt: "꿈식자의 전조와 두 번 연속 돌진 공격 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Attack.gif",
+          gifAlt: "꿈식자가 전조 후 두 번 연속 돌진 공격하는 실제 플레이 GIF"
+        },
+        search: {
+          index: "07 · SEARCH",
+          title: "공격 또는 추격 이후 마지막 흔적을 재탐색",
+          summary: "타깃을 즉시 포기하지 않고 마지막으로 확인한 위치와 이동 방향 주변을 일정 시간 탐색합니다.",
+          logic: "재탐색 중 다시 감지되면 추격으로 복귀하고, 단서를 찾지 못하면 개별 순찰 루트 복귀를 선택합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_SearchDesign.png",
+          designAlt: "마지막 확인 위치 주변을 재탐색하는 꿈식자 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Search.gif",
+          gifAlt: "꿈식자가 타깃을 놓친 뒤 재탐색하는 실제 플레이 GIF"
+        },
+        return: {
+          index: "08 · RETURN",
+          title: "가장 가까운 자기 루트로 개별 복귀",
+          summary: "어그로가 소진되면 공통 지점이 아니라 각 개체가 기억한 패트롤 루트의 최근접 포인트를 선택합니다.",
+          logic: "복귀가 완료되면 임시 전투·조사 정보를 정리하고 랜덤 순찰 상태를 다시 시작합니다.",
+          design: "./enemy-ai-fsm/images/PM_EnemyAI_ReturnDesign.png",
+          designAlt: "개체별 패트롤 루트의 최근접 지점으로 복귀하는 설계",
+          gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Return.gif",
+          gifAlt: "꿈식자가 각자의 순찰 루트로 복귀하는 실제 플레이 GIF"
+        }
+      };
+
+      const stateButtons = document.querySelectorAll("[data-state-preview]");
+      const stateIndex = document.querySelector("[data-state-index]");
+      const stateTitle = document.querySelector("[data-state-title]");
+      const stateSummary = document.querySelector("[data-state-summary]");
+      const stateLogic = document.querySelector("[data-state-logic]");
+      const stateDesign = document.querySelector("[data-state-design]");
+      const stateGif = document.querySelector("[data-state-gif]");
+
+      const showState = (key) => {
+        const state = stateData[key];
+        if (!state) return;
+        stateIndex.textContent = state.index;
+        stateTitle.textContent = state.title;
+        stateSummary.textContent = state.summary;
+        stateLogic.textContent = state.logic;
+        stateDesign.src = state.design;
+        stateDesign.alt = state.designAlt;
+        stateGif.src = state.gif;
+        stateGif.alt = state.gifAlt;
+
+        stateButtons.forEach((button) => {
+          const active = button.dataset.statePreview === key;
+          button.classList.toggle("is-active", active);
+          button.setAttribute("aria-selected", String(active));
+        });
+      };
+
+      stateButtons.forEach((button) => {
+        button.addEventListener("click", () => showState(button.dataset.statePreview));
+      });
+
+      const stage = document.querySelector("[data-fsm-stage]");
+      const frame = stage?.querySelector("iframe");
+      const triggers = document.querySelectorAll("[data-fsm-load]");
+
+      const loadInteractive = () => {
+        if (!stage || !frame) return;
+        if (!frame.getAttribute("src")) frame.src = frame.dataset.src;
+        stage.classList.add("is-loaded");
+        triggers.forEach((button) => {
+          if (button.tagName === "BUTTON") button.textContent = "인터랙티브 실행 중";
+        });
+      };
+
+      triggers.forEach((trigger) => trigger.addEventListener("click", loadInteractive));
+    })();
+  </script>
 </body>
 </html>
