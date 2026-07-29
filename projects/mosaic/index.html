@@ -3,160 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mos.A.I.c | Kasil Portfolio</title>
-  <meta
-    name="description"
-    content="AI NPC와 함께 흩어진 기억을 복원하는 3D 퍼즐 어드벤처 mos.A.I.c 프로젝트 소개 페이지입니다."
-  >
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <meta name="description" content="AI NPC와 대화하고 퍼즐을 해결하며 기억을 복원하는 3D 퍼즐 어드벤처 mos.A.I.c 프로젝트 포트폴리오">
+  <title>mos.A.I.c | 송예찬 게임 기획 포트폴리오</title>
+  <link rel="stylesheet" href="../../assets/css/project-showcase.css">
 </head>
-<body class="mosaic-theme">
-  <header class="detail-hero">
-    <div class="container detail-layout">
-      <div class="detail-panel">
-        <p class="eyebrow">3D Puzzle Adventure with AI NPC</p>
-        <h1>mos.A.I.c</h1>
-        <p class="mosaic-subtitle">AI NPC와 대화하며 흩어진 기억을 복원해 나가는 에피소드형 3D 퍼즐 어드벤처</p>
-        <p class="hero-text">
-          mos.A.I.c는 잃어버린 기억을 가진 주인공이 기억 공간을 탐색하며 퍼즐과 대화를 통해 삶의 조각을 복원해 나가는 팀 프로젝트입니다.
-          이야기, 퍼즐, 사운드, AI NPC 상호작용이 따로 놀지 않도록 한 흐름 안에 묶는 데 초점을 두고 설계되었습니다.
-        </p>
-        <div class="mosaic-facts">
-          <div class="mosaic-fact">
-            <span class="mosaic-fact-label">Period</span>
-            <span class="mosaic-fact-value">2026.03.16 - 2026.04.29</span>
-          </div>
-          <div class="mosaic-fact">
-            <span class="mosaic-fact-label">Team</span>
-            <span class="mosaic-fact-value">Team 모으미 / Team Moemi</span>
-          </div>
-          <div class="mosaic-fact">
-            <span class="mosaic-fact-label">Focus</span>
-            <span class="mosaic-fact-value">AI NPC, 기억 복원, 에피소드형 퍼즐 진행</span>
-          </div>
+<body class="mosaic-showcase">
+  <nav class="showcase-nav">
+    <div class="showcase-shell showcase-nav-inner">
+      <a class="showcase-brand" href="../../index.html">KASIL / PORTFOLIO</a>
+      <a href="#role">맡은 역할</a><a href="#work">핵심 구현</a><a href="#trouble">트러블슈팅</a><a href="#scope">담당 범위</a>
+    </div>
+  </nav>
+
+  <header class="showcase-hero">
+    <div class="showcase-shell showcase-hero-grid">
+      <div>
+        <p class="kicker">3D PUZZLE ADVENTURE · TEAM MOEMI</p>
+        <h1 class="showcase-title">mos.<br>A.I.c</h1>
+        <p class="showcase-lead">AI NPC와 대화하고 퍼즐을 해결하며 흩어진 기억을 복원하는 에피소드형 3D 퍼즐 어드벤처입니다.</p>
+        <div class="fact-row">
+          <span class="fact-pill"><strong>기간</strong> 2026.03.16–04.29</span>
+          <span class="fact-pill"><strong>담당</strong> Episode 3 · Sound · Gameplay</span>
+          <span class="fact-pill"><strong>엔진</strong> Unity 2022.3.62f3</span>
         </div>
-        <div class="detail-actions">
-          <a class="button button-primary" href="https://github.com/WooSeonghyeok/UnityProject_mozAIc" target="_blank" rel="noreferrer">GitHub 보기</a>
-          <a class="button button-secondary" href="https://app.notion.com/p/2-Mos-A-I-c-322a88c5418980729b37ddd77a03cf74?source=copy_link" target="_blank" rel="noreferrer">Notion 문서</a>
-          <a class="button button-secondary" href="https://youtube.com/watch?si=7UlzXbM8yDLmLV7z&v=jmPI6qiN4U0&feature=youtu.be" target="_blank" rel="noreferrer">시연 영상</a>
-          <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
+        <div class="action-row">
+          <a class="showcase-button primary" href="https://www.youtube.com/watch?v=jmPI6qiN4U0" target="_blank" rel="noreferrer">전체 시연 영상</a>
+          <a class="showcase-button" href="https://github.com/WooSeonghyeok/UnityProject_mozAIc" target="_blank" rel="noreferrer">구현 GitHub</a>
+          <a class="showcase-button" href="https://app.notion.com/p/39836532580e81cf9536df804eebe0d5" target="_blank" rel="noreferrer">Notion 프로젝트</a>
         </div>
       </div>
-
-      <aside class="mosaic-hero-media">
-        <img src="../../assets/images/mosaic-cover.png" alt="mos.A.I.c 시작 화면 이미지">
-      </aside>
+      <div class="hero-media">
+        <img src="../../assets/images/mosaic-demo.gif" alt="mos.A.I.c 플레이 장면 모음">
+        <div class="hero-media-copy">
+          <div><strong>기억 복원 플레이 루프</strong><span>대화 → 목표 → 퍼즐 → 결과 → 다음 기억</span></div>
+          <a href="https://www.youtube.com/watch?v=jmPI6qiN4U0" target="_blank" rel="noreferrer">영상으로 보기 ↗</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="content-grid">
-        <section class="content-card">
-          <p class="section-label">Overview</p>
-          <h2>프로젝트 개요</h2>
-          <p>
-            플레이어는 기억을 잃은 주인공이 되어 기억 공간을 탐험하고, 각 에피소드에서 AI NPC와의 대화와 퍼즐 풀이를 통해
-            삶의 단편을 하나씩 되찾아갑니다. 퍼즐을 푸는 행위 자체보다 기억이 선명해지는 감정선과 관계의 복원이 함께 전개되도록
-            구조를 잡은 점이 이 프로젝트의 핵심입니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Tech Stack</p>
-          <h2>사용 기술</h2>
-          <ul class="meta-list">
-            <li>Unity</li>
-            <li>C#</li>
-            <li>Unity UI</li>
-            <li>JSON Data</li>
-            <li>Animator</li>
-            <li>SoundManager</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Narrative</p>
-          <h2>에피소드 구성</h2>
-          <ul>
-            <li>EP.0 미지로의 발돋움: 기억 여행의 시작을 여는 도입부</li>
-            <li>EP.1 별을 헤는 소녀: 어린 시절의 기억을 별과 발판 퍼즐로 복원</li>
-            <li>EP.2 사라진 그림: 색과 시점을 활용해 잊힌 창작의 기억을 연결</li>
-            <li>EP.3 멈춰버린 노래: 소리와 리듬을 단서로 사랑의 기억을 되짚기</li>
-            <li>EP.4 뒤섞인 이야기: 앞선 조각들을 하나의 기억으로 다시 엮는 마무리</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">AI NPC</p>
-          <h2>대화 시스템 구성</h2>
-          <p>
-            NPC 대화는 단순 텍스트 출력이 아니라 각 캐릭터의 프로필과 진행 상황을 바탕으로 반응하도록 구성했습니다.
-            <code>PromptBuilder</code>, <code>ChatNPCManager</code>, <code>ServerChat</code>, <code>GameDialogueDatabase</code>
-            구조를 통해 JSON 기반 NPC 정보, 프롬프트 생성, 응답 요청, UI 출력 흐름이 연결되며 기억 복원이라는 주제를 상호작용 안으로 끌어왔습니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Puzzle Design</p>
-          <h2>대표 퍼즐 구성</h2>
-          <ul>
-            <li>EP.1: 별을 수집하고 색을 기억해 올바른 발판을 선택하는 퍼즐</li>
-            <li>EP.1: 빙판길 위에서 축 고정과 정지 판정을 이용한 슬라이딩 퍼즐</li>
-            <li>EP.2: 색을 혼합해 같은 색 발판에 착지하는 색상 매칭 퍼즐</li>
-            <li>EP.2: 시점 방향을 맞춰 조각을 결합하는 공간 퍼즐</li>
-            <li>EP.3: 소리를 듣고 악보 조각을 찾는 수집형 퍼즐과 리듬 점프 맵</li>
-            <li>EP.4: 조각과 색을 맞추며 최종 기억 완성도를 계산하는 통합 퍼즐</li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">System Design</p>
-          <h2>사운드와 진행 관리</h2>
-          <p>
-            프로젝트 전반의 사운드는 <code>SoundManager</code>, <code>SoundProfile</code>, <code>SoundController</code>,
-            <code>SoundTrigger</code>, <code>UISoundTrigger</code>로 나누어 중앙 집중식으로 관리했습니다. 저장과 불러오기는 JSON 데이터 구조를 기반으로 설계해
-            체크포인트, NPC 상태, 엔딩 조건과 태그 점수까지 이어지도록 구성했습니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Troubleshooting</p>
-          <h2>대표 트러블슈팅</h2>
-          <p>
-            에피소드 2 로비 복귀 컷신에서 이미지 컷신과 텍스트 컷신이 겹치며 마우스 커서 잠금 UI가 중간에 풀리는 문제가 있었습니다.
-            원인은 이미지 컷신 종료 시점에 <code>CutsceneMode</code>가 해제되지만 텍스트 컷신은 아직 끝나지 않는 흐름 충돌이었습니다.
-            이를 해결하기 위해 해당 퍼즐 복귀 컷신에서는 이미지 컷신이 <code>CutsceneMode</code>를 해제하지 않도록 별도 bool 조건을 추가했고,
-            그 결과 컷신 흐름과 UI 상태가 안정적으로 유지되도록 정리했습니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Project Meaning</p>
-          <h2>이 프로젝트에서 보여준 점</h2>
-          <p>
-            mos.A.I.c는 퍼즐 하나하나를 따로 나열한 게임이 아니라, 기억 복원이라는 주제를 시스템으로 번역해 보려는 시도가 강한 프로젝트였습니다.
-            AI 대화, 에피소드 구조, 퍼즐, 사운드, 저장 데이터를 하나의 감정선 안에서 묶어내려 했다는 점이 이 작업의 가장 큰 특징입니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Links</p>
-          <h2>관련 링크</h2>
-          <ul>
-            <li><a href="https://github.com/WooSeonghyeok/UnityProject_mozAIc" target="_blank" rel="noreferrer">GitHub 저장소 보기</a></li>
-            <li><a href="https://app.notion.com/p/2-Mos-A-I-c-322a88c5418980729b37ddd77a03cf74?source=copy_link" target="_blank" rel="noreferrer">Notion 문서 보기</a></li>
-            <li><a href="https://youtube.com/watch?si=7UlzXbM8yDLmLV7z&v=jmPI6qiN4U0&feature=youtu.be" target="_blank" rel="noreferrer">시연 영상 보기</a></li>
-          </ul>
-        </section>
+  <main>
+    <section class="showcase-section" id="role">
+      <div class="showcase-shell">
+        <div class="section-head">
+          <div><span class="section-index">01 · ROLE</span><h2>맡은 역할</h2></div>
+          <p class="section-intro">기능 하나를 따로 만드는 데 그치지 않고, 에피소드 3의 시나리오·퍼즐·대화·사운드·저장 결과가 하나의 플레이 순서로 이어지도록 연결했습니다.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card"><b>EPISODE DESIGN & IMPLEMENTATION</b><h3>에피소드 3 전체</h3><ul><li>로비와 3개 세부 스테이지 진행</li><li>퍼즐 완료 조건과 출구 개방 연결</li><li>컷씬·NPC·리듬 퍼즐 연출 구현</li></ul></article>
+          <article class="role-card"><b>SYSTEM</b><h3>사운드 시스템</h3><ul><li>BGM·Ambient·UI·SFX 역할 분리</li><li>씬별 프로필과 AudioMixer 연결</li><li>설정 저장·초기화·중복 재생 수정</li></ul></article>
+          <article class="role-card"><b>PROGRESSION</b><h3>결과와 저장</h3><ul><li>스테이지별 점수와 태그 누적</li><li>힌트·AI 상호작용 횟수 기록</li><li>엔딩 판정과 세이브 데이터 연결</li></ul></article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="showcase-section" id="work">
+      <div class="showcase-shell">
+        <div class="section-head">
+          <div><span class="section-index">02 · CORE WORK</span><h2>핵심 구현 자료</h2></div>
+          <p class="section-intro">아래 탭을 누르면 에피소드 흐름, 사운드 구조, 결과 데이터가 서로 어떻게 맞물리는지와 대표 코드를 함께 확인할 수 있습니다.</p>
+        </div>
+        <ol class="flow-track">
+          <li><strong>NPC 대화</strong><span>기억의 단서 확인</span></li><li><strong>목표 제시</strong><span>다음 행동 명확화</span></li>
+          <li><strong>퍼즐 수행</strong><span>스테이지별 규칙</span></li><li><strong>결과 기록</strong><span>점수·태그·힌트</span></li>
+          <li><strong>연출 재생</strong><span>컷씬·사운드</span></li><li><strong>기억 개방</strong><span>다음 진행 연결</span></li>
+        </ol>
+        <div class="workbench">
+          <div class="work-tabs" role="tablist">
+            <button class="work-tab active" data-panel="m-episode"><strong>에피소드 3</strong>세 개의 퍼즐을 하나의 기억으로</button>
+            <button class="work-tab" data-panel="m-sound"><strong>사운드 시스템</strong>씬 오브젝트의 호출을 중앙화</button>
+            <button class="work-tab" data-panel="m-result"><strong>결과·엔딩</strong>행동 결과를 점수와 태그로</button>
+            <button class="work-tab" data-panel="m-cutscene"><strong>컷씬 제어</strong>입력과 진행 상태를 동기화</button>
+          </div>
+          <div>
+            <article class="work-panel active" id="m-episode">
+              <div class="work-visual"><div class="diagram"><div class="orbit"></div><div class="diagram-center">Episode 3<br>기억 복원</div><span class="orbit-node n1">3-1<br>소리 조각</span><span class="orbit-node n2">3-2<br>리듬 퍼즐</span><span class="orbit-node n3">3-3<br>최종 피아노</span><span class="orbit-node n4">Lobby<br>대화·선택</span></div></div>
+              <div class="work-copy"><p class="kicker">EPISODE 3 FLOW</p><h3>퍼즐 결과가 다음 장면의 의미가 되도록</h3><p>각 스테이지를 독립 미니게임으로 두지 않고, 플레이어의 선택·힌트 사용·수집 태그를 결과 데이터로 모아 최종 기억 복원과 엔딩 판정에 사용했습니다.</p><div class="logic-stack"><div class="logic-step"><i>1</i><span>로비 대화로 기억의 맥락과 목표를 제시</span></div><div class="logic-step"><i>2</i><span>3-1·3-2·3-3의 결과를 공통 구조로 보고</span></div><div class="logic-step"><i>3</i><span>완료 연출과 출구를 열고 다음 흐름으로 전환</span></div></div><div class="code-actions"><button class="code-open" type="button" data-code-group="episode">관련 전체 스크립트 보기</button></div></div>
+            </article>
+            <article class="work-panel" id="m-sound">
+              <div class="work-visual"><div class="diagram"><div class="diagram-center">Sound<br>Manager</div><span class="orbit-node n1">BGM</span><span class="orbit-node n2">Ambient</span><span class="orbit-node n3">SFX</span><span class="orbit-node n4">UI</span></div></div>
+              <div class="work-copy"><p class="kicker">CENTRAL AUDIO</p><h3>재생 책임과 데이터 책임을 분리</h3><p>씬 오브젝트는 “무슨 소리가 필요한지”만 요청하고, 음원·볼륨·믹서·씬 전환은 SoundManager와 SoundProfile이 담당하도록 정리했습니다.</p><div class="code-card"><div class="code-label">SoundManager.cs · 실제 구조</div><pre><code>public enum BGMType { Title, Episode0, Episode1_1, Episode3_2, Episode4_Finale }
+public enum AmbientType { Ep0_Loop, Ep1_1_Loop, Ep3_2_Loop, Ep4_Loop }
+public enum UIType { Click, Hover, Confirm, Cancel, Open, Close }
+public enum SFXType { Jump, Land, PortalPass, Ep3_2_TileStepCorrect }</code></pre></div><div class="code-actions"><button class="code-open" type="button" data-code-group="sound">SoundManager 전체 보기</button></div></div>
+            </article>
+            <article class="work-panel" id="m-result">
+              <div class="work-visual"><div class="diagram"><div class="diagram-center">Ending<br>Evaluation</div><span class="orbit-node n1">관계 점수</span><span class="orbit-node n2">퍼즐 점수</span><span class="orbit-node n3">감정 점수</span><span class="orbit-node n4">기억 태그</span></div></div>
+              <div class="work-copy"><p class="kicker">PROGRESSION DATA</p><h3>플레이 기록을 엔딩 근거로 변환</h3><p>각 스테이지의 결과를 공통 데이터로 모으고, 힌트 사용량과 AI 상호작용, 필수 기억 태그를 합산해 엔딩을 판정했습니다.</p><div class="code-card"><div class="code-label">Ep_3Manager.cs · 실제 구조</div><pre><code>data.totalPuzzleScore =
+    stage3_1Result.puzzleScore +
+    stage3_2Result.puzzleScore +
+    stage3_3Result.puzzleScore;
+
+data.totalHintCount =
+    stage3_1Result.hintCount + ...;</code></pre></div><div class="code-actions"><button class="code-open" type="button" data-code-group="result">결과·저장 스크립트 보기</button></div></div>
+            </article>
+            <article class="work-panel" id="m-cutscene">
+              <div class="work-visual"><div class="diagram"><div class="diagram-center">Cutscene<br>State</div><span class="orbit-node n1">입력 잠금</span><span class="orbit-node n2">이미지 재생</span><span class="orbit-node n3">텍스트 재생</span><span class="orbit-node n4">상태 해제</span></div></div>
+              <div class="work-copy"><p class="kicker">STATE SYNCHRONIZATION</p><h3>연출이 모두 끝난 뒤에만 조작을 반환</h3><p>이미지 컷씬과 텍스트 컷씬의 수명이 달라 입력 잠금이 먼저 풀리던 문제를 별도 조건으로 분리했습니다. UI와 커서가 장면 중간에 노출되지 않도록 실제 연출 종료 시점을 기준으로 상태를 해제합니다.</p><div class="logic-stack"><div class="logic-step"><i>1</i><span>컷씬 시작 시 플레이어 입력·커서 상태 잠금</span></div><div class="logic-step"><i>2</i><span>이미지와 텍스트 연출을 각각 완료 판정</span></div><div class="logic-step"><i>3</i><span>마지막 연출이 끝난 뒤 조작 상태 복구</span></div></div><div class="code-actions"><button class="code-open" type="button" data-code-group="cutscene">컷씬 관련 스크립트 보기</button></div></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-section" id="trouble">
+      <div class="showcase-shell">
+        <div class="section-head"><div><span class="section-index">03 · TROUBLESHOOTING</span><h2>트러블 슈팅</h2></div><p class="section-intro">“오류를 없앴다”가 아니라 플레이 흐름이 왜 끊겼는지 찾아 책임과 종료 조건을 다시 나눈 사례입니다.</p></div>
+        <div class="trouble-grid">
+          <article class="trouble-card"><header><span>CASE 01 · CUTSCENE</span><h3>컷씬 중 커서 잠금이 먼저 해제됨</h3></header><div class="ba-grid"><div class="ba-panel before"><b>BEFORE</b><p>이미지 연출 종료가 전체 컷씬 종료로 처리되어 텍스트가 남아 있는데도 UI와 커서가 활성화됐습니다.</p></div><div class="ba-panel after"><b>AFTER</b><p>두 연출의 종료 조건을 분리하고, 마지막 연출이 끝난 뒤에만 CutsceneMode를 해제했습니다.</p></div></div></article>
+          <article class="trouble-card"><header><span>CASE 02 · AUDIO</span><h3>씬 전환 뒤 BGM이 겹치거나 초기화됨</h3></header><div class="ba-grid"><div class="ba-panel before"><b>BEFORE</b><p>씬마다 재생 책임이 흩어져 같은 BGM이 중복되거나 옵션 값이 기본값으로 되돌아갔습니다.</p></div><div class="ba-panel after"><b>AFTER</b><p>중앙 매니저와 씬 프로필로 재생 경로를 통합하고, 사용자 설정 저장·리셋 기준을 분리했습니다.</p></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-section" id="scope">
+      <div class="showcase-shell">
+        <div class="section-head"><div><span class="section-index">04 · SCOPE</span><h2>담당 범위</h2></div><p class="section-intro">팀 전체 기능과 개인 구현을 구분했습니다. 아래는 Git 커밋과 프로젝트 문서로 확인한 직접 작업 범위입니다.</p></div>
+        <div class="scope-grid">
+          <div class="scope-list"><div class="scope-item"><strong>직접 구현</strong>에피소드 3 로비·3개 스테이지·컷씬·퍼즐 연결</div><div class="scope-item"><strong>직접 구현</strong>SoundManager 리팩터링·AudioMixer·설정 저장</div><div class="scope-item"><strong>직접 구현</strong>에피소드 결과·세이브·엔딩 판정 연동</div><div class="scope-item"><strong>직접 수정</strong>NPC NavMesh, 컷씬 입력, BGM 중복 등 통합 오류</div></div>
+          <aside class="commit-proof"><strong>커밋 근거</strong><p>2026.04.03–04.29 사이 Sound 시스템, Episode 3, SaveManager 관련 직접 커밋 38건과 병합 기록을 확인했습니다.</p><p><small>AI NPC 공통 대화 프레임워크와 다른 에피소드는 팀 공동 결과이며, 이 페이지에서는 에피소드 3에 적용·연결한 범위만 개인 기여로 표현합니다.</small></p></aside>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="container">
-      <a class="back-link" href="../../index.html">Kasil Portfolio 메인으로 돌아가기</a>
-    </div>
-  </footer>
+  <dialog class="project-code-dialog" data-project-code-dialog>
+    <div class="project-code-head"><div><h3 data-code-title>전체 스크립트</h3><p data-code-path></p></div><button class="project-code-close" type="button" aria-label="전체 스크립트 닫기" data-code-close>×</button></div>
+    <div class="project-code-layout"><nav class="project-code-files" data-code-files aria-label="관련 스크립트"></nav><div class="project-code-view"><div class="project-code-note" data-code-note></div><pre><code data-code-content></code></pre></div></div>
+  </dialog>
+
+  <footer class="showcase-footer"><div class="showcase-shell">© Song Yechan · <a href="../../index.html">포트폴리오 메인으로 돌아가기</a></div></footer>
+  <script>
+    document.querySelectorAll('.work-tab').forEach(tab => tab.addEventListener('click', () => {
+      const area = tab.closest('.workbench');
+      area.querySelectorAll('.work-tab,.work-panel').forEach(el => el.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.panel).classList.add('active');
+    }));
+  </script>
+  <script src="./code-data.js"></script>
+  <script src="../../assets/js/project-code-viewer.js"></script>
 </body>
 </html>

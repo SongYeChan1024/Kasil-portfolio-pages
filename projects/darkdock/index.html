@@ -3,163 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darkdock | Kasil Portfolio</title>
-  <meta
-    name="description"
-    content="Darkdock 프로젝트 소개 페이지입니다."
-  >
-  <link rel="stylesheet" href="../../assets/css/style.css">
+  <meta name="description" content="제한된 시야 속에서 적의 추적을 피해 탈출하는 2.5D 공포 어드벤처 DarkDock 프로젝트 포트폴리오">
+  <title>DarkDock | 송예찬 게임 기획 포트폴리오</title>
+  <link rel="stylesheet" href="../../assets/css/project-showcase.css">
 </head>
-<body class="darkdock-theme">
-  <header class="detail-hero">
-    <div class="container detail-layout">
-      <div class="detail-panel">
-        <p class="eyebrow">3D Based 2.5D Horror Escape Game</p>
-        <h1>DARKDOCK</h1>
-        <p class="darkdock-subtitle">Enemy AI와 레벨 디자인을 중심으로 구현한 3D 기반 2.5D 공포 탈출 게임</p>
-        <p class="hero-text">
-          Darkdock은 3D 환경 위에서 2.5D 방식으로 진행되는 공포 탈출 게임입니다. 저는 이 프로젝트에서
-          Enemy AI 구현, 레벨 디자인, Animator 구조 개선을 담당했고, 단순한 동작 구현을 넘어
-          상태 관리가 실제 플레이 감각에 얼마나 큰 영향을 주는지 직접 다뤄볼 수 있었습니다.
-        </p>
-        <div class="darkdock-facts">
-          <div class="darkdock-fact">
-            <span class="darkdock-fact-label">Duration</span>
-            <span class="darkdock-fact-value">3주</span>
-          </div>
-          <div class="darkdock-fact">
-            <span class="darkdock-fact-label">Type</span>
-            <span class="darkdock-fact-value">팀 프로젝트</span>
-          </div>
-          <div class="darkdock-fact">
-            <span class="darkdock-fact-label">Role</span>
-            <span class="darkdock-fact-value">Enemy AI 구현, 레벨 디자인, Animator 구조 개선</span>
-          </div>
-        </div>
-        <div class="detail-actions">
-          <a class="button button-primary" href="https://github.com/Jin-o12/Project_TwoSlot" target="_blank" rel="noreferrer">GitHub 보기</a>
-          <a class="button button-secondary" href="https://app.notion.com/p/Dark-Dock-2ed386c115f280b783addf421919d6cf?source=copy_link" target="_blank" rel="noreferrer">Notion 문서</a>
-          <a class="button button-secondary" href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">플레이 영상</a>
-          <a class="button button-secondary" href="../../index.html">메인으로 돌아가기</a>
-        </div>
+<body class="darkdock-showcase">
+  <nav class="showcase-nav"><div class="showcase-shell showcase-nav-inner"><a class="showcase-brand" href="../../index.html">KASIL / PORTFOLIO</a><a href="#role">맡은 역할</a><a href="#work">핵심 구현</a><a href="#trouble">트러블슈팅</a><a href="#scope">담당 범위</a></div></nav>
+  <header class="showcase-hero">
+    <div class="showcase-shell showcase-hero-grid">
+      <div>
+        <p class="kicker">2.5D HORROR ESCAPE · TEAM PROJECT</p>
+        <h1 class="showcase-title">DARK<br>DOCK</h1>
+        <p class="showcase-lead">제한된 시야 속에서 서로 다른 적의 위협을 파악하고, 아이템을 선택해 탈출 경로를 개척하는 3D 기반 2.5D 공포 어드벤처입니다.</p>
+        <div class="fact-row"><span class="fact-pill"><strong>기간</strong> 2026.01.21–02.08</span><span class="fact-pill"><strong>담당</strong> Enemy · Level · Item</span><span class="fact-pill"><strong>엔진</strong> Unity 2022.3.62f3</span></div>
+        <div class="action-row"><a class="showcase-button primary" href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">플레이 영상</a><a class="showcase-button" href="https://github.com/Jin-o12/Project_TwoSlot" target="_blank" rel="noreferrer">구현 GitHub</a><a class="showcase-button" href="https://app.notion.com/p/39836532580e8104af60e54f97a85cfc" target="_blank" rel="noreferrer">Notion 프로젝트</a></div>
       </div>
-
-      <aside class="darkdock-hero-media">
-        <img src="../../assets/images/darkdock-cover.png" alt="Darkdock 커버 이미지">
-      </aside>
+      <div class="hero-media"><img src="../../assets/images/darkdock-demo.gif" alt="DarkDock 플레이 장면 모음"><div class="hero-media-copy"><div><strong>공간에서 작동하는 위협 설계</strong><span>적 행동 · 아이템 대응 · 탈출 동선</span></div><a href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">영상으로 보기 ↗</a></div></div>
     </div>
   </header>
+  <main>
+    <section class="showcase-section" id="role"><div class="showcase-shell"><div class="section-head"><div><span class="section-index">01 · ROLE</span><h2>맡은 역할</h2></div><p class="section-intro">Enemy AI만 만든 것이 아니라, 각 적의 행동이 레벨에서 실제 압박으로 느껴지고 아이템 선택으로 대응할 수 있도록 스테이지·적·아이템을 함께 구성했습니다.</p></div><div class="role-grid">
+      <article class="role-card"><b>ENEMY & ANIMATION</b><h3>적 행동 구현</h3><ul><li>경비견 횡축 추적·공격·피격</li><li>천장 매복형 적과 오일 드롭</li><li>공격·이동 Animator 충돌 수정</li></ul></article>
+      <article class="role-card"><b>LEVEL DESIGN</b><h3>3개 스테이지</h3><ul><li>적 배치와 이동 경로 설계</li><li>위험·회피·완급 공간 구성</li><li>NavMesh와 실제 플레이 통합 QA</li></ul></article>
+      <article class="role-card"><b>GAMEPLAY</b><h3>아이템 3종</h3><ul><li>소음 폭탄·플레어건·에너지 드링크</li><li>2슬롯 획득·교체·드롭 흐름</li><li>UI 피드백과 사용 상태 연결</li></ul></article>
+    </div></div></section>
 
-  <main class="section">
-    <div class="container">
-      <div class="content-grid">
-        <section class="content-card">
-          <p class="section-label">Overview</p>
-          <h2>프로젝트 개요</h2>
-          <p>
-            Darkdock은 제한된 시야와 긴장감 있는 환경 속에서 탈출을 목표로 하는 공포 게임입니다.
-            발표 자료의 전체 콘셉트처럼 단순한 공포 연출보다 플레이어의 선택과 압박을 설계하는 데
-            초점을 두었고, 저는 그중에서도 적의 행동 구조와 플레이 흐름을 만드는 파트를 맡아 구현했습니다.
-          </p>
-        </section>
+    <section class="showcase-section" id="work"><div class="showcase-shell"><div class="section-head"><div><span class="section-index">02 · CORE WORK</span><h2>핵심 구현 자료</h2></div><p class="section-intro">적의 상태, 공간 배치, 대응 아이템이 하나의 플레이 경험을 만드는 과정을 탭별로 확인할 수 있습니다.</p></div>
+      <ol class="flow-track"><li><strong>위협 노출</strong><span>시야 밖 소리·실루엣</span></li><li><strong>감지</strong><span>거리와 횡축 판정</span></li><li><strong>추적</strong><span>NavMesh 이동</span></li><li><strong>공격</strong><span>이동 잠금·Hitbox</span></li><li><strong>아이템 대응</strong><span>교란·조명·회복</span></li><li><strong>탈출</strong><span>다음 안전 구간</span></li></ol>
+      <div class="workbench"><div class="work-tabs" role="tablist">
+        <button class="work-tab active" data-panel="d-hound"><strong>경비견</strong>횡축 추적과 공격 상태</button>
+        <button class="work-tab" data-panel="d-plant"><strong>매복형 적</strong>오일 드롭과 공간 제약</button>
+        <button class="work-tab" data-panel="d-item"><strong>아이템 3종</strong>위협에 대응하는 선택지</button>
+        <button class="work-tab" data-panel="d-level"><strong>레벨 디자인</strong>3개 스테이지의 압박 곡선</button>
+      </div><div>
+        <article class="work-panel active" id="d-hound"><div class="work-visual"><div class="diagram"><div class="diagram-center">Guard<br>Hound</div><span class="orbit-node n1">Patrol</span><span class="orbit-node n2">Trace</span><span class="orbit-node n3">Attack</span><span class="orbit-node n4">Hit / Recoil</span></div></div><div class="work-copy"><p class="kicker">ENEMY STATE</p><h3>2.5D 공간에 맞춘 횡축 추적</h3><p>플레이어와의 X축 거리, 공격 Hitbox, 피격·공격 중 여부를 우선순위로 판정해 이동과 공격이 동시에 실행되지 않도록 했습니다.</p><div class="code-card"><div class="code-label">EnemyCtrl.cs · 실제 상태 분기</div><pre><code>if (isHitted) return;
+if (HandleBusyState()) return;
 
-        <section class="content-card">
-          <p class="section-label">Tech Stack</p>
-          <h2>사용 기술</h2>
-          <ul class="meta-list">
-            <li>Unity</li>
-            <li>C#</li>
-            <li>FSM</li>
-            <li>NavMeshAgent</li>
-            <li>Animator Transition</li>
-            <li>Unity Scene 구성</li>
-          </ul>
-        </section>
+if (inAttackRange) HandleAttackState(playerPos);
+else if (distanceX &lt; traceDist) HandleTraceState(playerPos);
+else HandlePatrolOrIdleState();</code></pre></div><div class="code-actions"><button class="code-open" type="button" data-code-group="hound">경비견 전체 스크립트 보기</button></div></div></article>
+        <article class="work-panel" id="d-plant"><div class="work-visual"><div class="diagram"><div class="diagram-center">Ambush<br>Plant</div><span class="orbit-node n1">천장 대기</span><span class="orbit-node n2">방울 생성</span><span class="orbit-node n3">바닥 판정</span><span class="orbit-node n4">오일 퍼들</span></div></div><div class="work-copy"><p class="kicker">AREA DENIAL</p><h3>플레이어가 서 있는 공간을 위험으로 변환</h3><p>고정된 적이 단순 투사체만 발사하는 대신, 일정 간격으로 오일 방울을 떨어뜨려 바닥에 위험 구역을 남기도록 구성했습니다.</p><div class="code-card"><div class="code-label">AmbushPlantOilDripper.cs · 실제 생성 흐름</div><pre><code>if (Time.time &lt; nextTime) return;
+SpawnDrop();
+ScheduleNext();
 
-        <section class="content-card">
-          <p class="section-label">My Role</p>
-          <h2>핵심 담당</h2>
-          <ul>
-            <li>Enemy AI 상태 구조 설계</li>
-            <li>NavMesh 기반 플레이어 추적 구현</li>
-            <li>공격 상태와 이동 상태 충돌 개선</li>
-            <li>레벨 디자인 구성</li>
-            <li>Animator 전환 조건 정리</li>
-          </ul>
-        </section>
+var oil = drop.GetComponent&lt;OilDrop&gt;();
+oil.puddlePrefab = puddlePrefab;</code></pre></div><div class="code-actions"><button class="code-open" type="button" data-code-group="plant">오일 생성 전체 스크립트 보기</button></div></div></article>
+        <article class="work-panel" id="d-item"><div class="work-visual"><div class="diagram"><div class="diagram-center">2 SLOT<br>INVENTORY</div><span class="orbit-node n1">소음 폭탄<br>교란</span><span class="orbit-node n2">플레어건<br>조명·공격</span><span class="orbit-node n3">에너지 드링크<br>회복·강화</span><span class="orbit-node n4">획득·교체<br>드롭</span></div></div><div class="work-copy"><p class="kicker">PLAYER CHOICE</p><h3>제한된 두 칸이 만드는 우선순위</h3><p>세 종류의 아이템을 모두 들 수 없도록 2슬롯 구조를 만들고, 같은 슬롯을 다시 누르면 총으로 복귀하도록 조작 흐름을 정리했습니다.</p><div class="code-card"><div class="code-label">PlayerItemTrigger.cs · 실제 전환 규칙</div><pre><code>if (activeMode == ActiveMode.Item
+    &amp;&amp; selectedSlot == slotIndex)
+{
+    SwitchToGun();
+    return;
+}
 
-        <section class="content-card">
-          <p class="section-label">Implementation</p>
-          <h2>대표 구현</h2>
-          <ul>
-            <li>FSM 기반 적 상태 구조 설계</li>
-            <li>플레이어를 감지하고 추적하는 Enemy AI 구현</li>
-            <li>공격 상태와 이동 상태를 분리해 동작 충돌을 줄이는 구조 정리</li>
-            <li>Animator 파라미터와 전환 조건을 재정리해 상태 흐름 안정화</li>
-          </ul>
-        </section>
+selectedSlot = slotIndex;
+activeMode = ActiveMode.Item;</code></pre></div><div class="code-actions"><button class="code-open" type="button" data-code-group="item">아이템 전체 스크립트 보기</button></div></div></article>
+        <article class="work-panel" id="d-level"><div class="work-visual"><div class="diagram"><div class="diagram-center">3 STAGES<br>PRESSURE</div><span class="orbit-node n1">Stage 1<br>규칙 학습</span><span class="orbit-node n2">Stage 2<br>복합 위협</span><span class="orbit-node n3">Stage 3<br>최대 압박</span><span class="orbit-node n4">회피 공간<br>완급 조절</span></div></div><div class="work-copy"><p class="kicker">LEVEL PRESSURE CURVE</p><h3>적의 기능을 공간의 문제로 바꾸기</h3><p>스테이지 1에서 개별 위협을 학습시키고, 2에서 적과 아이템 선택을 조합하며, 3에서 경로와 배치 밀도를 높여 종합적으로 사용하게 했습니다.</p><div class="logic-stack"><div class="logic-step"><i>1</i><span>이동 경로와 적 감지 범위를 먼저 배치</span></div><div class="logic-step"><i>2</i><span>우회·후퇴가 가능한 완충 공간 확보</span></div><div class="logic-step"><i>3</i><span>실제 NavMesh와 충돌을 기준으로 좌표 재조정</span></div></div><div class="code-actions"><button class="code-open" type="button" data-code-group="level">레벨 연동 스크립트 보기</button></div></div></article>
+      </div></div>
+    </div></section>
 
-        <section class="content-card">
-          <p class="section-label">Level Design</p>
-          <h2>레벨 디자인</h2>
-          <ul>
-            <li>적 배치와 이동 동선을 고려해 플레이어가 긴장감을 유지하도록 공간 구성</li>
-            <li>위협 요소가 한 번에 과도하게 몰리지 않도록 구간별 밀도를 조절</li>
-            <li>추적과 회피가 모두 드러날 수 있도록 씬 흐름과 구역 구조를 설계</li>
-            <li>AI의 동작이 잘 드러나는 레벨 구조를 함께 조정해 플레이 경험을 보완</li>
-          </ul>
-        </section>
+    <section class="showcase-section" id="trouble"><div class="showcase-shell"><div class="section-head"><div><span class="section-index">03 · TROUBLESHOOTING</span><h2>트러블 슈팅</h2></div><p class="section-intro">공격 애니메이션, 이동, 피격, 환경 오브젝트가 동시에 작동할 때 생긴 충돌을 상태 우선순위와 생명주기로 해결했습니다.</p></div><div class="trouble-grid">
+      <article class="trouble-card"><header><span>CASE 01 · STATE COLLISION</span><h3>공격 중에도 적이 계속 이동함</h3></header><div class="ba-grid"><div class="ba-panel before"><b>BEFORE</b><p>Animator는 공격 중이지만 NavMesh 목적지는 계속 갱신되어 적이 미끄러지듯 접근했습니다.</p></div><div class="ba-panel after"><b>AFTER</b><p>피격·공격·리코일을 Busy 상태로 묶고, 해당 상태가 끝날 때까지 추적과 순찰을 중단했습니다.</p></div></div></article>
+      <article class="trouble-card"><header><span>CASE 02 · OIL LIFECYCLE</span><h3>오일 웅덩이와 충돌이 남는 문제</h3></header><div class="ba-grid"><div class="ba-panel before"><b>BEFORE</b><p>기름 방울과 웅덩이의 생성·소멸 책임이 섞여 불필요한 충돌이나 오브젝트가 남았습니다.</p></div><div class="ba-panel after"><b>AFTER</b><p>드리퍼는 방울 생성, 방울은 바닥 판정, 웅덩이는 지속·소멸을 담당하도록 생명주기를 분리했습니다.</p></div></div></article>
+    </div></div></section>
 
-        <section class="content-card">
-          <p class="section-label">Troubleshooting</p>
-          <h2>대표 트러블슈팅</h2>
-          <p>
-            적이 공격 중에도 이동 로직이 동시에 실행되는 문제가 있었습니다. 원인을 확인해보니
-            Animator 전환 조건과 Enemy AI 상태 제어가 명확히 분리되지 않아, 공격 상태에 들어간 뒤에도
-            이동 판단이 함께 작동하고 있었습니다. 이를 해결하기 위해 FSM 기준으로 상태 우선순위를 다시
-            정리하고, 공격 중에는 이동 로직이 실행되지 않도록 제한했습니다. 그 결과 적의 추적과 공격 흐름이
-            더 안정적으로 동작하게 되었고 플레이 감각도 자연스러워졌습니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Learning</p>
-          <h2>배운 점</h2>
-          <p>
-            이 프로젝트를 통해 AI 구현에서 중요한 것은 단순히 적이 움직이고 공격하는 동작 자체보다,
-            각 상태가 어떤 우선순위로 전환되고 서로 충돌 없이 관리되는지라는 점을 배웠습니다. FSM 구조와
-            Animator 전환 조건을 함께 정리하면서 상태 관리가 게임의 완성도를 크게 좌우한다는 사실을
-            체감할 수 있었습니다.
-          </p>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Links</p>
-          <h2>관련 링크</h2>
-          <ul>
-            <li><a href="https://github.com/Jin-o12/Project_TwoSlot" target="_blank" rel="noreferrer">GitHub 저장소 보기</a></li>
-            <li><a href="https://app.notion.com/p/Dark-Dock-2ed386c115f280b783addf421919d6cf?source=copy_link" target="_blank" rel="noreferrer">Notion 문서 보기</a></li>
-            <li><a href="https://www.youtube.com/watch?v=nHctOk3t4EQ" target="_blank" rel="noreferrer">플레이 영상 보기</a></li>
-          </ul>
-        </section>
-
-        <section class="content-card">
-          <p class="section-label">Project Context</p>
-          <h2>프로젝트 맥락</h2>
-          <p>
-            발표 자료 기준으로 Darkdock은 제약된 조작, 제한된 자원, 사운드 기반 긴장감, 단계적인 레벨 압박을
-            핵심으로 삼은 팀 프로젝트였습니다. 저는 그 안에서 플레이 경험의 중심축이 되는 Enemy AI와
-            Animator 상태 흐름, 그리고 레벨 구성 쪽을 맡아 게임의 리듬을 다듬는 역할에 집중했습니다.
-          </p>
-        </section>
-      </div>
-    </div>
+    <section class="showcase-section" id="scope"><div class="showcase-shell"><div class="section-head"><div><span class="section-index">04 · SCOPE</span><h2>담당 범위</h2></div><p class="section-intro">Git 기록으로 확인한 직접 구현과 수정 범위입니다.</p></div><div class="scope-grid"><div class="scope-list"><div class="scope-item"><strong>직접 구현</strong>경비견·매복형 적의 추적/공격/환경 위험</div><div class="scope-item"><strong>직접 구현</strong>소음 폭탄·플레어건·에너지 드링크와 2슬롯</div><div class="scope-item"><strong>직접 제작</strong>스테이지 1·2·3 레벨 디자인과 에너미 배치</div><div class="scope-item"><strong>직접 수정</strong>피격 속도, Animator, 사운드, Pause, 오일 퍼들 오류</div></div><aside class="commit-proof"><strong>커밋 근거</strong><p>2026.01.26–02.08 사이 Enemy, Item, Level, QA 관련 직접 커밋 34건과 병합 기록을 확인했습니다.</p><p><small>공통 플레이어 기반과 일부 시각·사운드 리소스는 팀 결과이며, 개인 범위는 직접 구현·배치·수정한 항목으로 제한했습니다.</small></p></aside></div></div></section>
   </main>
-
-  <footer class="page-footer">
-    <div class="container">
-      <a class="back-link" href="../../index.html">Kasil Portfolio 메인으로 돌아가기</a>
-    </div>
-  </footer>
+  <dialog class="project-code-dialog" data-project-code-dialog><div class="project-code-head"><div><h3 data-code-title>전체 스크립트</h3><p data-code-path></p></div><button class="project-code-close" type="button" aria-label="전체 스크립트 닫기" data-code-close>×</button></div><div class="project-code-layout"><nav class="project-code-files" data-code-files aria-label="관련 스크립트"></nav><div class="project-code-view"><div class="project-code-note" data-code-note></div><pre><code data-code-content></code></pre></div></div></dialog>
+  <footer class="showcase-footer"><div class="showcase-shell">© Song Yechan · <a href="../../index.html">포트폴리오 메인으로 돌아가기</a></div></footer>
+  <script>document.querySelectorAll('.work-tab').forEach(tab=>tab.addEventListener('click',()=>{const area=tab.closest('.workbench');area.querySelectorAll('.work-tab,.work-panel').forEach(el=>el.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.panel).classList.add('active');}));</script>
+  <script src="./code-data.js"></script>
+  <script src="../../assets/js/project-code-viewer.js"></script>
 </body>
 </html>
