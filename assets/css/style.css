@@ -321,7 +321,15 @@ code {
 
 .skills-intro {
   max-width: 760px;
-  margin: -8px 0 24px;
+  margin: 8px 0 20px;
+}
+
+.technical-heading {
+  margin: 40px 0 18px;
+}
+
+.technical-heading h3 {
+  margin-top: 4px;
 }
 
 .strength-grid,
