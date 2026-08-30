@@ -6,7 +6,7 @@
   <title>Kasil Portfolio</title>
   <meta
     name="description"
-    content="송예찬의 게임 기획, 팀 프로젝트, 개발 경험을 정리한 포트폴리오 페이지입니다."
+    content="기획과 구현 사이의 간극을 좁히는 게임 기획자 송예찬의 포트폴리오입니다."
   >
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -16,7 +16,7 @@
       <p class="eyebrow">Game Planning Portfolio</p>
       <h1>Kasil Portfolio</h1>
       <p class="hero-text">
-        기획과 개발 사이의 간극을 좁히는 게임 기획자 송예찬의 포트폴리오입니다.
+        기획과 구현 사이의 간극을 좁히는 게임 기획자 송예찬의 포트폴리오입니다.
         Unity 팀 프로젝트에서 PM, 컨셉 기획, Gameplay Programming을 함께 경험하며
         아이디어가 실제 플레이 흐름으로 이어지는 과정을 문서와 구현으로 정리했습니다.
       </p>
@@ -41,7 +41,7 @@
           </p>
           <p>
             팀 프로젝트에서는 일정표와 마일스톤 관리, QA와 회의록 정리, 기능 명세 작성,
-            Enemy AI와 튜토리얼, 아이템 루팅 흐름 구현을 함께 맡으며 기획과 개발의 연결 지점을 경험했습니다.
+            Enemy AI와 Tutorial, Item Looting 흐름 구현을 함께 맡으며 기획과 구현의 연결 지점을 경험했습니다.
           </p>
         </div>
       </div>
@@ -119,7 +119,7 @@
               <h3>침몽도시: 루시드 다이버</h3>
               <p>
                 PM, 컨셉 기획, Gameplay Programmer로 참여한 진행 중인 팀 프로젝트입니다.
-                컨셉 초안, 에너미 AI, 상자/인벤토리, 아티팩트, VFX, 튜토리얼 구현과 일정/QA 문서화를 담당했습니다.
+                컨셉 초안, Enemy AI, Box/Inventory, Artifact, VFX, Tutorial 구현과 일정/QA 문서화를 담당했습니다.
               </p>
               <ul class="stack-list">
                 <li>Unity</li>
@@ -136,7 +136,7 @@
               <p class="project-tag">Game / Horror</p>
               <h3>Darkdock</h3>
               <p>
-                Enemy AI, 레벨 디자인, Animator 구조 개선을 담당한 3D 기반 2.5D 공포 탈출 게임입니다.
+                Enemy AI, Level Design, Animator 구조 개선을 담당한 3D 기반 2.5D 공포 탈출 게임입니다.
               </p>
               <ul class="stack-list">
                 <li>Unity</li>
@@ -172,48 +172,92 @@
         <div class="section-heading">
           <div>
             <p class="section-label">Technical Skills</p>
-            <h2>기술 및 협업 역량</h2>
+            <h2>기획을 플레이 가능한 구조로 연결하는 역량</h2>
           </div>
         </div>
-        <div class="content-grid">
-          <section class="content-card">
-            <h3>Planning</h3>
-            <ul>
-              <li>게임 콘셉트 기획</li>
-              <li>시스템 플로우 설계</li>
-              <li>기능 명세 작성</li>
-              <li>UI/UX 흐름 정리</li>
-              <li>QA 체크리스트 작성</li>
-            </ul>
-          </section>
-          <section class="content-card">
-            <h3>Development</h3>
-            <ul>
-              <li>Unity, C#, MonoBehaviour 생명주기 이해</li>
-              <li>FSM 기반 상태 제어</li>
-              <li>NavMesh 기반 추적 AI</li>
-              <li>JSON 기반 데이터 관리</li>
-              <li>Animator, UI, VFX 흐름 구성</li>
-            </ul>
-          </section>
-          <section class="content-card">
-            <h3>Project Management</h3>
-            <ul>
-              <li>마스터 일정 및 주간 마일스톤 관리</li>
-              <li>회의록, 개발일지, 작업 보드 정리</li>
-              <li>범위 통제와 기능 동결 기준 정리</li>
-              <li>버그 우선순위 분류와 RC 체크리스트 작성</li>
-            </ul>
-          </section>
-          <section class="content-card">
-            <h3>Collaboration</h3>
-            <ul>
-              <li>Notion 문서 관리</li>
-              <li>Git 기반 협업 학습 중</li>
-              <li>기획-개발 전달용 문서 작성</li>
-              <li>시연 동선과 발표 자료 관리</li>
-            </ul>
-          </section>
+        <p class="skills-intro">수준은 문서 작성 경험이 아니라, <strong>직접 설계·구현·수정해 본 범위</strong>를 기준으로 표시했습니다.</p>
+
+        <div class="strength-grid" aria-label="대표 강점">
+          <article class="strength-card">
+            <span class="strength-mark">01</span>
+            <h3>Enemy AI 설계·구현</h3>
+            <p>FSM과 NavMesh를 바탕으로 감지·추적·공격·복귀까지의 행동 흐름을 구현했습니다.</p>
+          </article>
+          <article class="strength-card">
+            <span class="strength-mark">02</span>
+            <h3>기획-구현 연결</h3>
+            <p>Core Loop, Tutorial, UI Flow를 실제 플레이와 결과 화면까지 연결했습니다.</p>
+          </article>
+          <article class="strength-card">
+            <span class="strength-mark">03</span>
+            <h3>협업 구조화</h3>
+            <p>일정·문서·Git 작업 흐름을 정리해 팀 작업이 하나의 플레이 경험으로 이어지게 했습니다.</p>
+          </article>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card skill-card-featured">
+            <div class="skill-card-top">
+              <div class="skill-icon skill-icon-planning" aria-hidden="true">✦</div>
+              <div>
+                <p class="skill-category">Game Planning</p>
+                <h3>Core Loop · System Design</h3>
+              </div>
+              <strong class="skill-score">8<span>/10</span></strong>
+            </div>
+            <div class="skill-meter" aria-label="숙련도 8점 / 10점"><span style="width: 80%"></span></div>
+            <p>플레이어 목표와 행동, 보상, 실패 조건을 한 흐름으로 설계합니다.</p>
+            <p class="skill-evidence"><strong>적용:</strong> 루시드 다이버 Core Loop · DarkDock 3개 Stage 구성</p>
+          </article>
+
+          <article class="skill-card skill-card-featured">
+            <div class="skill-card-top">
+              <div class="skill-icon-group" aria-hidden="true">
+                <img src="https://cdn.simpleicons.org/unity/4A4A4A" alt="">
+                <span>C#</span>
+              </div>
+              <div>
+                <p class="skill-category">Development</p>
+                <h3>Unity · C#</h3>
+              </div>
+              <strong class="skill-score">7<span>/10</span></strong>
+            </div>
+            <div class="skill-meter" aria-label="숙련도 7점 / 10점"><span style="width: 70%"></span></div>
+            <p>Gameplay System과 UI Flow를 직접 구현하고 테스트·수정합니다.</p>
+            <p class="skill-evidence"><strong>적용:</strong> Inventory · Tutorial · SaveData · 결과 정산</p>
+          </article>
+
+          <article class="skill-card skill-card-featured">
+            <div class="skill-card-top">
+              <div class="skill-icon skill-icon-ai" aria-hidden="true">AI</div>
+              <div>
+                <p class="skill-category">Artificial Intelligence</p>
+                <h3>FSM · NavMesh · Perception</h3>
+              </div>
+              <strong class="skill-score">8<span>/10</span></strong>
+            </div>
+            <div class="skill-meter" aria-label="숙련도 8점 / 10점"><span style="width: 80%"></span></div>
+            <p>상태 전환 규칙과 감지 정보를 분리해 Enemy의 행동을 설계합니다.</p>
+            <p class="skill-evidence"><strong>적용:</strong> 꿈식자 Patrol · Detect · Chase · Attack · Return</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-group" aria-hidden="true">
+                <img src="https://cdn.simpleicons.org/git/F05032" alt="">
+                <img src="https://cdn.simpleicons.org/github/181717" alt="">
+                <img src="https://cdn.simpleicons.org/notion/000000" alt="">
+              </div>
+              <div>
+                <p class="skill-category">Collaboration</p>
+                <h3>Git · GitHub · Notion</h3>
+              </div>
+              <strong class="skill-score">7<span>/10</span></strong>
+            </div>
+            <div class="skill-meter" aria-label="숙련도 7점 / 10점"><span style="width: 70%"></span></div>
+            <p>기능 단위의 작업 기록과 기획-구현 간 전달 문서를 관리합니다.</p>
+            <p class="skill-evidence"><strong>적용:</strong> 브랜치 전략 · 마일스톤 · 개발일지 · QA 기록</p>
+          </article>
         </div>
       </div>
     </section>

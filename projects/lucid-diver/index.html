@@ -1307,7 +1307,7 @@
             <h2>최종 시연 영상</h2>
           </div>
           <p>
-            초기 P0 검증에 머물지 않고 전투·파밍·탈출, 결과 정산, 튜토리얼, 적 AI까지 연결한 최종 빌드를 완성했습니다.
+            초기 P0 검증에 머물지 않고 Combat, Farming, Extraction, 결과 정산, Tutorial, Enemy AI까지 연결한 최종 빌드를 완성했습니다.
             전체 시연 영상과 대표 구현인 꿈식자 AI 영상을 통해 실제 플레이 결과를 먼저 확인할 수 있습니다.
           </p>
         </div>
@@ -1416,7 +1416,7 @@
             <p class="lucid-kicker">Worldview → Behavior → Experience</p>
             <h3>플레이어를 방해하는 적이 아니라, 플레이어를 사냥하는 존재</h3>
             <p>
-              테스트용 더미 에너미를 기초로 삼아 실제 제작용 FSM을 설계하고 구현했습니다.
+              테스트용 Dummy Enemy를 기초로 삼아 실제 제작용 FSM을 설계하고 구현했습니다.
               스폰 포인트와 패트롤 루트를 기반으로 움직이되 NavMesh 위 임의 지점을 선택해 매번 다른 순찰선을 만들고,
               시야나 소리로 플레이어의 흔적을 얻으면 조사·추격·공격으로 상태를 전환합니다.
             </p>
@@ -1840,7 +1840,7 @@
         investigate: {
           index: "04 · INVESTIGATE",
           title: "플레이어가 아니라 소음 앵커의 좌표를 조사",
-          summary: "플레이어 이동 중 생성된 소음 앵커가 청각 반경과 조건을 충족하면 해당 좌표를 조사 목적지로 선택합니다.",
+          summary: "Player 이동 중 생성된 Noise Anchor가 청각 반경과 조건을 충족하면 해당 좌표를 조사 목적지로 선택합니다.",
           logic: "조사 좌표는 NavMesh 위로 보정하고 제한 시간 안에 단서를 찾지 못하면 재탐색 또는 복귀로 전환합니다.",
           design: "./enemy-ai-fsm/images/PM_EnemyAI_InvestigateDesign_v2.png",
           designAlt: "소음 앵커와 청각 반경이 교차해 조사를 시작하는 설계",
@@ -1853,7 +1853,7 @@
           summary: "타깃의 현재 좌표와 이동 벡터를 이용해 예상 지점을 계산하고, 개체별 접근 위치를 분산합니다.",
           logic: "여러 개체가 한 점에 겹치지 않으면서 플레이어가 향하는 길목을 압박하도록 추격 목적지를 갱신합니다.",
           design: "./enemy-ai-fsm/images/PM_EnemyAI_ChaseDesign.png",
-          designAlt: "플레이어 이동 방향을 예측해 길목을 압박하는 추격 설계",
+          designAlt: "Player 이동 방향을 예측해 길목을 압박하는 추격 설계",
           gif: "./enemy-ai-fsm/gifs/PM_EnemyAI_Chase.gif",
           gifAlt: "꿈식자가 플레이어의 이동 방향을 예측해 추격하는 실제 플레이 GIF"
         },
