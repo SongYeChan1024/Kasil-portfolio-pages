@@ -1,58 +1,50 @@
-# Kasil Portfolio Pages
+# Kasil Devlog
 
-안녕하세요 송예찬 이라고 합니다.
-이 레포지토리는 제가 진행했던 프로젝트를 HTML 형식의 포트폴리오 페이지로 정리하기 위한 저장소이자 
-개별 프로젝트 소개 페이지들을 한 곳에 모아 보여주는 포트폴리오 사이트입니다.
+송예찬(Kasil)의 게임 기획·개발 일지, 배우고 있는 기술, 개인 개발 기록을 모으는 블로그입니다.
+[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 테마(Jekyll)로 만들고 GitHub Pages로 배포합니다.
 
-- 메인 페이지: 전체 프로젝트 목록 소개
-- 프로젝트 상세 페이지: 프로젝트별 역할, 구현 내용, 기술 스택, 회고 정리
+- 사이트: https://songyechan1024.github.io/Kasil-portfolio-pages/
 
 ## 폴더 구조
 
 ```text
-portfolio-pages/
-├─ index.html
-├─ projects/
-│  ├─ lucid-diver/
-│  │  └─ index.html
-│  ├─ darkdock/
-│  │  └─ index.html
-│  └─ mosaic/
-│     └─ index.html
-├─ assets/
-│  ├─ css/
-│  │  └─ style.css
-│  └─ images/
-└─ README.md
+Kasil-portfolio-pages/
+├─ _posts/       개발일지 (YYYY-MM-DD-영문-슬러그.md)
+├─ _tabs/        사이드바 메뉴: 카테고리 · 태그 · 아카이브 · 기술 스택 · 개인 개발 · 소개
+├─ _data/        연락처·공유 버튼 설정
+├─ _config.yml   사이트 설정 (제목, 언어, 주소 등)
+├─ _legacy/      예전 HTML 포트폴리오 (보관용, 사이트에 나오지 않음)
+└─ .github/      GitHub Actions 배포 설정
 ```
 
-## 수정 방법
+## 글 쓰기
 
-1. 메인 소개와 프로젝트 카드 내용은 `index.html`에서 수정합니다.
-2. 프로젝트별 상세 설명은 `projects/.../index.html`에서 수정합니다.
-3. 공통 색상, 여백, 버튼, 카드 스타일은 `assets/css/style.css`에서 수정합니다.
-4. 프로젝트 이미지나 썸네일은 `assets/images/`에 추가합니다.
+`_posts/2026-10-23-slug.md` 파일을 만들고 맨 위에 아래 머리말을 붙입니다.
 
-## 경로 규칙
+```yaml
+---
+title: "[프로젝트] 제목"
+date: 2026-10-23 23:00:00 +0900
+categories: [개발일지, 프로젝트 이름]
+tags: [태그1, 태그2]
+---
+```
 
-- 메인 페이지 CSS: `./assets/css/style.css`
-- 프로젝트 상세 페이지 CSS: `../../assets/css/style.css`
-- 상세 페이지에서 메인으로 돌아가기: `../../index.html`
+- 카테고리 첫 칸은 `개발일지`, 둘째 칸은 프로젝트로 둡니다.
+- 비공개 내용(연락처, 공개 전 팀 기획의 세부, 내부 문서 링크)은 올리지 않습니다. 날것의 기록은 노션 데일리로그에 둡니다.
 
-## GitHub Pages 배포
+## 로컬에서 미리 보기
 
-1. 변경 내용을 GitHub에 push 합니다.
-2. 저장소의 `Settings`로 이동합니다.
-3. `Pages` 메뉴를 엽니다.
-4. `Build and deployment`에서 `Deploy from a branch`를 선택합니다.
-5. 브랜치는 `main`, 폴더는 `/(root)`를 선택합니다.
-6. 저장 후 잠시 기다리면 사이트가 배포됩니다.
+Ruby와 Bundler가 필요합니다.
 
-배포 주소는 보통 아래 형식입니다.
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-`https://<github-username>.github.io/Kasil-portfolio-pages/`
+브라우저에서 `http://127.0.0.1:4000/Kasil-portfolio-pages/`를 엽니다.
 
-## 메모
+## 배포
 
-- 현재 들어간 프로젝트 설명과 GitHub 링크는 템플릿용 예시 문구입니다.
-- 실제 프로젝트 내용, 링크, 이미지로 교체하면 바로 포트폴리오로 사용할 수 있습니다.
+`main`에 push하면 GitHub Actions(`.github/workflows/pages-deploy.yml`)가 사이트를 만들어 배포합니다.
+저장소 Settings → Pages → Source를 **GitHub Actions**로 바꿔 둬야 합니다.
