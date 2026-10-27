@@ -64,7 +64,7 @@ tags: [태그1, 태그2]
 
 관리 화면은 기존 Decap의 인증·저장·이미지 선택 기능을 사용합니다. 별도 관리용 토큰을 만들 필요가 없습니다. 네이버의 관리자 메뉴 구성을 참고했으며, 네이버 계정 설정이나 게시글은 변경하지 않습니다.
 
-로컬 검증: `tools/category-preview`에서 `pnpm install --frozen-lockfile` 후 저장소 루트에서 `node tools/category-preview/server.mjs`를 실행합니다. `http://127.0.0.1:4176/Kasil-portfolio-pages/`에서 확인할 수 있습니다. 이 서버의 관리 화면은 메모리 테스트 백엔드로만 저장하며, 종료하거나 새로고침하면 검증용 변경은 사라집니다. 공개된 테마 파일을 사용하므로 인터넷 연결이 필요합니다. Liquid 미리보기이며 아래의 Jekyll 전체 빌드 검사를 대체하지 않습니다.
+로컬 검증: `tools/category-preview`에서 `pnpm install --frozen-lockfile` 후 저장소 루트에서 `node tools/category-preview/server.mjs`를 실행합니다. `http://127.0.0.1:4176/Kasil_DevLog/`에서 확인할 수 있습니다. 이 서버의 관리 화면은 메모리 테스트 백엔드로만 저장하며, 종료하거나 새로고침하면 검증용 변경은 사라집니다. 공개된 테마 파일을 사용하므로 인터넷 연결이 필요합니다. Liquid 미리보기이며 아래의 Jekyll 전체 빌드 검사를 대체하지 않습니다.
 
 메뉴·분류·페이지 나눔·템플릿 검사는 `node --test tools/category-regression.test.mjs`로 실행합니다.
 

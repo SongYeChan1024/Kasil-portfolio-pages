@@ -5,7 +5,7 @@ import {Liquid} from 'liquidjs';
 import YAML from 'yaml';
 import MarkdownIt from 'markdown-it';
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-export const base='/Kasil-portfolio-pages';
+export const base='/Kasil_DevLog';
 const engine=new Liquid({jekyllInclude:true}),markdown=new MarkdownIt();
 engine.registerFilter('relative_url',value=>base+value);
 engine.registerFilter('jsonify',value=>JSON.stringify(value??null));

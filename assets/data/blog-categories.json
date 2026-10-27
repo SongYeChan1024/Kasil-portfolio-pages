@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{"categories":[{% assign first_category = true %}{% for category in site.categories %}{% assign public_posts = category[1] | where_exp: 'post', 'post.hidden != true' %}{% if public_posts.size > 0 %}{% unless first_category %},{% endunless %}{"name":{{ category[0] | jsonify }},"count":{{ public_posts.size }}}{% assign first_category = false %}{% endif %}{% endfor %}]}

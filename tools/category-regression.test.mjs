@@ -41,7 +41,7 @@ test('actual home template keeps all public posts, correct edit filenames, and r
   const site=await readSite(), html=await renderHome(site);
   assert.equal((html.match(/<li data-blog-post/g)||[]).length,site.posts.length);
   assert.ok(html.indexOf('class="blog-right"')>html.indexOf('id="blog-posts"'));
-  assert.ok(html.includes('/Kasil-portfolio-pages/admin/#/collections/posts/entries/2026-10-27-261027ncai_'));
+  assert.ok(html.includes('/Kasil_DevLog/admin/#/collections/posts/entries/2026-10-27-261027ncai_'));
   assert.ok(html.includes('?tab=blender'));
   assert.ok(!html.includes('src=""'));
 });
