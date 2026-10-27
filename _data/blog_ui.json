@@ -9,12 +9,83 @@
     "accent": "violet",
     "default_tab": "all",
     "tabs": [
-      { "id": "all", "title": "전체 글", "all": true, "categories": [], "show_top": true, "show_side": true },
-      { "id": "blender", "title": "Blender", "all": false, "categories": ["Blender"], "show_top": true, "show_side": true },
-      { "id": "unity-practice", "title": "Unity 실습", "all": false, "categories": ["Unity 실습"], "show_top": true, "show_side": true },
-      { "id": "unity-template", "title": "Unity 템플릿", "all": false, "categories": ["Unity 템플릿"], "show_top": true, "show_side": true },
-      { "id": "after-seconds", "title": "After Seconds", "all": false, "categories": ["After Seconds"], "show_top": true, "show_side": true },
-      { "id": "team", "title": "팀 프로젝트", "all": false, "categories": ["팀 프로젝트"], "show_top": true, "show_side": true }
+      {
+        "categories": [],
+        "all": true,
+        "show_top": true,
+        "show_side": true,
+        "id": "all",
+        "title": "전체 글",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "Blender"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "blender",
+        "title": "Blender",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "Unity 실습"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "unity-practice",
+        "title": "Unity 실습",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "Unity 템플릿"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "unity-template",
+        "title": "Unity 템플릿",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "After Seconds"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "after-seconds",
+        "title": "After Seconds",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "팀 프로젝트"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "team",
+        "title": "팀 프로젝트",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "Unity 실습",
+          "Unity 템플릿",
+          "Unity"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "tab-ec2c7692-ebf5-4368-8f3d-067ebeab9516",
+        "title": "Unity",
+        "parent": ""
+      }
     ]
   }
 }
