@@ -9,6 +9,8 @@ tags: [Unity, URP, Volume, 후처리, 템플릿]
 
 ## 다운로드
 
+- [템플릿용 정리 버전 다운로드 — 권장]({{ '/assets/downloads/unity-volume-profiles/URP-VolumeProfiles-Template.unitypackage' | relative_url }})
+- [정리 내역과 새 GUID 목록]({{ '/assets/downloads/unity-volume-profiles/template-manifest.json' | relative_url }})
 - [프로필 패키지 다운로드]({{ '/assets/downloads/unity-volume-profiles/URP-VolumeProfiles.unitypackage' | relative_url }})
 - [에셋 목록·GUID·SHA-256·누락 참조 목록]({{ '/assets/downloads/unity-volume-profiles/manifest.json' | relative_url }})
 
@@ -16,7 +18,30 @@ tags: [Unity, URP, Volume, 후처리, 템플릿]
 
 패키지에는 **프로필 37개, 참조 텍스처 26개로 총 63개 에셋**이 들어 있다. Unity/URP 자체 스크립트는 포함하지 않았으므로 대상 프로젝트에 URP가 필요하다. 원본 폴더 경로와 GUID를 유지했다.
 
-## 템플릿에 적용하기
+## 정리 버전을 템플릿에 바로 적용하기
+
+정리 버전은 **프로필 37개 + 텍스처 26개 + Global Volume 프리팹 1개**로 구성했다. 모든 에셋에 새 GUID를 부여하고 `Assets/TemplateVolumeProfiles` 아래에 넣었다. 원본 보관 패키지와 함께 가져와도 같은 GUID로 원본을 덮어쓰지 않는다.
+
+1. URP 프로젝트에서 `Assets > Import Package > Custom Package`로 **URP-VolumeProfiles-Template.unitypackage**를 가져온다.
+2. `Assets/TemplateVolumeProfiles/Prefabs/TemplateGlobalVolume.prefab`을 씬에 드래그한다. 정리한 `DefaultVolumeProfile`이 이미 연결되어 있으며 Global, Weight 1, Priority 0, Default 레이어로 설정되어 있다.
+3. 카메라의 Post Processing을 켜고 Volume Layer Mask에 Default 레이어를 포함한다. 기존 Global Volume이 있다면 동시에 적용되어 효과가 중첩되는지 확인한다.
+4. 다른 분위기를 원하면 같은 폴더 아래의 `URP Profile` 또는 `URP Post/v4/Profiles`에서 다른 프로필을 Volume의 Profile에 연결한다.
+5. 씬을 저장해 템플릿에 포함한다. 기본 프로필은 URP의 전체 기본값을 교체하는 설정이 아니라, 이 프리팹에서 사용하는 프로필이다.
+
+정리한 내용은 다음과 같다.
+
+- `DefaultVolumeProfile`: 구현 파일이 없는 커스텀 컴포넌트 4개와 `m_Script: {fileID: 0}` 상태의 Unity Editor 테스트 컴포넌트 5개를 제거했다. 컴포넌트 목록의 fileID 참조도 함께 정리했다.
+- `Movie_Profile 6_Black`: 구현 파일이 없는 `VolumetricFogVolumeComponent`를 제거했다.
+- `Day_Post Profile`: Bloom Dirt Texture를 None으로, Dirt Intensity를 0으로 설정했다. 두 항목의 오버라이드는 유지해 다른 낮은 우선순위 Volume에서 Dirt 설정이 섞여 들어오는 것을 막았다. 일반 Bloom 설정은 유지했다.
+- 그 밖의 프로필 효과 값과 텍스처 내용은 유지했다. 패키지 내부의 프로필·텍스처 참조는 새 GUID로 연결했다.
+
+없는 커스텀 효과는 제거했으므로 해당 효과까지 복원한 버전은 아니다. 프리셋별 색감과 조명 결과는 대상 씬에서 확인해야 한다.
+
+별도 Unity 6000.4.0f1 / URP 17.6.0 프로젝트에서 정리 버전의 **프로필 37개와 컴포넌트 258개**를 실제 로드해 누락 컴포넌트·오브젝트 참조가 없는 것을 확인했다. Bloom Dirt 비활성화와 Global Volume 프리팹 연결 검사도 통과했다. 패키지를 풀어 내부 64개 에셋의 해시와 경로를 확인했으며, 원본 63개 파일이 변경되지 않은 것도 확인했다. 이 검증은 화면 렌더링 비교를 포함하지 않는다.
+
+- [Unity 검증 결과]({{ '/assets/downloads/unity-volume-profiles/unity-validation.txt' | relative_url }})
+
+## 원본 보관본을 템플릿에 적용하기
 
 1. URP 프로젝트에서 `Assets > Import Package > Custom Package`로 다운로드한 파일을 가져온다. 기존 프로젝트에 같은 경로나 GUID의 에셋이 있다면 먼저 백업하고 Import 목록을 확인한다.
 2. `Assets/Settings/URP Profile` 또는 `Assets/Settings/URP Post/v4/Profiles`에서 프로필을 선택한다.

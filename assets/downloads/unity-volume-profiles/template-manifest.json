@@ -1,0 +1,525 @@
+{
+  "unity": "6000.4.0f1",
+  "urp": "17.6.0",
+  "profileCount": 37,
+  "assetCount": 64,
+  "unresolvedGuids": [],
+  "changes": [
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Day_Post Profile.asset",
+      "action": "disableMissingBloomDirt",
+      "texture": null,
+      "intensity": 0
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 6_Black.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "VolumetricFogVolumeComponent",
+      "fileId": "382404567324536835"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "CopyPasteTestComponent2",
+      "fileId": "-8104416584915340131"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "OutlineVolumeComponent",
+      "fileId": "-7750755424749557576"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "TestAnimationCurveVolumeComponent",
+      "fileId": "-7274224791359825572"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "VolumeComponentSupportedEverywhere",
+      "fileId": "-5360449096862653589"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "OasisFogVolumeComponent",
+      "fileId": "-5139089513906902183"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "CopyPasteTestComponent3",
+      "fileId": "-581120513425526550"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "TestVolume",
+      "fileId": "4251301726029935498"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "VolumeComponentSupportedOnAnySRP",
+      "fileId": "6940869943325143175"
+    },
+    {
+      "profile": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "action": "removeMissingScriptComponent",
+      "component": "CopyPasteTestComponent1",
+      "fileId": "9122958982931076880"
+    }
+  ],
+  "assets": [
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/GestLUTSPack/Aqua_LUT_32.png",
+      "guid": "b438e450d51094668134cffeb6054cbd",
+      "sourceGuid": "2026e7eab3aea98479e823c4dbaba1c4",
+      "isProfile": false,
+      "sha256": "733dc327db1c971e8e85face3cd5bac62c64e625509d761bce803761783b4fdc"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/GestLUTSPack/Autumn2LUT_32.png",
+      "guid": "5c1cfff4ff34e2e1694fddd7785079fc",
+      "sourceGuid": "ae9a8f71956435b4cb33ef1a2a0eb1f6",
+      "isProfile": false,
+      "sha256": "cf17a68f647ba62e4a6468dc2e84b825644244b67008b710133199db60a884b2"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/GestLUTSPack/GreenParadiseLUT_32.png",
+      "guid": "45b06fe1a83427cb71e854730a2bd7ac",
+      "sourceGuid": "45478cad60b4e3a41bdabdde1fd4c03c",
+      "isProfile": false,
+      "sha256": "25761f091f8fd2a4defffd041c32f1cb38fc1f6dda208ae9c9ba58fe416da6c7"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/GestLUTSPack/HDR_LUT_32.png",
+      "guid": "304f02d27ced9ba49d429edc3eae1258",
+      "sourceGuid": "20533833ab333f146a6016bd406ad08c",
+      "isProfile": false,
+      "sha256": "3be8df7a33c0d4245a9141971b6ae93ec003bbf840e06224567935fcddba0ede"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/GestLUTSPack/Movie6LUT_32.png",
+      "guid": "02e5999afc1ac0cebb032371781a420a",
+      "sourceGuid": "728c1dd3c933f914799214ff425d9d1a",
+      "isProfile": false,
+      "sha256": "b4c2d8d77f17e1cb2735b73087543e6d032465626a784f2fe85fce960474635e"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/AutumnLUT_32.png",
+      "guid": "91e65354359a06bcd9cc4f1a4317e6d3",
+      "sourceGuid": "57863826664884e46b1672bd8959eb6b",
+      "isProfile": false,
+      "sha256": "29c405f728b74e157341e34e7b69faca1842c1c430458fd3e57083391970e19d"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Coziness2LUT_32.png",
+      "guid": "bb53d1ee1ba0bb78020f1426294ab652",
+      "sourceGuid": "d6baee6a63dfed241a6b545eb8cde703",
+      "isProfile": false,
+      "sha256": "3e15b016cc17e21835e75b201405fe35b4432305a4e1a3d2df951d06a413ff0f"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/CozinessLUT_32.png",
+      "guid": "22742c0b271d801549aec1cfb9c8c6a9",
+      "sourceGuid": "8fffa1992e044ca43a3734cf149ee169",
+      "isProfile": false,
+      "sha256": "7fae2f081d208cb8fcb757650c933bc8ff7768149c9b7acf04bfcecd58ed59a0"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/crazyLUT_32.png",
+      "guid": "a949a18386d0a3b2048a36bf54eae5c0",
+      "sourceGuid": "5c3f8f167e21c05438bf102eeca3bf1c",
+      "isProfile": false,
+      "sha256": "a93b0fdb86e4444782ebb3c40c6240c97449134dffe9fd0f4baf5632916fd96a"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Dark2LUT_32.png",
+      "guid": "e1d6a26e58c9cb4db527e9fbcff60190",
+      "sourceGuid": "b2be66e1edb1a584190484224c0f9c66",
+      "isProfile": false,
+      "sha256": "cad710501b1fac4503142354f6533c8e1de0733272c8c8d339fdbbdfe0605b9f"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/DarkLUT_32.png",
+      "guid": "2e10e33e5095e94aff7deefa41d40b74",
+      "sourceGuid": "c3c39d20658041944b7980a7a21ec5d6",
+      "isProfile": false,
+      "sha256": "378a5a5f167e108ee72abaff1c9172ab5d0262aaf1ac45e5e0d30e53f085d7e2"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/horror_LUT.png",
+      "guid": "7a62901a68272a923e31d2b44c22d51d",
+      "sourceGuid": "6ece7d54efd9cad44828a82e920d64ae",
+      "isProfile": false,
+      "sha256": "ebaffce26cc6cc243e84f358695f1ca3bdacbb4b233a4e5f91bc008370c5cbd8"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Horror2LUT_32.png",
+      "guid": "097ad072c5fd8f52788c0b01e6d5fea0",
+      "sourceGuid": "3ae01bc4fcb67274582f6d61be50ed43",
+      "isProfile": false,
+      "sha256": "ad8fd7d7a100d5e73567bf4459c62bf45fd3c76de81198b9b19182a6d9272827"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/horror3LUT_32.png",
+      "guid": "b95d3eb02673d29985f50e8209a4de97",
+      "sourceGuid": "2af015f13c3e45b4783402c39e2dbef3",
+      "isProfile": false,
+      "sha256": "6238d7918add2cabd1a9ed9f565c8c9eee5e4f34f0e1f9424a86e1249a6490ab"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/LomonewLUT_32.png",
+      "guid": "9f974e62f819a7e88cde33ab08d46f22",
+      "sourceGuid": "2f08cb72f46a2134b974e39afc2111a5",
+      "isProfile": false,
+      "sha256": "60f7f0831055c38bc1d9b2f86e966416d8f5b3cd4b9c1eb6d516564eacdc6dbe"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Movie2LUT_32.png",
+      "guid": "e28de3b9cc17d071da8a3755f172c767",
+      "sourceGuid": "be22ce3f7af51b144abeceeece1ec660",
+      "isProfile": false,
+      "sha256": "874c1ada7fddf51f5c22bf82e6ab12a027d5db31e8e11ebadae992542a960c4d"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Movie3LUT_32.png",
+      "guid": "b87cf751cb0de446fadb7c973c95d15b",
+      "sourceGuid": "396f5d4397260ff44a7f2353b8381b10",
+      "isProfile": false,
+      "sha256": "61b33cbdf1bd36bd4616bf94f3e63479a634e367bce30988525b97a0a463b9c4"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/movie4LUT_32.png",
+      "guid": "a03aacbc000e2123413b80e6671650fe",
+      "sourceGuid": "2b698f1b5f9aa944899012a28b478cae",
+      "isProfile": false,
+      "sha256": "0b119b96468e7dfa689035708acfd5fd0806df7d6eae5373f048b4681c8a2ba2"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/MovieLUT_32.png",
+      "guid": "28ad04c22bf5af4c65a0ffb423e075cc",
+      "sourceGuid": "c69fcc884b9e70a4f997836a84ac9909",
+      "isProfile": false,
+      "sha256": "ac4868435b41d5209c4a2e222779330478dce55f79a36b2dc8a073d0335061cf"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/PurpleLUT_32.png",
+      "guid": "a93ad06f7b11c3ec1eeb8466fea35723",
+      "sourceGuid": "805b63fa736fa1745b7bdd182dfbb3f2",
+      "isProfile": false,
+      "sha256": "3e4af7ad8d0bc85027ac85e590a1f7d8e8f2d10626b1506a98fcef6f6d8f6704"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/Russian2LUT_32.png",
+      "guid": "0b4ea93568a688d2c91304dfb5fa9b5c",
+      "sourceGuid": "9f9764eda1da9af43bcb9726fb962c5b",
+      "isProfile": false,
+      "sha256": "353160fea21e354516db338231098bb5c15df2e30a9b0c2e2bdf763e95b60d5e"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/RussianLUT_32.png",
+      "guid": "db523ec9129c3b25c05c05ac81f39b8c",
+      "sourceGuid": "26babcb5b387f6b438daf67b70fcafff",
+      "isProfile": false,
+      "sha256": "b9d34f54b1e37640397da2db17878bd008906a6b9022c18f4e515ce434c2ded1"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/vice3LUT_32.png",
+      "guid": "51e724f25b1e4778271d524cd52a47da",
+      "sourceGuid": "2749147ab15a797468733a4f68688ec9",
+      "isProfile": false,
+      "sha256": "961385eff9190e87b3e2989a111473c9e4bca67c96d0b656a28eabd1b34ef85c"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/ViceLUT_32.png",
+      "guid": "b357efda1928e77d481f47c983c75684",
+      "sourceGuid": "fb7abafb89d678e4e955087a3550a023",
+      "isProfile": false,
+      "sha256": "27df2d58207abf25fe701cc09bff8f557d10a92950c5b44425b3e85cadfc374e"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Luts/WesternLUT_32.png",
+      "guid": "e773241e131cd3363c08c780a1bb0f81",
+      "sourceGuid": "b7b3c17d58b414646a424a3e55785fe5",
+      "isProfile": false,
+      "sha256": "0203d1f49cb7d28a122d2cd50bc5c00dea5f75827322920dd1c3a56f1487a784"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/Textures/lens.png",
+      "guid": "037857d3bce76cd6c2ddc9f203bd25d8",
+      "sourceGuid": "1fd16acc533eaa34382de697c36d0900",
+      "isProfile": false,
+      "sha256": "8c7bdd89134692a427bba576453c5596dd04d48e86420e038c418237ce056fd1"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Aque_Profile.asset",
+      "guid": "b316c7cbdb12a198fc788dd3a1e22922",
+      "sourceGuid": "8e081f71f029c794db5eca1f8cb4f7bf",
+      "isProfile": true,
+      "sha256": "b91bde315eb6f175f2a68d8917adcf295e5b0716e6355323894cf6425b6b4f5f"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Autumn_Profile 1.asset",
+      "guid": "cba41b4d8eb1d00e6fa785079c7cb540",
+      "sourceGuid": "1abd292aa01996d4382ebd99d0d65151",
+      "isProfile": true,
+      "sha256": "7d13ea587a7b4514230a6dd0a200732dd51ee2fd559946db8bacb57d6591de76"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Autumn_Profile 2.asset",
+      "guid": "b842f1516bd1066dd34cac46bbc4b709",
+      "sourceGuid": "2f092020e53cf2345a2ded8dc2626cdf",
+      "isProfile": true,
+      "sha256": "c57d75dab7389c6ebeaf6cd890b3bb56a4f359c328131eaaab3fea5f63cba657"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Coziness_Profile 1.asset",
+      "guid": "e238daebaae77c71ca718fbf0b55746e",
+      "sourceGuid": "5fd3b2e025fa07c44aa14051e074ae15",
+      "isProfile": true,
+      "sha256": "fcecf8823c7c6ffd1e38c13ea4123eb61aad55dc4ab66828ce4203a5961fd805"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Coziness_Profile 2.asset",
+      "guid": "972551eace814b59f1067b5a860c86cb",
+      "sourceGuid": "4d96efc655c7bc749a8d5a8f645b910c",
+      "isProfile": true,
+      "sha256": "0b704813513fc6699ac40de4177ff5a14f8b745b4d83bbb20fd51236b1f997a3"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Coziness_Profile 3.asset",
+      "guid": "ca2d8b88cc99d813af3b721d36ec52ae",
+      "sourceGuid": "0f62618472ba73648a582c015969de69",
+      "isProfile": true,
+      "sha256": "fa0aa37e40c50497c84d6d197b1bf97086382f3cf0f1036b3d90ca77f84a2b78"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Crazy_Profile.asset",
+      "guid": "5150210e94e49c440a0dc312e979d64e",
+      "sourceGuid": "c586c52ec5bd3594c8c1c9602b0477b5",
+      "isProfile": true,
+      "sha256": "e0d9661df8eeeffd5e86604e2f113953decc7aae3e67d755843c7f8a1f28063e"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Dark_Profile 1.asset",
+      "guid": "db8eb5f848abf16abfec0a65d185ad02",
+      "sourceGuid": "4637bc0f2690c2f4ebf191e0505dd552",
+      "isProfile": true,
+      "sha256": "93ae139cc7446c191abc60dba9bf9a27cf5a7107e23df65aae41b3b70641093c"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Dark_Profile 2.asset",
+      "guid": "43bf81aeeb73b7e9ea85c0a311366d6b",
+      "sourceGuid": "50f2b57ad035dd345ba68e3c0923af60",
+      "isProfile": true,
+      "sha256": "61100e616ad3f79e70949837ee6cdcc8a8036ca5cca504a6181ec741c41f2bf6"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Day_Post Profile.asset",
+      "guid": "880768d105d34146171b1658eb58efc1",
+      "sourceGuid": "3d03729086b0abb48b9bda38c8c5dabf",
+      "isProfile": true,
+      "sha256": "56e05d7ce3db2eb07c6b1db36460a763c66f13f3f6186e9b694b184696674961"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Green_Profile.asset",
+      "guid": "fe789e9f677c42e6e8b86e2b8512a0b3",
+      "sourceGuid": "c74ef75cce9fc7a4e8486ad009863455",
+      "isProfile": true,
+      "sha256": "83869fc050f6e8f179d5a05fc0e31f76826fe94d4dd43b00c77fe1290b525e41"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/HDR_Profile.asset",
+      "guid": "cf06610382ce6a1d0e3c0c630fe7c743",
+      "sourceGuid": "59dbaa1156941b94d95fa2cb6b7340d8",
+      "isProfile": true,
+      "sha256": "57efde450ffeaf4c9fd89709fcf3c21e644251e45e387daf6d0de009bc22171b"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Horror_Profile 1.asset",
+      "guid": "0f9d16075fdd09051ecac5432e52c7c0",
+      "sourceGuid": "61191c69c7cebcf49a4f6421d4a488c6",
+      "isProfile": true,
+      "sha256": "4ab44556f15845d75f850355630e7a2d768864d5eb0c57c43040b397e63e3578"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Horror_Profile 2.asset",
+      "guid": "597349d00f964f8ecfcc8abe205b9932",
+      "sourceGuid": "a029089e77c78df4bab676d9a17b98c9",
+      "isProfile": true,
+      "sha256": "b32da2b588a68c30df61c39c138922ae3b5a18b911b0ce802fd7f9f4d982c5ca"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Horror_Profile 3.asset",
+      "guid": "f433134c986a5c36c6865563c5e8694c",
+      "sourceGuid": "597e066495e54b04b885835775bc5aee",
+      "isProfile": true,
+      "sha256": "983cc5103891e188b98c80cfb3a2e66114d446d4be0862da5a541a366adc8f96"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Lomon_Profile.asset",
+      "guid": "5955f8092fb3c2936f8e83674d733d0f",
+      "sourceGuid": "4d7c50ce69cc0dd4697cc3a3b2ad875e",
+      "isProfile": true,
+      "sha256": "f510925d082908ae328cb948bd7f3d6bebe5ce38578f62d9a5b8d1703016339a"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 1.asset",
+      "guid": "a96f66d8c3a08e301283a0da015edc86",
+      "sourceGuid": "32257e25bbfec6d4e9af808c36c1a38c",
+      "isProfile": true,
+      "sha256": "d9af985002ea4cf6b10afdf293ff654f8c232cd4589c37fffb05a9dde793d67a"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 2.asset",
+      "guid": "3aa15be0709081d37d1fc6b4ba284d38",
+      "sourceGuid": "a7df3ca5ca63ad747983c68e087db11b",
+      "isProfile": true,
+      "sha256": "edea3756d137c42f290e3c65a54f2707d42bb07c7af5b77bb96f55d89a3425d6"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 3.asset",
+      "guid": "eacb057c7a8cb70f9b5d0307bbe60e06",
+      "sourceGuid": "d32f89e34fe42da47976b21175d35777",
+      "isProfile": true,
+      "sha256": "ee592a5d090ff0b73df22daa5bb9b3ae161f52b57a2fbdbb02be64ccdd3a5cae"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 4.asset",
+      "guid": "695c2e39b63bf38364f00d30c4464a5a",
+      "sourceGuid": "090a4f781ac831e4abe849ffd7ef13ee",
+      "isProfile": true,
+      "sha256": "c63a20c084c460da6f18b769b7347566c579e57bce92ef42d6c4488af46176d0"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 5.asset",
+      "guid": "552215cfaf5f74aa48e1cad7df8a8726",
+      "sourceGuid": "c39f6b56061381045915a7d3ea9b474a",
+      "isProfile": true,
+      "sha256": "ec7d7bb19f32e52d32c19294d89b23512a5ac9201e0defa8f56737e6953742a3"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 6_Black.asset",
+      "guid": "d561c0172f2f0c9029ee6232ca749a83",
+      "sourceGuid": "d9ddb9042d0bc784f842d9c337003f4c",
+      "isProfile": true,
+      "sha256": "04116006a4879a1146e8645f76bfd40a737f42e02c4a448989ecdfaa2de5c9ae"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 7_White.asset",
+      "guid": "f95a07b76abd53215a26b231acd9d354",
+      "sourceGuid": "0d445ba2a20e4514dba467c484cd5e53",
+      "isProfile": true,
+      "sha256": "ece591c9ecb64be6adf0a02a73450d8d214d385f2d8cd2f1231b90e5e5ccc335"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Movie_Profile 8.asset",
+      "guid": "332eb4f5b68758616d4815f54a8b41d3",
+      "sourceGuid": "71c1e8ffd3bd6b145befaf238643f56f",
+      "isProfile": true,
+      "sha256": "b65d90149b18c41a65878af0f42c404bb097913c142797e2bb8f4b9ab1194ed0"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Purple_Profile.asset",
+      "guid": "89e6c927cd9e3b1671d9872362f030d2",
+      "sourceGuid": "610535404f71b51449bd738f9b4d52a9",
+      "isProfile": true,
+      "sha256": "e9853fda3c273f324da4f5acbb15e240ee7717cd43a63b792ce53b0fdb586594"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Russian_Profile 1.asset",
+      "guid": "eeba405dcfaed8f2f31b57f015eeba13",
+      "sourceGuid": "350e78fa1590d414883c562b8fc91a5a",
+      "isProfile": true,
+      "sha256": "f3f9e4b96deee5a3c50f99e253712d5a38cbecbb107a1508cf99879909ee4477"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Russian_Profile 2.asset",
+      "guid": "c23e7787bf8dc0a5d5c1361f5ebd4bae",
+      "sourceGuid": "e8bb2a1a26e23504eb0fd2efa768a4a3",
+      "isProfile": true,
+      "sha256": "9c7a1f96d514a6efac5507ab7223e5345c3f75b73acc681e53b32331409d5c44"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Vice_Profile 1.asset",
+      "guid": "c8ac4ae9ba2f0e7edb7bf5db6c19fedb",
+      "sourceGuid": "872862463dd0b654d9f0792141f45d21",
+      "isProfile": true,
+      "sha256": "8d67bb644a7488e8e286a0e368307af218abf7ee53114d6d52244c46fa721532"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Vice_Profile 2.asset",
+      "guid": "2580a5e4baebcb382f97d5db318661bf",
+      "sourceGuid": "25bbd7bec8b13374999487f3e3dd6d45",
+      "isProfile": true,
+      "sha256": "1acdc4d5ed0913a1f54cf7346d90ffcb14d2f88431b8b8e88e624f0084a0d50c"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Watch_Profile.asset",
+      "guid": "cfd7c0b940d9db9821c470a4084c75e2",
+      "sourceGuid": "6f3bf7980a71c7540be89be32d1614a6",
+      "isProfile": true,
+      "sha256": "124a4e50654a7fc10c81b212806110bfdf2676dfe2094206539c11e7e0f37817"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Western_Profile 1.asset",
+      "guid": "426039a24dd436cbf49c8d785464a6a4",
+      "sourceGuid": "40af350bdd450ab46bcb07464e17253d",
+      "isProfile": true,
+      "sha256": "ccbba2c16c3e74323a75587052bb9323b631acdbc551ede68fcbd54d6d8f0f8a"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Post/v4/Profiles/Western_Profile 2.asset",
+      "guid": "9faae967a0c5814cc9fa0c8147fb3846",
+      "sourceGuid": "9b7869e639becf747b0a17eb84bc9750",
+      "isProfile": true,
+      "sha256": "f88534d1908469d6e0bf908bee149054bbe0420358faa2067f7fe59177a0d738"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Profile/DefaultVolumeProfile.asset",
+      "guid": "874be23c78cb902cde10a957b541a4b7",
+      "sourceGuid": "ab09877e2e707104187f6f83e2f62510",
+      "isProfile": true,
+      "sha256": "d31338e82c78790990d446c5f2a76e663151d9112b2bf1dce65f62ed99ecb28f"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Profile/HighQualityProfile 1.asset",
+      "guid": "e0c0ecb1e9d7f26f2336b702619f6033",
+      "sourceGuid": "4ccae8e8c5ac3ba4eba413de8e5c5261",
+      "isProfile": true,
+      "sha256": "956bfee4c5799bd5fcb9f83e83387dec266f936a7e4b82f44b0916b051e051c2"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Profile/HighQualityProfile 2.asset",
+      "guid": "e3c2a87052caae75e35e04068b3f2b02",
+      "sourceGuid": "1b781d6f90d772148ac5b2cd552c4a09",
+      "isProfile": true,
+      "sha256": "bb6ef63e6f618b851bc30486a00daa4d6708c94d04156d885a5d3d917840f419"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Profile/SampleSceneProfile.asset",
+      "guid": "8e9db19c9d4d09c4ed0b3556af9e11ce",
+      "sourceGuid": "10fc4df2da32a41aaa32d77bc913491c",
+      "isProfile": true,
+      "sha256": "a8677d4bac051d24caa11cd622e39f968155ee277bfce132274f1de225692fe9"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/URP Profile/URP_InteriorProfile.asset",
+      "guid": "33ec748633095eb2bbb45bc34871f1d6",
+      "sourceGuid": "602017349975ff04ba5f262b1bb9dcb1",
+      "isProfile": true,
+      "sha256": "27227612234107185491f474bacd9d5952531e2225f6fee6238dd6c1014454d4"
+    },
+    {
+      "path": "Assets/TemplateVolumeProfiles/Prefabs/TemplateGlobalVolume.prefab",
+      "guid": "ac8525fe9396d46c69809b2167167f46",
+      "isProfile": false,
+      "sha256": "c98a38184228464da7292ba7dbd4ebe62ba2a6650466113e031ac7d7fb561638"
+    }
+  ],
+  "validation": "Static GUID, null-script and component fileID checks passed; Unity validation recorded separately."
+}
