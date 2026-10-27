@@ -1,0 +1,479 @@
+{
+  "unity": "6000.4.0f1",
+  "urp": "17.6.0",
+  "profileCount": 37,
+  "assetCount": 63,
+  "assets": [
+    {
+      "path": "Assets/Settings/URP Post/GestLUTSPack/Aqua_LUT_32.png",
+      "guid": "2026e7eab3aea98479e823c4dbaba1c4",
+      "sha256": "733dc327db1c971e8e85face3cd5bac62c64e625509d761bce803761783b4fdc",
+      "bytes": 32784,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/GestLUTSPack/Autumn2LUT_32.png",
+      "guid": "ae9a8f71956435b4cb33ef1a2a0eb1f6",
+      "sha256": "cf17a68f647ba62e4a6468dc2e84b825644244b67008b710133199db60a884b2",
+      "bytes": 37640,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/GestLUTSPack/GreenParadiseLUT_32.png",
+      "guid": "45478cad60b4e3a41bdabdde1fd4c03c",
+      "sha256": "25761f091f8fd2a4defffd041c32f1cb38fc1f6dda208ae9c9ba58fe416da6c7",
+      "bytes": 45098,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/GestLUTSPack/HDR_LUT_32.png",
+      "guid": "20533833ab333f146a6016bd406ad08c",
+      "sha256": "3be8df7a33c0d4245a9141971b6ae93ec003bbf840e06224567935fcddba0ede",
+      "bytes": 30840,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/GestLUTSPack/Movie6LUT_32.png",
+      "guid": "728c1dd3c933f914799214ff425d9d1a",
+      "sha256": "b4c2d8d77f17e1cb2735b73087543e6d032465626a784f2fe85fce960474635e",
+      "bytes": 39080,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/AutumnLUT_32.png",
+      "guid": "57863826664884e46b1672bd8959eb6b",
+      "sha256": "29c405f728b74e157341e34e7b69faca1842c1c430458fd3e57083391970e19d",
+      "bytes": 56550,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Coziness2LUT_32.png",
+      "guid": "d6baee6a63dfed241a6b545eb8cde703",
+      "sha256": "3e15b016cc17e21835e75b201405fe35b4432305a4e1a3d2df951d06a413ff0f",
+      "bytes": 58540,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/CozinessLUT_32.png",
+      "guid": "8fffa1992e044ca43a3734cf149ee169",
+      "sha256": "7fae2f081d208cb8fcb757650c933bc8ff7768149c9b7acf04bfcecd58ed59a0",
+      "bytes": 56567,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/crazyLUT_32.png",
+      "guid": "5c3f8f167e21c05438bf102eeca3bf1c",
+      "sha256": "a93b0fdb86e4444782ebb3c40c6240c97449134dffe9fd0f4baf5632916fd96a",
+      "bytes": 97505,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Dark2LUT_32.png",
+      "guid": "b2be66e1edb1a584190484224c0f9c66",
+      "sha256": "cad710501b1fac4503142354f6533c8e1de0733272c8c8d339fdbbdfe0605b9f",
+      "bytes": 45928,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/DarkLUT_32.png",
+      "guid": "c3c39d20658041944b7980a7a21ec5d6",
+      "sha256": "378a5a5f167e108ee72abaff1c9172ab5d0262aaf1ac45e5e0d30e53f085d7e2",
+      "bytes": 57061,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/horror_LUT.png",
+      "guid": "6ece7d54efd9cad44828a82e920d64ae",
+      "sha256": "ebaffce26cc6cc243e84f358695f1ca3bdacbb4b233a4e5f91bc008370c5cbd8",
+      "bytes": 49986,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Horror2LUT_32.png",
+      "guid": "3ae01bc4fcb67274582f6d61be50ed43",
+      "sha256": "ad8fd7d7a100d5e73567bf4459c62bf45fd3c76de81198b9b19182a6d9272827",
+      "bytes": 57002,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/horror3LUT_32.png",
+      "guid": "2af015f13c3e45b4783402c39e2dbef3",
+      "sha256": "6238d7918add2cabd1a9ed9f565c8c9eee5e4f34f0e1f9424a86e1249a6490ab",
+      "bytes": 52898,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/LomonewLUT_32.png",
+      "guid": "2f08cb72f46a2134b974e39afc2111a5",
+      "sha256": "60f7f0831055c38bc1d9b2f86e966416d8f5b3cd4b9c1eb6d516564eacdc6dbe",
+      "bytes": 30057,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Movie2LUT_32.png",
+      "guid": "be22ce3f7af51b144abeceeece1ec660",
+      "sha256": "874c1ada7fddf51f5c22bf82e6ab12a027d5db31e8e11ebadae992542a960c4d",
+      "bytes": 53135,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Movie3LUT_32.png",
+      "guid": "396f5d4397260ff44a7f2353b8381b10",
+      "sha256": "61b33cbdf1bd36bd4616bf94f3e63479a634e367bce30988525b97a0a463b9c4",
+      "bytes": 57310,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/movie4LUT_32.png",
+      "guid": "2b698f1b5f9aa944899012a28b478cae",
+      "sha256": "0b119b96468e7dfa689035708acfd5fd0806df7d6eae5373f048b4681c8a2ba2",
+      "bytes": 53677,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/MovieLUT_32.png",
+      "guid": "c69fcc884b9e70a4f997836a84ac9909",
+      "sha256": "ac4868435b41d5209c4a2e222779330478dce55f79a36b2dc8a073d0335061cf",
+      "bytes": 49921,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/PurpleLUT_32.png",
+      "guid": "805b63fa736fa1745b7bdd182dfbb3f2",
+      "sha256": "3e4af7ad8d0bc85027ac85e590a1f7d8e8f2d10626b1506a98fcef6f6d8f6704",
+      "bytes": 55884,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/Russian2LUT_32.png",
+      "guid": "9f9764eda1da9af43bcb9726fb962c5b",
+      "sha256": "353160fea21e354516db338231098bb5c15df2e30a9b0c2e2bdf763e95b60d5e",
+      "bytes": 44483,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/RussianLUT_32.png",
+      "guid": "26babcb5b387f6b438daf67b70fcafff",
+      "sha256": "b9d34f54b1e37640397da2db17878bd008906a6b9022c18f4e515ce434c2ded1",
+      "bytes": 30849,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/vice3LUT_32.png",
+      "guid": "2749147ab15a797468733a4f68688ec9",
+      "sha256": "961385eff9190e87b3e2989a111473c9e4bca67c96d0b656a28eabd1b34ef85c",
+      "bytes": 51942,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/ViceLUT_32.png",
+      "guid": "fb7abafb89d678e4e955087a3550a023",
+      "sha256": "27df2d58207abf25fe701cc09bff8f557d10a92950c5b44425b3e85cadfc374e",
+      "bytes": 32221,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Luts/WesternLUT_32.png",
+      "guid": "b7b3c17d58b414646a424a3e55785fe5",
+      "sha256": "0203d1f49cb7d28a122d2cd50bc5c00dea5f75827322920dd1c3a56f1487a784",
+      "bytes": 16174,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/Textures/lens.png",
+      "guid": "1fd16acc533eaa34382de697c36d0900",
+      "sha256": "8c7bdd89134692a427bba576453c5596dd04d48e86420e038c418237ce056fd1",
+      "bytes": 2797932,
+      "isProfile": false
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Aque_Profile.asset",
+      "guid": "8e081f71f029c794db5eca1f8cb4f7bf",
+      "sha256": "f01e9189342e969997c154d394aac5366e443bdea2bfd7794615b883c0c58e23",
+      "bytes": 5252,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Autumn_Profile 1.asset",
+      "guid": "1abd292aa01996d4382ebd99d0d65151",
+      "sha256": "cbb6b088ec0789fbb70d03ff678e550ab953bb2880f2c2ab8b4da728f64cb49c",
+      "bytes": 4518,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Autumn_Profile 2.asset",
+      "guid": "2f092020e53cf2345a2ded8dc2626cdf",
+      "sha256": "c39b6b1034df425118095efa09ec1f994cfb6dd68c460a6a635ef710d45ce938",
+      "bytes": 6018,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Coziness_Profile 1.asset",
+      "guid": "5fd3b2e025fa07c44aa14051e074ae15",
+      "sha256": "625b15b81e9f6ca1317f57b41b75b1fe026225a5108591bb3fdf1238788d3914",
+      "bytes": 3931,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Coziness_Profile 2.asset",
+      "guid": "4d96efc655c7bc749a8d5a8f645b910c",
+      "sha256": "95682d50013203813fc04a4dfd4ce8e0a5b15a336ed40ef54b9bfda10eb2f3ab",
+      "bytes": 5450,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Coziness_Profile 3.asset",
+      "guid": "0f62618472ba73648a582c015969de69",
+      "sha256": "49082fcd79b1f77bd7f601b6172899e3b9f04797f7a120932906987d7a9bb19c",
+      "bytes": 5452,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Crazy_Profile.asset",
+      "guid": "c586c52ec5bd3594c8c1c9602b0477b5",
+      "sha256": "4d63946897fc6576e7daa75e4d662332a47536fedd3dd5abacd01aa8244cb447",
+      "bytes": 4607,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Dark_Profile 1.asset",
+      "guid": "4637bc0f2690c2f4ebf191e0505dd552",
+      "sha256": "ef44fe07e4b2fa1135cfb094a50baa0f1a3fdca404e3e17edb7016b32d972044",
+      "bytes": 5252,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Dark_Profile 2.asset",
+      "guid": "50f2b57ad035dd345ba68e3c0923af60",
+      "sha256": "7668d15f92584b5d0f1e64a0777fdd49c68e69b6136737957ebb33aae86ab504",
+      "bytes": 6021,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Day_Post Profile.asset",
+      "guid": "3d03729086b0abb48b9bda38c8c5dabf",
+      "sha256": "c85ed7c72cab192ca040f8270130ab8d7204c9c49f0cb96c100bd71616a90697",
+      "bytes": 5139,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Green_Profile.asset",
+      "guid": "c74ef75cce9fc7a4e8486ad009863455",
+      "sha256": "008420de616149ecf000ce4f151751876c2424588d776c428b5bb4cacb063631",
+      "bytes": 5251,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/HDR_Profile.asset",
+      "guid": "59dbaa1156941b94d95fa2cb6b7340d8",
+      "sha256": "eda81b3cb230d88b4b0fe511758dc2e25f636fb2261c0a3ce6da6afd063a3b29",
+      "bytes": 5249,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Horror_Profile 1.asset",
+      "guid": "61191c69c7cebcf49a4f6421d4a488c6",
+      "sha256": "f94d9029527f0f32a9f5ff6b03155a2d72cbb37691882020c3db4f04b8bcc703",
+      "bytes": 5254,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Horror_Profile 2.asset",
+      "guid": "a029089e77c78df4bab676d9a17b98c9",
+      "sha256": "62f3a07619da779a48add3ad334f8016ff9697b58d58f6f2998be482a08c436d",
+      "bytes": 5256,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Horror_Profile 3.asset",
+      "guid": "597e066495e54b04b885835775bc5aee",
+      "sha256": "cf9c5af40cc3006b2bff9b42d67979360ca24d313b12a61b4d8a33d50ad2d67d",
+      "bytes": 6076,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Lomon_Profile.asset",
+      "guid": "4d7c50ce69cc0dd4697cc3a3b2ad875e",
+      "sha256": "848451b9147f248c93f92eeb303569e0b315a966b381aec535f466f78a5b9aa1",
+      "bytes": 5497,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 1.asset",
+      "guid": "32257e25bbfec6d4e9af808c36c1a38c",
+      "sha256": "98a773b3c42b1945c2334e7ddcec86e7e39188d01bf846c76d320b1e932691da",
+      "bytes": 4574,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 2.asset",
+      "guid": "a7df3ca5ca63ad747983c68e087db11b",
+      "sha256": "38d4ad9675035201651ea2d56269e441600629839251e2066a73af27c37163a7",
+      "bytes": 5253,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 3.asset",
+      "guid": "d32f89e34fe42da47976b21175d35777",
+      "sha256": "0f372a470de5e40cba136f12e7be867b0b3af0f15e44479f517810272e8942d2",
+      "bytes": 5418,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 4.asset",
+      "guid": "090a4f781ac831e4abe849ffd7ef13ee",
+      "sha256": "913c9a5200f8f8b714164a655143c2d321f5dcf49feea20c1aedd46dfb855f3a",
+      "bytes": 6213,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 5.asset",
+      "guid": "c39f6b56061381045915a7d3ea9b474a",
+      "sha256": "863a6b64392423d47a6432e5687b853bd694e7292525f9beb78721494954409c",
+      "bytes": 5417,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 6_Black.asset",
+      "guid": "d9ddb9042d0bc784f842d9c337003f4c",
+      "sha256": "2e700d370b965d2484e0c10dc49187ef7454aefa6838d07eb481a7c9ec8b7cf1",
+      "bytes": 8534,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 7_White.asset",
+      "guid": "0d445ba2a20e4514dba467c484cd5e53",
+      "sha256": "64b1dd70c25e3504d65f58d521e694d1f06614dba91846617fc5ed01a42568c9",
+      "bytes": 10630,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Movie_Profile 8.asset",
+      "guid": "71c1e8ffd3bd6b145befaf238643f56f",
+      "sha256": "f429b996c6c6ea2526839df0b8b7b6290b29df3d3ba51436f8de19e2aad1039a",
+      "bytes": 6215,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Purple_Profile.asset",
+      "guid": "610535404f71b51449bd738f9b4d52a9",
+      "sha256": "272e10c3b1d8062174adfa4adefe866ea68af184c8b03dfc3bcc3213dc74caee",
+      "bytes": 5250,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Russian_Profile 1.asset",
+      "guid": "350e78fa1590d414883c562b8fc91a5a",
+      "sha256": "15e4133e0e9520aa1120200d98cda8b7ab750bb47855b361647fc7f1e7cfa90a",
+      "bytes": 5257,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Russian_Profile 2.asset",
+      "guid": "e8bb2a1a26e23504eb0fd2efa768a4a3",
+      "sha256": "6072e2279c2f2ab03bd38fef8fd634eb4f8ea98a26acd641960131c9e4850c39",
+      "bytes": 6704,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Vice_Profile 1.asset",
+      "guid": "872862463dd0b654d9f0792141f45d21",
+      "sha256": "af17ba086dc34517783039823738c653034488e208d5bb7bcf66ca9892f2a096",
+      "bytes": 5252,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Vice_Profile 2.asset",
+      "guid": "25bbd7bec8b13374999487f3e3dd6d45",
+      "sha256": "09dd349252d957d0660a9087244393e262a4f901d9e01180f4456d7600fa803d",
+      "bytes": 6697,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Watch_Profile.asset",
+      "guid": "6f3bf7980a71c7540be89be32d1614a6",
+      "sha256": "01d7ddb8074e9d5347dae63d17f9283faf42b3eb21c105cb47022e920a08c01d",
+      "bytes": 6084,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Western_Profile 1.asset",
+      "guid": "40af350bdd450ab46bcb07464e17253d",
+      "sha256": "9b67387485d08de31c5a5ed718d6e2967312fb0857c2454efd9b777e426a874b",
+      "bytes": 6019,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Post/v4/Profiles/Western_Profile 2.asset",
+      "guid": "9b7869e639becf747b0a17eb84bc9750",
+      "sha256": "f2308d6d68fa2a354a20e639b90ba00b52fef445b0ff0833b130d72a0565d6c1",
+      "bytes": 6025,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Profile/DefaultVolumeProfile.asset",
+      "guid": "ab09877e2e707104187f6f83e2f62510",
+      "sha256": "463776c51ae49d4fef980e8fd268081b2f505610d79315003faae1acff8f4115",
+      "bytes": 24035,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Profile/HighQualityProfile 1.asset",
+      "guid": "4ccae8e8c5ac3ba4eba413de8e5c5261",
+      "sha256": "956bfee4c5799bd5fcb9f83e83387dec266f936a7e4b82f44b0916b051e051c2",
+      "bytes": 7437,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Profile/HighQualityProfile 2.asset",
+      "guid": "1b781d6f90d772148ac5b2cd552c4a09",
+      "sha256": "bb6ef63e6f618b851bc30486a00daa4d6708c94d04156d885a5d3d917840f419",
+      "bytes": 7435,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Profile/SampleSceneProfile.asset",
+      "guid": "10fc4df2da32a41aaa32d77bc913491c",
+      "sha256": "a8677d4bac051d24caa11cd622e39f968155ee277bfce132274f1de225692fe9",
+      "bytes": 3703,
+      "isProfile": true
+    },
+    {
+      "path": "Assets/Settings/URP Profile/URP_InteriorProfile.asset",
+      "guid": "602017349975ff04ba5f262b1bb9dcb1",
+      "sha256": "27227612234107185491f474bacd9d5952531e2225f6fee6238dd6c1014454d4",
+      "bytes": 5144,
+      "isProfile": true
+    }
+  ],
+  "packageReferences": {
+    "cdfbdbb87d3286943a057f7791b43141": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ChannelMixer.cs",
+    "c01700fd266d6914ababb731e09af2eb": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/DepthOfField.cs",
+    "fb60a22f311433c4c962b888d1393f88": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/PaniniProjection.cs",
+    "0b2db86121404754db890f4c8dfe81b2": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/Bloom.cs",
+    "66f335fb1ffd8684294ad653bf1c7564": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ColorAdjustments.cs",
+    "e021b4c809a781e468c2988c016ebbea": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ColorLookup.cs",
+    "81180773991d8724ab7f2d216912b564": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ChromaticAberration.cs",
+    "5485954d14dfb9a4c8ead8edb0ded5b1": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/LiftGammaGain.cs",
+    "221518ef91623a7438a71fef23660601": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/WhiteBalance.cs",
+    "558a8e2b6826cf840aae193990ba9f2e": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ShadowsMidtonesHighlights.cs",
+    "06437c1ff663d574d9447842ba0a72e4": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ScreenSpaceLensFlare.cs",
+    "29fa0085f50d5e54f8144f766051a691": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/FilmGrain.cs",
+    "97c23e3b12dc18c42a140437e53d3951": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/Tonemapping.cs",
+    "70afe9e12c7a7ed47911bb608a23a8ff": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/SplitToning.cs",
+    "d7fd9488000d3734a9e00ee676215985": "Library/PackageCache/com.unity.render-pipelines.core@6a60abc179f8/Runtime/Volume/VolumeProfile.cs",
+    "6bd486065ce11414fa40e631affc4900": "Library/PackageCache/com.unity.render-pipelines.core@6a60abc179f8/Runtime/Lighting/ProbeVolume/ProbeVolumesOptions.cs",
+    "c5e1dc532bcb41949b58bc4f2abfbb7e": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/LensDistortion.cs",
+    "899c54efeace73346a0a16faa3afe726": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/Vignette.cs",
+    "ccf1aba9553839d41ae37dd52e9ebcce": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/MotionBlur.cs",
+    "3eb4b772797da9440885e8bd939e9560": "Library/PackageCache/com.unity.render-pipelines.universal@0c5162adfb45/Runtime/Overrides/ColorCurves.cs"
+  },
+  "unresolvedGuids": [
+    "0fd9ee276a1023e439cf7a9c393195fa",
+    "60f3b30c03e6ba64d9a27dc9dba8f28d",
+    "a074ec59f6e910b4e8c49f57e56cf95a",
+    "a2960ffde020f27409e070d92fb2e00b",
+    "5a00a63fdd6bd2a45ab1f2d869305ffd",
+    "74955a4b0b4243bc87231e8b59ed9140"
+  ]
+}
