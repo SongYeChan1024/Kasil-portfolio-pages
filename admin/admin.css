@@ -15,3 +15,9 @@ body { margin: 0; font-family: system-ui, sans-serif; }
 .author-card small { display: block; margin-top: 12px; color: #526079; }
 .author-error { margin: 12px 0; color: #b91c1c; }
 @media (max-width: 520px) { .author-card { padding: 22px; } }
+.image-paste-help, .image-paste-status { font-size: 13px; line-height: 1.6; margin: 8px 0; color: #43576d; }
+.image-paste-status:empty { display: none; }
+.image-paste-error { color: #b42318; }
+.image-paste-widget[aria-busy="true"] { cursor: progress; }
+.author-card label.remember-login { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 16px 0; }
+.author-card .remember-login input { width: 18px; height: 18px; margin: 0; padding: 0; }

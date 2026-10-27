@@ -7,18 +7,38 @@
     return;
   }
 
-  // Decap normally persists its user (including an OAuth token) in localStorage.
-  // This backend returns metadata only and starts a fresh login on every page load.
-  try { window.localStorage.removeItem("decap-cms-user"); } catch (_) { /* Storage may be disabled. */ }
+  const session = window.KasilLoginSession.createSession(() => window.localStorage);
+  // Decap's default user record remains token-free. Remembering is an explicit opt-in.
+  if (!session.read()) {
+    try { window.localStorage.removeItem("decap-cms-user"); } catch (_) { /* Storage may be disabled. */ }
+  }
+  let autoAttempted = false;
+  let loginView;
+  let loginMessage = "";
+  function notifyLogin(message) {
+    loginMessage = message;
+    if (loginView) loginView.setState({ busy: false, error: message });
+  }
 
   const h = window.h;
   const Login = window.createClass({
-    getInitialState: function () { return { busy: false, error: "" }; },
+    getInitialState: function () { return { busy: false, error: loginMessage }; },
+    componentDidMount: function () {
+      loginView = this;
+      const token = session.read();
+      if (token && !autoAttempted) {
+        autoAttempted = true;
+        this.setState({ busy: true });
+        this.props.onLogin({ token, remember: true });
+      }
+    },
+    componentWillUnmount: function () { if (loginView === this) loginView = null; },
     submit: async function (event) {
       event.preventDefault();
       const input = event.currentTarget.elements.namedItem("github-token");
       let token = input.value.trim();
       if (!token) return;
+      const remember = event.currentTarget.elements.namedItem("remember-login").checked;
       input.value = "";
       this.setState({ busy: true, error: "" });
       try {
@@ -27,7 +47,7 @@
           cache: "no-store"
         });
         if (!response.ok) throw new Error("토큰을 확인해 주세요.");
-        await this.props.onLogin({ token: token });
+        this.props.onLogin({ token, remember });
       } catch (_) {
         this.setState({ error: "로그인하지 못했습니다. 토큰 유효기간과 저장소 Contents 쓰기 권한을 확인해 주세요." });
       } finally {
@@ -43,9 +63,13 @@
           h("form", { onSubmit: this.submit },
             h("label", { htmlFor: "github-token" }, "GitHub 전용 토큰"),
             h("input", { id: "github-token", name: "github-token", type: "password", autoComplete: "off", spellCheck: false, required: true, disabled: this.state.busy, placeholder: "github_pat_…" }),
+            h("label", { className: "remember-login", htmlFor: "remember-login" },
+              h("input", { id: "remember-login", name: "remember-login", type: "checkbox", disabled: this.state.busy }),
+              "이 브라우저에 로그인 유지"
+            ),
             this.state.error ? h("p", { className: "author-error", role: "alert" }, this.state.error) : null,
             h("button", { type: "submit", disabled: this.state.busy }, this.state.busy ? "확인 중…" : "편집기 열기"),
-            h("small", null, "토큰은 현재 페이지 메모리에서만 사용합니다. 새로고침하거나 창을 닫으면 다시 입력해야 합니다.")
+            h("small", null, "로그인 유지를 선택하면 토큰을 이 브라우저에 보관합니다. 개인 PC에서만 사용해 주세요. 로그아웃하면 지워지며, 만료·폐기되면 새 토큰이 필요합니다.")
           ),
           h("details", null,
             h("summary", null, "처음 사용하는 경우: 토큰 만들기"),
@@ -68,24 +92,9 @@
     loading.textContent = "GitHub 편집 기능을 불러오지 못했습니다. 새로고침해 주세요.";
     return;
   }
-  class TokenBackend extends native.BackendClass {
-    authComponent() { return Login; }
-    async authenticate(credentials) {
-      this._currentUserPromise = undefined;
-      this._userIsOriginMaintainerPromises = undefined;
-      try {
-        const user = await super.authenticate(credentials);
-        // Keep credentials on the backend instance, never in Decap's persisted user.
-        const { token, ...metadata } = user;
-        return metadata;
-      } catch (error) {
-        await super.logout();
-        throw error;
-      }
-    }
-    restoreUser() { throw new Error("관리자 토큰을 다시 입력해 주세요."); }
-  }
+  const TokenBackend = window.KasilLoginSession.createBackend(native.BackendClass, session, Login, notifyLogin);
   window.CMS.registerBackend("github-token", TokenBackend);
+  window.KasilImagePaste.register(window.CMS, window.createClass, h);
   loading.remove();
   window.CMS.init();
 })();

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>이미지 붙여넣기 로컬 검증</title>
+<link rel="stylesheet" href="../admin/admin.css">
+<style>#qa { position:fixed; bottom:0; right:0; z-index:9999; background:#fff6dc; border:1px solid #ddd; padding:8px; font:13px sans-serif; max-width:440px } #qa button { margin:4px } #saved { max-height:160px; overflow:auto; white-space:pre-wrap }</style>
+<aside id="qa">로컬 검증 · GitHub에 연결하지 않습니다.<br><button id="copy">테스트 캡처 복사</button><button id="saved-button">저장 결과 확인</button><pre id="saved"></pre></aside>
+<script>window.CMS_MANUAL_INIT = true;</script>
+<script src="https://unpkg.com/decap-cms@3.17.3/dist/decap-cms.js" integrity="sha384-RWRzuHfiZSWCt3nEvG7B0v3cMgM1C2UuJmgBSL92GQh4uXmNSkbcthql/mNBqvjr" crossorigin="anonymous"></script>
+<script src="../admin/image-paste.js"></script>
+<script>
+  KasilImagePaste.register(CMS, createClass, h);
+  CMS.init({ config: {
+    load_config_file: false, backend: { name: 'test-repo' }, locale: 'ko',
+    media_folder: 'assets/img/uploads', public_folder: '/assets/img/uploads',
+    collections: [{ name:'posts', label:'검증용 글', folder:'_posts', create:true, fields:[
+      { name:'title', label:'제목', widget:'string' },
+      { name:'body', label:'본문', widget:'clipboard-markdown', paste_public_folder:'/assets/img/uploads' }
+    ] }]
+  } });
+  document.getElementById('copy').onclick = async () => {
+    const canvas = document.createElement('canvas'); canvas.width=520; canvas.height=240;
+    const ctx=canvas.getContext('2d'); ctx.fillStyle='#204ad9'; ctx.fillRect(0,0,520,240);
+    ctx.fillStyle='white'; ctx.font='bold 30px sans-serif'; ctx.fillText('Kasil Devlog',32,70);
+    ctx.font='24px sans-serif'; ctx.fillText('캡처 이미지 붙여넣기',32,120); ctx.fillText('Ctrl + V',32,180);
+    const blob=await new Promise(resolve => canvas.toBlob(resolve));
+    await navigator.clipboard.write([new ClipboardItem({'image/png':blob})]);
+    document.getElementById('saved').textContent='테스트 이미지가 복사되었습니다.';
+  };
+  document.getElementById('saved-button').onclick = () => {
+    const posts=Object.values(window.repoFiles._posts || {}).map(file => file.content).join('\n');
+    const media=Object.values(window.repoFiles.assets?.img?.uploads || {}).map(file => file.path);
+    document.getElementById('saved').textContent=JSON.stringify({posts,media},null,2);
+  };
+</script>
+</html>
