@@ -95,6 +95,7 @@
   const TokenBackend = window.KasilLoginSession.createBackend(native.BackendClass, session, Login, notifyLogin);
   window.CMS.registerBackend("github-token", TokenBackend);
   window.KasilImagePaste.register(window.CMS, window.createClass, h);
+  window.KasilBlogManager.register(window.CMS, window.createClass, h);
   loading.remove();
   window.CMS.init();
 })();

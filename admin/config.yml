@@ -22,6 +22,21 @@ slug:
   sanitize_replacement: "-"
 
 collections:
+  - name: blog_settings
+    label: 블로그 관리
+    editor:
+      preview: false
+    files:
+      - name: appearance
+        label: 블로그 설정
+        file: _data/blog_ui.json
+        format: json
+        fields:
+          - name: settings
+            label: 블로그 관리
+            widget: blog-manager
+            categories_url: ../assets/data/blog-categories.json
+            home_url: ../
   - name: posts
     label: 블로그 글
     label_singular: 글
