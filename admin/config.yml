@@ -1,0 +1,72 @@
+backend:
+  name: github-token
+  repo: SongYeChan1024/Kasil-portfolio-pages
+  branch: main
+  use_graphql: false
+  commit_messages:
+    create: "Write {{collection}}: {{slug}}"
+    update: "Update {{collection}}: {{slug}}"
+    delete: "Delete {{collection}}: {{slug}}"
+    uploadMedia: "Upload blog image: {{path}}"
+    deleteMedia: "Delete blog image: {{path}}"
+
+site_url: https://songyechan1024.github.io/Kasil-portfolio-pages
+display_url: https://songyechan1024.github.io/Kasil-portfolio-pages
+locale: ko
+media_folder: assets/img/uploads
+public_folder: https://songyechan1024.github.io/Kasil-portfolio-pages/assets/img/uploads
+show_preview_links: false
+slug:
+  encoding: unicode
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: posts
+    label: 블로그 글
+    label_singular: 글
+    folder: _posts
+    create: true
+    extension: md
+    format: yaml-frontmatter
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    view_filters:
+      - label: Unity
+        field: tags
+        pattern: Unity
+    fields:
+      - {label: 제목, name: title, widget: string}
+      - label: 작성일
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD HH:mm:ss ZZ"
+        date_format: "YYYY-MM-DD"
+        time_format: "HH:mm"
+        picker_utc: false
+        hint: "미래 시각이면 해당 시각 이후 사이트가 다시 빌드될 때 공개됩니다."
+      - label: 카테고리
+        name: categories
+        widget: list
+        default: [개발일지, Unity]
+        hint: "순서대로 대분류, 프로젝트명 등을 입력하세요. 예: 개발일지, After Seconds"
+      - label: 태그
+        name: tags
+        widget: list
+        required: false
+        default: []
+      - label: 대표 이미지
+        name: image
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - {label: 이미지, name: path, widget: image, required: false}
+          - {label: 이미지 설명, name: alt, widget: string, required: false}
+      - {label: 상단 고정, name: pin, widget: boolean, default: false, required: false}
+      - {label: 목차 표시, name: toc, widget: boolean, default: true, required: false}
+      - label: 본문
+        name: body
+        widget: markdown
+        hint: "이미지는 편집기에서 업로드할 수 있습니다. 저장하면 main에 커밋되고 자동 배포됩니다."

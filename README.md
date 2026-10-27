@@ -19,6 +19,17 @@ Kasil-portfolio-pages/
 
 ## 글 쓰기
 
+사이트의 **글쓰기** 메뉴 또는 `/Kasil-portfolio-pages/admin/`에서 작성할 수 있습니다. Decap CMS 3.17.3과 GitHub backend를 사용합니다.
+
+- GitHub Fine-grained token을 생성하고 `Kasil-portfolio-pages` 저장소에만 `Contents: Read and write` 권한을 줍니다. Metadata는 기본 읽기 권한을 유지합니다.
+- 관리자 화면에 토큰을 입력합니다. 별도 인증 서버 없이 GitHub API를 사용하며 토큰은 페이지 메모리에만 두고, Decap의 저장 사용자 정보에서는 제거합니다. 새로고침하면 다시 로그인합니다.
+- **블로그 글 → 새 글**에서 제목·날짜·카테고리·태그·본문·이미지를 입력하고 저장/발행합니다. `main`에 커밋된 뒤 기존 GitHub Actions가 사이트를 배포합니다.
+- 이미지는 `assets/img/uploads`에 저장하고 GitHub Pages의 baseurl을 포함한 주소로 연결합니다.
+- 날짜가 미래이면 예약된 시각에 자동으로 빌드되지는 않습니다. 공개할 시각 또는 지난 시각을 입력하세요.
+- 토큰을 저장소·본문·채팅에 넣지 마세요. 토큰을 잃거나 만료되면 GitHub에서 새 토큰을 만듭니다.
+
+관리자 UI와 backend 확장은 `admin/`에 있습니다. 기존의 Markdown 파일 작성 방식도 그대로 사용할 수 있습니다.
+
 `_posts/2026-10-23-slug.md` 파일을 만들고 맨 위에 아래 머리말을 붙입니다.
 
 ```yaml

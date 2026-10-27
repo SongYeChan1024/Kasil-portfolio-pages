@@ -1,0 +1,17 @@
+body { margin: 0; font-family: system-ui, sans-serif; }
+#cms-loading { padding: 2rem; text-align: center; color: #475569; }
+.author-login { box-sizing: border-box; min-height: 100vh; display: grid; place-items: center; background: #f1f5f9; padding: 24px; }
+.author-card { width: 100%; max-width: 480px; padding: 32px; border: 1px solid #dbe2ea; border-radius: 16px; background: white; box-shadow: 0 10px 40px #0f172a0d; color: #172033; line-height: 1.7; }
+.author-card h1 { margin: 0 0 8px; font-size: 25px; }
+.author-card p { margin: 0 0 20px; }
+.author-card label { display: block; font-weight: 600; margin-bottom: 8px; }
+.author-card input { box-sizing: border-box; width: 100%; padding: 12px; border: 1px solid #94a3b8; border-radius: 8px; font: inherit; }
+.author-card button { width: 100%; margin-top: 14px; padding: 12px; background: #1d4ed8; color: white; border: 0; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; }
+.author-card button:disabled { opacity: .6; cursor: wait; }
+.author-card a { color: #1d4ed8; }
+.author-card details { margin: 24px 0; font-size: 14px; }
+.author-card summary { cursor: pointer; font-weight: 600; }
+.author-card ol { padding-left: 22px; }
+.author-card small { display: block; margin-top: 12px; color: #526079; }
+.author-error { margin: 12px 0; color: #b91c1c; }
+@media (max-width: 520px) { .author-card { padding: 22px; } }
