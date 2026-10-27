@@ -97,6 +97,17 @@
         "id": "tab-d995487f-eb53-4941-8802-db849ccc667e",
         "title": "프로젝트 전체",
         "parent": ""
+      },
+      {
+        "categories": [
+          "개인 프로젝트"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "tab-0c68975d-c092-4862-90d3-95b2f5d229cc",
+        "title": "개인 프로젝트",
+        "parent": ""
       }
     ]
   }
