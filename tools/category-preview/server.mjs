@@ -7,9 +7,14 @@ const response=await fetch(remote+base+'/');if(!response.ok)throw Error('Publish
 const shell=(await response.text()).replace(/<script\b[^>]*src="[^"]*\/app\.min\.js[^"]*"[^>]*>[\s\S]*?<\/script>/gi,'');
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.yml':'text/yaml; charset=utf-8','.png':'image/png','.svg':'image/svg+xml'};
 const server=http.createServer(async(req,res)=>{
-  const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+  const requestUrl=new URL(req.url,'http://localhost'),pathname=decodeURIComponent(requestUrl.pathname);
   try {
     const site=await readSite();
+    if(requestUrl.searchParams.get('fixture')==='hierarchy') {
+      const tabs=site.data.blog_ui.settings.tabs;
+      tabs.push({id:'unity',title:'Unity',parent:'',all:false,categories:[],show_top:true,show_side:true});
+      for(const tab of tabs)if(['unity-practice','unity-template'].includes(tab.id)){tab.parent='unity';tab.show_top=false;}
+    }
     if(pathname==='/'||pathname===base+'/') {
       const content=await renderHome(site);
       const html=shell.replace(/(<main\b[^>]*>)[\s\S]*?<\/main>/i,'$1'+content+'</main>');
