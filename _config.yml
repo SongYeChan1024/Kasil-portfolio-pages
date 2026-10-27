@@ -156,13 +156,13 @@ pwa:
     # shares the same domain name as the current website.
     deny_paths:
       - "/admin/"
-      - "/Kasil-portfolio-pages/admin/"
+      - "/Kasil_DevLog/admin/"
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
 
 # The base URL of your site
-baseurl: "/Kasil-portfolio-pages"
+baseurl: "/Kasil_DevLog"
 
 # ------------ The following options are not recommended to be modified ------------------
 

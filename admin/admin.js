@@ -76,7 +76,7 @@
             h("ol", null,
               h("li", null, h("a", { href: "https://github.com/settings/personal-access-tokens/new", target: "_blank", rel: "noopener noreferrer" }, "GitHub에서 Fine-grained token 만들기")),
               h("li", null, "Resource owner: SongYeChan1024. Repository access에서 Only select repositories를 선택합니다."),
-              h("li", null, "Kasil-portfolio-pages 저장소만 선택합니다."),
+              h("li", null, "Kasil_DevLog 저장소만 선택합니다."),
               h("li", null, "Repository permissions → Contents를 Read and write로 설정합니다. Metadata는 기본 읽기 권한을 둡니다."),
               h("li", null, "유효기간을 정하고 Generate token을 누른 뒤 이 입력창에 붙여 넣습니다.")
             )

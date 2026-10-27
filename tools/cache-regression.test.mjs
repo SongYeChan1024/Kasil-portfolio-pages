@@ -16,7 +16,7 @@ function harness(cached = null, networkStatus = 200) {
     importScripts: () => {},
     swconf: {purge: false, cacheName: 'chirpy-test', resources: [], interceptor: {paths: [], urlPrefixes: []}},
     self: {
-      location: {href: `${origin}/Kasil-portfolio-pages/sw.min.js`, origin},
+      location: {href: `${origin}/Kasil_DevLog/sw.min.js`, origin},
       addEventListener: (name, handler) => {handlers[name] = handler;},
       skipWaiting: async () => {}, clients: {claim: async () => {}}
     },
@@ -54,26 +54,26 @@ test('all external requests, admin assets and no-store requests bypass cache', a
   const h = harness(new Response('stale'));
   for (const [url, options] of [
     ['https://api.github.com/repos/owner/repo', {}],
-    [`${origin}/Kasil-portfolio-pages/admin/`, {}],
-    [`${origin}/Kasil-portfolio-pages/admin/admin.js`, {}],
-    [`${origin}/Kasil-portfolio-pages/`, {cache: 'no-store'}],
-    [`${origin}/Kasil-portfolio-pages/`, {headers: {Authorization: 'test'}}]
+    [`${origin}/Kasil_DevLog/admin/`, {}],
+    [`${origin}/Kasil_DevLog/admin/admin.js`, {}],
+    [`${origin}/Kasil_DevLog/`, {cache: 'no-store'}],
+    [`${origin}/Kasil_DevLog/`, {headers: {Authorization: 'test'}}]
   ]) assert.equal(await h.request(url, options), null);
   assert.equal(h.stats.matched, 0);
 });
 test('failed responses are never reused or added to cache', async () => {
   const h = harness(new Response('', {status: 401}), 503);
-  const response = await h.request(`${origin}/Kasil-portfolio-pages/`);
+  const response = await h.request(`${origin}/Kasil_DevLog/`);
   assert.equal(response.status, 503);
   assert.equal(h.stats.fetched, 1);
   assert.equal(h.stats.stored, 0);
 });
 test('ordinary blog assets retain successful offline cache behavior', async () => {
   const cached = harness(new Response('cached'));
-  assert.equal(await (await cached.request(`${origin}/Kasil-portfolio-pages/assets/main.css`)).text(), 'cached');
+  assert.equal(await (await cached.request(`${origin}/Kasil_DevLog/assets/main.css`)).text(), 'cached');
   assert.equal(cached.stats.fetched, 0);
   const fresh = harness();
-  await fresh.request(`${origin}/Kasil-portfolio-pages/assets/main.css`);
+  await fresh.request(`${origin}/Kasil_DevLog/assets/main.css`);
   assert.equal(fresh.stats.stored, 1);
 });
 test('activation removes old Chirpy cache only', async () => {
@@ -82,8 +82,8 @@ test('activation removes old Chirpy cache only', async () => {
 });
 test('home and search index prefer the latest network content over a stale cache', async () => {
   for (const [url,options] of [
-    [`${origin}/Kasil-portfolio-pages/`, {headers:{Accept:'text/html'}}],
-    [`${origin}/Kasil-portfolio-pages/assets/js/data/search.json`, {}]
+    [`${origin}/Kasil_DevLog/`, {headers:{Accept:'text/html'}}],
+    [`${origin}/Kasil_DevLog/assets/js/data/search.json`, {}]
   ]) {
     const h=harness(new Response('old post list'));
     assert.equal(await (await h.request(url, options)).text(), 'fresh');
@@ -93,6 +93,6 @@ test('home and search index prefer the latest network content over a stale cache
 });
 test('offline navigation can still use a successful cached page', async () => {
   const h=harness(new Response('offline page'),0);
-  assert.equal(await (await h.request(`${origin}/Kasil-portfolio-pages/`, {headers:{Accept:'text/html'}})).text(), 'offline page');
+  assert.equal(await (await h.request(`${origin}/Kasil_DevLog/`, {headers:{Accept:'text/html'}})).text(), 'offline page');
   assert.equal(h.stats.fetched,1);
 });

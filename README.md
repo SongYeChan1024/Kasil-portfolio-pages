@@ -3,12 +3,12 @@
 송예찬(Kasil)의 게임 기획·개발 일지, 배우고 있는 기술, 개인 개발 기록을 모으는 블로그입니다.
 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 테마(Jekyll)로 만들고 GitHub Pages로 배포합니다.
 
-- 사이트: https://songyechan1024.github.io/Kasil-portfolio-pages/
+- 사이트: https://songyechan1024.github.io/Kasil_DevLog/
 
 ## 폴더 구조
 
 ```text
-Kasil-portfolio-pages/
+Kasil_DevLog/
 ├─ _posts/       개발일지 (YYYY-MM-DD-영문-슬러그.md)
 ├─ _tabs/        사이드바 메뉴: 카테고리 · 태그 · 아카이브 · 기술 스택 · 개인 개발 · 소개
 ├─ _data/        연락처·공유 버튼 설정
@@ -19,9 +19,9 @@ Kasil-portfolio-pages/
 
 ## 글 쓰기
 
-사이트의 **글쓰기** 메뉴 또는 `/Kasil-portfolio-pages/admin/`에서 작성할 수 있습니다. Decap CMS 3.17.3과 GitHub backend를 사용합니다.
+사이트의 **글쓰기** 메뉴 또는 `/Kasil_DevLog/admin/`에서 작성할 수 있습니다. Decap CMS 3.17.3과 GitHub backend를 사용합니다.
 
-- GitHub Fine-grained token을 생성하고 `Kasil-portfolio-pages` 저장소에만 `Contents: Read and write` 권한을 줍니다. Metadata는 기본 읽기 권한을 유지합니다.
+- GitHub Fine-grained token을 생성하고 `Kasil_DevLog` 저장소에만 `Contents: Read and write` 권한을 줍니다. Metadata는 기본 읽기 권한을 유지합니다.
 - 관리자 화면에 토큰을 입력합니다. 기본은 페이지 메모리에서만 사용합니다. 개인 PC에서는 **이 브라우저에 로그인 유지**를 선택하면 다음 접속 때 자동 로그인합니다. 이 경우 토큰은 이 사이트의 브라우저 저장소에 보관되며, 로그아웃하거나 인증에 실패하면 제거됩니다. 공용 PC에서는 선택하지 마세요. 만료·폐기된 토큰은 새로 입력해야 합니다. Decap의 기본 사용자 기록에는 토큰을 넣지 않습니다.
 - **블로그 글 → 새 글**에서 제목·날짜·카테고리·태그·본문·이미지를 입력하고 저장/발행합니다. `main`에 커밋된 뒤 기존 GitHub Actions가 사이트를 배포합니다.
 - 이미지는 `assets/img/uploads`에 저장하고 GitHub Pages의 baseurl을 포함한 주소로 연결합니다.
@@ -58,7 +58,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-브라우저에서 `http://127.0.0.1:4000/Kasil-portfolio-pages/`를 엽니다.
+브라우저에서 `http://127.0.0.1:4000/Kasil_DevLog/`를 엽니다.
 
 ## 배포
 
