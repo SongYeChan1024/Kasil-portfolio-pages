@@ -1,8 +1,15 @@
 ---
 title: "[Unity] 템플릿용 URP 후처리 볼륨 프로필 보관"
-date: 2026-10-27 11:33:00 +0900
-categories: [개발일지, Unity 템플릿]
-tags: [Unity, URP, Volume, 후처리, 템플릿]
+date: 2026-10-27 09:30:00 +0900
+categories:
+  - 개발일지
+  - Unity 템플릿
+tags:
+  - Unity
+  - URP
+  - Volume
+  - 후처리
+  - 템플릿
 ---
 
 새 프로젝트의 기본 템플릿을 만들 때 재사용하려고 LightBake 프로젝트의 Volume Profile을 모았다. 프로필은 이미 `.asset`으로 저장되어 있어, 설정값과 하위 Volume Component를 그대로 보존하고 참조하는 LUT·텍스처와 `.meta`를 함께 패키지로 묶었다.
