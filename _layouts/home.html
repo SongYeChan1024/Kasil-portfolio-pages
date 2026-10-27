@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{% assign blog = site.data.blog_ui.settings %}
+{% assign visible_posts = site.posts | where_exp: 'post', 'post.hidden != true' %}
+{% comment %}Decap hash URLs are client-side routes; their entry pages are checked separately.{% endcomment %}
+{% assign manage_url = '/admin/#/collections/blog_settings/entries/appearance' | relative_url %}
+<link rel="stylesheet" href="{{ '/assets/css/blog-board.css' | relative_url }}">
+<section class="blog-board" data-accent="{{ blog.accent | escape }}" data-home="{{ '/' | relative_url }}">
+  <header class="blog-cover{% if blog.banner_image and blog.banner_image != empty %} has-cover-image{% endif %}">
+    {% if blog.banner_image and blog.banner_image != empty %}<img class="blog-cover-image" src="{{ blog.banner_image | escape }}" alt="" fetchpriority="high">{% endif %}
+    <div class="blog-cover-copy"><span class="blog-eyebrow">KASIL · DEVELOPMENT JOURNAL</span><h1>{{ blog.title | escape }}</h1><p>{{ blog.tagline | escape }}</p></div>
+    <a class="blog-cover-edit" data-proofer-ignore href="{{ manage_url }}">꾸미기 · 관리 <span aria-hidden="true">↗</span></a>
+  </header>
+  <nav class="blog-top-tabs" aria-label="카테고리 탭">
+    {% for tab in blog.tabs %}{% if tab.show_top %}
+      <a class="blog-tab" data-blog-tab="{{ tab.id | escape }}" href="{{ '/' | relative_url }}?tab={{ tab.id | url_encode }}">{{ tab.title | escape }}<span data-tab-count="{{ tab.id | escape }}"></span></a>
+    {% endif %}{% endfor %}
+  </nav>
+  <div class="blog-columns">
+    <div class="blog-main">
+      <div class="blog-list-heading"><div><p class="blog-kicker">POSTS</p><h2 id="blog-list-title">전체 글 <span id="blog-post-count">{{ visible_posts.size }}</span></h2></div><a class="blog-write" data-proofer-ignore href="{{ '/admin/#/collections/posts/new' | relative_url }}"><span aria-hidden="true">＋</span> 글쓰기</a></div>
+      <form class="blog-search" role="search"><label class="visually-hidden" for="blog-filter">선택한 카테고리에서 검색</label><span aria-hidden="true">⌕</span><input id="blog-filter" type="search" placeholder="이 카테고리에서 글 검색" autocomplete="off" disabled><button type="reset" hidden>검색 지우기</button></form>
+      <p id="blog-results-status" class="blog-results" role="status" aria-live="polite">최신 글부터 표시합니다.</p>
+      <div class="blog-list-labels" aria-hidden="true"><span>제목</span><span>작성일</span></div>
+      <ol class="blog-posts" id="blog-posts">
+        {% for post in visible_posts %}
+        {% assign edit_slug = post.path | split: '/' | last | remove: '.md' | url_encode %}
+        <li data-blog-post data-categories="{{ post.categories | jsonify | escape }}" data-tags="{{ post.tags | jsonify | escape }}" data-pin="{{ post.pin | default: false }}">
+          <article class="blog-post-row">
+            <div class="blog-post-copy"><div class="blog-post-meta"><span>{{ post.categories | last | default: '미분류' | escape }}</span>{% if post.pin %}<span class="blog-pin">고정</span>{% endif %}</div><h3><a class="blog-post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p class="blog-post-summary">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 115 | escape }}</p></div>
+            <div class="blog-post-side"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><a class="blog-edit-post" data-proofer-ignore href="{{ '/admin/#/collections/posts/entries/' | relative_url }}{{ edit_slug }}" aria-label="{{ post.title | escape }} 수정">수정</a></div>
+          </article>
+        </li>
+        {% endfor %}
+      </ol>
+      <div class="blog-empty" id="blog-empty" hidden><span aria-hidden="true">⌕</span><h3>표시할 글이 없습니다.</h3><p>다른 카테고리를 선택하거나 검색어를 바꿔 보세요.</p></div>
+      <nav class="blog-pages" id="blog-pages" aria-label="글 목록 페이지" hidden><button type="button" data-page-step="-1">← 이전</button><span id="blog-page-label"></span><button type="button" data-page-step="1">다음 →</button></nav>
+      <noscript><p>전체 글을 표시하고 있습니다. <a href="{{ '/categories/' | relative_url }}">카테고리별 목록 보기</a></p></noscript>
+    </div>
+    <aside class="blog-right" aria-label="프로필과 카테고리">
+      <section class="blog-profile"><div class="blog-profile-top">{% if blog.profile_image != empty %}<img src="{{ blog.profile_image | escape }}" alt="{{ blog.nickname | escape }} 프로필" width="52" height="52">{% else %}<span class="blog-avatar" aria-hidden="true">K.</span>{% endif %}<div><strong>{{ blog.nickname | escape }}</strong><span>기획 · 개발</span></div><a data-proofer-ignore href="{{ manage_url }}" aria-label="프로필 수정">수정</a></div><p>{{ blog.bio | escape }}</p><a class="blog-profile-manage" data-proofer-ignore href="{{ manage_url }}">블로그 관리 <span aria-hidden="true">↗</span></a></section>
+      <section class="blog-category-panel"><div class="blog-panel-heading"><h2>카테고리</h2><a data-proofer-ignore href="{{ manage_url }}" aria-label="카테고리 수정">수정</a></div><nav aria-label="오른쪽 카테고리 목록">{% for tab in blog.tabs %}{% if tab.show_side %}<a data-blog-tab="{{ tab.id | escape }}" href="{{ '/' | relative_url }}?tab={{ tab.id | url_encode }}"><span>{{ tab.title | escape }}</span><span class="blog-category-count" data-tab-count="{{ tab.id | escape }}"></span></a>{% endif %}{% endfor %}</nav></section>
+      <div class="blog-side-note"><span class="blog-kicker">KEEP A RECORD</span><p>작은 배움도, 만들어 가는 과정도.<br>하나씩 기록합니다.</p><a href="{{ '/archives/' | relative_url }}">날짜별로 모아보기 →</a></div>
+    </aside>
+  </div>
+  <div id="blog-settings" data-settings="{{ blog | jsonify | escape }}" hidden></div>
+</section>
+<script src="{{ '/assets/js/blog-model.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/blog-board.js' | relative_url }}" defer></script>

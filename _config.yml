@@ -159,7 +159,8 @@ pwa:
       - "/Kasil_DevLog/admin/"
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+# The home board filters all published posts and paginates each category in the browser.
+paginate:
 
 # The base URL of your site
 baseurl: "/Kasil_DevLog"
