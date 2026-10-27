@@ -4,9 +4,13 @@ icon: fas fa-pen-to-square
 order: 7
 ---
 
+<script>window.location.replace({{ '/admin/#/collections/posts/new' | relative_url | jsonify }});</script>
+
+<p>새 글 편집기로 이동합니다. 자동으로 열리지 않으면 <a data-proofer-ignore href="{{ '/admin/#/collections/posts/new' | relative_url }}">글쓰기 편집기 열기</a>를 눌러 주세요.</p>
+
 블로그 글을 작성하거나 기존 글과 이미지를 관리합니다. 저장소에 쓰기 권한이 있는 작성자만 사용할 수 있습니다.
 
-**[글쓰기 편집기 열기]({{ '/admin/' | relative_url }})**
+**[블로그 관리 열기]({{ '/admin/' | relative_url }})**
 
 처음에는 편집기 로그인 화면의 **처음 사용하는 경우: 토큰 만들기** 안내에 따라 이 블로그 저장소에만 `Contents: Read and write` 권한을 준 GitHub Fine-grained token을 만드세요. 토큰은 채팅이나 글 본문에 넣지 말고 로그인 입력창에서 사용하세요.
 

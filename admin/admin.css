@@ -1,4 +1,11 @@
 body { margin: 0; font-family: system-ui, sans-serif; }
+.cms-home-bar { position:fixed; inset:0 0 auto; height:46px; z-index:10001; box-sizing:border-box; display:flex; align-items:center; gap:18px; padding:0 16px; background:#163f30; color:#d7eadf; font:12px/1.4 system-ui,sans-serif; }
+.cms-home-bar a { color:white; font-size:14px; font-weight:650; text-decoration:none; padding:6px 10px; border:1px solid #ffffff50; border-radius:4px; }
+.cms-home-bar a:focus-visible { outline:2px solid white; outline-offset:2px; }
+.cms-home-bar~#nc-root { position:fixed; inset:46px 0 0; overflow:auto; transform:translateZ(0); }
+.cms-home-bar~#nc-root .author-login { min-height:calc(100vh - 46px); }
+.cms-home-bar~#cms-loading { margin-top:46px; }
+@media(max-width:480px) { .cms-home-bar { padding:0 10px; }.cms-home-bar span { display:none; } }
 #cms-loading { padding: 2rem; text-align: center; color: #475569; }
 .author-login { box-sizing: border-box; min-height: 100vh; display: grid; place-items: center; background: #f1f5f9; padding: 24px; }
 .author-card { width: 100%; max-width: 480px; padding: 32px; border: 1px solid #dbe2ea; border-radius: 16px; background: white; box-shadow: 0 10px 40px #0f172a0d; color: #172033; line-height: 1.7; }

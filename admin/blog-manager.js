@@ -22,21 +22,24 @@
         const current=tabs.find(tab=>tab.id===config.default_tab);
         this.change({tabs,default_tab:current&&(current.show_top||current.show_side)?current.id:(tabs.find(tab=>tab.show_top||tab.show_side)?.id||'')});
       },
-      addTab() {
+      addTab(parent='') {
+        if(typeof parent!=='string')parent='';
         const config=this.config();let number=1;while(config.tabs.some(tab=>tab.title==='새 메뉴 '+number))number++;
-        const tab={id:'tab-'+root.crypto.randomUUID(),title:'새 메뉴 '+number,all:false,categories:[],show_top:true,show_side:true};
-        this.change({tabs:[...config.tabs,tab]});this.setState({selected:tab.id,notice:'새 메뉴를 추가했습니다. 아래에서 이름과 포함할 카테고리를 정해 주세요.'});
+        const tab={id:'tab-'+root.crypto.randomUUID(),title:'새 메뉴 '+number,parent,all:false,categories:[],show_top:!parent,show_side:true};
+        this.change({tabs:[...config.tabs,tab]});this.setState({selected:tab.id,notice:parent?'하위 카테고리를 추가했습니다. 이름과 포함할 글의 카테고리를 선택하세요.':'새 메뉴를 추가했습니다. 아래에서 이름과 포함할 카테고리를 정해 주세요.'});
       },
       moveTab(step) {
-        const tabs=this.config().tabs.slice(),index=tabs.findIndex(tab=>tab.id===this.selected().id),next=index+step;
-        if(next<0||next>=tabs.length)return;[tabs[index],tabs[next]]=[tabs[next],tabs[index]];this.change({tabs});
+        const tabs=this.config().tabs.slice(),selected=this.selected(),siblings=tabs.filter(tab=>tab.parent===selected.parent),position=siblings.findIndex(tab=>tab.id===selected.id),other=siblings[position+step];
+        if(!other)return;
+        const index=tabs.findIndex(tab=>tab.id===selected.id),next=tabs.indexOf(other);
+        [tabs[index],tabs[next]]=[tabs[next],tabs[index]];this.change({tabs});
       },
       removeTab() {
         const config=this.config(), selected=this.selected();
         if(config.tabs.length<=1)return;
-        const tabs=config.tabs.filter(tab=>tab.id!==selected.id);
+        const tabs=config.tabs.filter(tab=>tab.id!==selected.id).map(tab=>tab.parent===selected.id?{...tab,parent:selected.parent}:tab);
         this.change({tabs,default_tab:config.default_tab===selected.id?(tabs.find(tab=>tab.show_top||tab.show_side)?.id||''):config.default_tab});
-        this.setState({selected:tabs[0].id,notice:'메뉴만 제외했습니다. 게시글과 원래 카테고리는 그대로 있습니다.'});
+        this.setState({selected:tabs[0].id,notice:'메뉴만 제외했습니다. 하위 메뉴는 한 단계 위로 옮겼으며 게시글과 원래 카테고리는 그대로 있습니다.'});
       },
       addCategory(name) {
         const selected=this.selected(), category=name.trim();if(!category||selected.categories.includes(category))return;
@@ -51,20 +54,21 @@
         return h('div',{className:'bm-field',key},h('label',null,label),h(CMS.getWidget('image').control,{...this.props,field,forID:'bm-'+key,value:this.config()[key],onChange:value=>this.change({[key]:value||''})}));
       },
       renderMenus() {
-        const config=this.config(),selected=this.selected(),index=config.tabs.indexOf(selected);
+        const config=this.config(),selected=this.selected(),tree=model.hierarchy(config.tabs),siblings=config.tabs.filter(tab=>tab.parent===selected?.parent),index=siblings.findIndex(tab=>tab.id===selected?.id),descendants=new Set(model.subtree(config.tabs,selected?.id).map(tab=>tab.id));
         const categories=Array.from(new Set([...this.state.categories.map(item=>item.name),...config.tabs.flatMap(tab=>tab.categories)])).sort((a,b)=>a.localeCompare(b,'ko'));
         return h('div',null,
           h('div',{className:'bm-section-heading'},h('div',null,h('h2',null,'카테고리 · 메뉴 설정'),h('p',null,'상단 탭과 오른쪽 카테고리를 직접 구성하세요.')),h('button',{type:'button',className:'bm-primary',onClick:this.addTab},'＋ 메뉴 추가')),
-          h('p',{className:'bm-help'},'메뉴를 선택한 뒤 이름과 포함할 카테고리를 바꾸세요. 여러 카테고리를 묶으면 해당 글을 한 목록에서 볼 수 있습니다.'),
+          h('p',{className:'bm-help'},'메뉴를 선택하고 하위 카테고리를 추가하거나 상위 카테고리를 지정하세요. 상위 메뉴를 누르면 하위 메뉴의 글도 함께 표시합니다.'),
           h('div',{className:'bm-table-wrap'},h('table',{className:'bm-table'},h('thead',null,h('tr',null,h('th',null,'메뉴 이름'),h('th',null,'상단 탭'),h('th',null,'오른쪽'),h('th',null,'첫 화면'),h('th',null,'포함한 카테고리'))),
-            h('tbody',null,config.tabs.map(tab=>h('tr',{key:tab.id,'data-selected':selected?.id===tab.id},
-              h('td',null,h('button',{type:'button',className:'bm-row-select','aria-pressed':selected?.id===tab.id,onClick:()=>this.setState({selected:tab.id})},tab.title||'이름 없는 메뉴')),
+            h('tbody',null,tree.map(({tab,depth})=>h('tr',{key:tab.id,'data-selected':selected?.id===tab.id},
+              h('td',null,h('button',{type:'button',className:'bm-row-select',style:{paddingLeft:Math.min(depth,5)*16},'aria-label':model.tabLabel(config.tabs,tab.id),'aria-pressed':selected?.id===tab.id,onClick:()=>this.setState({selected:tab.id})},depth?'↳ ':null,tab.title||'이름 없는 메뉴')),
               ...['show_top','show_side'].map((key,i)=>h('td',{key},h('input',{type:'checkbox','aria-label':tab.title+(i===0?' 상단 탭':' 오른쪽'),checked:tab[key],onChange:event=>{const checked=event.target.checked;this.setState({selected:tab.id},()=>this.changeTab({[key]:checked}));}}))),
               h('td',null,h('input',{type:'radio',name:'default-blog-tab','aria-label':tab.title+' 첫 화면',checked:config.default_tab===tab.id,disabled:!tab.show_top&&!tab.show_side,onChange:()=>this.change({default_tab:tab.id})})),
-              h('td',null,tab.all?'모든 카테고리':tab.categories.join(', ')||'아직 선택하지 않음')))))),
+              h('td',null,tab.all?'모든 카테고리':tab.categories.join(', ')||'직접 선택한 분류 없음',config.tabs.some(child=>child.parent===tab.id)?h('small',{className:'bm-children-note'},'하위 카테고리 글 포함'):null)))))),
           selected?h('section',{className:'bm-menu-detail','aria-label':'선택한 메뉴 설정'},
-            h('div',{className:'bm-detail-heading'},h('h3',null,'선택한 메뉴'),h('div',{className:'bm-actions'},h('button',{type:'button',disabled:index===0,onClick:()=>this.moveTab(-1)},'↑ 위로'),h('button',{type:'button',disabled:index===config.tabs.length-1,onClick:()=>this.moveTab(1)},'↓ 아래로'),h('button',{type:'button',disabled:config.tabs.length===1,onClick:this.removeTab},'메뉴 제외'))),
+            h('div',{className:'bm-detail-heading'},h('h3',null,'선택한 메뉴'),h('div',{className:'bm-actions'},h('button',{type:'button',onClick:()=>this.addTab(selected.id)},'＋ 하위 카테고리'),h('button',{type:'button',disabled:index===0,onClick:()=>this.moveTab(-1)},'↑ 위로'),h('button',{type:'button',disabled:index===siblings.length-1,onClick:()=>this.moveTab(1)},'↓ 아래로'),h('button',{type:'button',disabled:config.tabs.length===1,onClick:this.removeTab},'메뉴 제외'))),
             h('div',{className:'bm-inline-field'},h('label',{htmlFor:'bm-menu-name'},'메뉴 이름'),h('input',{id:'bm-menu-name',value:selected.title,maxLength:40,onChange:event=>this.changeTab({title:event.target.value})})),
+            h('div',{className:'bm-inline-field'},h('label',{htmlFor:'bm-menu-parent'},'상위 카테고리'),h('select',{id:'bm-menu-parent',value:selected.parent,onChange:event=>this.changeTab({parent:event.target.value})},h('option',{value:''},'없음 · 최상위'),tree.filter(({tab})=>!descendants.has(tab.id)).map(({tab})=>h('option',{key:tab.id,value:tab.id},model.tabLabel(config.tabs,tab.id))))),
             h('label',{className:'bm-check'},h('input',{type:'checkbox',checked:selected.all,onChange:event=>this.changeTab({all:event.target.checked})}),'모든 카테고리의 글 표시'),
             !selected.all?h('div',null,
               h('div',{className:'bm-category-picker'},h('div',null,h('h4',null,'사용 가능한 카테고리'),h('ul',null,categories.map(name=>h('li',{key:name},h('button',{type:'button',disabled:selected.categories.includes(name),onClick:()=>this.addCategory(name)},h('span',null,name),h('span',null,selected.categories.includes(name)?'선택됨':'추가 →')))))),
@@ -75,7 +79,7 @@
       },
       renderPreview() {
         const config=this.config();
-        return h('details',{className:'bm-preview'},h('summary',null,'배치 미리보기'),h('div',{className:'bm-preview-cover'},h('strong',null,config.title),h('span',null,config.tagline)),h('div',{className:'bm-preview-tabs'},config.tabs.filter(tab=>tab.show_top).map(tab=>h('span',{key:tab.id},tab.title))),h('div',{className:'bm-preview-columns'},h('div',null,h('h4',null,'글 목록'),h('p',null,'선택한 메뉴의 글이 이곳에 표시됩니다.')),h('aside',null,h('strong',null,config.nickname),h('p',null,'카테고리'),config.tabs.filter(tab=>tab.show_side).map(tab=>h('div',{key:tab.id},tab.title)))));
+        return h('details',{className:'bm-preview'},h('summary',null,'배치 미리보기'),h('div',{className:'bm-preview-cover'},h('strong',null,config.title),h('span',null,config.tagline)),h('div',{className:'bm-preview-tabs'},model.hierarchy(config.tabs).filter(({tab})=>tab.show_top).map(({tab})=>h('span',{key:tab.id},model.tabLabel(config.tabs,tab.id)))),h('div',{className:'bm-preview-columns'},h('div',null,h('h4',null,'글 목록'),h('p',null,'선택한 메뉴의 글이 이곳에 표시됩니다.')),h('aside',null,h('strong',null,config.nickname),h('p',null,'카테고리'),model.hierarchy(config.tabs).filter(({tab})=>tab.show_side).map(({tab,depth})=>h('div',{key:tab.id,style:{paddingLeft:Math.min(depth,5)*12}},depth?'↳ ':null,tab.title)))));
       },
       render() {
         const config=this.config(),error=model.validate(config),sections=[['basic','기본 설정','블로그 정보'],['design','꾸미기 설정','배너 · 프로필 이미지'],['menus','메뉴 관리','카테고리 · 메뉴']];

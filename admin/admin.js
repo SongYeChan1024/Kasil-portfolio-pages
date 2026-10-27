@@ -22,13 +22,13 @@
 
   const h = window.h;
   const Login = window.createClass({
-    getInitialState: function () { return { busy: false, error: loginMessage }; },
+    getInitialState: function () { return { busy: false, restoring: !!session.read() && !autoAttempted, error: loginMessage }; },
     componentDidMount: function () {
       loginView = this;
       const token = session.read();
       if (token && !autoAttempted) {
         autoAttempted = true;
-        this.setState({ busy: true });
+        this.setState({ busy: true, restoring: true });
         this.props.onLogin({ token, remember: true });
       }
     },
@@ -56,6 +56,7 @@
       }
     },
     render: function () {
+      if(this.state.restoring && !this.state.error) return h('main',{className:'author-login'},h('p',{role:'status'},'저장된 로그인 정보를 확인하고 편집기를 여는 중입니다…'));
       return h("main", { className: "author-login" },
         h("section", { className: "author-card" },
           h("h1", null, "Kasil Devlog 글쓰기"),

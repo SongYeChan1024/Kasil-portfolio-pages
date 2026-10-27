@@ -107,3 +107,27 @@ test('blocked browser storage does not break an ordinary login', async () => {
   assert.equal(session.read(),'');
   assert.match(notice,/저장.*차단/);
 });
+
+test('saved login opens the editor without showing token fields; failure restores the login form', async () => {
+  const source=await readFile(new URL('../admin/admin.js',import.meta.url),'utf8');
+  function harness(token) {
+    let definition,notify,submitted;
+    const session={read:()=>token};
+    const root={CMS:{getBackend:()=>({BackendClass:class{}}),registerBackend(){},init(){}},
+      createClass(value){definition=value;return value;},h:(type,props,...children)=>({type,props,children}),
+      localStorage:{removeItem(){}},KasilImagePaste:{register(){}},KasilBlogManager:{register(){}},
+      KasilLoginSession:{createSession:()=>session,createBackend(native,stored,view,callback){notify=callback;return class{};}}};
+    vm.runInNewContext(source,{window:root,document:{getElementById:()=>({remove(){}})}});
+    const control={...definition,props:{onLogin(value){submitted=value;}},setState(value){Object.assign(this.state,value);}};
+    control.state=control.getInitialState();return {control,notify:message=>notify(message),submitted:()=>submitted};
+  }
+  const saved=harness('TEST_ONLY_NOT_A_CREDENTIAL');
+  assert.equal(saved.control.state.restoring,true);
+  assert.equal(JSON.stringify(saved.control.render()).includes('github-token'),false);
+  saved.control.componentDidMount();assert.equal(saved.submitted().remember,true);
+  saved.notify('인증 실패');assert.equal(JSON.stringify(saved.control.render()).includes('github-token'),true);
+  const empty=harness('');assert.equal(empty.control.state.restoring,false);
+  assert.equal(JSON.stringify(empty.control.render()).includes('github-token'),true);
+  const writePage=await readFile(new URL('../_tabs/write.md',import.meta.url),'utf8');
+  assert.match(writePage,/window\.location\.replace\([^\n]*\/admin\/#\/collections\/posts\/new/);
+});
