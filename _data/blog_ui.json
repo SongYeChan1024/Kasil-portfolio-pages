@@ -53,14 +53,15 @@
       },
       {
         "categories": [
-          "After Seconds"
+          "After Seconds",
+          "개인 프로젝트"
         ],
         "all": false,
         "show_top": true,
         "show_side": true,
         "id": "after-seconds",
         "title": "After Seconds",
-        "parent": ""
+        "parent": "tab-0c68975d-c092-4862-90d3-95b2f5d229cc"
       },
       {
         "categories": [
