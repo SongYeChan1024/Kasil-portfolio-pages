@@ -122,6 +122,50 @@
         "id": "daily-log",
         "title": "데일리 로그",
         "parent": ""
+      },
+      {
+        "categories": [
+          "수업 노트"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "notion-class-notes",
+        "title": "수업 노트",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "개발 메모"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "notion-development-notes",
+        "title": "개발 메모",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "참고 자료"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "notion-references",
+        "title": "참고 자료",
+        "parent": ""
+      },
+      {
+        "categories": [
+          "회의 기록"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "notion-meeting-notes",
+        "title": "회의 기록",
+        "parent": ""
       }
     ]
   }
