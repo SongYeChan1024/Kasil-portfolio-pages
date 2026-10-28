@@ -9,10 +9,13 @@ const model=context.KasilBlog, sample=JSON.parse(await readFile(new URL('../_dat
 const copy=()=>JSON.parse(JSON.stringify(sample));
 
 function nested() {
-  const config=model.normalize(copy());
-  config.tabs.push({id:'unity',title:'Unity',parent:'',categories:[],show_top:true,show_side:true});
-  for(const id of ['unity-practice','unity-template'])config.tabs.find(tab=>tab.id===id).parent='unity';
-  return config;
+  return model.normalize({tabs:[
+    {id:'all',title:'전체 글',all:true},
+    {id:'blender',title:'Blender',categories:['Blender']},
+    {id:'unity-practice',title:'Unity 실습',parent:'unity',categories:['Unity 실습']},
+    {id:'unity-template',title:'Unity 템플릿',parent:'unity',categories:['Unity 템플릿']},
+    {id:'unity',title:'Unity'}
+  ]});
 }
 test('parent includes descendants once, child stays scoped, nested links survive renaming',()=>{
   const config=nested(),posts=[{categories:['Unity 실습','Unity 템플릿']},{categories:['Unity 템플릿']},{categories:['Blender']}];
