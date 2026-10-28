@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "기록 정보 작업일: 2026-10-26 작성자: 송예찬 프로젝트: 개인 프로젝트 「After Seconds(애프터 세컨즈)」 기획서: V0.09 환경: Unity 6000.4.0f1 / URP 17.4.0 기록 범위: 오늘 앞선 연구소·에셋·개발 준비 기록과 집에서 진행한 계층 분리 작"
 description: "기록 정보 작업일: 2026-10-26 작성자: 송예찬 프로젝트: 개인 프로젝트 「After Seconds(애프터 세컨즈)」 기획서: V0.09 환경: Unity 6000.4.0f1 / URP 17.4.0 기록 범위: 오늘 앞선 연구소·에셋·개발 준비 기록과 집에서 진행한 계층 분리 작"
-published: false
+published: true
 migration_id: "40536532580e81e2ab76fe7ddaa73ee1"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

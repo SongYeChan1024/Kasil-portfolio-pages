@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "첨부 자료 1. 프로젝트 목표 정리 본 문서는 《침몽도시: 루시드 다이버》의 컨셉 기획을 실제 제작 가능한 일정과 작업 단위로 전환하기 위한 PM 관리 문서이다. PM의 역할은 프로젝트의 방향을 새로 정하는 것이 아니라, 팀이 합의한 방향이 실제 결과물로 완성될 수 있도록 목표, 역할,"
 description: "첨부 자료 1. 프로젝트 목표 정리 본 문서는 《침몽도시: 루시드 다이버》의 컨셉 기획을 실제 제작 가능한 일정과 작업 단위로 전환하기 위한 PM 관리 문서이다. PM의 역할은 프로젝트의 방향을 새로 정하는 것이 아니라, 팀이 합의한 방향이 실제 결과물로 완성될 수 있도록 목표, 역할,"
-published: false
+published: true
 migration_id: "38036532580e80589c9ad187ce9e0a41"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

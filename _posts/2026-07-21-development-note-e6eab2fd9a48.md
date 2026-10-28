@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/Enemy/EnemyStatus.cs cs using System; using UnityEngine; public class EnemyStatus : MonoBehaviour, IEffec"
 description: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/Enemy/EnemyStatus.cs cs using System; using UnityEngine; public class EnemyStatus : MonoBehaviour, IEffec"
-published: false
+published: true
 migration_id: "3a436532580e81d49ffde6eab2fd9a48"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

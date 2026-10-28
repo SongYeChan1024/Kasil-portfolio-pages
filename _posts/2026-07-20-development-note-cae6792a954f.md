@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/02_Scripts/System/Tutorial/TutorialHighlightTarget.cs 2. 변경 설명 하이라키 또는 프리팹의 강조 대상을 문자열 ID로 등록하는 경량"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/02_Scripts/System/Tutorial/TutorialHighlightTarget.cs 2. 변경 설명 하이라키 또는 프리팹의 강조 대상을 문자열 ID로 등록하는 경량"
-published: false
+published: true
 migration_id: "3a336532580e8169908bcae6792a954f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

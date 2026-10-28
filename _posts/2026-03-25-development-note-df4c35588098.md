@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unreal"]
 tags: ["Notion 이전", "Unreal"]
 excerpt: "정리본 (한눈에 보기) 1) 이 특강에서 말하는 핵심 메시지 게임업계 취업 준비의 출발점은 시야를 넓히는 것 (대기업만 보지 말고, 시장/장르/회사 스펙트럼을 넓게 보기) 게임업계에서 ‘경력’의 큰 축은 게임 플레이 경험(게임 경력) 자기소개서는 ‘나 소개’가 아니라 업무 적합성(프로젝"
 description: "정리본 (한눈에 보기) 1) 이 특강에서 말하는 핵심 메시지 게임업계 취업 준비의 출발점은 시야를 넓히는 것 (대기업만 보지 말고, 시장/장르/회사 스펙트럼을 넓게 보기) 게임업계에서 ‘경력’의 큰 축은 게임 플레이 경험(게임 경력) 자기소개서는 ‘나 소개’가 아니라 업무 적합성(프로젝"
-published: false
+published: true
 migration_id: "35e36532580e81adbac8df4c35588098"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

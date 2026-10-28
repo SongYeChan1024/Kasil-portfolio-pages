@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "한눈에 보기 (팀 공유용) 분기 기준: “잘했는가/못했는가”가 아니라 기억이 얼마나 충분히 이어졌는가(기억 재구성률) 판정 방식: 총점(0\\~100) + 필수 기억(핵심 태그) 충족 여부 출력 방식: 시스템이 엔딩을 판정하고, 그 결과(상태값)를 AI NPC 엔딩 대사 생성 에 그대로 "
 description: "한눈에 보기 (팀 공유용) 분기 기준: “잘했는가/못했는가”가 아니라 기억이 얼마나 충분히 이어졌는가(기억 재구성률) 판정 방식: 총점(0\\~100) + 필수 기억(핵심 태그) 충족 여부 출력 방식: 시스템이 엔딩을 판정하고, 그 결과(상태값)를 AI NPC 엔딩 대사 생성 에 그대로 "
-published: false
+published: true
 migration_id: "35e36532580e81a9a837d247ac846799"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

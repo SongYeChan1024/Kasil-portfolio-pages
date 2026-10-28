@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "기본 정보 날짜: 2026-03-30 프로젝트: moz.A.I.c 작성자: 작성자 오늘 할 일(우선순위) 3-0(로비) 씬 / 3-3 씬 분리 기준 확정 같은 맵 디자인을 공유하되, 씬별 기능(상호작용/트리거/연출/상태표시) 차이를 목록으로 정리 3-3 씬 핵심 연출 루프 1차 고정 진"
 description: "기본 정보 날짜: 2026-03-30 프로젝트: moz.A.I.c 작성자: 작성자 오늘 할 일(우선순위) 3-0(로비) 씬 / 3-3 씬 분리 기준 확정 같은 맵 디자인을 공유하되, 씬별 기능(상호작용/트리거/연출/상태표시) 차이를 목록으로 정리 3-3 씬 핵심 연출 루프 1차 고정 진"
-published: false
+published: true
 migration_id: "35e36532580e818b898cfaead9b37bfd"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

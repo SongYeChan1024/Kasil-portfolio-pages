@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/Editor/TutorialHighlightPrefabSetup.cs 2. 변경 설명 튜토리얼 하이라이트에 필요한 Canvas 계층, 한글 TMP 폰트, 대상 ID와 참조를 프"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/Editor/TutorialHighlightPrefabSetup.cs 2. 변경 설명 튜토리얼 하이라이트에 필요한 Canvas 계층, 한글 TMP 폰트, 대상 ID와 참조를 프"
-published: false
+published: true
 migration_id: "3a336532580e811589afed83144019a3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

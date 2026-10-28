@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "기획서 버전 관리 버전 업로드 일자 업데이트 내역 1.00 2026.03.24 퍼즐 설계/로직 초안 정리 1.01 2026.03.26 업데이트안 반영 + 장 구성/요약 정리(최종본) 1. 퍼즐 목표 Episode 3-2는 음악 리듬(오디오 재생 시간)에 맞춰 정답 발판을 판정 윈도우 안"
 description: "기획서 버전 관리 버전 업로드 일자 업데이트 내역 1.00 2026.03.24 퍼즐 설계/로직 초안 정리 1.01 2026.03.26 업데이트안 반영 + 장 구성/요약 정리(최종본) 1. 퍼즐 목표 Episode 3-2는 음악 리듬(오디오 재생 시간)에 맞춰 정답 발판을 판정 윈도우 안"
-published: false
+published: true
 migration_id: "35e36532580e81be98ecfb1280779c58"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

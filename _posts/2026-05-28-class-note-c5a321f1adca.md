@@ -5,9 +5,9 @@ categories: ["수업 노트", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "게임 프로젝트 설계 눈피하기 게임 플레이어는 가로로 이동 위에서 떻어지는 눈을 피하는 게임 체력 100 눈을 한번 맞을 때 데미지 20 5번 맞으면 게임 오버 데이터 베이스 (데이터 저장) FireBase 게임 재화 (코인, 돈 ) 게임의 점수(Score) 플레이어 종류 (5-6종류)"
 description: "게임 프로젝트 설계 눈피하기 게임 플레이어는 가로로 이동 위에서 떻어지는 눈을 피하는 게임 체력 100 눈을 한번 맞을 때 데미지 20 5번 맞으면 게임 오버 데이터 베이스 (데이터 저장) FireBase 게임 재화 (코인, 돈 ) 게임의 점수(Score) 플레이어 종류 (5-6종류)"
-published: false
+published: true
 migration_id: "36e36532580e801ba570c5a321f1adca"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

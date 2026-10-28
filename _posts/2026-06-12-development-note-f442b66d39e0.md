@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "첨부 자료 원본 첨부: 침몽_도시_루시드_다이버_컨셉_기획서_V0.5.docx (별도 로컬 보관) 《침몽도시: 루시드 다이버》 컨셉 기획 요약본 V0.5 1. 프로젝트 개요 《침몽도시: 루시드 다이버》는 현실 무기가 통하지 않는 꿈속 도시를 탐사하고, 드림 포지드 무장으로 침식체를 상대"
 description: "첨부 자료 원본 첨부: 침몽_도시_루시드_다이버_컨셉_기획서_V0.5.docx (별도 로컬 보관) 《침몽도시: 루시드 다이버》 컨셉 기획 요약본 V0.5 1. 프로젝트 개요 《침몽도시: 루시드 다이버》는 현실 무기가 통하지 않는 꿈속 도시를 탐사하고, 드림 포지드 무장으로 침식체를 상대"
-published: false
+published: true
 migration_id: "37d36532580e80e4b0f0f442b66d39e0"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["private_attachment_preserved", "publication_review"]
 ---
 

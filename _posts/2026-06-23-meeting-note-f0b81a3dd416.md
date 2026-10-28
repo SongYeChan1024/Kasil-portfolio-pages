@@ -5,9 +5,9 @@ categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "개발 총괄 업무 분배 및 개발 계획 수립 회의 2026-06-23 요약 1) 한 줄 결론 (TL;DR) 개발 총괄의 업무 분배 범위 설정 방법론을 논의하고, 세부 개발 기획 문서 작성 필요성을 확정함 2) 회의 개요 일시: 2026-06-23 회의 유형: 개발/기술 목적: 개발 총괄의 "
 description: "개발 총괄 업무 분배 및 개발 계획 수립 회의 2026-06-23 요약 1) 한 줄 결론 (TL;DR) 개발 총괄의 업무 분배 범위 설정 방법론을 논의하고, 세부 개발 기획 문서 작성 필요성을 확정함 2) 회의 개요 일시: 2026-06-23 회의 유형: 개발/기술 목적: 개발 총괄의 "
-published: false
+published: true
 migration_id: "38836532580e80d4a9ddf0b81a3dd416"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

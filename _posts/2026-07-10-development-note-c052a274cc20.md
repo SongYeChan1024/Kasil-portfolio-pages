@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 수정 목표 | 버그 ID | 문제 | 원인 후보 | | --- | --- | --- | | QA-PM-003 | 에너미가 평소 루트에서 벗어난 뒤 오래 추격함 | 추격 제한 범위, 어그로 감소, 복귀 조건 부족 | | QA-PM-004 | 플레이어가 벽을 등지고 있을 때 에너미가 "
 description: "1. 수정 목표 | 버그 ID | 문제 | 원인 후보 | | --- | --- | --- | | QA-PM-003 | 에너미가 평소 루트에서 벗어난 뒤 오래 추격함 | 추격 제한 범위, 어그로 감소, 복귀 조건 부족 | | QA-PM-004 | 플레이어가 벽을 등지고 있을 때 에너미가 "
-published: false
+published: true
 migration_id: "39936532580e80a1880ec052a274cc20"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

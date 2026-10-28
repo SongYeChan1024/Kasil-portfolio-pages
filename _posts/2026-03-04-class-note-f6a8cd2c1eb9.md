@@ -5,9 +5,9 @@ categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity 적 AI 시야 기반 추적 시스템 구현 2026-03-04 요약 학습 목표 및 구현 사항 적 캐릭터가 거리가 아닌 시야로 플레이어를 감지하도록 AI 개선하기 배럴과 박스 장애물 뒤에 있을 때 총알 발사 방지하기 Unity Editor 클래스(DrawWireDisc, DrawSo"
 description: "Unity 적 AI 시야 기반 추적 시스템 구현 2026-03-04 요약 학습 목표 및 구현 사항 적 캐릭터가 거리가 아닌 시야로 플레이어를 감지하도록 AI 개선하기 배럴과 박스 장애물 뒤에 있을 때 총알 발사 방지하기 Unity Editor 클래스(DrawWireDisc, DrawSo"
-published: false
+published: true
 migration_id: "35e36532580e81d1bdf1f6a8cd2c1eb9"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

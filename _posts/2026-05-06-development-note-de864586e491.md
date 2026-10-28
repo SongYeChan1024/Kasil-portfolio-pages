@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity VR 환경 설정 및 Ray Interactor 실습 요약 오늘 수업 핵심 요약 Unity에서 VR 개발 환경 을 처음부터 설정하는 전체 과정을 배웠습니다. OpenXR 표준 프로토콜과 XR Interaction Toolkit 을 설치하여 VR 하드웨어와 통신하고 사용자 입력을"
 description: "Unity VR 환경 설정 및 Ray Interactor 실습 요약 오늘 수업 핵심 요약 Unity에서 VR 개발 환경 을 처음부터 설정하는 전체 과정을 배웠습니다. OpenXR 표준 프로토콜과 XR Interaction Toolkit 을 설치하여 VR 하드웨어와 통신하고 사용자 입력을"
-published: false
+published: true
 migration_id: "35e36532580e81d3b6d3de864586e491"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

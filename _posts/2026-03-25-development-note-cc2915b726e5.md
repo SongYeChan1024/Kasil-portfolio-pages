@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "상단: 기획서 버전 관리 표 원본 첨부: 프로젝트_mos.A.I.c_대화툴_데이터테이블_초안.xlsx (별도 로컬 보관) | 버전 | 날짜 | 작성자 | 수정 내용 | 비고 | | --- | --- | --- | --- | --- | | v0.1 | 2026-03-25 | 카실 | 대화"
 description: "상단: 기획서 버전 관리 표 원본 첨부: 프로젝트_mos.A.I.c_대화툴_데이터테이블_초안.xlsx (별도 로컬 보관) | 버전 | 날짜 | 작성자 | 수정 내용 | 비고 | | --- | --- | --- | --- | --- | | v0.1 | 2026-03-25 | 카실 | 대화"
-published: false
+published: true
 migration_id: "35e36532580e81b39000cc2915b726e5"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["private_attachment_preserved"]
 ---
 

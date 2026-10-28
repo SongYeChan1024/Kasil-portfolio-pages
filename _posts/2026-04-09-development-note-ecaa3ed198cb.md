@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "키워드 - Melody(선율),Rhythm(장단/리듬),Harmony(화성/화음) Episode 3 Scene 키워드 선정 및 위치 키워드 - Melody(선율), Rhythm(장단/리듬), Harmony(화성/화음) Episode 3-1 Scene → 선율(Melody) 선율은 곡의 "
 description: "키워드 - Melody(선율),Rhythm(장단/리듬),Harmony(화성/화음) Episode 3 Scene 키워드 선정 및 위치 키워드 - Melody(선율), Rhythm(장단/리듬), Harmony(화성/화음) Episode 3-1 Scene → 선율(Melody) 선율은 곡의 "
-published: false
+published: true
 migration_id: "35e36532580e81cdbe2aecaa3ed198cb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "첨부 자료 동굴 속 초가집 첨부 자료 첨부 자료 첨부 자료 그리고 그 안에서 무언갈 지키듯이 서 있는 병사"
 description: "첨부 자료 동굴 속 초가집 첨부 자료 첨부 자료 첨부 자료 그리고 그 안에서 무언갈 지키듯이 서 있는 병사"
-published: false
+published: true
 migration_id: "3fb36532580e803eb450e4f073ec27c3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

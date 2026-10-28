@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "기본 정보 날짜: 2026-04-13 프로젝트: MosAIc (EP.3) 작성자: 작성자 오늘 한 일(요약) 3-1 최초 진입 컷씬 재생 구조 분리/재설정 (로비와 플래그 분기) 씬 복사 후 참조 누락 이슈 점검 및 자동 연결/예외 처리 방향 정리 악보 조각 10개 수집 완료 시 저장 "
 description: "기본 정보 날짜: 2026-04-13 프로젝트: MosAIc (EP.3) 작성자: 작성자 오늘 한 일(요약) 3-1 최초 진입 컷씬 재생 구조 분리/재설정 (로비와 플래그 분기) 씬 복사 후 참조 누락 이슈 점검 및 자동 연결/예외 처리 방향 정리 악보 조각 10개 수집 완료 시 저장 "
-published: false
+published: true
 migration_id: "35e36532580e8115ac9be1a650eaddac"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

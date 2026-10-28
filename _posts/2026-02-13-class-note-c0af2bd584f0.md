@@ -5,9 +5,9 @@ categories: ["수업 노트", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-02-13 엘리스 Unity 수업 2026-02-13 요약 주요 학습 내용 Draw Call 최적화 Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정 ^ 비공개 원문 참조 Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하 ^ 비공개 원문"
 description: "2026-02-13 엘리스 Unity 수업 2026-02-13 요약 주요 학습 내용 Draw Call 최적화 Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정 ^ 비공개 원문 참조 Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하 ^ 비공개 원문"
-published: false
+published: true
 migration_id: "35e36532580e8131bb22c0af2bd584f0"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review"]
 ---
 

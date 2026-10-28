@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-15\\_tutorial\\_scene\\_flow\\_code\\_analysis 이 문서는 2026-07-15 기준 튜토리얼 씬 구축 및 베타 병합 후 로컬 변경 상태 점검 내용을 정리한 코드 변경 사항 기록이다. AI가 작성한 초안이므로 PM/기획자 검토 후 확정한다. 1. "
 description: "2026-07-15\\_tutorial\\_scene\\_flow\\_code\\_analysis 이 문서는 2026-07-15 기준 튜토리얼 씬 구축 및 베타 병합 후 로컬 변경 상태 점검 내용을 정리한 코드 변경 사항 기록이다. AI가 작성한 초안이므로 PM/기획자 검토 후 확정한다. 1. "
-published: false
+published: true
 migration_id: "39e36532580e816294d7c2c25665a725"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

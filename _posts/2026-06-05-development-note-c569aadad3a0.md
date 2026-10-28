@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "제페토 메타버스 게임 기획서 피드백 세션 2026-06-05 요약 오늘 수업 핵심 요약 제페토(ZEPETO) 플랫폼 기반 메타버스 게임 기획서 를 학생별로 검토하고 피드백을 제공했습니다. 상업성(BM), PPL, 수익 모델, 기술적 구현 가능성 을 중심으로 실무 관점의 조언이 이루어졌습"
 description: "제페토 메타버스 게임 기획서 피드백 세션 2026-06-05 요약 오늘 수업 핵심 요약 제페토(ZEPETO) 플랫폼 기반 메타버스 게임 기획서 를 학생별로 검토하고 피드백을 제공했습니다. 상업성(BM), PPL, 수익 모델, 기술적 구현 가능성 을 중심으로 실무 관점의 조언이 이루어졌습"
-published: false
+published: true
 migration_id: "37636532580e803ead03c569aadad3a0"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

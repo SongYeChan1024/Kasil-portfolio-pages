@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "챕터 19 이론 수업 안내 2026-06-09 요약 오늘 수업 핵심 요약 챕터 19 이론 수업이 약 1시간 정도 진행될 예정 이후 시간에는 개발 작업 실습 진행 이미 진행해왔던 개발 내용을 이어서 작업 일정 준수 필요 수업 흐름별 정리 1. 챕터 19 이론 수업 안내 설명: 챕터 19에"
 description: "챕터 19 이론 수업 안내 2026-06-09 요약 오늘 수업 핵심 요약 챕터 19 이론 수업이 약 1시간 정도 진행될 예정 이후 시간에는 개발 작업 실습 진행 이미 진행해왔던 개발 내용을 이어서 작업 일정 준수 필요 수업 흐름별 정리 1. 챕터 19 이론 수업 안내 설명: 챕터 19에"
-published: false
+published: true
 migration_id: "37a36532580e801d926ec1f3e0974fd1"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Manager/Manager/SceneController.cs cs /// /// 모든 씬 전환을 관리하는 인스턴스 클래스 /// using UnityEngine; using UnityEngine.Sc"
 description: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Manager/Manager/SceneController.cs cs /// /// 모든 씬 전환을 관리하는 인스턴스 클래스 /// using UnityEngine; using UnityEngine.Sc"
-published: false
+published: true
 migration_id: "3a536532580e8189978cd44ba6d35fa2"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

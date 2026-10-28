@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "기본 정보 날짜 : 2026-09-07 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 튜토리얼 1구간 동굴 맵, 목표 진행 흐름, 반복 생성 도구와 적 비활성 코루틴 오류 수정 --- 오늘의 한 문장 개별 기능을 시험하던 프로토타입을 이동, 빗자루 "
 description: "기본 정보 날짜 : 2026-09-07 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 튜토리얼 1구간 동굴 맵, 목표 진행 흐름, 반복 생성 도구와 적 비활성 코루틴 오류 수정 --- 오늘의 한 문장 개별 기능을 시험하던 프로토타입을 이동, 빗자루 "
-published: false
+published: true
 migration_id: "3d436532580e81af8efefe6e04abbeea"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["회의 기록", "Blender"]
 tags: ["Notion 이전", "Blender"]
 excerpt: "게임 개발 팀 스크럼 회의 2026-03-20 요약 액션 아이템 3-1 스테이지 사운드 작업 완료 공간 퍼즐 맵 제작 진행 UI 기반 두 번째 퍼즐 구현 검토 각 스테이지 기획서 완성 후 팀 공유 디스코드를 통해 코치님께 업데이트 내역 제출 추가 사용 사이트 및 에셋 출처 기획서에 업데"
 description: "게임 개발 팀 스크럼 회의 2026-03-20 요약 액션 아이템 3-1 스테이지 사운드 작업 완료 공간 퍼즐 맵 제작 진행 UI 기반 두 번째 퍼즐 구현 검토 각 스테이지 기획서 완성 후 팀 공유 디스코드를 통해 코치님께 업데이트 내역 제출 추가 사용 사이트 및 에셋 출처 기획서에 업데"
-published: false
+published: true
 migration_id: "35e36532580e8104badcfb09f5a7d55e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["private_link_removed", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-004 | | 관련 버그 | | | 이슈명 | 플레이어의 총알 Ray가 적에게 도착했으나 실제 TakeDamage 판정을 발동시키지 않는 경우가 간헐적으로 발생하는 현상 | | 담당 기능 "
 description: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-004 | | 관련 버그 | | | 이슈명 | 플레이어의 총알 Ray가 적에게 도착했으나 실제 TakeDamage 판정을 발동시키지 않는 경우가 간헐적으로 발생하는 현상 | | 담당 기능 "
-published: false
+published: true
 migration_id: "d3136532580e83519cdf0141704aaab7"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked"]
 ---
 

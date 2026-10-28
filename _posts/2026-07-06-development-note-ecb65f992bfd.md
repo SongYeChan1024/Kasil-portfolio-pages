@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-07-06\\_enemy\\_patrol\\_return\\_scene\\_fix\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 6일 기준 진행한 패트롤 테스트 씬 연동 , 적 감지/체력 UI 오류 수정 , 조사-복귀 로직 개선 , 이탈 지점 기준 복귀 구조화"
 description: "2026-07-06\\_enemy\\_patrol\\_return\\_scene\\_fix\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 6일 기준 진행한 패트롤 테스트 씬 연동 , 적 감지/체력 UI 오류 수정 , 조사-복귀 로직 개선 , 이탈 지점 기준 복귀 구조화"
-published: false
+published: true
 migration_id: "39536532580e8021bf61ecb65f992bfd"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

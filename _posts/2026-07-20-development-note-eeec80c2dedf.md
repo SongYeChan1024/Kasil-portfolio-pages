@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/System/Player/PlayerInventory.cs cs /// /// 플레이어의 인벤토리 데이터와 내부의 슬롯, 아이템을 관리하는 클래스 /// using System; using Syste"
 description: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/System/Player/PlayerInventory.cs cs /// /// 플레이어의 인벤토리 데이터와 내부의 슬롯, 아이템을 관리하는 클래스 /// using System; using Syste"
-published: false
+published: true
 migration_id: "3a336532580e8187a03deeec80c2dedf"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

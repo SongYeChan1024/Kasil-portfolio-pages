@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Presenter/QuickSlotPresenter.cs cs /// /// 퀵슬롯 입력과 아이템 사용 효과를 중재하는 프레젠터입니다. /// 퀵슬롯에 등록된 아이템이 실제로 소비된 경우에만 효과를 "
 description: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Presenter/QuickSlotPresenter.cs cs /// /// 퀵슬롯 입력과 아이템 사용 효과를 중재하는 프레젠터입니다. /// 퀵슬롯에 등록된 아이템이 실제로 소비된 경우에만 효과를 "
-published: false
+published: true
 migration_id: "3a336532580e8186969ec037b47815be"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

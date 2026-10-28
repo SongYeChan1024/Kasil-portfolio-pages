@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "작성일 : 2026-06-15 작성자 : 송예찬 스프린트 : Sprint 1 (1주차) --- 오늘의 목표 x 기획 회의 최종 합의안(가챠 BM 폐지, 마나 자원 통합, 사망 시 100 유실 및 안전 금고 조율, 탈출구 제한 등) 컨셉 기획서 반영 x 1차 프로토타입 무장 권총 1종 단"
 description: "작성일 : 2026-06-15 작성자 : 송예찬 스프린트 : Sprint 1 (1주차) --- 오늘의 목표 x 기획 회의 최종 합의안(가챠 BM 폐지, 마나 자원 통합, 사망 시 100 유실 및 안전 금고 조율, 탈출구 제한 등) 컨셉 기획서 반영 x 1차 프로토타입 무장 권총 1종 단"
-published: false
+published: true
 migration_id: "38036532580e80939c2ac9fafe98bee3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked", "publication_review"]
 ---
 

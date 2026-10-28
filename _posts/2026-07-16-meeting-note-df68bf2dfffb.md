@@ -5,9 +5,9 @@ categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "베타 버전 개발 작업 분배 및 진행 상황 점검 2026-07-16 요약 1) 한 줄 결론 (TL;DR) 베타 버전 마무리를 위해 손전등 기능, 튜토리얼, UI 디버깅, 창고 시스템 개선 작업을 분배하고 점심 후 병합 일정을 확정함 2) 회의 개요 일시: 2026-07-16 (수) 오전 "
 description: "베타 버전 개발 작업 분배 및 진행 상황 점검 2026-07-16 요약 1) 한 줄 결론 (TL;DR) 베타 버전 마무리를 위해 손전등 기능, 튜토리얼, UI 디버깅, 창고 시스템 개선 작업을 분배하고 점심 후 병합 일정을 확정함 2) 회의 개요 일시: 2026-07-16 (수) 오전 "
-published: false
+published: true
 migration_id: "39f36532580e805f918edf68bf2dfffb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

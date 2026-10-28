@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "사운드 구조 정리 1. 우리 프로젝트의 현재 사운드 구조 우리 프로젝트의 사운드 시스템은 완전히 한 가지 방식이 아니라, 여러 방식이 섞여 있는 혼합 구조이다. 현재 핵심 사운드 관리자는 SoundManager이고, 전체 흐름은 다음과 같다. enum으로 사운드 종류를 나눈다. 인스펙터"
 description: "사운드 구조 정리 1. 우리 프로젝트의 현재 사운드 구조 우리 프로젝트의 사운드 시스템은 완전히 한 가지 방식이 아니라, 여러 방식이 섞여 있는 혼합 구조이다. 현재 핵심 사운드 관리자는 SoundManager이고, 전체 흐름은 다음과 같다. enum으로 사운드 종류를 나눈다. 인스펙터"
-published: false
+published: true
 migration_id: "35e36532580e81ed9c39c0f5f8063024"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

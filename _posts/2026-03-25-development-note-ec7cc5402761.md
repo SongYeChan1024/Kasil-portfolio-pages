@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "기본 정보 날짜: 2026-03-25 프로젝트: MosAIc (moz.A.I.c) 작성자: 작성자 오늘 할 일(우선순위) 체크포인트 선택 → 해당 위치 스폰까지 연결 스테이지 선택 후 체크포인트를 고르면, 해당 Transform/좌표로 플레이어가 정확히 스폰되는지 확인 전환 직후 플레이"
 description: "기본 정보 날짜: 2026-03-25 프로젝트: MosAIc (moz.A.I.c) 작성자: 작성자 오늘 할 일(우선순위) 체크포인트 선택 → 해당 위치 스폰까지 연결 스테이지 선택 후 체크포인트를 고르면, 해당 Transform/좌표로 플레이어가 정확히 스폰되는지 확인 전환 직후 플레이"
-published: false
+published: true
 migration_id: "35e36532580e81a69584ec7cc5402761"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

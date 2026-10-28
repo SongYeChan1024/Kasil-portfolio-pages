@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "개인 작업 기록 — 최종 발표 시연 영상·대본 준비 오늘의 목표 x 최종 발표에서 사용할 총 시연 영상을 행동 파트별로 촬영 x 꿈식자 AI 인터랙션별 발표 대본 작성 x 3분 발표용 압축 운영 순서 정리 1. 총 시연 영상 파트별 촬영 최종 발표에서 꿈식자 AI의 행동 흐름을 실제 플"
 description: "개인 작업 기록 — 최종 발표 시연 영상·대본 준비 오늘의 목표 x 최종 발표에서 사용할 총 시연 영상을 행동 파트별로 촬영 x 꿈식자 AI 인터랙션별 발표 대본 작성 x 3분 발표용 압축 운영 순서 정리 1. 총 시연 영상 파트별 촬영 최종 발표에서 꿈식자 AI의 행동 흐름을 실제 플"
-published: false
+published: true
 migration_id: "3aa36532580e816ea90afa894dbfe7db"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

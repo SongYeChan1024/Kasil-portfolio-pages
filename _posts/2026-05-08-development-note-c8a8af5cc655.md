@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "VR 손 애니메이션 및 로코모션 시스템 구현 2026-05-08 요약 오늘 수업 핵심 요약 VR 손 애니메이션 시스템 을 구현하여 Grip (쥐기)과 Pinch (집기) 동작을 Input System과 연동했습니다. Animator Controller 와 Blend Tree 를 활용하여"
 description: "VR 손 애니메이션 및 로코모션 시스템 구현 2026-05-08 요약 오늘 수업 핵심 요약 VR 손 애니메이션 시스템 을 구현하여 Grip (쥐기)과 Pinch (집기) 동작을 Input System과 연동했습니다. Animator Controller 와 Blend Tree 를 활용하여"
-published: false
+published: true
 migration_id: "35e36532580e81cab034c8a8af5cc655"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 2a81ecc 파일: Assets/02_Scripts/UI/Game/ChestSlotUI.cs cs using TMPro; using UnityEngine; using UnityEngine.EventSystems; using UnityEngine.UI; "
 description: "1. 이전 스크립트 전체 기준: 2a81ecc 파일: Assets/02_Scripts/UI/Game/ChestSlotUI.cs cs using TMPro; using UnityEngine; using UnityEngine.EventSystems; using UnityEngine.UI; "
-published: false
+published: true
 migration_id: "3a436532580e81f59998efd41c05d007"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

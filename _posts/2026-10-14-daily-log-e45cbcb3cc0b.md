@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "기록 정보 프로젝트: 에르고스퀘어: 설계자 — 튜토리얼 프로토타입 작성자: 송예찬 작업일: 2026-10-14 작성일: 2026-10-16 (Asia/Seoul) 기록 범위: 코드 학습용 주석 보강·컴파일 확인 기록 오늘의 목표 프로젝트 코드를 읽으며 역할·호출 관계·상태 소유와 함수 "
 description: "기록 정보 프로젝트: 에르고스퀘어: 설계자 — 튜토리얼 프로토타입 작성자: 송예찬 작업일: 2026-10-14 작성일: 2026-10-16 (Asia/Seoul) 기록 범위: 코드 학습용 주석 보강·컴파일 확인 기록 오늘의 목표 프로젝트 코드를 읽으며 역할·호출 관계·상태 소유와 함수 "
-published: false
+published: true
 migration_id: "3fa36532580e813c85a8e45cbcb3cc0b"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

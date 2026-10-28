@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "전체 스토리 개요 플레이어는 이름도, 과거도 기억하지 못한 채 정체불명의 공간에서 깨어난다. 그곳에는 형태를 잃은 이야기 조각들이 떠다니고 있으며, 그것들은 점점 사라지고 있다. 이 공간은 단순한 세계가 아니라, 플레이어 자신의 기억이 파편화된 정신 속 세계이다. 사라져가는 이야기 조각"
 description: "전체 스토리 개요 플레이어는 이름도, 과거도 기억하지 못한 채 정체불명의 공간에서 깨어난다. 그곳에는 형태를 잃은 이야기 조각들이 떠다니고 있으며, 그것들은 점점 사라지고 있다. 이 공간은 단순한 세계가 아니라, 플레이어 자신의 기억이 파편화된 정신 속 세계이다. 사라져가는 이야기 조각"
-published: false
+published: true
 migration_id: "35e36532580e81d49554d7e37fca6e42"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

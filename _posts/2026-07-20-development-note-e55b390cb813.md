@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-07-20\\_전체\\_스크립트\\_비교\\_정리 1. 한 줄 결론 2026-07-20에는 병합 후 유실된 입력·프리팹·VFX 참조를 복구하고, 튜토리얼 조작 가이드와 인벤토리 장착 가능 슬롯의 하이라이트를 추가했으며, 플레이어 사격 머즐에 HDR VFX와 짧은 실시간 라이트 피드백을"
 description: "2026-07-20\\_전체\\_스크립트\\_비교\\_정리 1. 한 줄 결론 2026-07-20에는 병합 후 유실된 입력·프리팹·VFX 참조를 복구하고, 튜토리얼 조작 가이드와 인벤토리 장착 가능 슬롯의 하이라이트를 추가했으며, 플레이어 사격 머즐에 HDR VFX와 짧은 실시간 라이트 피드백을"
-published: false
+published: true
 migration_id: "3a336532580e819eb514e55b390cb813"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

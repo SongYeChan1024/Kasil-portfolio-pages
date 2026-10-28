@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-BETA-006 기능 게임 메뉴 팝업 발생 조건 각 화면 진입 시 재현 방법 ① 게임 시작 → ② 게임 메뉴(ESC) 실행 → ③ 다른 화면으로 이동 → ④ 로비로 복귀 후 게임 메뉴 실행 기대 결과 게임 메뉴 팝업이 떠 있지 않음 실제 결과 게임 메뉴 팝업이"
 description: "항목 내용 버그 ID QA-BETA-006 기능 게임 메뉴 팝업 발생 조건 각 화면 진입 시 재현 방법 ① 게임 시작 → ② 게임 메뉴(ESC) 실행 → ③ 다른 화면으로 이동 → ④ 로비로 복귀 후 게임 메뉴 실행 기대 결과 게임 메뉴 팝업이 떠 있지 않음 실제 결과 게임 메뉴 팝업이"
-published: false
+published: true
 migration_id: "f7536532580e83c0a0b3812b6528ac2f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

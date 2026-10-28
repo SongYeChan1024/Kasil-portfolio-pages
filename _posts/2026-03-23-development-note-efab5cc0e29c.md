@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "한눈에 보기 이 문서는 AI NPC 대사(힌트/격려/개입 타이밍)를 “성격 키워드”로부터 일관되게 생성 하기 위한 규칙표다. 핵심은 키워드 → 파라미터(1\\~5) → 상황(실패/정체) 보정 → 최종 대사 스타일 순서로 만든다는 것. --- 1) 핵심 개념: 성격을 숫자로 만든다(파라미터"
 description: "한눈에 보기 이 문서는 AI NPC 대사(힌트/격려/개입 타이밍)를 “성격 키워드”로부터 일관되게 생성 하기 위한 규칙표다. 핵심은 키워드 → 파라미터(1\\~5) → 상황(실패/정체) 보정 → 최종 대사 스타일 순서로 만든다는 것. --- 1) 핵심 개념: 성격을 숫자로 만든다(파라미터"
-published: false
+published: true
 migration_id: "35e36532580e814c8ce9efab5cc0e29c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-07-08\\_artifact\\_script\\_full\\_compare 2026-07-08\\_artifact\\_inventory\\_equipment\\_code\\_review 1. 문서 개요 이 문서는 2026년 7월 8일 기준으로 진행한 아티팩트 아이템 루팅 및 장착 시스템 구현"
 description: "2026-07-08\\_artifact\\_script\\_full\\_compare 2026-07-08\\_artifact\\_inventory\\_equipment\\_code\\_review 1. 문서 개요 이 문서는 2026년 7월 8일 기준으로 진행한 아티팩트 아이템 루팅 및 장착 시스템 구현"
-published: false
+published: true
 migration_id: "39736532580e80d9a293e1b4d7158835"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

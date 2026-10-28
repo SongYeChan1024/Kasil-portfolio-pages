@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-25 Script Full Compare Previous version: HEAD:path Current version: working tree Output encoding: UTF-8 with BOM Assets/02\\_Scripts/System/ItemBox.cs Pr"
 description: "2026-06-25 Script Full Compare Previous version: HEAD:path Current version: working tree Output encoding: UTF-8 with BOM Assets/02\\_Scripts/System/ItemBox.cs Pr"
-published: false
+published: true
 migration_id: "38a36532580e80639840c8dd2d717f26"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

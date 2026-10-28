@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 문서 개요 이 문서는 2026년 7월 14일 사용자가 직접 요청해 구현·수정한 VFX와 튜토리얼 스크립트만 대상으로 한다. 같은 날 다른 작업자가 수정한 코드는 포함하지 않는다. 구분 이전 기준 현재 기준 내용 VFX 시스템 00489d3 5381ff4 카탈로그·풀링·전체 인게임 "
 description: "1. 문서 개요 이 문서는 2026년 7월 14일 사용자가 직접 요청해 구현·수정한 VFX와 튜토리얼 스크립트만 대상으로 한다. 같은 날 다른 작업자가 수정한 코드는 포함하지 않는다. 구분 이전 기준 현재 기준 내용 VFX 시스템 00489d3 5381ff4 카탈로그·풀링·전체 인게임 "
-published: false
+published: true
 migration_id: "39d36532580e815ebb90f691d1cb6b12"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked", "publication_review"]
 ---
 

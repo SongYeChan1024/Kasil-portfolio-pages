@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "이 문서는 2026-07-16 베타 버전 플레이 피드백을 개발 백로그와 회의 안건으로 전환하기 위해 재정리한 통합 문서다. 하단 이미지는 원문 보존용이 아니라 각 피드백 항목의 화면 증빙으로 사용한다. 1. 한 줄 결론 이번 베타 피드백의 핵심은 플레이를 막는 버그, 플레이어가 기능을 "
 description: "이 문서는 2026-07-16 베타 버전 플레이 피드백을 개발 백로그와 회의 안건으로 전환하기 위해 재정리한 통합 문서다. 하단 이미지는 원문 보존용이 아니라 각 피드백 항목의 화면 증빙으로 사용한다. 1. 한 줄 결론 이번 베타 피드백의 핵심은 플레이를 막는 버그, 플레이어가 기능을 "
-published: false
+published: true
 migration_id: "39f36532580e8177acdcefc1206fe711"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

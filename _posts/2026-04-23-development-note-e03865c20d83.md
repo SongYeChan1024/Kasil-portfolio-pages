@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Ep3\\_2Manager.cs (line 39) 기준으로 useTopDownRhythmPuzzle는 켜져 있어. Ep3\\_2\\_Scene.unity (line 3091)에 Ep3\\_2TopDownRhythmPuzzle 컴포넌트도 이미 붙여뒀어. startPuzzleController와 "
 description: "Ep3\\_2Manager.cs (line 39) 기준으로 useTopDownRhythmPuzzle는 켜져 있어. Ep3\\_2\\_Scene.unity (line 3091)에 Ep3\\_2TopDownRhythmPuzzle 컴포넌트도 이미 붙여뒀어. startPuzzleController와 "
-published: false
+published: true
 migration_id: "35e36532580e810c90f2e03865c20d83"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

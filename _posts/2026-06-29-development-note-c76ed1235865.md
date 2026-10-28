@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29 Inventory / Sortie / Chest Compare Previous version: b6598e9:path Current version: working tree Output "
 description: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29 Inventory / Sortie / Chest Compare Previous version: b6598e9:path Current version: working tree Output "
-published: false
+published: true
 migration_id: "38e36532580e80b0b0cfc76ed1235865"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

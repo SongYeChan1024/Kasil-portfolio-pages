@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/System/Player/PlayerStatus.cs cs ﻿ /// /// 플레이어의 상태를 관리하는 스크립트 /// 26.06.16_강다영 플레이어의 기본적인 스텟의 변화가 서로 다른 씬에서 일어날"
 description: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/System/Player/PlayerStatus.cs cs ﻿ /// /// 플레이어의 상태를 관리하는 스크립트 /// 26.06.16_강다영 플레이어의 기본적인 스텟의 변화가 서로 다른 씬에서 일어날"
-published: false
+published: true
 migration_id: "3a536532580e81969441c29e2e701f4e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-26 Enemy Vision Compare Previous version: 23ab6ad:path Current version: working tree Output encoding: UTF-8 Assets/02\\_Scripts/System/Enemy/EnemyMovemen"
 description: "2026-06-26 Enemy Vision Compare Previous version: 23ab6ad:path Current version: working tree Output encoding: UTF-8 Assets/02\\_Scripts/System/Enemy/EnemyMovemen"
-published: false
+published: true
 migration_id: "38b36532580e80b3b5d5fe24037cd279"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

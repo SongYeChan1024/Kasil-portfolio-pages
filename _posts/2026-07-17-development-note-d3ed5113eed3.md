@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-17\\_tutorial\\_combat\\_practice\\_script\\_compare 1. 한 줄 결론 2026-07-17에는 송예찬이 직접 작성한 세 개의 커밋을 통해 튜토리얼 전투 실습 진행 차단, UI 입력 누수 방지, 바닥 꺼짐 원인 보정, 튜토리얼 UI 인스펙터 "
 description: "2026-07-17\\_tutorial\\_combat\\_practice\\_script\\_compare 1. 한 줄 결론 2026-07-17에는 송예찬이 직접 작성한 세 개의 커밋을 통해 튜토리얼 전투 실습 진행 차단, UI 입력 누수 방지, 바닥 꺼짐 원인 보정, 튜토리얼 UI 인스펙터 "
-published: false
+published: true
 migration_id: "3a036532580e81f9b90fd3ed5113eed3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

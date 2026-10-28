@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "이 문서는 2026-07-21에 송예찬이 직접 수정한 C 스크립트 13개의 전문 비교 인덱스입니다. 각 하위 문서는 반드시 다음 순서로 구성합니다. 이전 스크립트 전체 변경 설명 현재 스크립트 전체 팀원 커밋과 병합 커밋은 제외했습니다. 두 직접 커밋 이후 C 변경이 없으므로 현재 스크"
 description: "이 문서는 2026-07-21에 송예찬이 직접 수정한 C 스크립트 13개의 전문 비교 인덱스입니다. 각 하위 문서는 반드시 다음 순서로 구성합니다. 이전 스크립트 전체 변경 설명 현재 스크립트 전체 팀원 커밋과 병합 커밋은 제외했습니다. 두 직접 커밋 이후 C 변경이 없으므로 현재 스크"
-published: false
+published: true
 migration_id: "3a436532580e81cea600c7102ff4b5dd"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

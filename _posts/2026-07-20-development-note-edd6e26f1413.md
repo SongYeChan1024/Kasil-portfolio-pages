@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "이 문서는 2026-07-20에 직접 작성하거나 수정한 C 스크립트 24개의 전문 비교 인덱스입니다. 각 하위 문서는 반드시 다음 순서로 구성합니다. 이전 스크립트 전체 변경 설명 현재 스크립트 전체 신규 스크립트는 이전 코드가 없음을 명시하고 현재 전문을 기록합니다. 팀원의 이후 변경"
 description: "이 문서는 2026-07-20에 직접 작성하거나 수정한 C 스크립트 24개의 전문 비교 인덱스입니다. 각 하위 문서는 반드시 다음 순서로 구성합니다. 이전 스크립트 전체 변경 설명 현재 스크립트 전체 신규 스크립트는 이전 코드가 없음을 명시하고 현재 전문을 기록합니다. 팀원의 이후 변경"
-published: false
+published: true
 migration_id: "3a336532580e816296fcedd6e26f1413"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

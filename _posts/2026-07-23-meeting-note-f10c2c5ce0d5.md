@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "침몽도시: 루시드 다이버 발표 준비 점검 회의 2026-07-23 요약 1) 한 줄 결론 (TL;DR) 개발은 QA 완료 상태이며, 두트윈 애니메이션 연출 2가지를 우승혁 CD가 담당하고 나머지 인원은 발표 자료 준비에 집중하기로 확정 2) 회의 개요 일시: 2026-07-23 (수) "
 description: "침몽도시: 루시드 다이버 발표 준비 점검 회의 2026-07-23 요약 1) 한 줄 결론 (TL;DR) 개발은 QA 완료 상태이며, 두트윈 애니메이션 연출 2가지를 우승혁 CD가 담당하고 나머지 인원은 발표 자료 준비에 집중하기로 확정 2) 회의 개요 일시: 2026-07-23 (수) "
-published: false
+published: true
 migration_id: "3a636532580e8087a90af10c2c5ce0d5"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

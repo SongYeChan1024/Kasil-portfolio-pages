@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 문서 개요 이 문서는 2026년 7월 6일 기준 진행한 패트롤 테스트 씬 연동 , 적 조사/복귀 구조 개선 , 청각 차단 판정 추가 , 적 HP UI 개체 분리 , ExitPoint 타이머 예외 대응 작업을 스크립트 비교 형식으로 정리한 문서이다. 문서 형식은 이전 스크립트 -> "
 description: "1. 문서 개요 이 문서는 2026년 7월 6일 기준 진행한 패트롤 테스트 씬 연동 , 적 조사/복귀 구조 개선 , 청각 차단 판정 추가 , 적 HP UI 개체 분리 , ExitPoint 타이머 예외 대응 작업을 스크립트 비교 형식으로 정리한 문서이다. 문서 형식은 이전 스크립트 -> "
-published: false
+published: true
 migration_id: "39536532580e80e3bca0ce98209b86ab"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked"]
 ---
 

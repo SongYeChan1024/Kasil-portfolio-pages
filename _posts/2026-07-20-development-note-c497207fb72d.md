@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Manager/Manager/InputManager.cs cs using System.Collections; using System.Collections.Generic; using UnityEngin"
 description: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Manager/Manager/InputManager.cs cs using System.Collections; using System.Collections.Generic; using UnityEngin"
-published: false
+published: true
 migration_id: "3a336532580e81198c41c497207fb72d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

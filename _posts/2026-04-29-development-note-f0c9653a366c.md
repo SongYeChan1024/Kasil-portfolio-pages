@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "원본 첨부: moz.A.I.c_최종_발표_시트_v0.4.pptx (별도 로컬 보관) https://naver.me/xF4r8zAt 비공개 자료 링크 제외 (비공개 원문 참조) 관련 기록 (원문 참조) Episode 3-2 리듬 퍼즐 리뉴얼과 구현 포인트 QA 과정에서 3-2 퍼즐 스테이"
 description: "원본 첨부: moz.A.I.c_최종_발표_시트_v0.4.pptx (별도 로컬 보관) https://naver.me/xF4r8zAt 비공개 자료 링크 제외 (비공개 원문 참조) 관련 기록 (원문 참조) Episode 3-2 리듬 퍼즐 리뉴얼과 구현 포인트 QA 과정에서 3-2 퍼즐 스테이"
-published: false
+published: true
 migration_id: "35e36532580e8180a2cef0c9653a366c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["private_attachment_preserved", "private_link_removed", "publication_review"]
 ---
 

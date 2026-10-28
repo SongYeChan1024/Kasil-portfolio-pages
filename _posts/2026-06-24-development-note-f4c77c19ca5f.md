@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "txt /// /// 플레이어가 상자와 상호작용했을 때 /// 기존처럼 드롭 아이템을 바로 바닥에 생성하지 않고, /// 상자 UI를 열어 안에 들어 있는 아이템을 인벤토리로 옮길 수 있게 바꾸는 작업 /// 전달 변경점 기존 상자 구조는 이랬다. 플레이어가 ItemBox 와 상호작용 "
 description: "txt /// /// 플레이어가 상자와 상호작용했을 때 /// 기존처럼 드롭 아이템을 바로 바닥에 생성하지 않고, /// 상자 UI를 열어 안에 들어 있는 아이템을 인벤토리로 옮길 수 있게 바꾸는 작업 /// 전달 변경점 기존 상자 구조는 이랬다. 플레이어가 ItemBox 와 상호작용 "
-published: false
+published: true
 migration_id: "38936532580e80b39b73f4c77c19ca5f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "취업 준비 가이드 및 침몽도시 개발 업무 배정 2026-07-15 요약 1) 한 줄 결론 (TL;DR) 취업 준비(포트폴리오 제작, 연봉 협상 전략) 가이드 공유 후, 내일 시연을 위한 개발 업무(로비 UI, 버그 수정, SFX/조명 적용) 배정 완료 2) 회의 개요 일시: 2026-0"
 description: "취업 준비 가이드 및 침몽도시 개발 업무 배정 2026-07-15 요약 1) 한 줄 결론 (TL;DR) 취업 준비(포트폴리오 제작, 연봉 협상 전략) 가이드 공유 후, 내일 시연을 위한 개발 업무(로비 UI, 버그 수정, SFX/조명 적용) 배정 완료 2) 회의 개요 일시: 2026-0"
-published: false
+published: true
 migration_id: "39e36532580e80208678c1dfb270f325"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

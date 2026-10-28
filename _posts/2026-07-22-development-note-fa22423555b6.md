@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Utils/GlobalEventBus.cs cs ﻿/// /// 글로벌 이벤트 버스 클래스 /// 게임 내에서 발생하는 다양한 이벤트를 중앙에서 관리하고 전달하는 역할을 합니다. /// using Sy"
 description: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Utils/GlobalEventBus.cs cs ﻿/// /// 글로벌 이벤트 버스 클래스 /// 게임 내에서 발생하는 다양한 이벤트를 중앙에서 관리하고 전달하는 역할을 합니다. /// using Sy"
-published: false
+published: true
 migration_id: "3a536532580e812d8b61fa22423555b6"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

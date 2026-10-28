@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1부터 20까지 숫자 중에서 짝수만 출력하시오. cs for (int i = 1; i 3의 배수이면서 5의 배수인 숫자만 출력하시오. 힌트: if (조건 && 조건) 결과:오답 || → 하나라도 맞으면 출력 && → 둘 다 맞아야 출력 &&를 써야 정답 cs for (int i = 1;"
 description: "1부터 20까지 숫자 중에서 짝수만 출력하시오. cs for (int i = 1; i 3의 배수이면서 5의 배수인 숫자만 출력하시오. 힌트: if (조건 && 조건) 결과:오답 || → 하나라도 맞으면 출력 && → 둘 다 맞아야 출력 &&를 써야 정답 cs for (int i = 1;"
-published: false
+published: true
 migration_id: "35e36532580e818d9eb7d5c4e5c7ec0d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

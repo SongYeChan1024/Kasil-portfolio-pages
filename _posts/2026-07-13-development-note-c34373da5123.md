@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 문서 개요 이 문서는 2026년 7월 13일 사용자가 직접 요청해 수정한 다크 스피릿 AI와 게임 종료 상태 처리 스크립트만 대상으로 한다. 같은 날 다른 작업자가 수정한 코드는 포함하지 않는다. 구분 기준 커밋 내용 AI 수정 이전 ba742c8 QA-PM-003 재설계 직전 종"
 description: "1. 문서 개요 이 문서는 2026년 7월 13일 사용자가 직접 요청해 수정한 다크 스피릿 AI와 게임 종료 상태 처리 스크립트만 대상으로 한다. 같은 날 다른 작업자가 수정한 코드는 포함하지 않는다. 구분 기준 커밋 내용 AI 수정 이전 ba742c8 QA-PM-003 재설계 직전 종"
-published: false
+published: true
 migration_id: "39c36532580e81e78388c34373da5123"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

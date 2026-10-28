@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-07-09\\_script\\_full\\_compare 1. 문서 개요 이 문서는 2026년 7월 9일 알파 시연 준비 과정에서 변경된 주요 C 스크립트를 이전 스크립트 -> 변경 설명 -> 현재 스크립트 순서로 비교하기 위한 기록입니다. 비교 기준 이전 커밋: d7ffbe3 현재"
 description: "2026-07-09\\_script\\_full\\_compare 1. 문서 개요 이 문서는 2026년 7월 9일 알파 시연 준비 과정에서 변경된 주요 C 스크립트를 이전 스크립트 -> 변경 설명 -> 현재 스크립트 순서로 비교하기 위한 기록입니다. 비교 기준 이전 커밋: d7ffbe3 현재"
-published: false
+published: true
 migration_id: "39836532580e800591d6d7cc8e563411"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

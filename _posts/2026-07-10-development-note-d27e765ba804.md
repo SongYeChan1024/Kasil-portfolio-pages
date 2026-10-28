@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-10\\_wall\\_collision\\_debug\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 10일 진행한 벽 관통 및 충돌 판정 디버깅 작업을 기준으로, 수정 전 스크립트 전체와 수정 후 스크립트 전체를 비교하기 위해 작성했다. | 기준 | "
 description: "2026-07-10\\_wall\\_collision\\_debug\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 10일 진행한 벽 관통 및 충돌 판정 디버깅 작업을 기준으로, 수정 전 스크립트 전체와 수정 후 스크립트 전체를 비교하기 위해 작성했다. | 기준 | "
-published: false
+published: true
 migration_id: "39936532580e8044bb76d27e765ba804"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

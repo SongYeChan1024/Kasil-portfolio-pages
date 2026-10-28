@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "메타버스 개론 및 제페토 개발 입문 2026-05-18 요약 오늘 수업 핵심 요약 메타버스(Metaverse) 는 '초월(Meta)'과 '세계(Universe)'의 합성어로, 현실과 가상이 융합된 3차원 디지털 공간을 의미하며, 사용자가 직접 콘텐츠를 제작하고 경제활동을 하는 새로운 플"
 description: "메타버스 개론 및 제페토 개발 입문 2026-05-18 요약 오늘 수업 핵심 요약 메타버스(Metaverse) 는 '초월(Meta)'과 '세계(Universe)'의 합성어로, 현실과 가상이 융합된 3차원 디지털 공간을 의미하며, 사용자가 직접 콘텐츠를 제작하고 경제활동을 하는 새로운 플"
-published: false
+published: true
 migration_id: "36436532580e80f19caec1fc6d9814c2"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

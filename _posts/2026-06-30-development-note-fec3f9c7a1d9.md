@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 2026-06-30 Enemy / Vision / Occlusion Compare Previous version: 7b512a6^:path for restored files, none for newly a"
 description: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 2026-06-30 Enemy / Vision / Occlusion Compare Previous version: 7b512a6^:path for restored files, none for newly a"
-published: false
+published: true
 migration_id: "38f36532580e80a38c79fec3f9c7a1d9"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "기본 정보 날짜 : 2026-08-19 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 공통 상호작용 안내, 빗자루 스킬 타격 데이터, 테스트용 빗자루 도깨비와 전투 샌드박스 --- 오늘의 한 문장 상호작용 대상을 알아보고 G 로 실행하는 공통 흐름과"
 description: "기본 정보 날짜 : 2026-08-19 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 공통 상호작용 안내, 빗자루 스킬 타격 데이터, 테스트용 빗자루 도깨비와 전투 샌드박스 --- 오늘의 한 문장 상호작용 대상을 알아보고 G 로 실행하는 공통 흐름과"
-published: false
+published: true
 migration_id: "3c036532580e814190dddddc776ca7c5"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

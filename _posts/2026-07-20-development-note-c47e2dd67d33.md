@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/02_Scripts/UI/Game/InventoryDragFeedbackController.cs 2. 변경 설명 현재 드래그 중인 아이템을 기준으로 유효한 드롭 대상 그룹만 찾"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/02_Scripts/UI/Game/InventoryDragFeedbackController.cs 2. 변경 설명 현재 드래그 중인 아이템을 기준으로 유효한 드롭 대상 그룹만 찾"
-published: false
+published: true
 migration_id: "3a336532580e814a96f4c47e2dd67d33"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

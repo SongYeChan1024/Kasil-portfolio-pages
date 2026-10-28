@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity Photon Chat UI 구현 및 한글화 2026-05-27 요약 오늘 수업 핵심 요약 Unity에서 Photon Chat 을 활용한 실시간 채팅 UI를 구현하는 방법을 학습했습니다. TextMeshPro의 한글 폰트 에셋(SDF) 을 생성하여 채팅창에서 한글을 사용할 수 "
 description: "Unity Photon Chat UI 구현 및 한글화 2026-05-27 요약 오늘 수업 핵심 요약 Unity에서 Photon Chat 을 활용한 실시간 채팅 UI를 구현하는 방법을 학습했습니다. TextMeshPro의 한글 폰트 에셋(SDF) 을 생성하여 채팅창에서 한글을 사용할 수 "
-published: false
+published: true
 migration_id: "36d36532580e800d8043de3cd3fb24e6"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

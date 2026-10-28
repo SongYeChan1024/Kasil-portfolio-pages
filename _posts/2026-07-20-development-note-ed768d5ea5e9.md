@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/02_Scripts/Define/InventoryItemPlacementPolicy.cs 2. 변경 설명 아이템 종류별 배치 규칙을 한곳에 모은 공통 정책입니다. 소비 아이템은"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/02_Scripts/Define/InventoryItemPlacementPolicy.cs 2. 변경 설명 아이템 종류별 배치 규칙을 한곳에 모은 공통 정책입니다. 소비 아이템은"
-published: false
+published: true
 migration_id: "3a336532580e810b8d76ed768d5ea5e9"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

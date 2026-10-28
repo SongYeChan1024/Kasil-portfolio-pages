@@ -5,9 +5,9 @@ categories: ["개발 메모", "Blender"]
 tags: ["Notion 이전", "Blender"]
 excerpt: "기획서 버전 관리 버전 업로드 일자 업데이트 내역 1.00 2026.03.19 퍼즐 규칙 초안 작성 1.01 2026.03.20 스크럼 내용 반영(3-1 연출/사운드/제출 항목) + 기획서 보강 1. 퍼즐 목표 소리가 끊긴 공연장 공간에서 흩어진 악보 조각들을 수집하고, 올바른 순서와 "
 description: "기획서 버전 관리 버전 업로드 일자 업데이트 내역 1.00 2026.03.19 퍼즐 규칙 초안 작성 1.01 2026.03.20 스크럼 내용 반영(3-1 연출/사운드/제출 항목) + 기획서 보강 1. 퍼즐 목표 소리가 끊긴 공연장 공간에서 흩어진 악보 조각들을 수집하고, 올바른 순서와 "
-published: false
+published: true
 migration_id: "35e36532580e816b80f7ee2c90f71673"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

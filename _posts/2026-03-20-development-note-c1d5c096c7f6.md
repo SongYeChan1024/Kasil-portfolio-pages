@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "--- EP.0 미지로의 발돋움 EP.0은 본격적인 기억 복원 이야기에 들어가기 전, 플레이어가 현재 어떤 상태인지 보여주는 프롤로그 이 에피소드의 목적 플레이어가 기억을 잃은 상태 임을 보여준다 이 세계가 현실이 아니라 플레이어의 정신 속 기억 공간 임을 암시한다 추억, 색채, 소리 "
 description: "--- EP.0 미지로의 발돋움 EP.0은 본격적인 기억 복원 이야기에 들어가기 전, 플레이어가 현재 어떤 상태인지 보여주는 프롤로그 이 에피소드의 목적 플레이어가 기억을 잃은 상태 임을 보여준다 이 세계가 현실이 아니라 플레이어의 정신 속 기억 공간 임을 암시한다 추억, 색채, 소리 "
-published: false
+published: true
 migration_id: "35e36532580e81b4a0bbc1d5c096c7f6"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

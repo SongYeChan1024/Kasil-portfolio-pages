@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Scrum 스토리라인 작성, 게임 진행 방식 구성 필요 캐릭터 및 맵에 사용할 에셋 탐색 및 선정 --- 첨부 자료 Project --- 오늘 진행한 작업 GitHub 및 리포지토리 생성 스테이지 3에 사용할 에셋 일부 선정 이젤과 캐릭터 에셋 구성 완료 진행 중인 작업 스테이지별 에셋"
 description: "Scrum 스토리라인 작성, 게임 진행 방식 구성 필요 캐릭터 및 맵에 사용할 에셋 탐색 및 선정 --- 첨부 자료 Project --- 오늘 진행한 작업 GitHub 및 리포지토리 생성 스테이지 3에 사용할 에셋 일부 선정 이젤과 캐릭터 에셋 구성 완료 진행 중인 작업 스테이지별 에셋"
-published: false
+published: true
 migration_id: "35e36532580e81c09c0cdbdcda98c1e3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

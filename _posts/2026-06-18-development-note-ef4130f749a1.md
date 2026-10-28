@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "\\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다. PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. 🗺️ 침몽도시: 루시드 다이버 - 프로젝트 일정표 구조 재정의안 1."
 description: "\\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다. PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. 🗺️ 침몽도시: 루시드 다이버 - 프로젝트 일정표 구조 재정의안 1."
-published: false
+published: true
 migration_id: "38336532580e8069a87eef4130f749a1"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

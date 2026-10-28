@@ -5,9 +5,9 @@ categories: ["개발 메모", "Blender"]
 tags: ["Notion 이전", "Blender"]
 excerpt: "블렌더 기초 통합본 2026-03-29 요약 주요 학습 내용 블렌더 인터페이스 : 뷰포트(작업 공간), 아웃라이너(오브젝트 관리), 속성창(설정 공간), 타임라인(애니메이션용) 화면 조작법 : 마우스 휠로 회전, Shift+휠로 이동, 휠 굴리기로 확대/축소, 물결키(\\~)로 객관적 각"
 description: "블렌더 기초 통합본 2026-03-29 요약 주요 학습 내용 블렌더 인터페이스 : 뷰포트(작업 공간), 아웃라이너(오브젝트 관리), 속성창(설정 공간), 타임라인(애니메이션용) 화면 조작법 : 마우스 휠로 회전, Shift+휠로 이동, 휠 굴리기로 확대/축소, 물결키(\\~)로 객관적 각"
-published: false
+published: true
 migration_id: "35e36532580e811fb86ef213e9701ea3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

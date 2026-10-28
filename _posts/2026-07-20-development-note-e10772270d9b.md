@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/UI/Game/InventorySlotUI.cs cs ﻿/// /// 아이템 슬롯 하나의 역할을 수행합니다 /// 인벤토리 슬롯 1칸의 표시와 입력을 담당한다. /// 인벤토리 슬롯끼리의 위치 교환,"
 description: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/UI/Game/InventorySlotUI.cs cs ﻿/// /// 아이템 슬롯 하나의 역할을 수행합니다 /// 인벤토리 슬롯 1칸의 표시와 입력을 담당한다. /// 인벤토리 슬롯끼리의 위치 교환,"
-published: false
+published: true
 migration_id: "3a336532580e8196961de10772270d9b"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

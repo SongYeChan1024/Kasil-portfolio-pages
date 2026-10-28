@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "DEBUG-CD-004 Addressable Group 누락으로 인한 아이템 출력 불가 문제 1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-CD-004 | | 관련 버그 | | | 이슈명 | Addressable Group 누락으로 인한 아"
 description: "DEBUG-CD-004 Addressable Group 누락으로 인한 아이템 출력 불가 문제 1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-CD-004 | | 관련 버그 | | | 이슈명 | Addressable Group 누락으로 인한 아"
-published: false
+published: true
 migration_id: "30b36532580e8210864081209c91bbc3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

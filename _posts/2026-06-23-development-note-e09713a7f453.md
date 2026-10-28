@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "cs /// /// 플레이어의 이동을 처리하는 스크립트 /// using UnityEngine; public class PlayerMovement : MonoBehaviour Header(\"Player Movement Controll\") SerializeField private Rigi"
 description: "cs /// /// 플레이어의 이동을 처리하는 스크립트 /// using UnityEngine; public class PlayerMovement : MonoBehaviour Header(\"Player Movement Controll\") SerializeField private Rigi"
-published: false
+published: true
 migration_id: "38836532580e80db8cd8e09713a7f453"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked"]
 ---
 

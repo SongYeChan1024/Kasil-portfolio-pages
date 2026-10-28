@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "문제 상황: 플레이어 스포너 위치를 바꿔서 다른 위치에 스폰 시켜도 곧장 원점으로 복구되어 움직일 수 없는 버그가 발생함 원인: 한 오브젝트에 두개의 애니메이터가 존재하면서 부모의 애니메이터가 이동 값(죄표)을 0으로 고정시켜 원점에 고정된 듯한 현상이 발생함 부모의 애니메이터를 없에고"
 description: "문제 상황: 플레이어 스포너 위치를 바꿔서 다른 위치에 스폰 시켜도 곧장 원점으로 복구되어 움직일 수 없는 버그가 발생함 원인: 한 오브젝트에 두개의 애니메이터가 존재하면서 부모의 애니메이터가 이동 값(죄표)을 0으로 고정시켜 원점에 고정된 듯한 현상이 발생함 부모의 애니메이터를 없에고"
-published: false
+published: true
 migration_id: "0a636532580e834ca2cd01dba480d3ab"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

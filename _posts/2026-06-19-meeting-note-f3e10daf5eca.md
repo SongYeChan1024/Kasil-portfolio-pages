@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "프로토타입 최종 제출 및 에셋 요청 준비 회의 2026-06-19 요약 1) 한 줄 결론 (TL;DR) 오늘 15:00 기획서 최종 제출 후 16:00 피드백, 유료 에셋 추가 요청서를 작성하여 운영진에 제출 확정 2) 회의 개요 일시: 2026-06-19 (금) 회의 유형: 기획/디자"
 description: "프로토타입 최종 제출 및 에셋 요청 준비 회의 2026-06-19 요약 1) 한 줄 결론 (TL;DR) 오늘 15:00 기획서 최종 제출 후 16:00 피드백, 유료 에셋 추가 요청서를 작성하여 운영진에 제출 확정 2) 회의 개요 일시: 2026-06-19 (금) 회의 유형: 기획/디자"
-published: false
+published: true
 migration_id: "38436532580e804e828bf3e10daf5eca"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

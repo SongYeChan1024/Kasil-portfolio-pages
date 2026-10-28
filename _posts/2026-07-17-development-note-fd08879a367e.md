@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "문서 목적 이 문서는 2026-07-17에 송예찬이 직접 작성하거나 수정한 커밋만 대상으로, 변경된 모든 스크립트를 이전 상태 → 변경 설명 → 현재 상태 순서로 비교 정리한 문서다. 분석 기준은 Git 작성자 SongYeChan1024 이며, 대상 커밋은 다음 세 건이다. 60122e"
 description: "문서 목적 이 문서는 2026-07-17에 송예찬이 직접 작성하거나 수정한 커밋만 대상으로, 변경된 모든 스크립트를 이전 상태 → 변경 설명 → 현재 상태 순서로 비교 정리한 문서다. 분석 기준은 Git 작성자 SongYeChan1024 이며, 대상 커밋은 다음 세 건이다. 60122e"
-published: false
+published: true
 migration_id: "3a036532580e81318552fd08879a367e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

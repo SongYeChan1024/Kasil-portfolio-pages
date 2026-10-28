@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/Enemy/EnemyCombat.cs cs using System; using System.Collections; using UnityEngine; using UnityEngine.AI; "
 description: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/Enemy/EnemyCombat.cs cs using System; using System.Collections; using UnityEngine; using UnityEngine.AI; "
-published: false
+published: true
 migration_id: "3a436532580e8164b5b4dd72732f8f83"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/System/Player/PlayerInteraction.cs cs using System.Collections.Generic; using UnityEngine; using UnityEngine.In"
 description: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/System/Player/PlayerInteraction.cs cs using System.Collections.Generic; using UnityEngine; using UnityEngine.In"
-published: false
+published: true
 migration_id: "3a336532580e815eb61adf44c2bc04c4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

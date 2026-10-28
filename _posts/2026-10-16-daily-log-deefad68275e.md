@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "Blender"]
 excerpt: "기록 정보 프로젝트: 에르고스퀘어: 설계자 — 튜토리얼 프로토타입 작성자: 송예찬 작업일: 2026-10-16 작성일: 2026-10-16 (Asia/Seoul) 기록 범위: 현재 시점 기준 진행 기록 오늘의 목표 10월 12일부터 오늘까지 비어 있던 데일리로그와 일일개발일지를 보완하고"
 description: "기록 정보 프로젝트: 에르고스퀘어: 설계자 — 튜토리얼 프로토타입 작성자: 송예찬 작업일: 2026-10-16 작성일: 2026-10-16 (Asia/Seoul) 기록 범위: 현재 시점 기준 진행 기록 오늘의 목표 10월 12일부터 오늘까지 비어 있던 데일리로그와 일일개발일지를 보완하고"
-published: false
+published: true
 migration_id: "3fa36532580e81af8c76deefad68275e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

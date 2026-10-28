@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "제페토(Zepeto) 플랫폼 개요 및 실습 준비 2026-05-21 요약 오늘 수업 핵심 요약 제페토(Zepeto) 메타버스 플랫폼의 비즈니스 모델과 수익 구조를 학습했습니다. 제페토에서 아이템 제작 및 월드 제작 을 통해 실제 수익을 창출할 수 있는 방법을 배웠습니다. Unity 20"
 description: "제페토(Zepeto) 플랫폼 개요 및 실습 준비 2026-05-21 요약 오늘 수업 핵심 요약 제페토(Zepeto) 메타버스 플랫폼의 비즈니스 모델과 수익 구조를 학습했습니다. 제페토에서 아이템 제작 및 월드 제작 을 통해 실제 수익을 창출할 수 있는 방법을 배웠습니다. Unity 20"
-published: false
+published: true
 migration_id: "36736532580e80c6a090c490a5a2f2f7"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

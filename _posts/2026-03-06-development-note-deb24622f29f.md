@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "작성일: 2026-03-05 최종 업데이트: 2026-03-05 문서 유형: 게임 기획서 (실습) 게임명: Unity Runner 진행 로그(데일리) 아래 데일리 로그에서 날짜별 진행 과정을 확인 관련 기록03/05 데일리 로그 | Unity Runner 2026-03-06\\_데일리 로"
 description: "작성일: 2026-03-05 최종 업데이트: 2026-03-05 문서 유형: 게임 기획서 (실습) 게임명: Unity Runner 진행 로그(데일리) 아래 데일리 로그에서 날짜별 진행 과정을 확인 관련 기록03/05 데일리 로그 | Unity Runner 2026-03-06\\_데일리 로"
-published: false
+published: true
 migration_id: "35e36532580e81a29669deb24622f29f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "UI 사운드 -Free UI Click Sound Pack Nature Sound FX - 쓸지도? 모르는 것들 General RPG SFX Pack - 각종 효과음 SFX EP.0 발자국 : 거의 무음, 유령 같은 소프트 스텝 Footsteps - Essentials Footsteps"
 description: "UI 사운드 -Free UI Click Sound Pack Nature Sound FX - 쓸지도? 모르는 것들 General RPG SFX Pack - 각종 효과음 SFX EP.0 발자국 : 거의 무음, 유령 같은 소프트 스텝 Footsteps - Essentials Footsteps"
-published: false
+published: true
 migration_id: "35e36532580e810baa61d1a8434d6e2a"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["수업 노트", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-02-10-Elice\\_수업-Universal Pipeline Rendering"
 description: "2026-02-10-Elice\\_수업-Universal Pipeline Rendering"
-published: false
+published: true
 migration_id: "30536532580e803b9087df9106b2bfe1"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

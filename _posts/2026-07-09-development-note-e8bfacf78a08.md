@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-09\\_script\\_full\\_compare 2026-07-09 코드 변경 사항 기록 1. 문서 개요 이 문서는 2026년 7월 9일 알파 버전 시연 준비 과정에서 진행한 주요 코드 변경 사항과 디버깅 내용을 정리한 기록이다. 오늘 작업의 핵심은 아티팩트 장착 효과 적용"
 description: "2026-07-09\\_script\\_full\\_compare 2026-07-09 코드 변경 사항 기록 1. 문서 개요 이 문서는 2026년 7월 9일 알파 버전 시연 준비 과정에서 진행한 주요 코드 변경 사항과 디버깅 내용을 정리한 기록이다. 오늘 작업의 핵심은 아티팩트 장착 효과 적용"
-published: false
+published: true
 migration_id: "39836532580e804db00be8bfacf78a08"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-07-21 전체 스크립트 비교 정리 1. 한 줄 결론 2026-07-21에는 다크 스피릿의 피격 반응과 다중 추격 정합성을 보강하고, 에너미 처치 보상·튜토리얼 확정 보상 상자를 분리했으며, 인벤토리와 상자 사이에서 실제 드롭될 슬롯을 명확히 표시하도록 개선했습니다. 해당 작업"
 description: "2026-07-21 전체 스크립트 비교 정리 1. 한 줄 결론 2026-07-21에는 다크 스피릿의 피격 반응과 다중 추격 정합성을 보강하고, 에너미 처치 보상·튜토리얼 확정 보상 상자를 분리했으며, 인벤토리와 상자 사이에서 실제 드롭될 슬롯을 명확히 표시하도록 개선했습니다. 해당 작업"
-published: false
+published: true
 migration_id: "3a436532580e819a991bd9010fab1dec"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

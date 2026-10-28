@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-08\\_artifact\\_system\\_troubleshooting 1. 문서 개요 이 문서는 2026년 7월 8일 아티팩트 루팅/장착 시스템을 구현하면서 발생한 문제와 해결 과정을 정리한 트러블슈팅 문서다. 오늘 발생한 문제들은 대부분 “데이터는 생겼지만 기존 인벤토리 "
 description: "2026-07-08\\_artifact\\_system\\_troubleshooting 1. 문서 개요 이 문서는 2026년 7월 8일 아티팩트 루팅/장착 시스템을 구현하면서 발생한 문제와 해결 과정을 정리한 트러블슈팅 문서다. 오늘 발생한 문제들은 대부분 “데이터는 생겼지만 기존 인벤토리 "
-published: false
+published: true
 migration_id: "39736532580e80d59c79dcb0ac5efea7"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

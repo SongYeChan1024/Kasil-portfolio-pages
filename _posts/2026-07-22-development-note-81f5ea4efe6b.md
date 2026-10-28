@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-006 | | 관련 버그 | | | 이슈명 | 인벤토리에서 드랍한 아이템 아이콘이 비정상적으로 비대하게 출력됨 | | 담당 기능 | DropItem | | 발견자 | 강다영 | | 발견일 "
 description: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-006 | | 관련 버그 | | | 이슈명 | 인벤토리에서 드랍한 아이템 아이콘이 비정상적으로 비대하게 출력됨 | | 담당 기능 | DropItem | | 발견자 | 강다영 | | 발견일 "
-published: false
+published: true
 migration_id: "72c36532580e83a894e481f5ea4efe6b"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

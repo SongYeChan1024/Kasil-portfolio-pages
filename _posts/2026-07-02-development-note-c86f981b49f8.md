@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-02\\_enemy\\_noise\\_system\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 2일 기준으로 정리한 에너미 노이즈 시스템 관련 스크립트 비교 문서다. 각 항목은 원본 스크립트 -> 설명 -> 수정된 스크립트 순서로 구성했고, 원본 스"
 description: "2026-07-02\\_enemy\\_noise\\_system\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 2일 기준으로 정리한 에너미 노이즈 시스템 관련 스크립트 비교 문서다. 각 항목은 원본 스크립트 -> 설명 -> 수정된 스크립트 순서로 구성했고, 원본 스"
-published: false
+published: true
 migration_id: "39136532580e803ba5abc86f981b49f8"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked", "publication_review"]
 ---
 

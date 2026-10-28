@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "알파 버전 개발 착수 및 업무 분배 회의 2026-07-01 요약 1) 한 줄 결론 (TL;DR) 외부 피드백의 축소 제안을 거부하고 현재 기획대로 P0.5 알파 버전 개발 진행, 5개 주요 작업(AI 기획/레벨 디자인/플레이어 기획/애니메이션/UI)으로 인원 분배 확정 2) 회의 개요"
 description: "알파 버전 개발 착수 및 업무 분배 회의 2026-07-01 요약 1) 한 줄 결론 (TL;DR) 외부 피드백의 축소 제안을 거부하고 현재 기획대로 P0.5 알파 버전 개발 진행, 5개 주요 작업(AI 기획/레벨 디자인/플레이어 기획/애니메이션/UI)으로 인원 분배 확정 2) 회의 개요"
-published: false
+published: true
 migration_id: "39036532580e80c09145cd702d4b23f4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/Manager/Manager/ResultManager.cs cs ﻿/// /// 인게임 세션 종료 시 데이터 변동을 관리하는 클래스 /// (탈출 성공 여부, 플레이 타임, 인벤토리 및 퀵슬롯, 동조율"
 description: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/Manager/Manager/ResultManager.cs cs ﻿/// /// 인게임 세션 종료 시 데이터 변동을 관리하는 클래스 /// (탈출 성공 여부, 플레이 타임, 인벤토리 및 퀵슬롯, 동조율"
-published: false
+published: true
 migration_id: "3a536532580e814082e1e984ae642e6e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "2026-07-10\\_wall\\_collision\\_debug\\_script\\_compare 2026-07-10 코드 변경 사항 기록 1. 문서 개요 이 문서는 2026년 7월 10일 기준으로 진행한 디버깅 및 코드 수정 내용을 정리한 기록이다. 오늘 작업의 핵심은 벽 관통 관련 버그 "
 description: "2026-07-10\\_wall\\_collision\\_debug\\_script\\_compare 2026-07-10 코드 변경 사항 기록 1. 문서 개요 이 문서는 2026년 7월 10일 기준으로 진행한 디버깅 및 코드 수정 내용을 정리한 기록이다. 오늘 작업의 핵심은 벽 관통 관련 버그 "
-published: false
+published: true
 migration_id: "39936532580e8062a067e113686230cc"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

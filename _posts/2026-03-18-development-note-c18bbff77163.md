@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-18 요약 작업 진행 사항 에피소드 2 작업 공간 마무리 후 그림 진입 시 씬 전환 기술 구현 및 UI 배치 예정 스테이지 1의 얼음 미끄럼 포즈 구현 완료, 피드백 대기 중 에피소드 4 퍼즐 맵 제작 진행 중 기획서 정리 작업:"
 description: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-18 요약 작업 진행 사항 에피소드 2 작업 공간 마무리 후 그림 진입 시 씬 전환 기술 구현 및 UI 배치 예정 스테이지 1의 얼음 미끄럼 포즈 구현 완료, 피드백 대기 중 에피소드 4 퍼즐 맵 제작 진행 중 기획서 정리 작업:"
-published: false
+published: true
 migration_id: "35e36532580e8193914fc18bbff77163"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

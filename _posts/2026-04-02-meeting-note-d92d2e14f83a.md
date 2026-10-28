@@ -5,9 +5,9 @@ categories: ["회의 기록", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "취업 및 프로젝트 진행 상담 2026-04-02 요약 실행 항목 송카실: Notion 포트폴리오 업데이트 후 링크 공유 송카실: \"게임 잡는 사람\" 등에서 채용 공고 유심히 확인 송카실: Notion에 프로젝트 중 막힌 문제와 해결 방법 추가 송카실: Notion에 향후 게임에 추가할 "
 description: "취업 및 프로젝트 진행 상담 2026-04-02 요약 실행 항목 송카실: Notion 포트폴리오 업데이트 후 링크 공유 송카실: \"게임 잡는 사람\" 등에서 채용 공고 유심히 확인 송카실: Notion에 프로젝트 중 막힌 문제와 해결 방법 추가 송카실: Notion에 향후 게임에 추가할 "
-published: false
+published: true
 migration_id: "35e36532580e8191a046d92d2e14f83a"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

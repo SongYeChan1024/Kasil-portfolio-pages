@@ -5,9 +5,9 @@ categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "06.29 버전 관리 위기 대응 및 병합 프로세스 재정비 회의 2026-06-29 요약 1) 한 줄 결론 (TL;DR) 주말 병합 작업 중 과거 버전이 미래 버전을 덮어쓰는 문제로 구현물 소실 발생, P0 완성 일정이 이번 주 말까지 연기되고 하루 2회 정기 병합 + 작업 할당 후 추가"
 description: "06.29 버전 관리 위기 대응 및 병합 프로세스 재정비 회의 2026-06-29 요약 1) 한 줄 결론 (TL;DR) 주말 병합 작업 중 과거 버전이 미래 버전을 덮어쓰는 문제로 구현물 소실 발생, P0 완성 일정이 이번 주 말까지 연기되고 하루 2회 정기 병합 + 작업 할당 후 추가"
-published: false
+published: true
 migration_id: "38e36532580e80738f76e346dac61c5c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

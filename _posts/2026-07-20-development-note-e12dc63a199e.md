@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/02_Scripts/System/Tutorial/TutorialHighlightController.cs 2. 변경 설명 튜토리얼 가이드가 지정한 UI 또는 월드 대상의 화면 b"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 9d7af9e 파일: Assets/02_Scripts/System/Tutorial/TutorialHighlightController.cs 2. 변경 설명 튜토리얼 가이드가 지정한 UI 또는 월드 대상의 화면 b"
-published: false
+published: true
 migration_id: "3a336532580e81c2ac55e12dc63a199e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "1. 프로토타입 목적 본 1차 프로토타입의 목적은 《침몽도시: 루시드 다이버》의 전체 콘텐츠를 구현하는 것이 아니라, 게임의 가장 기본적인 플레이 흐름이 실제로 작동하는지 검증하는 것이다. 이번 프로토타입에서는 진입 → 이동 → 전투 → 회수 → 탈출 → 결과 확인 으로 이어지는 최소 "
 description: "1. 프로토타입 목적 본 1차 프로토타입의 목적은 《침몽도시: 루시드 다이버》의 전체 콘텐츠를 구현하는 것이 아니라, 게임의 가장 기본적인 플레이 흐름이 실제로 작동하는지 검증하는 것이다. 이번 프로토타입에서는 진입 → 이동 → 전투 → 회수 → 탈출 → 결과 확인 으로 이어지는 최소 "
-published: false
+published: true
 migration_id: "38036532580e807dbb3ffe6a235c0e14"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

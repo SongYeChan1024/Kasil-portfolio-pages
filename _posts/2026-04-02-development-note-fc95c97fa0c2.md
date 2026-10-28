@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "작업실 진입 - 인트로 컷신 보여주면 좋은 것 흩어진 악보 비어 있는 자리 작업 중이던 흔적 희미한 조명 음악가 NPC의 뒷모습 또는 옆모습 첨부 자료 첨부 자료 3-1 공연장 이동 - 이동 후 공연장을 보여주는 컷신 보여주면 좋은 것 어두운 공연장 내부 조명이 꺼진 무대 중앙에 피아노"
 description: "작업실 진입 - 인트로 컷신 보여주면 좋은 것 흩어진 악보 비어 있는 자리 작업 중이던 흔적 희미한 조명 음악가 NPC의 뒷모습 또는 옆모습 첨부 자료 첨부 자료 3-1 공연장 이동 - 이동 후 공연장을 보여주는 컷신 보여주면 좋은 것 어두운 공연장 내부 조명이 꺼진 무대 중앙에 피아노"
-published: false
+published: true
 migration_id: "35e36532580e819282d4fc95c97fa0c2"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

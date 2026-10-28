@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "기본 정보 날짜: 2026-04-10 프로젝트: MosAIc / EP.3 작성자: 작성자 오늘 한 일(요약) EP3 로비 인트로 컷씬 자막 구조를 기존 Canvas_Cutscene 에 붙는 형태로 정리 컷씬 대사 구성 정리(나레이션/독백 중심) + 음악가 대사는 상호작용 이후로 분리 백"
 description: "기본 정보 날짜: 2026-04-10 프로젝트: MosAIc / EP.3 작성자: 작성자 오늘 한 일(요약) EP3 로비 인트로 컷씬 자막 구조를 기존 Canvas_Cutscene 에 붙는 형태로 정리 컷씬 대사 구성 정리(나레이션/독백 중심) + 음악가 대사는 상호작용 이후로 분리 백"
-published: false
+published: true
 migration_id: "35e36532580e819d9fa9eefdace39b8d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

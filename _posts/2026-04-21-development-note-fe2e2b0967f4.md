@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 리팩토링 목표 기존에는 씬이 바뀔 때마다 SoundManager 안에서 switch(scene.name)로 어떤 사운드를 재생할지 직접 분기했다. 이번 리팩토링의 목표는 이 구조를 씬 이름을 키로 SoundProfile을 찾는 딕셔너리 구조 로 바꾸는 것이었다. 즉, 이전: 코드가"
 description: "1. 리팩토링 목표 기존에는 씬이 바뀔 때마다 SoundManager 안에서 switch(scene.name)로 어떤 사운드를 재생할지 직접 분기했다. 이번 리팩토링의 목표는 이 구조를 씬 이름을 키로 SoundProfile을 찾는 딕셔너리 구조 로 바꾸는 것이었다. 즉, 이전: 코드가"
-published: false
+published: true
 migration_id: "35e36532580e81c68f42fe2e2b0967f4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

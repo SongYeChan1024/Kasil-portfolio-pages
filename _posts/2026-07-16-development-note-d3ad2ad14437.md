@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-07-16\\_tutorial\\_storage\\_enemy\\_visual\\_script\\_summary 1. 한 줄 결론 튜토리얼 대화 UI를 무전/대사/툴팁 구조로 확장하고, 창고 슬롯 UI의 레어리티·퀵슬롯·아티팩트 교환 정합성을 보강했으며, 에너미 AI의 디코이 우선순위와 "
 description: "2026-07-16\\_tutorial\\_storage\\_enemy\\_visual\\_script\\_summary 1. 한 줄 결론 튜토리얼 대화 UI를 무전/대사/툴팁 구조로 확장하고, 창고 슬롯 UI의 레어리티·퀵슬롯·아티팩트 교환 정합성을 보강했으며, 에너미 AI의 디코이 우선순위와 "
-published: false
+published: true
 migration_id: "39f36532580e813d9b03d3ad2ad14437"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

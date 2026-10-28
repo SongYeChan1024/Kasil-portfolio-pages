@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "🗺️ 3차 프로젝트 마일스톤 및 개발 로드맵 본 로드맵은 《침몽도시: 루시드 다이버》 개발을 위한 전체 일정표 및 팀원별 마일스톤입니다. 1차 기획 및 프로토타입 검증부터 최종 발표용 빌드 구축까지의 과정을 관리합니다. --- 📅 전체 마일스톤 (Milestones) mermaid ga"
 description: "🗺️ 3차 프로젝트 마일스톤 및 개발 로드맵 본 로드맵은 《침몽도시: 루시드 다이버》 개발을 위한 전체 일정표 및 팀원별 마일스톤입니다. 1차 기획 및 프로토타입 검증부터 최종 발표용 빌드 구축까지의 과정을 관리합니다. --- 📅 전체 마일스톤 (Milestones) mermaid ga"
-published: false
+published: true
 migration_id: "38136532580e80aab655eb164a973efd"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

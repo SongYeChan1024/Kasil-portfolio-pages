@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/Editor/InventoryDropFeedbackPrefabSetup.cs 2. 변경 설명 Inventory Canvas에 밝기 Fill, 흰색 Border, 피드백 컴포넌트"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: 6e5f262 파일: Assets/Editor/InventoryDropFeedbackPrefabSetup.cs 2. 변경 설명 Inventory Canvas에 밝기 Fill, 흰색 Border, 피드백 컴포넌트"
-published: false
+published: true
 migration_id: "3a336532580e8157a395ff0de2068319"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

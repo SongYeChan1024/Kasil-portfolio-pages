@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: bfd072d 파일: Assets/02_Scripts/System/Player/MuzzleFlashLight.cs 2. 변경 설명 발사 위치의 Point Light 하나를 재사용해 짧은 광량 피드백을 만드는 컴"
 description: "1. 이전 스크립트 전체 신규 파일로 이전 스크립트가 없습니다. 생성 커밋: bfd072d 파일: Assets/02_Scripts/System/Player/MuzzleFlashLight.cs 2. 변경 설명 발사 위치의 Point Light 하나를 재사용해 짧은 광량 피드백을 만드는 컴"
-published: false
+published: true
 migration_id: "3a336532580e814d86e8f57b0352da44"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

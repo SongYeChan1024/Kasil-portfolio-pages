@@ -5,9 +5,9 @@ categories: ["수업 노트", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "3D 애니메이션 제작 파이프라인 1.프리 프로덕션 시나리오: 스토리 전개, 케릭터의 대사와 지문 등 구체적인 대본 작성 컨셉아트: 케릭터, 배경, 프랍(소품) 등의 시각적인 디자인과 전체적인 무드 설정 스토리 보드: 대본을 바탕으로 주요 장면의 구도와 연결을 만화 컷처럼 시각화 컬러스크"
 description: "3D 애니메이션 제작 파이프라인 1.프리 프로덕션 시나리오: 스토리 전개, 케릭터의 대사와 지문 등 구체적인 대본 작성 컨셉아트: 케릭터, 배경, 프랍(소품) 등의 시각적인 디자인과 전체적인 무드 설정 스토리 보드: 대본을 바탕으로 주요 장면의 구도와 연결을 만화 컷처럼 시각화 컬러스크"
-published: false
+published: true
 migration_id: "3fa36532580e80789b23eef7a10dcdbf"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

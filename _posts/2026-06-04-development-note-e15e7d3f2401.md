@@ -5,9 +5,9 @@ categories: ["개발 메모", "Blender"]
 tags: ["Notion 이전", "Blender"]
 excerpt: "게임 기획서 피드백 및 진로 상담 수업 2026-06-04 요약 오늘 수업 핵심 요약 게임 개발 도구인 Pixyz 플러그인 을 소개하고, FBX 파일을 손상 없이 Unity로 가져오는 방법을 설명했습니다. 게임 개발자의 진로로 경력 쌓기 → 강사/창업 경로를 제시하며, 정책자금 활용법과"
 description: "게임 기획서 피드백 및 진로 상담 수업 2026-06-04 요약 오늘 수업 핵심 요약 게임 개발 도구인 Pixyz 플러그인 을 소개하고, FBX 파일을 손상 없이 Unity로 가져오는 방법을 설명했습니다. 게임 개발자의 진로로 경력 쌓기 → 강사/창업 경로를 제시하며, 정책자금 활용법과"
-published: false
+published: true
 migration_id: "37536532580e80c4acb8e15e7d3f2401"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "privacy_review", "source_citations_preserved_in_backup"]
 ---
 

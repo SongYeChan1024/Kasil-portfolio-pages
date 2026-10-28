@@ -5,9 +5,9 @@ categories: ["개발 메모", "AI"]
 tags: ["Notion 이전", "AI"]
 excerpt: "FGT 게임 프로젝트 발표 및 피드백 2026-04-17 요약 회의 개요 FGT(Focus Group Test) 플레이 테스트를 위한 두 팀의 게임 프로젝트 발표 진행 각 팀이 게임 컨셉, 기술 구현, AI 활용 방안 등을 시연과 함께 공유 발표 후 질의응답 및 빌드 파일 공유 예정 첫"
 description: "FGT 게임 프로젝트 발표 및 피드백 2026-04-17 요약 회의 개요 FGT(Focus Group Test) 플레이 테스트를 위한 두 팀의 게임 프로젝트 발표 진행 각 팀이 게임 컨셉, 기술 구현, AI 활용 방안 등을 시연과 함께 공유 발표 후 질의응답 및 빌드 파일 공유 예정 첫"
-published: false
+published: true
 migration_id: "35e36532580e816c8c4efca57850c9cf"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

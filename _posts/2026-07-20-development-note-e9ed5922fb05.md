@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 9d7af9e^ 파일: Assets/Editor/TutorialPrefabBuilder.cs cs using System.Collections.Generic; using System.Linq; using TMPro; using UnityEditor; us"
 description: "1. 이전 스크립트 전체 기준: 9d7af9e^ 파일: Assets/Editor/TutorialPrefabBuilder.cs cs using System.Collections.Generic; using System.Linq; using TMPro; using UnityEditor; us"
-published: false
+published: true
 migration_id: "3a336532580e81b09c35e9ed5922fb05"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

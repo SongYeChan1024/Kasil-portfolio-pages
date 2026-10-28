@@ -5,9 +5,9 @@ categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Cinemachine 카메라 시스템 학습 2026-02-12 오전 요약 Action Items 포트폴리오에 Cinemachine을 적극 활용하여 카메라 연출 구현 1. FreeLookCamera 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 ^ 비"
 description: "Cinemachine 카메라 시스템 학습 2026-02-12 오전 요약 Action Items 포트폴리오에 Cinemachine을 적극 활용하여 카메라 연출 구현 1. FreeLookCamera 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 ^ 비"
-published: false
+published: true
 migration_id: "35e36532580e81fbabcdfe27fbdf4b90"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

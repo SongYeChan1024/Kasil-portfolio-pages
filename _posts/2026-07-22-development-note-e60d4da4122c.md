@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/UI/Game/NoticeLobbyUI.cs cs using System.Collections; using System.Collections.Generic; using UnityEngine; using"
 description: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/UI/Game/NoticeLobbyUI.cs cs using System.Collections; using System.Collections.Generic; using UnityEngine; using"
-published: false
+published: true
 migration_id: "3a536532580e81648affe60d4da4122c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["회의 기록", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "3차 프로젝트 팀 회의 - 역할 분담 및 일정 계획 2026-06-12 요약 회의 핵심 요약 팀장 부재 상황에서 초기 기획 역할 분담 을 진행하고, 기획서를 시스템, 시나리오, 컨셉, 레벨 디자인으로 나눠 작성하기로 결정했다 문서 공유 매체 는 1차로 Notion을 사용하고, 추후 An"
 description: "3차 프로젝트 팀 회의 - 역할 분담 및 일정 계획 2026-06-12 요약 회의 핵심 요약 팀장 부재 상황에서 초기 기획 역할 분담 을 진행하고, 기획서를 시스템, 시나리오, 컨셉, 레벨 디자인으로 나눠 작성하기로 결정했다 문서 공유 매체 는 1차로 Notion을 사용하고, 추후 An"
-published: false
+published: true
 migration_id: "37d36532580e80289a68dada7da19914"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "게임 프로젝트 진행 상황 발표 회의 2026-04-24 요약 액션 아이템 상해찬: 1-2 스테이지 리뉴얼 작업을 최종 프로젝트 기간 내 완료 1팀: 최종 발표일까지 AI 프롬프트 지속적 개선 2팀: 최종 발표일까지 QA 및 디버깅 작업 지속, 프롬프트 개선 아이템 일회성에 대한 UI 개"
 description: "게임 프로젝트 진행 상황 발표 회의 2026-04-24 요약 액션 아이템 상해찬: 1-2 스테이지 리뉴얼 작업을 최종 프로젝트 기간 내 완료 1팀: 최종 발표일까지 AI 프롬프트 지속적 개선 2팀: 최종 발표일까지 QA 및 디버깅 작업 지속, 프롬프트 개선 아이템 일회성에 대한 UI 개"
-published: false
+published: true
 migration_id: "35e36532580e8161aa73c3f62cd1e100"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

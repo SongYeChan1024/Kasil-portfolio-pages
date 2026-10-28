@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/Define/Enums.cs cs /// /// 게임 내 모든 Enum형을 관리합니다 /// // 캐릭터 종류 public enum UserType main, // 메인 다이버 support // 적 "
 description: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/Define/Enums.cs cs /// /// 게임 내 모든 Enum형을 관리합니다 /// // 캐릭터 종류 public enum UserType main, // 메인 다이버 support // 적 "
-published: false
+published: true
 migration_id: "3a436532580e8199af37c08fd40ff8cc"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

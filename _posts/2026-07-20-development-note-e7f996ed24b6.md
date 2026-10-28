@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: bfd072d^ 파일: Assets/02_Scripts/System/Player/PlayerWeapon.cs cs ﻿using System.Collections; using UnityEngine; using UnityEngine.AddressableAss"
 description: "1. 이전 스크립트 전체 기준: bfd072d^ 파일: Assets/02_Scripts/System/Player/PlayerWeapon.cs cs ﻿using System.Collections; using UnityEngine; using UnityEngine.AddressableAss"
-published: false
+published: true
 migration_id: "3a336532580e813fac8ae7f996ed24b6"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

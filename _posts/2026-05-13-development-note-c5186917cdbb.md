@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "메타버스와 인터넷 기술 강의 2026-05-13 요약 오늘 수업 핵심 요약 메타버스Metaverse 의 정의와 현실-비현실 연결 방식을 배웠다. 메타버스는 Meta초월와 Universe세계의 합성어로, 공간적·정신적·사회적·경제적·정보적 연결을 통해 현실과 가상을 이어준다. 한국 인터넷"
 description: "메타버스와 인터넷 기술 강의 2026-05-13 요약 오늘 수업 핵심 요약 메타버스Metaverse 의 정의와 현실-비현실 연결 방식을 배웠다. 메타버스는 Meta초월와 Universe세계의 합성어로, 공간적·정신적·사회적·경제적·정보적 연결을 통해 현실과 가상을 이어준다. 한국 인터넷"
-published: false
+published: true
 migration_id: "35f36532580e80aebd3dc5186917cdbb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

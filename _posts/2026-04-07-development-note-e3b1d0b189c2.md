@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "EP.2 사라진 그림 리뉴얼본 문을 넘어간 직후 EP.2에 들어왔을 때의 플레이어 독백 문을 넘어선 순간, 희미한 별빛이 시야에서 천천히 걷혀 나간다. 그 자리를 대신하듯, 메마른 공기와 멈춰 선 빛이 눈앞에 스며든다. 천천히 모습을 드러내는 것은 낡은 작업실이다. 찢어진 캔버스. 쓰러"
 description: "EP.2 사라진 그림 리뉴얼본 문을 넘어간 직후 EP.2에 들어왔을 때의 플레이어 독백 문을 넘어선 순간, 희미한 별빛이 시야에서 천천히 걷혀 나간다. 그 자리를 대신하듯, 메마른 공기와 멈춰 선 빛이 눈앞에 스며든다. 천천히 모습을 드러내는 것은 낡은 작업실이다. 찢어진 캔버스. 쓰러"
-published: false
+published: true
 migration_id: "35e36532580e8174900be3b1d0b189c2"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "1. 문서 목적 이 문서는 2026-07-16에 수정한 핵심 스크립트를 읽기 위한 정리 문서다. 단순 변경 목록이 아니라, 각 스크립트가 왜 바뀌었고 현재 어떤 책임을 갖는지 중심으로 정리한다. 2. 튜토리얼 UI / 데이터 구조 2.1 TutorialGuideData.cs 이전 문제 "
 description: "1. 문서 목적 이 문서는 2026-07-16에 수정한 핵심 스크립트를 읽기 위한 정리 문서다. 단순 변경 목록이 아니라, 각 스크립트가 왜 바뀌었고 현재 어떤 책임을 갖는지 중심으로 정리한다. 2. 튜토리얼 UI / 데이터 구조 2.1 TutorialGuideData.cs 이전 문제 "
-published: false
+published: true
 migration_id: "39f36532580e81a08153f878b9a201ca"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

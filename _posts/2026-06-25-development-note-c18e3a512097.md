@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-25\\_script\\_full\\_compare 전체 구조 변화 기존에는 ItemBox 가 단순히 아이템을 담아두는 박스에 가까웠고, 인벤토리와 체스트가 같은 슬롯 구조로 맞물려 움직이는 형태는 아니었어. 또 인벤토리 슬롯도 TID , 수량, 아이콘 중심이라 체스트로 다시 "
 description: "2026-06-25\\_script\\_full\\_compare 전체 구조 변화 기존에는 ItemBox 가 단순히 아이템을 담아두는 박스에 가까웠고, 인벤토리와 체스트가 같은 슬롯 구조로 맞물려 움직이는 형태는 아니었어. 또 인벤토리 슬롯도 TID , 수량, 아이콘 중심이라 체스트로 다시 "
-published: false
+published: true
 migration_id: "38a36532580e802e8f84c18e3a512097"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked"]
 ---
 

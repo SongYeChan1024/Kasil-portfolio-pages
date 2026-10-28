@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "VR 인터랙션 시스템 (Climb, Haptic, Gaze) 2026-05-07 요약 오늘 수업 핵심 요약 Climb Interactable 을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다. Teleportation Anchor 와 Teleportation Multi Anch"
 description: "VR 인터랙션 시스템 (Climb, Haptic, Gaze) 2026-05-07 요약 오늘 수업 핵심 요약 Climb Interactable 을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다. Teleportation Anchor 와 Teleportation Multi Anch"
-published: false
+published: true
 migration_id: "35e36532580e8118a2e7da5ff99a41e1"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

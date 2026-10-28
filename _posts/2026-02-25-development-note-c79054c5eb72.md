@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "문제: 1부터 10까지 중 3의 배수만 출력해라. cs for(int i = 1; i / : 나누기(몫) : 나머지(배수 판정용) 배수 판정은 거의 무조건 라고 생각해라 1부터 10까지의 합 구하기 (정답 55) 힌트 sum 이라는 변수를 하나 만들고 (처음엔 0) for문 돌면서 su"
 description: "문제: 1부터 10까지 중 3의 배수만 출력해라. cs for(int i = 1; i / : 나누기(몫) : 나머지(배수 판정용) 배수 판정은 거의 무조건 라고 생각해라 1부터 10까지의 합 구하기 (정답 55) 힌트 sum 이라는 변수를 하나 만들고 (처음엔 0) for문 돌면서 su"
-published: false
+published: true
 migration_id: "35e36532580e817e86f5c79054c5eb72"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

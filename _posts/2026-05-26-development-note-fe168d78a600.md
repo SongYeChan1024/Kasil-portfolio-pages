@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "게임 기획 방법론: 상향성과 하향성 기획 2026-05-26 요약 오늘 수업 핵심 요약 상향성 기획 과 하향성 기획 의 개념과 차이점을 학습했습니다. 상향성 기획은 세상에 없는 새로운 것을 만드는 도전적 접근이며, 하향성 기획은 검증된 게임을 모방하되 독보적인 요소를 추가하는 접근입니다"
 description: "게임 기획 방법론: 상향성과 하향성 기획 2026-05-26 요약 오늘 수업 핵심 요약 상향성 기획 과 하향성 기획 의 개념과 차이점을 학습했습니다. 상향성 기획은 세상에 없는 새로운 것을 만드는 도전적 접근이며, 하향성 기획은 검증된 게임을 모방하되 독보적인 요소를 추가하는 접근입니다"
-published: false
+published: true
 migration_id: "36c36532580e808cab20fe168d78a600"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

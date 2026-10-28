@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-BETA-015 기능 튜토리얼 / 아이템 상자 / 인벤토리 UI 발생 조건 튜토리얼 아이템 상자를 열어 다음 일시정지 안내가 출력될 때 재현 방법 ① 튜토리얼 아이템 구간 진입 → ② 상자와 상호작용 → ③ 상자 UI와 인벤토리 UI 출력 상태 확인 기대 결과"
 description: "항목 내용 버그 ID QA-BETA-015 기능 튜토리얼 / 아이템 상자 / 인벤토리 UI 발생 조건 튜토리얼 아이템 상자를 열어 다음 일시정지 안내가 출력될 때 재현 방법 ① 튜토리얼 아이템 구간 진입 → ② 상자와 상호작용 → ③ 상자 UI와 인벤토리 UI 출력 상태 확인 기대 결과"
-published: false
+published: true
 migration_id: "3a536532580e81d7b902f38ff9d20fcd"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

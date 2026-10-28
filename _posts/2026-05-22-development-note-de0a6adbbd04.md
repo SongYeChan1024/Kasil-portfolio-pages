@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "Photon 네트워킹 고급 문제 해결 및 킬 카운터 UI 구현 2026-05-22 요약 오늘 수업 핵심 요약 Photon 멀티플레이어 게임에서 발생하는 4가지 핵심 문제 와 실무적 해결 방법을 학습했습니다. Custom Properties(룸 프로퍼티) 를 활용한 상태 기반 동기화가 B"
 description: "Photon 네트워킹 고급 문제 해결 및 킬 카운터 UI 구현 2026-05-22 요약 오늘 수업 핵심 요약 Photon 멀티플레이어 게임에서 발생하는 4가지 핵심 문제 와 실무적 해결 방법을 학습했습니다. Custom Properties(룸 프로퍼티) 를 활용한 상태 기반 동기화가 B"
-published: false
+published: true
 migration_id: "36836532580e80b8837bde0a6adbbd04"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

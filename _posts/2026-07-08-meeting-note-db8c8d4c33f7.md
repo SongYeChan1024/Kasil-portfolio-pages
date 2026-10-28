@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "개발 스탠드업 및 발표 준비 회의 2026-07-08 요약 1) 한 줄 결론 (TL;DR) 목요일 시연 준비 확인, 네트워크 구현 검토 보류, VFX/툰쉐이더 에셋 요청서 금일 작성, 발표 자료 준비 업무 분담 논의, 프리즘 유탄 스킬 구현 명세 확정 2) 회의 개요 일시: 2026-0"
 description: "개발 스탠드업 및 발표 준비 회의 2026-07-08 요약 1) 한 줄 결론 (TL;DR) 목요일 시연 준비 확인, 네트워크 구현 검토 보류, VFX/툰쉐이더 에셋 요청서 금일 작성, 발표 자료 준비 업무 분담 논의, 프리즘 유탄 스킬 구현 명세 확정 2) 회의 개요 일시: 2026-0"
-published: false
+published: true
 migration_id: "39736532580e80e1b3e9db8c8d4c33f7"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

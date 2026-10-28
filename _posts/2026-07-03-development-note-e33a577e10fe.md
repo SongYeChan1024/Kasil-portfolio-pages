@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-03\\_box\\_spawn\\_enemy\\_combo\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 3일 기준으로 진행한 작업 중, 아이템 박스 랜덤 스폰 시스템 추가와 에너미 AI 구조 분리 및 2연격 구현에 관련된 스크립트 변경 사항을 비교 정"
 description: "2026-07-03\\_box\\_spawn\\_enemy\\_combo\\_script\\_compare 1. 문서 개요 이 문서는 2026년 7월 3일 기준으로 진행한 작업 중, 아이템 박스 랜덤 스폰 시스템 추가와 에너미 AI 구조 분리 및 2연격 구현에 관련된 스크립트 변경 사항을 비교 정"
-published: false
+published: true
 migration_id: "39236532580e8047aa5de33a577e10fe"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

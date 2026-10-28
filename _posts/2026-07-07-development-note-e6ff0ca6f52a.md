@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 문서 개요 이 문서는 2026년 7월 7일 기준 진행한 Demo 씬 에너미 스폰 호환 , 먹잇감 차단 이동 구현 및 튜닝 , 루시드 낙인 2중첩 구조 구현 , 의식누출 흔적형 소음 시스템 추가 , 제한 시간 감소 이벤트 연동 작업을 스크립트 비교 형식으로 정리한 문서이다. 문서 형"
 description: "1. 문서 개요 이 문서는 2026년 7월 7일 기준 진행한 Demo 씬 에너미 스폰 호환 , 먹잇감 차단 이동 구현 및 튜닝 , 루시드 낙인 2중첩 구조 구현 , 의식누출 흔적형 소음 시스템 추가 , 제한 시간 감소 이벤트 연동 작업을 스크립트 비교 형식으로 정리한 문서이다. 문서 형"
-published: false
+published: true
 migration_id: "39636532580e8067b97de6ff0ca6f52a"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked", "publication_review"]
 ---
 

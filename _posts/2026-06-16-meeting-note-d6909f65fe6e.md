@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "게임 프로토타입 기획 및 역할 분담 회의 2026-06-16 요약 오늘 회의 핵심 요약 PM 업무 분담 방식 을 논의하여, 기획서 완성까지는 기존 방식을 유지하고 기획 완료 후 새로운 역할 분담 체제로 전환하기로 결정했습니다. 프로토타입 인벤토리 시스템 범위를 확정하기 위해 레퍼런스 게"
 description: "게임 프로토타입 기획 및 역할 분담 회의 2026-06-16 요약 오늘 회의 핵심 요약 PM 업무 분담 방식 을 논의하여, 기획서 완성까지는 기존 방식을 유지하고 기획 완료 후 새로운 역할 분담 체제로 전환하기로 결정했습니다. 프로토타입 인벤토리 시스템 범위를 확정하기 위해 레퍼런스 게"
-published: false
+published: true
 migration_id: "38136532580e80f1b756d6909f65fe6e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

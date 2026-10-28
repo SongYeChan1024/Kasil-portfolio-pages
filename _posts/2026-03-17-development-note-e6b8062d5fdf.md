@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Episode 3 - 멈춰버린 노래 맵 환경 멜로디 오브젝트 배경 장식 퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 https://assetstore.unity.com/packages/vfx/particles/polygonal-s-low-pol"
 description: "Episode 3 - 멈춰버린 노래 맵 환경 멜로디 오브젝트 배경 장식 퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 https://assetstore.unity.com/packages/vfx/particles/polygonal-s-low-pol"
-published: false
+published: true
 migration_id: "35e36532580e81c480d0e6b8062d5fdf"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-07-03\\_box\\_spawn\\_enemy\\_combo\\_script\\_compare 2026-07-03\\_level\\_box\\_random\\_spawn\\_enemy\\_refactor\\_and\\_combo 1. 문서 개요 이 문서는 2026년 7월 3일 기준으로 진행한 레벨 "
 description: "2026-07-03\\_box\\_spawn\\_enemy\\_combo\\_script\\_compare 2026-07-03\\_level\\_box\\_random\\_spawn\\_enemy\\_refactor\\_and\\_combo 1. 문서 개요 이 문서는 2026년 7월 3일 기준으로 진행한 레벨 "
-published: false
+published: true
 migration_id: "39236532580e8013a475ce22627f1045"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

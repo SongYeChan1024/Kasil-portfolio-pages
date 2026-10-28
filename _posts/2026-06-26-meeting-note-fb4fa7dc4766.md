@@ -5,9 +5,9 @@ categories: ["회의 기록", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "회의 2026-06-26 2026-06-26 요약 1) 한 줄 결론 (TL;DR) 외부 인사 활용 방식 재정의, 에셋 콜라이더 문제 해결 착수, 리소스 일정 조정 논의로 개발 4주 남은 시점의 실행력 강화 방향 확정 2) 회의 개요 일시: 2026-06-26 회의 유형: 데일리/스탠드업"
 description: "회의 2026-06-26 2026-06-26 요약 1) 한 줄 결론 (TL;DR) 외부 인사 활용 방식 재정의, 에셋 콜라이더 문제 해결 착수, 리소스 일정 조정 논의로 개발 4주 남은 시점의 실행력 강화 방향 확정 2) 회의 개요 일시: 2026-06-26 회의 유형: 데일리/스탠드업"
-published: false
+published: true
 migration_id: "38b36532580e80b5b20bfb4fa7dc4766"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

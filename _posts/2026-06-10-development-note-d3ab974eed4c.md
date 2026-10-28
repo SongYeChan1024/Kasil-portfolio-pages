@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "프로젝트 발표 및 브레인스토밍 수업 2026-06-10 요약 오늘 수업 핵심 요약 효과적인 브레인스토밍 회의 진행 방법과 협상 사례를 학습했습니다. 오늘 오후 4시에 게임 소개서와 유니티 시연 발표를 진행하며, 실전 발표 경험을 쌓는 시간을 가집니다. 피드백 방법 과 대안 제시 의 중요"
 description: "프로젝트 발표 및 브레인스토밍 수업 2026-06-10 요약 오늘 수업 핵심 요약 효과적인 브레인스토밍 회의 진행 방법과 협상 사례를 학습했습니다. 오늘 오후 4시에 게임 소개서와 유니티 시연 발표를 진행하며, 실전 발표 경험을 쌓는 시간을 가집니다. 피드백 방법 과 대안 제시 의 중요"
-published: false
+published: true
 migration_id: "37b36532580e8077bc52d3ab974eed4c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

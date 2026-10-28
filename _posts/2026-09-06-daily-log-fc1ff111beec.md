@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "기본 정보 날짜 : 2026-09-06 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 종합 기획서 재구성, 안티그래비티 초안 통합, 세계관 전체 스토리와 클릭형 용어집 구축 --- 오늘의 한 문장 흩어져 있던 기존 기획과 안티그래비티 초안을 하나의 "
 description: "기본 정보 날짜 : 2026-09-06 프로젝트 : ERGOSQUARE: ARCHITECT 작성자 : 송예찬 기록 범위 : 종합 기획서 재구성, 안티그래비티 초안 통합, 세계관 전체 스토리와 클릭형 용어집 구축 --- 오늘의 한 문장 흩어져 있던 기존 기획과 안티그래비티 초안을 하나의 "
-published: false
+published: true
 migration_id: "3d336532580e81e996bbfc1ff111beec"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

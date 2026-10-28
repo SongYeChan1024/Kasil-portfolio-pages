@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "게임 기획서 작성 피드백 수업 2026-06-02 요약 오늘 수업 핵심 요약 게임 기획서 작성 시 시놉시스/시나리오가 필수 이며, 아무리 간단한 게임이라도 스토리와 세계관이 있어야 유저 몰입이 가능하다 게임 기획서는 조각상을 만들듯 전체를 먼저 완성한 후 계속 다듬는 방식 으로 작성해야"
 description: "게임 기획서 작성 피드백 수업 2026-06-02 요약 오늘 수업 핵심 요약 게임 기획서 작성 시 시놉시스/시나리오가 필수 이며, 아무리 간단한 게임이라도 스토리와 세계관이 있어야 유저 몰입이 가능하다 게임 기획서는 조각상을 만들듯 전체를 먼저 완성한 후 계속 다듬는 방식 으로 작성해야"
-published: false
+published: true
 migration_id: "37336532580e80e8a39eca472c5618eb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

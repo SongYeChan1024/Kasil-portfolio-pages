@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "EP.1 별을 헤는 소녀 리뉴얼본 문을 넘어간 직후 EP.1에 들어왔을 때의 플레이어 독백 문을 넘어선 순간, 화면이 희게 번진다. 빗물 맺힌 유리창 너머를 보는 듯한 흐릿하고 좁은 시야 속에서, 새로운 풍경이 천천히 모습을 드러낸다. 희미한 들판. 색 바랜 마을. 바위로 막힌 동굴 입"
 description: "EP.1 별을 헤는 소녀 리뉴얼본 문을 넘어간 직후 EP.1에 들어왔을 때의 플레이어 독백 문을 넘어선 순간, 화면이 희게 번진다. 빗물 맺힌 유리창 너머를 보는 듯한 흐릿하고 좁은 시야 속에서, 새로운 풍경이 천천히 모습을 드러낸다. 희미한 들판. 색 바랜 마을. 바위로 막힌 동굴 입"
-published: false
+published: true
 migration_id: "35e36532580e814b8e11e0646e11b6aa"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

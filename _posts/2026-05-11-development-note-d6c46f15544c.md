@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "Unity VR - XR Grab Interactive 및 총기 조작 구현 2026-05-11 요약 오늘 수업 핵심 요약 XR Grab Interactable 의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 "
 description: "Unity VR - XR Grab Interactive 및 총기 조작 구현 2026-05-11 요약 오늘 수업 핵심 요약 XR Grab Interactable 의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 "
-published: false
+published: true
 migration_id: "35e36532580e81108dc1d6c46f15544c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

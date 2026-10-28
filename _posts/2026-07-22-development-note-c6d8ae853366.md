@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Presenter/GameUIPresenter.cs cs using System.Collections; using System.Collections.Generic; using UnityEngine; u"
 description: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Presenter/GameUIPresenter.cs cs using System.Collections; using System.Collections.Generic; using UnityEngine; u"
-published: false
+published: true
 migration_id: "3a536532580e81a59486c6d8ae853366"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

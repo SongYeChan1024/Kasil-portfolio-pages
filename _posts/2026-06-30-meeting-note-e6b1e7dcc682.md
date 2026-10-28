@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "침몽도시: 루시드 다이버 — P0 개발 진행 점검 및 시연 일정 확정 2026-06-30 요약 1) 한 줄 결론 (TL;DR) P0 핵심 기능 구현이 거의 완료되어 7월 2일(목) 외부 인사 대상 프로토타입 시연을 확정하고, 에셋 적용 및 리소스 제작 일정을 조율함 2) 회의 개요 일시"
 description: "침몽도시: 루시드 다이버 — P0 개발 진행 점검 및 시연 일정 확정 2026-06-30 요약 1) 한 줄 결론 (TL;DR) P0 핵심 기능 구현이 거의 완료되어 7월 2일(목) 외부 인사 대상 프로토타입 시연을 확정하고, 에셋 적용 및 리소스 제작 일정을 조율함 2) 회의 개요 일시"
-published: false
+published: true
 migration_id: "38f36532580e80619e9be6b1e7dcc682"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

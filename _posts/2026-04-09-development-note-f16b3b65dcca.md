@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "EP.4 뒤섞인 이야기 리뉴얼 에피소드 3을 끝내고 에피소드 4로 진입시 빛이 한 번 크게 흔들린다. 별빛, 물감, 악보와 음표가 한꺼번에 시야를 스쳐 지나간다. 언덕 같던 길은 캔버스 조각으로 갈라지고, 작업실 벽은 무대의 구조물과 겹쳐지며, 공연장의 그림자는 별빛 아래로 길게 드리워"
 description: "EP.4 뒤섞인 이야기 리뉴얼 에피소드 3을 끝내고 에피소드 4로 진입시 빛이 한 번 크게 흔들린다. 별빛, 물감, 악보와 음표가 한꺼번에 시야를 스쳐 지나간다. 언덕 같던 길은 캔버스 조각으로 갈라지고, 작업실 벽은 무대의 구조물과 겹쳐지며, 공연장의 그림자는 별빛 아래로 길게 드리워"
-published: false
+published: true
 migration_id: "35e36532580e81449a48f16b3b65dcca"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

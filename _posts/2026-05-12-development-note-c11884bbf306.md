@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "실습용 프로젝트 ThunderBolt 17cbfd2e-da17-497c-9ddc-b567138a7dd3 네트워크 통신과 Photon 동기화 옵션 2026-05-12 요약 액션 아이템 Photon 대시보드에서 새로운 앱 생성하기 (Thunderbolt 6 등) 생성한 앱 ID를 메모장에 "
 description: "실습용 프로젝트 ThunderBolt 17cbfd2e-da17-497c-9ddc-b567138a7dd3 네트워크 통신과 Photon 동기화 옵션 2026-05-12 요약 액션 아이템 Photon 대시보드에서 새로운 앱 생성하기 (Thunderbolt 6 등) 생성한 앱 ID를 메모장에 "
-published: false
+published: true
 migration_id: "35e36532580e81d9ad29c11884bbf306"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-CD-001 기능 출격 소지품 퀵슬롯 출력 발생 조건 앱 실행 후 인게임 세션 첫 진입 전 로비 신 내부에서 발생 재현 방법 ① 앱 실행 → ② 창고/인벤토리 화면으로 이동하여 소비 기물 아이템을 퀵슬롯에 배치 → ③ 관제실 화면으로 이동 → ④ 출격 준비 화"
 description: "항목 내용 버그 ID QA-CD-001 기능 출격 소지품 퀵슬롯 출력 발생 조건 앱 실행 후 인게임 세션 첫 진입 전 로비 신 내부에서 발생 재현 방법 ① 앱 실행 → ② 창고/인벤토리 화면으로 이동하여 소비 기물 아이템을 퀵슬롯에 배치 → ③ 관제실 화면으로 이동 → ④ 출격 준비 화"
-published: false
+published: true
 migration_id: "73836532580e825a86940191c492ee8f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

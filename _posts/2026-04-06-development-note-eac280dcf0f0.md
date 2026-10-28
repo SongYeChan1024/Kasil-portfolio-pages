@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "사운드 시스템 사용 가이드 1\\. 개요 우리 프로젝트의 사운드는 SoundManager 를 중심으로 관리한다. 배경음과 환경음은 SoundProfile + SoundController 를 통해 씬 시작 시 자동 적용되며, 플레이어 사운드는 PlayerSound , UI 사운드는 UISo"
 description: "사운드 시스템 사용 가이드 1\\. 개요 우리 프로젝트의 사운드는 SoundManager 를 중심으로 관리한다. 배경음과 환경음은 SoundProfile + SoundController 를 통해 씬 시작 시 자동 적용되며, 플레이어 사운드는 PlayerSound , UI 사운드는 UISo"
-published: false
+published: true
 migration_id: "35e36532580e812f8e69eac280dcf0f0"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

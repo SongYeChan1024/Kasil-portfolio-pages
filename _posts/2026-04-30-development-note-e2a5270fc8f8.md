@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "VR 개발 기초: Unity 설치와 가상현실 핵심 요소 2026-04-30 요약 오늘 수업 핵심 요약 Unity 6.3 LTS 버전 설치 및 VR 개발 환경 구축 방법을 배웠습니다. VR에서 상호작용하기 위한 세 가지 핵심 요소인 트래킹(Tracking) , 렌더링(Rendering) "
 description: "VR 개발 기초: Unity 설치와 가상현실 핵심 요소 2026-04-30 요약 오늘 수업 핵심 요약 Unity 6.3 LTS 버전 설치 및 VR 개발 환경 구축 방법을 배웠습니다. VR에서 상호작용하기 위한 세 가지 핵심 요소인 트래킹(Tracking) , 렌더링(Rendering) "
-published: false
+published: true
 migration_id: "35e36532580e816a8606e2a5270fc8f8"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["credential_redacted", "privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

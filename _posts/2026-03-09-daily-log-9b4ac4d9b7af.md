@@ -5,9 +5,9 @@ categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "기본 정보 날짜 : \\ YYYY-MM-DD\\ 프로젝트 : \\ 프로젝트명\\ 작성자 : 송예찬 --- 오늘의 한 문장 \\ 오늘을 가장 잘 설명하는 한 문장을 작성합니다.\\ --- 오늘의 기록 \\ 오늘 무엇을 목표로 시작했고 실제로 어떤 일을 진행했는지 일기처럼 작성합니다.\\ \\ 단순한 작업"
 description: "기본 정보 날짜 : \\ YYYY-MM-DD\\ 프로젝트 : \\ 프로젝트명\\ 작성자 : 송예찬 --- 오늘의 한 문장 \\ 오늘을 가장 잘 설명하는 한 문장을 작성합니다.\\ --- 오늘의 기록 \\ 오늘 무엇을 목표로 시작했고 실제로 어떤 일을 진행했는지 일기처럼 작성합니다.\\ \\ 단순한 작업"
-published: false
+published: true
 migration_id: "43e65f9423b64985bdcb9b4ac4d9b7af"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

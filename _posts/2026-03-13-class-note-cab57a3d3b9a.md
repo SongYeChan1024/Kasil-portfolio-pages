@@ -5,9 +5,9 @@ categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "오늘 수업 정리 (요약본) 1) 게임 개발 프로젝트: AI 적용 & 요구사항 이번 주 실행 항목 (To-do) 팀별로 프로젝트 방향성 및 게임 컨셉 논의 팀장 최종 확정 (다음 주 부스팅 시간에 재논의) 프로젝트에 AI 기능 필수 포함 (간단한 형태라도 가능) 컴투스 공모전 자료 필요 "
 description: "오늘 수업 정리 (요약본) 1) 게임 개발 프로젝트: AI 적용 & 요구사항 이번 주 실행 항목 (To-do) 팀별로 프로젝트 방향성 및 게임 컨셉 논의 팀장 최종 확정 (다음 주 부스팅 시간에 재논의) 프로젝트에 AI 기능 필수 포함 (간단한 형태라도 가능) 컴투스 공모전 자료 필요 "
-published: false
+published: true
 migration_id: "35e36532580e81cf9976cab57a3d3b9a"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

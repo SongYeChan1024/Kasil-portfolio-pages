@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-PM-004 / QA-PM-006 기능 에너미 공격 이동 / 플레이어 구르기 이동 / 벽 충돌 판정 발생 조건 에너미가 벽을 등진 플레이어를 향해 공격 또는 돌진하거나, 플레이어가 벽에 밀착한 상태에서 구르기를 사용 재현 방법 ① 플레이어가 벽을 등지고 대기 "
 description: "항목 내용 버그 ID QA-PM-004 / QA-PM-006 기능 에너미 공격 이동 / 플레이어 구르기 이동 / 벽 충돌 판정 발생 조건 에너미가 벽을 등진 플레이어를 향해 공격 또는 돌진하거나, 플레이어가 벽에 밀착한 상태에서 구르기를 사용 재현 방법 ① 플레이어가 벽을 등지고 대기 "
-published: false
+published: true
 migration_id: "4a936532580e838d906981906e6337be"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/Utils/Interface/IResultService.cs cs ﻿using UnityEngine; public interface IResultService //인게임 세션 플레이 결과 (성공 / 실"
 description: "1. 이전 스크립트 전체 기준: dd3a3c0 파일: Assets/02_Scripts/Utils/Interface/IResultService.cs cs ﻿using UnityEngine; public interface IResultService //인게임 세션 플레이 결과 (성공 / 실"
-published: false
+published: true
 migration_id: "3a536532580e819eaf66edd1d959ff5e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

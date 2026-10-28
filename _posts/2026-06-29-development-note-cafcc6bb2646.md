@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29\\_inventory\\_sortie\\_chest\\_restore 2026-06-29 개발 보고서 1. 작업 개요 오늘은 로비의 출격 준비 UI부터 인게임 퀵슬롯, 상자와 인벤토리 간 아이"
 description: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29\\_inventory\\_sortie\\_chest\\_restore 2026-06-29 개발 보고서 1. 작업 개요 오늘은 로비의 출격 준비 UI부터 인게임 퀵슬롯, 상자와 인벤토리 간 아이"
-published: false
+published: true
 migration_id: "38e36532580e80559a0ecafcc6bb2646"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

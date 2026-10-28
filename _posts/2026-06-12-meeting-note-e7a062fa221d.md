@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "프로토타입을 위한 기획서를 작성 해야함 일단 컨셉 기획서는 그대로 두고 프로토 타입을 위한 기획을 따로 만들어서 기획서를 작성 해 볼 것 몬스터, 캐릭터 각 오브젝트나 기물 , 아이템 컨셉 기획서가 필요함"
 description: "프로토타입을 위한 기획서를 작성 해야함 일단 컨셉 기획서는 그대로 두고 프로토 타입을 위한 기획을 따로 만들어서 기획서를 작성 해 볼 것 몬스터, 캐릭터 각 오브젝트나 기물 , 아이템 컨셉 기획서가 필요함"
-published: false
+published: true
 migration_id: "37d36532580e803bb3d2e7a062fa221d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

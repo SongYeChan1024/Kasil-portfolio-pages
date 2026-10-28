@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/ItemBox.cs cs using System.Collections.Generic; using UnityEngine; /// /// 플레이어가 상호작용할 수 있는 아이템 상자 클래스입니다"
 description: "1. 이전 스크립트 전체 기준: 0bd90d1 파일: Assets/02_Scripts/System/ItemBox.cs cs using System.Collections.Generic; using UnityEngine; /// /// 플레이어가 상호작용할 수 있는 아이템 상자 클래스입니다"
-published: false
+published: true
 migration_id: "3a436532580e81169509f9acd248f875"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

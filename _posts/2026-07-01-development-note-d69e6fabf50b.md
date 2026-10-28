@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "P0.5 꿈식자 에너미 AI 및 컨셉 기획서 (v1.0.1) \\ !IMPORTANT\\ 이 문서는 검토 및 승인 전 단계의 최종 초안입니다. 기획자/PM의 검토 및 승인 후 이 배너를 제거하면 P0.5 확정 사양으로 인정합니다. --- 0. 기획 의도 (Design Intent) 목적 :"
 description: "P0.5 꿈식자 에너미 AI 및 컨셉 기획서 (v1.0.1) \\ !IMPORTANT\\ 이 문서는 검토 및 승인 전 단계의 최종 초안입니다. 기획자/PM의 검토 및 승인 후 이 배너를 제거하면 P0.5 확정 사양으로 인정합니다. --- 0. 기획 의도 (Design Intent) 목적 :"
-published: false
+published: true
 migration_id: "39036532580e802e85cdd69e6fabf50b"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["legacy_image_recovered", "publication_review"]
 ---
 

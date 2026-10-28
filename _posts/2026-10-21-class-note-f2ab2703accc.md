@@ -5,9 +5,9 @@ categories: ["수업 노트", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "원본 첨부: assignment_02.blend (별도 로컬 보관) 원본 첨부: 20261021_송예찬.zip (별도 로컬 보관) 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료"
 description: "원본 첨부: assignment_02.blend (별도 로컬 보관) 원본 첨부: 20261021_송예찬.zip (별도 로컬 보관) 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료"
-published: false
+published: true
 migration_id: "40036532580e80bc99eef2ab2703accc"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["private_attachment_preserved"]
 ---
 

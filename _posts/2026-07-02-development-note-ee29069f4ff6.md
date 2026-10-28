@@ -5,9 +5,9 @@ categories: ["개발 메모", "웹 개발"]
 tags: ["Notion 이전", "웹 개발"]
 excerpt: "2026-07-02\\_enemy\\_noise\\_system\\_script\\_compare 2026-07- 02\\_enemy\\_noise\\_investigation\\_and\\_aggro 1. 작업 개요 오늘 작업은 적 AI에 청각 기반 조사 흐름을 추가하고, 기존 시야 기반 추적 구조와 "
 description: "2026-07-02\\_enemy\\_noise\\_system\\_script\\_compare 2026-07- 02\\_enemy\\_noise\\_investigation\\_and\\_aggro 1. 작업 개요 오늘 작업은 적 AI에 청각 기반 조사 흐름을 추가하고, 기존 시야 기반 추적 구조와 "
-published: false
+published: true
 migration_id: "39136532580e80b99667ee29069f4ff6"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

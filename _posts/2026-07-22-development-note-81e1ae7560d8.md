@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-BETA-010 기능 게임 메뉴 발생 조건 게임 메뉴를 통해 로비 화면으로 복귀 시 재현 방법 ① 게임 시작 → ② 출격 → ③ ESC 버튼 입력 → ④ 로비로 돌아가기 선택 후 로비로 복귀 → ⑤ 창고에서 소지품 확인 기대 결과 게임 시작 전의 인벤토리 상태"
 description: "항목 내용 버그 ID QA-BETA-010 기능 게임 메뉴 발생 조건 게임 메뉴를 통해 로비 화면으로 복귀 시 재현 방법 ① 게임 시작 → ② 출격 → ③ ESC 버튼 입력 → ④ 로비로 돌아가기 선택 후 로비로 복귀 → ⑤ 창고에서 소지품 확인 기대 결과 게임 시작 전의 인벤토리 상태"
-published: false
+published: true
 migration_id: "6f936532580e8246890981e1ae7560d8"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

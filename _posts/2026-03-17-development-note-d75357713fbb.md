@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-17 요약 액션 아이템 작성자: 플레이어 움직임 코드 작성 작성자: 스테이지 1 맵 디자인 플레이어 캐릭터 및 레벨 1 캐릭터 제작 완료 에피소드 2 추가 에셋 찾기 에피소드 2 맵 제작 (실내 배경) 완성된 캐릭터 프리팹화 및 "
 description: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-17 요약 액션 아이템 작성자: 플레이어 움직임 코드 작성 작성자: 스테이지 1 맵 디자인 플레이어 캐릭터 및 레벨 1 캐릭터 제작 완료 에피소드 2 추가 에셋 찾기 에피소드 2 맵 제작 (실내 배경) 완성된 캐릭터 프리팹화 및 "
-published: false
+published: true
 migration_id: "35e36532580e81aaa1a6d75357713fbb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

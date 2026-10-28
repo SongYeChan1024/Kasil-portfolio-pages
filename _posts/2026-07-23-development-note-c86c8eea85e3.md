@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "비교 기준 작성자 기준: SongYeChan1024 직접 커밋만 포함 대상 커밋: be4d82f — 에너미 소음 감지 및 추적 상실 탐색 로직 개선 비교 범위: 해당 커밋의 수정 C 5개 형식: 각 파일의 이전 전문 → 변경 설명 → 변경 후 전문 제외: 팀원 커밋, 병합 커밋, 씬·프"
 description: "비교 기준 작성자 기준: SongYeChan1024 직접 커밋만 포함 대상 커밋: be4d82f — 에너미 소음 감지 및 추적 상실 탐색 로직 개선 비교 범위: 해당 커밋의 수정 C 5개 형식: 각 파일의 이전 전문 → 변경 설명 → 변경 후 전문 제외: 팀원 커밋, 병합 커밋, 씬·프"
-published: false
+published: true
 migration_id: "3a636532580e81dd9b0dc86c8eea85e3"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

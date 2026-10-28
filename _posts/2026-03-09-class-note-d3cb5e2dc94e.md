@@ -5,9 +5,9 @@ categories: ["수업 노트", "Unreal"]
 tags: ["Notion 이전", "Unreal"]
 excerpt: "디지털 휴먼 기술과 Unity 개발 교육 2026-03-09 요약 액션 아이템 학생들은 Unity 헤어 시스템 패키지를 다운로드하고 실습 예제를 따라 진행 챕터 테스트 완료 Unity와 Unreal Engine 모두 학습하여 경력 스펙 강화 GitHub의 Unity Hair 시스템 참고"
 description: "디지털 휴먼 기술과 Unity 개발 교육 2026-03-09 요약 액션 아이템 학생들은 Unity 헤어 시스템 패키지를 다운로드하고 실습 예제를 따라 진행 챕터 테스트 완료 Unity와 Unreal Engine 모두 학습하여 경력 스펙 강화 GitHub의 Unity Hair 시스템 참고"
-published: false
+published: true
 migration_id: "35e36532580e8147b5a8d3cb5e2dc94e"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

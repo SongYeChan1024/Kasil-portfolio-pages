@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 이전 스크립트 전체 기준: 2a81ecc 파일: Assets/02_Scripts/Define/InventoryItemPlacementPolicy.cs cs /// /// 인벤토리 아이템을 배치할 수 있는 장착 대상 종류입니다. /// UI 표시와 실제 데이터 처리에서 같은 값을 사"
 description: "1. 이전 스크립트 전체 기준: 2a81ecc 파일: Assets/02_Scripts/Define/InventoryItemPlacementPolicy.cs cs /// /// 인벤토리 아이템을 배치할 수 있는 장착 대상 종류입니다. /// UI 표시와 실제 데이터 처리에서 같은 값을 사"
-published: false
+published: true
 migration_id: "3a436532580e817491a8de1ece945858"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

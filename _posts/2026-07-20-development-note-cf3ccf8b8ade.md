@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/UI/Game/ArtifactEquipSlotUI.cs cs using UnityEngine; using UnityEngine.EventSystems; using UnityEngine.UI; usin"
 description: "1. 이전 스크립트 전체 기준: 6e5f262^ 파일: Assets/02_Scripts/UI/Game/ArtifactEquipSlotUI.cs cs using UnityEngine; using UnityEngine.EventSystems; using UnityEngine.UI; usin"
-published: false
+published: true
 migration_id: "3a336532580e8183bd0fcf3ccf8b8ade"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

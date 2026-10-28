@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "이 문서는 2026-07-15 튜토리얼 씬 구축 작업에서 변경된 주요 코드의 역할과 흐름을 학습용으로 정리한 전체 코드 분석 문서이다. 각 항목은 이전 구조 → 변경 이유 → 현재 구조 → 확인 포인트 순서로 기록한다. 1. 전체 아키텍처 요약 이번 튜토리얼 시스템은 크게 네 층으로 나"
 description: "이 문서는 2026-07-15 튜토리얼 씬 구축 작업에서 변경된 주요 코드의 역할과 흐름을 학습용으로 정리한 전체 코드 분석 문서이다. 각 항목은 이전 구조 → 변경 이유 → 현재 구조 → 확인 포인트 순서로 기록한다. 1. 전체 아키텍처 요약 이번 튜토리얼 시스템은 크게 네 층으로 나"
-published: false
+published: true
 migration_id: "39e36532580e8153aaa8ef91da36f944"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

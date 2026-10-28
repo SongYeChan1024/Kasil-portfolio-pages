@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "P0.5 꿈식자 에너미 연동 명세서 (v1.0.1) \\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 초안입니다. 기획자/PM의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. --- 0. 기획 의도 (Design Intent) 목적 : 꿈식자"
 description: "P0.5 꿈식자 에너미 연동 명세서 (v1.0.1) \\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 초안입니다. 기획자/PM의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. --- 0. 기획 의도 (Design Intent) 목적 : 꿈식자"
-published: false
+published: true
 migration_id: "39036532580e8050a597d5af35954324"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["legacy_image_recovered", "publication_review"]
 ---
 

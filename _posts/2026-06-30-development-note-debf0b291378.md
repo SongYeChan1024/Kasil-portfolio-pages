@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 1. 작업 개요 오늘 작업은 이전 버전에서 사용하던 적 시야각 인식 로직과 Scene 뷰 디버그 가시화 기능을 현재 브랜치 구조에 맞게 다시 복원하고, 에너미 AI의 추적 및 공격 판정을 함께 고도화하는 "
 description: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 1. 작업 개요 오늘 작업은 이전 버전에서 사용하던 적 시야각 인식 로직과 Scene 뷰 디버그 가시화 기능을 현재 브랜치 구조에 맞게 다시 복원하고, 에너미 AI의 추적 및 공격 판정을 함께 고도화하는 "
-published: false
+published: true
 migration_id: "38f36532580e808fafc0debf0b291378"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

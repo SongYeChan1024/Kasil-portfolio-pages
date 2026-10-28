@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "2026-07-08\\_artifact\\_script\\_full\\_compare 1. 문서 개요 이 문서는 7aca9f9 아티팩트 장착 및 루팅 흐름 구현 커밋을 기준으로, 오늘 수정되거나 추가된 C 스크립트의 전체 내용을 비교하기 위한 리뷰 문서입니다. 각 항목은 이전 전체 스크립트 -"
 description: "2026-07-08\\_artifact\\_script\\_full\\_compare 1. 문서 개요 이 문서는 7aca9f9 아티팩트 장착 및 루팅 흐름 구현 커밋을 기준으로, 오늘 수정되거나 추가된 C 스크립트의 전체 내용을 비교하기 위한 리뷰 문서입니다. 각 항목은 이전 전체 스크립트 -"
-published: false
+published: true
 migration_id: "39736532580e8011b349f9ddad1c54ec"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unreal"]
 tags: ["Notion 이전", "Unreal"]
 excerpt: "Unity 멀티플레이어 및 메타버스 기술 강의 2026-05-14 요약 오늘 수업 핵심 요약 Photon 엔진의 3가지 멀티플레이어 솔루션 (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다. 입문자는 PUN 2 로 시작하고, 프로젝트 규모가 커지면 Fu"
 description: "Unity 멀티플레이어 및 메타버스 기술 강의 2026-05-14 요약 오늘 수업 핵심 요약 Photon 엔진의 3가지 멀티플레이어 솔루션 (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다. 입문자는 PUN 2 로 시작하고, 프로젝트 규모가 커지면 Fu"
-published: false
+published: true
 migration_id: "36036532580e80da8dbdedad94f8f3f4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

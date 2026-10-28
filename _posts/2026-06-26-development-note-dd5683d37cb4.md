@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-06-26\\_enemy\\_vision\\_compare 2026-06-26 개발 보고서 1. 작업 개요 오늘은 적 AI의 인식 방식을 기존 원형 반경 탐지 방식에서 시야각 기반 탐지 방식으로 개선하는 작업을 진행했다. 기존 구조에서는 적이 플레이어를 인식할 때 방향과 무관하게 일"
 description: "2026-06-26\\_enemy\\_vision\\_compare 2026-06-26 개발 보고서 1. 작업 개요 오늘은 적 AI의 인식 방식을 기존 원형 반경 탐지 방식에서 시야각 기반 탐지 방식으로 개선하는 작업을 진행했다. 기존 구조에서는 적이 플레이어를 인식할 때 방향과 무관하게 일"
-published: false
+published: true
 migration_id: "38b36532580e8063bfb9dd5683d37cb4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

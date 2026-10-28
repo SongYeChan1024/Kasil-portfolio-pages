@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 1. 맵 환경 에셋 (Environment) 몽환적인 음악 공간 (기본 맵) - 결국 찾지 못해서 우성혁 레이서님과 같은 에셋 사용하였음 악기 - https://sketchfab.com/3d-mode"
 description: "퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 1. 맵 환경 에셋 (Environment) 몽환적인 음악 공간 (기본 맵) - 결국 찾지 못해서 우성혁 레이서님과 같은 에셋 사용하였음 악기 - https://sketchfab.com/3d-mode"
-published: false
+published: true
 migration_id: "35e36532580e81ec9075c66d730a1341"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

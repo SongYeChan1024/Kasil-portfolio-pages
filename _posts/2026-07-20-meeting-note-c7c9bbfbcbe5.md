@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "침몽도시: 루시드 다이버 베타빌드 수정 및 발표 준비 회의 2026-07-20 요약 1) 한 줄 결론 (TL;DR) 베타빌드 버그 수정을 최우선으로 하고, 금요일(07.25)까지 개발 완료 후 웹페이지 형식 발표자료 제작 및 07.28 발표 준비 확정 2) 회의 개요 일시: 2026-0"
 description: "침몽도시: 루시드 다이버 베타빌드 수정 및 발표 준비 회의 2026-07-20 요약 1) 한 줄 결론 (TL;DR) 베타빌드 버그 수정을 최우선으로 하고, 금요일(07.25)까지 개발 완료 후 웹페이지 형식 발표자료 제작 및 07.28 발표 준비 확정 2) 회의 개요 일시: 2026-0"
-published: false
+published: true
 migration_id: "3a336532580e8001895ec7c9bbfbcbe5"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

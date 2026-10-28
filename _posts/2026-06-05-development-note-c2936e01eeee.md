@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "수업 일정 및 기획서 관리 2026-06-05 요약 오늘 수업 핵심 요약 수업에서는 일정과 시간 엄수 의 중요성을 강조했습니다. 티칭과 코칭을 병행하는 수업 방식 으로 진행되며, 자격증, Notion 과제, 기획서 작성, 취업 시즌 등 다양한 활동을 관리합니다. 현업 실무자들의 기획서를"
 description: "수업 일정 및 기획서 관리 2026-06-05 요약 오늘 수업 핵심 요약 수업에서는 일정과 시간 엄수 의 중요성을 강조했습니다. 티칭과 코칭을 병행하는 수업 방식 으로 진행되며, 자격증, Notion 과제, 기획서 작성, 취업 시즌 등 다양한 활동을 관리합니다. 현업 실무자들의 기획서를"
-published: false
+published: true
 migration_id: "37636532580e80c68b9fc2936e01eeee"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "메인 캐릭터 1 - 한서윤 (Seo-Yoon) : 타입 : 올라운더 스트라이커 (Striker / 밸런스형 딜러) 특화 무기 풀 : 에너지 권총 (Pistol) / 돌격 소총 (AR - ※ 1차 프로토타입 범위 제외) 성격/컨셉 : “죄책감 속에서 길을 찾는 몽상적 가이드” 평소에는 단"
 description: "메인 캐릭터 1 - 한서윤 (Seo-Yoon) : 타입 : 올라운더 스트라이커 (Striker / 밸런스형 딜러) 특화 무기 풀 : 에너지 권총 (Pistol) / 돌격 소총 (AR - ※ 1차 프로토타입 범위 제외) 성격/컨셉 : “죄책감 속에서 길을 찾는 몽상적 가이드” 평소에는 단"
-published: false
+published: true
 migration_id: "38136532580e80ae8310ee1d354cca03"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

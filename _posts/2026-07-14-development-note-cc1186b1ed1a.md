@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "2026-07-14\\_vfx\\_tutorial\\_script\\_compare 오늘 작업의 핵심은 인게임 VFX를 데이터 기반 카탈로그와 런타임 풀로 통합하고, 이벤트별 재생 연결과 풀 반환 안정화를 마친 뒤, 도로 중심의 독립 튜토리얼 씬과 재사용 가능한 팝업·트리거·NavMesh 설치"
 description: "2026-07-14\\_vfx\\_tutorial\\_script\\_compare 오늘 작업의 핵심은 인게임 VFX를 데이터 기반 카탈로그와 런타임 풀로 통합하고, 이벤트별 재생 연결과 풀 반환 안정화를 마친 뒤, 도로 중심의 독립 튜토리얼 씬과 재사용 가능한 팝업·트리거·NavMesh 설치"
-published: false
+published: true
 migration_id: "39d36532580e8116a5adcc1186b1ed1a"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

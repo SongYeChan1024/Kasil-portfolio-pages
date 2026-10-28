@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "EP.3 멈춰버린 노래 로비 맵에서 EP.3로 진입할 때의 플레이어 독백 그림 작업실을 떠난 뒤, 나는 다시 로비로 돌아온다. 색을 되찾은 기억의 여운이 아직 시야 한쪽에 남아 있지만, 그 온기는 오래 머물지 않는다. 로비의 공기는 여전히 고요하고, 다음 기억으로 향하는 문만이 희미한 "
 description: "EP.3 멈춰버린 노래 로비 맵에서 EP.3로 진입할 때의 플레이어 독백 그림 작업실을 떠난 뒤, 나는 다시 로비로 돌아온다. 색을 되찾은 기억의 여운이 아직 시야 한쪽에 남아 있지만, 그 온기는 오래 머물지 않는다. 로비의 공기는 여전히 고요하고, 다음 기억으로 향하는 문만이 희미한 "
-published: false
+published: true
 migration_id: "35e36532580e81d39543cb34d585f5f4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

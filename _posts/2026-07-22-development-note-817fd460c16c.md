@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "아이템 허공 잔존 버그 문제: 아이템을 드래그 한 상태에서 인벤토리 상호작용 시 드래깅 한 해당 위치에 아이템 아이콘이 출력되는 문제가 있었음 원인: 드래그 시 아이템이 다른 UI에 가려지지 않게 메인 캔버스로 올리는데, 그 과정에서 인벤토리를 비활성화 해 아이템이 제자리로 돌아가지 못"
 description: "아이템 허공 잔존 버그 문제: 아이템을 드래그 한 상태에서 인벤토리 상호작용 시 드래깅 한 해당 위치에 아이템 아이콘이 출력되는 문제가 있었음 원인: 드래그 시 아이템이 다른 UI에 가려지지 않게 메인 캔버스로 올리는데, 그 과정에서 인벤토리를 비활성화 해 아이템이 제자리로 돌아가지 못"
-published: false
+published: true
 migration_id: "27936532580e83f3b7c0817fd460c16c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

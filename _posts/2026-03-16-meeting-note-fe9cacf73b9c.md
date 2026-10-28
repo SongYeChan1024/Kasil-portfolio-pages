@@ -5,9 +5,9 @@ categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "Moz.A.I.c 게임 프로젝트 기획 회의 2026-03-16 요약 Action Items Unity 버전 최종 결정 (필요한 AI 기능 확인 후) 영 스테이지(튜토리얼 로비) 구조 설계 스테이지별 스토리 세부 기획 (시작점, 결승점, 통과점 설정) RPG 요소 추가 검토 (레벨업 시스"
 description: "Moz.A.I.c 게임 프로젝트 기획 회의 2026-03-16 요약 Action Items Unity 버전 최종 결정 (필요한 AI 기능 확인 후) 영 스테이지(튜토리얼 로비) 구조 설계 스테이지별 스토리 세부 기획 (시작점, 결승점, 통과점 설정) RPG 요소 추가 검토 (레벨업 시스"
-published: false
+published: true
 migration_id: "35e36532580e818fac7bfe9cacf73b9c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

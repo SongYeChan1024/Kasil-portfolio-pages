@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "알파 빌드 시연 준비 및 개발 업무 분배 2026-07-09 요약 1) 한 줄 결론 (TL;DR) 7월 9일 알파 빌드 시연을 당일 17:50 및 20:00 2회 진행하기로 확정, 발표 형식은 간소화(PPT 생략, 시연 위주)하고 개발 작업에 집중하기로 결정 2) 회의 개요 일시: 20"
 description: "알파 빌드 시연 준비 및 개발 업무 분배 2026-07-09 요약 1) 한 줄 결론 (TL;DR) 7월 9일 알파 빌드 시연을 당일 17:50 및 20:00 2회 진행하기로 확정, 발표 형식은 간소화(PPT 생략, 시연 위주)하고 개발 작업에 집중하기로 결정 2) 회의 개요 일시: 20"
-published: false
+published: true
 migration_id: "39836532580e80bdac5ad4eda20e5bc4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

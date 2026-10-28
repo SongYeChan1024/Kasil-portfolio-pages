@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "1. 먼저 정해야 할 핵심 3-2 퍼즐을 리뉴얼할 때 가장 먼저 정해야 하는 건 \\ \\ “이 퍼즐이 어떤 재미를 주는가”\\ \\ 야. 점프맵은 손맛과 긴장감을 주는 구조지만, 에피소드 3의 분위기가 음악, 기억, 감정, 몰입 쪽에 더 가깝다면 꼭 점프 액션일 필요는 없을 수도 있어. 그래"
 description: "1. 먼저 정해야 할 핵심 3-2 퍼즐을 리뉴얼할 때 가장 먼저 정해야 하는 건 \\ \\ “이 퍼즐이 어떤 재미를 주는가”\\ \\ 야. 점프맵은 손맛과 긴장감을 주는 구조지만, 에피소드 3의 분위기가 음악, 기억, 감정, 몰입 쪽에 더 가깝다면 꼭 점프 액션일 필요는 없을 수도 있어. 그래"
-published: false
+published: true
 migration_id: "35e36532580e817da0bbe58f23f609e5"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

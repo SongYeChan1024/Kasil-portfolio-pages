@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity 네트워크 게임 개발 - Roblox & Photon 실습 2026-05-19 요약 오늘 수업 핵심 요약 Roblox Studio 설치 와 템플릿 기반 간단한 게임 체험을 진행했습니다. Unity에서 Photon Realtime을 사용한 네트워크 멀티플레이 구현을 시작했습니다."
 description: "Unity 네트워크 게임 개발 - Roblox & Photon 실습 2026-05-19 요약 오늘 수업 핵심 요약 Roblox Studio 설치 와 템플릿 기반 간단한 게임 체험을 진행했습니다. Unity에서 Photon Realtime을 사용한 네트워크 멀티플레이 구현을 시작했습니다."
-published: false
+published: true
 migration_id: "36536532580e8037a610cdb4413aebf4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["privacy_review", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

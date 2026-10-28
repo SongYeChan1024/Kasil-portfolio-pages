@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "1. 한 줄 결론 2026-07-22에는 인게임 ESC 메뉴와 인벤토리의 입력 우선순위를 정리하고, 관제실 복귀를 게임 포기 실패 정산으로 연결했으며, 튜토리얼에서 상자 UI와 안내 팝업이 충돌하지 않도록 입력·커서 복구 흐름을 보완했습니다. 2. 기록 범위 작성 기준: 송예찬 Song"
 description: "1. 한 줄 결론 2026-07-22에는 인게임 ESC 메뉴와 인벤토리의 입력 우선순위를 정리하고, 관제실 복귀를 게임 포기 실패 정산으로 연결했으며, 튜토리얼에서 상자 UI와 안내 팝업이 충돌하지 않도록 입력·커서 복구 흐름을 보완했습니다. 2. 기록 범위 작성 기준: 송예찬 Song"
-published: false
+published: true
 migration_id: "3a536532580e8171bbceff99449d15ae"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

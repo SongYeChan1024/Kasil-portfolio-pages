@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "팀 모으미 - moz.A.I.c 프로젝트 부스팅 회의 2026-03-16 요약 액션 아이템 각자 에피소드별 에셋 찾아오기 (로우폴리 그래픽 컨셉) 에피소드 1 (별을 모으는 소녀) 에셋 찾기 에피소드 2 (사라진 그림) 에셋 찾기 에피소드 3 (멈춰버린 노래) 에셋 찾기 에피소드 4 및"
 description: "팀 모으미 - moz.A.I.c 프로젝트 부스팅 회의 2026-03-16 요약 액션 아이템 각자 에피소드별 에셋 찾아오기 (로우폴리 그래픽 컨셉) 에피소드 1 (별을 모으는 소녀) 에셋 찾기 에피소드 2 (사라진 그림) 에셋 찾기 에피소드 3 (멈춰버린 노래) 에셋 찾기 에피소드 4 및"
-published: false
+published: true
 migration_id: "35e36532580e819b9bf5cf7a85bc6822"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

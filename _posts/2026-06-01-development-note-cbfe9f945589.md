@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "제페토(ZEPETO) 월드 개발 기초 - Build it + Unity 2026-06-01 요약 오늘 수업 핵심 요약 제페토(ZEPETO) 월드 개발 환경 구축 방법을 배웠다. Unity 2022.3.9f 버전과 제페토 Build-it 툴을 설치하고, 제페토 계정과 Unity를 연동하여"
 description: "제페토(ZEPETO) 월드 개발 기초 - Build it + Unity 2026-06-01 요약 오늘 수업 핵심 요약 제페토(ZEPETO) 월드 개발 환경 구축 방법을 배웠다. Unity 2022.3.9f 버전과 제페토 Build-it 툴을 설치하고, 제페토 계정과 Unity를 연동하여"
-published: false
+published: true
 migration_id: "37236532580e8081b554cbfe9f945589"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked", "source_citations_preserved_in_backup"]
 ---
 

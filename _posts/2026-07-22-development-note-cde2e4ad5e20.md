@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Presenter/InventoryPresenter.cs cs /// /// 아이템과 인벤토리에 관한 상호작용을 중재하는 Presenter. /// 아이템 습득, 인벤토리 UI 열기/닫기, 체스트 UI"
 description: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/Presenter/InventoryPresenter.cs cs /// /// 아이템과 인벤토리에 관한 상호작용을 중재하는 Presenter. /// 아이템 습득, 인벤토리 UI 열기/닫기, 체스트 UI"
-published: false
+published: true
 migration_id: "3a536532580e8142aafccde2e4ad5e20"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

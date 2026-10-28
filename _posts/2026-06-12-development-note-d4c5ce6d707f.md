@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "markdown 📝 개발일지 — 송예찬 작성일 : 2026-06-12 작성자 : 송예찬 스프린트 : Sprint 1 (1주차) --- 📌 오늘의 목표 x 06/11 확정된 팀 프로젝트 방향 세분화 및 기획 구조 정리 x 컨셉 기획서 작성 및 팀장님 컨펌(피드백 반영) 진행 x 컨셉 기획"
 description: "markdown 📝 개발일지 — 송예찬 작성일 : 2026-06-12 작성자 : 송예찬 스프린트 : Sprint 1 (1주차) --- 📌 오늘의 목표 x 06/11 확정된 팀 프로젝트 방향 세분화 및 기획 구조 정리 x 컨셉 기획서 작성 및 팀장님 컨펌(피드백 반영) 진행 x 컨셉 기획"
-published: false
+published: true
 migration_id: "37d36532580e8005a9e0d4c5ce6d707f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["local_code_link_unlinked", "publication_review"]
 ---
 

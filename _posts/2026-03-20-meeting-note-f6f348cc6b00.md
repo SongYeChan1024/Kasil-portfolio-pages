@@ -5,9 +5,9 @@ categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "게임 개발 회의 2026-03-20 요약 액션 아이템 매니저 시스템 완성 (스테이지 매니저, 풀링 매니저, 이펙트 매니저, 퍼즐 매니저) 3-1 퍼즐 완성 후 2번 퍼즐 작업 시나리오 보강 - NPC 대화 중심으로 스토리 전개 퍼즐 개수 3개에서 2개로 축소 난이도 조정을 위한 데이터 "
 description: "게임 개발 회의 2026-03-20 요약 액션 아이템 매니저 시스템 완성 (스테이지 매니저, 풀링 매니저, 이펙트 매니저, 퍼즐 매니저) 3-1 퍼즐 완성 후 2번 퍼즐 작업 시나리오 보강 - NPC 대화 중심으로 스토리 전개 퍼즐 개수 3개에서 2개로 축소 난이도 조정을 위한 데이터 "
-published: false
+published: true
 migration_id: "35e36532580e8147bfc4f6f348cc6b00"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

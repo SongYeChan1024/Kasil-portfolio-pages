@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/System/Player/LocalInputReader.cs cs /// /// 로컬 입력을 읽어서 글로벌 이벤트 버스에 전달하는 역할을 하는 클래스 /// 'Player input'에 등록되는 모든 "
 description: "1. 이전 스크립트 전체 기준: b88e064 파일: Assets/02_Scripts/System/Player/LocalInputReader.cs cs /// /// 로컬 입력을 읽어서 글로벌 이벤트 버스에 전달하는 역할을 하는 클래스 /// 'Player input'에 등록되는 모든 "
-published: false
+published: true
 migration_id: "3a536532580e81e1a88dfea7e3ac14f9"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

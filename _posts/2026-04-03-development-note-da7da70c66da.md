@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "cs using System.Collections.Generic; using UnityEngine; using UnityEngine.SceneManagement; /// /// 프로젝트 전체의 사운드를 총괄하는 매니저 /// - BGM /// - Ambient(환경음) /// - UI "
 description: "cs using System.Collections.Generic; using UnityEngine; using UnityEngine.SceneManagement; /// /// 프로젝트 전체의 사운드를 총괄하는 매니저 /// - BGM /// - Ambient(환경음) /// - UI "
-published: false
+published: true
 migration_id: "35e36532580e81f4a3b9da7da70c66da"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

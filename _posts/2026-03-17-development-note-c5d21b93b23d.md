@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "첨부 자료"
 description: "첨부 자료"
-published: false
+published: true
 migration_id: "35e36532580e81639623c5d21b93b23d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

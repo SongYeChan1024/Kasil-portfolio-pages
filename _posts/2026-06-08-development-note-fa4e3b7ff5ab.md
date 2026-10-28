@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "Pet Bloom Garden - ZEPETO 1주일 프로젝트 기획 및 구조 설계 2026-06-08 요약 오늘 수업 핵심 요약 Pet Bloom Garden 은 1주일 단위 1인 개발 프로젝트로, 프로토타입 완성을 목표로 1일차부터 구체적인 목표를 설정하여 진행한다. 핵심 흐름은 펫 "
 description: "Pet Bloom Garden - ZEPETO 1주일 프로젝트 기획 및 구조 설계 2026-06-08 요약 오늘 수업 핵심 요약 Pet Bloom Garden 은 1주일 단위 1인 개발 프로젝트로, 프로토타입 완성을 목표로 1일차부터 구체적인 목표를 설정하여 진행한다. 핵심 흐름은 펫 "
-published: false
+published: true
 migration_id: "37936532580e804683affa4e3b7ff5ab"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["source_citations_preserved_in_backup"]
 ---
 

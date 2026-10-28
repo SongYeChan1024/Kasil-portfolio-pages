@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "침몽도시: 루시드 다이버 — 프로젝트 전체 회고 작성자: 송예찬 역할: PM / 기획·개발 병행 작성 기준일: 2026.07.28 근거 범위: 프로젝트 일정표, 주간·개인 개발일지, 꿈식자 컨셉 문서, P0/P0.5 명세, Unity 코드와 커밋, 최종 발표 자료 --- 프로젝트 개요 "
 description: "침몽도시: 루시드 다이버 — 프로젝트 전체 회고 작성자: 송예찬 역할: PM / 기획·개발 병행 작성 기준일: 2026.07.28 근거 범위: 프로젝트 일정표, 주간·개인 개발일지, 꿈식자 컨셉 문서, P0/P0.5 명세, Unity 코드와 커밋, 최종 발표 자료 --- 프로젝트 개요 "
-published: false
+published: true
 migration_id: "3ab36532580e808ebdfee9efa38b2dcb"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["legacy_image_recovered", "publication_review"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "엘리스 오전 수업 - 유니티 그래픽스 2026-02-10 오전 10:00\\~10:50 요약 주요 학습 내용 셰이더, 머티리얼, 텍스처의 개념과 관계 학습 ^ 비공개 원문 참조 유니버셜 렌더 파이프라인(Universal Render Pipeline) 이론 및 실습 예정 ^ 비공개 원문 참"
 description: "엘리스 오전 수업 - 유니티 그래픽스 2026-02-10 오전 10:00\\~10:50 요약 주요 학습 내용 셰이더, 머티리얼, 텍스처의 개념과 관계 학습 ^ 비공개 원문 참조 유니버셜 렌더 파이프라인(Universal Render Pipeline) 이론 및 실습 예정 ^ 비공개 원문 참"
-published: false
+published: true
 migration_id: "35e36532580e814ba004dfb3d9abafa8"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

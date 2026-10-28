@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity VR 멀티플레이 개발 수업 - 룸 리스트 UI 및 버그 수정 2026-05-20 요약 오늘 수업 핵심 요약 Photon2 멀티플레이 복습 문제를 풀이하며 RPC 타겟, 컬링 기법, AI 프롬프트 작성법, 메타버스 아바타 표준 포맷 등을 점검했습니다. Unity UI 시스템 을"
 description: "Unity VR 멀티플레이 개발 수업 - 룸 리스트 UI 및 버그 수정 2026-05-20 요약 오늘 수업 핵심 요약 Photon2 멀티플레이 복습 문제를 풀이하며 RPC 타겟, 컬링 기법, AI 프롬프트 작성법, 메타버스 아바타 표준 포맷 등을 점검했습니다. Unity UI 시스템 을"
-published: false
+published: true
 migration_id: "36636532580e80d79fcbe4175dcdb253"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

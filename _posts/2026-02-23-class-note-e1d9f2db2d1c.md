@@ -5,9 +5,9 @@ categories: ["수업 노트", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "Unity 리로드 애니메이션 구현 수업 2026-02-23 요약 실습 과제 x 송카실: Enemy에서 구현한 리로드 시스템을 SWAT 캐릭터에도 동일하게 구현 x 송카실: 완성된 코드와 작동 화면을 캡처하여 제출 (빌드는 선택사항) 학습 목표 오늘 수업의 주요 학습 목표는 10발을 발사"
 description: "Unity 리로드 애니메이션 구현 수업 2026-02-23 요약 실습 과제 x 송카실: Enemy에서 구현한 리로드 시스템을 SWAT 캐릭터에도 동일하게 구현 x 송카실: 완성된 코드와 작동 화면을 캡처하여 제출 (빌드는 선택사항) 학습 목표 오늘 수업의 주요 학습 목표는 10발을 발사"
-published: false
+published: true
 migration_id: "35e36532580e814f9683e1d9f2db2d1c"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

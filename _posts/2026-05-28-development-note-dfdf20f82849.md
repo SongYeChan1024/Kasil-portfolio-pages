@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Unity UI 설정 및 Canvas Scaler 수업 2026-05-28 요약 오늘 수업 핵심 요약 Unity에서 CanvasScaler 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 Scale With Screen Size 모드를 실습했습니다. Fi"
 description: "Unity UI 설정 및 Canvas Scaler 수업 2026-05-28 요약 오늘 수업 핵심 요약 Unity에서 CanvasScaler 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 Scale With Screen Size 모드를 실습했습니다. Fi"
-published: false
+published: true
 migration_id: "36e36532580e80d19e10dfdf20f82849"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked", "publication_review", "source_citations_preserved_in_backup"]
 ---
 

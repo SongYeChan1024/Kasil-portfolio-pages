@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Presenter/PlayerCombatPresenter.cs cs using UnityEngine; using UnityEngine.InputSystem; /// /// 플레이어의 전투 입력을 실제"
 description: "1. 이전 스크립트 전체 기준: 2f085c3^ 파일: Assets/02_Scripts/Presenter/PlayerCombatPresenter.cs cs using UnityEngine; using UnityEngine.InputSystem; /// /// 플레이어의 전투 입력을 실제"
-published: false
+published: true
 migration_id: "3a336532580e8160a6b1fdfa0043812d"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

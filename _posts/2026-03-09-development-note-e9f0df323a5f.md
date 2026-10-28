@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "작성일: 2026-03-09 \\~ 최종 업데이트: 2026-03-09 문서 유형: 게임 기획서 게임명: ZombieSurvivor --- 0. 요약 장르/플랫폼: 웨이브형 좀비 탑다운 슈터 (PC) 한 줄 소개(피치): 끊임없이 몰려오는 좀비를 처치해 점수를 올리고, 탄약/체력 아이템을"
 description: "작성일: 2026-03-09 \\~ 최종 업데이트: 2026-03-09 문서 유형: 게임 기획서 게임명: ZombieSurvivor --- 0. 요약 장르/플랫폼: 웨이브형 좀비 탑다운 슈터 (PC) 한 줄 소개(피치): 끊임없이 몰려오는 좀비를 처치해 점수를 올리고, 탄약/체력 아이템을"
-published: false
+published: true
 migration_id: "35e36532580e81278c16e9f0df323a5f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

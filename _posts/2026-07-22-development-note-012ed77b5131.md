@@ -5,9 +5,9 @@ categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
 excerpt: "항목 내용 버그 ID QA-BETA-011 기능 창고 - 장착 아티팩트 슬롯 발생 조건 아티팩트 슬롯에 장착된 아티팩트를 인벤토리의 소비아이템이 있는 슬롯에 드래그 재현 방법 ① 게임 시작 → ② 창고 → ③ 장착 아티팩트 슬롯에 있는 아이템 드래그 → ④ 인벤토리 또는 창고에 있는 소"
 description: "항목 내용 버그 ID QA-BETA-011 기능 창고 - 장착 아티팩트 슬롯 발생 조건 아티팩트 슬롯에 장착된 아티팩트를 인벤토리의 소비아이템이 있는 슬롯에 드래그 재현 방법 ① 게임 시작 → ② 창고 → ③ 장착 아티팩트 슬롯에 있는 아이템 드래그 → ④ 인벤토리 또는 창고에 있는 소"
-published: false
+published: true
 migration_id: "10f36532580e82e686d7012ed77b5131"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

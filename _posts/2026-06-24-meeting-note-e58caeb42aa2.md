@@ -5,9 +5,9 @@ categories: ["회의 기록", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "외부 인사 방문 대비 체크리스트 작성 회의 2026-06-24 요약 1) 한 줄 결론 (TL;DR) 매주 화·목 외부 인사 방문 시 효과적인 피드백을 받기 위해 팀별 체크리스트를 11시 반까지 작성·취합하기로 결정 2) 회의 개요 일시: 2026-06-24 (화요일) 회의 유형: 데일리"
 description: "외부 인사 방문 대비 체크리스트 작성 회의 2026-06-24 요약 1) 한 줄 결론 (TL;DR) 매주 화·목 외부 인사 방문 시 효과적인 피드백을 받기 위해 팀별 체크리스트를 11시 반까지 작성·취합하기로 결정 2) 회의 개요 일시: 2026-06-24 (화요일) 회의 유형: 데일리"
-published: false
+published: true
 migration_id: "38936532580e80e88cf1e58caeb42aa2"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

@@ -5,9 +5,9 @@ categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "EP.0 오프닝 리뉴얼본 게임 시작시 바로 보일 컷씬 혹은 화면 아무것도 완전히 존재하지 않는 공간. 어두운 허공 사이로, 겨우 한 줄기의 길만이 이어져 있다. 길 주변에는 무언가의 조각들이 떠다닌다. 어떤 것은 악기처럼 보이고, 어떤 것은 찢어진 그림의 일부처럼 보인다. 어떤 것은 작"
 description: "EP.0 오프닝 리뉴얼본 게임 시작시 바로 보일 컷씬 혹은 화면 아무것도 완전히 존재하지 않는 공간. 어두운 허공 사이로, 겨우 한 줄기의 길만이 이어져 있다. 길 주변에는 무언가의 조각들이 떠다닌다. 어떤 것은 악기처럼 보이고, 어떤 것은 찢어진 그림의 일부처럼 보인다. 어떤 것은 작"
-published: false
+published: true
 migration_id: "35e36532580e81689587c4e184e3aea4"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: []
 ---
 

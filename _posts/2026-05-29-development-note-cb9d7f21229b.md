@@ -5,9 +5,9 @@ categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "Firebase와 Unity 연동 수업 2026-05-29 요약 오늘 수업 핵심 요약 Firebase 와 Unity 를 연동하는 방법과 Firebase의 요금제 체계(Spark vs Blaze)를 배웠습니다. Unity에서 HP 시스템 , 스코어 매니저 , 애니메이션 시스템 을 구현하여"
 description: "Firebase와 Unity 연동 수업 2026-05-29 요약 오늘 수업 핵심 요약 Firebase 와 Unity 를 연동하는 방법과 Firebase의 요금제 체계(Spark vs Blaze)를 배웠습니다. Unity에서 HP 시스템 , 스코어 매니저 , 애니메이션 시스템 을 구현하여"
-published: false
+published: true
 migration_id: "36f36532580e80b6a6bfcb9d7f21229b"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

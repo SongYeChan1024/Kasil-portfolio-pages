@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "항목 내용 버그 ID QA-PM-003 기능 다크 스피릿 추격 / 복귀 / 랜덤 순찰 AI 우선순위 Major 상태 코드 수정 완료 / 플레이 모드 회귀 테스트 필요 발생 조건 플레이어를 감지한 다크 스피릿이 자기 패트롤 루트에서 멀리 벗어남 기존 문제 시야가 유지되면 활동 범위를 벗어"
 description: "항목 내용 버그 ID QA-PM-003 기능 다크 스피릿 추격 / 복귀 / 랜덤 순찰 AI 우선순위 Major 상태 코드 수정 완료 / 플레이 모드 회귀 테스트 필요 발생 조건 플레이어를 감지한 다크 스피릿이 자기 패트롤 루트에서 멀리 벗어남 기존 문제 시야가 유지되면 활동 범위를 벗어"
-published: false
+published: true
 migration_id: "b4336532580e83f18722814fbb9d5a3f"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

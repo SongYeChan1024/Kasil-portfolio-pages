@@ -5,9 +5,9 @@ categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
 excerpt: "코치님 피드백 (06.22) 2026-06-22 요약 1) 한 줄 결론 (TL;DR) 1주차 P0 Core 1 범위 확정 (로비→인게임→결과창→로비 완전 루프 구현), PPT 비주얼 보강, 캐릭터 동기 개연성 보완, 기획서 전자서명 진행 결정 2) 회의 개요 일시: 2026-06-22 "
 description: "코치님 피드백 (06.22) 2026-06-22 요약 1) 한 줄 결론 (TL;DR) 1주차 P0 Core 1 범위 확정 (로비→인게임→결과창→로비 완전 루프 구현), PPT 비주얼 보강, 캐릭터 동기 개연성 보완, 기획서 전자서명 진행 결정 2) 회의 개요 일시: 2026-06-22 "
-published: false
+published: true
 migration_id: "38736532580e801db06bf3fde15b1c55"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 

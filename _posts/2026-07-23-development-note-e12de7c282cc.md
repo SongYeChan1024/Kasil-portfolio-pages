@@ -5,9 +5,9 @@ categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
 excerpt: "1. 한 줄 결론 2026-07-23에는 적이 소음을 인식한 뒤 추적 대상을 잃으면 소리 위치를 탐색하도록 보완하고, 소음 범위·청각 차폐·플레이어 이동 소음을 조정했습니다. 2. 기록 범위 작성자 기준: SongYeChan1024 직접 커밋만 포함 기준 커밋: be4d82f — 에너미"
 description: "1. 한 줄 결론 2026-07-23에는 적이 소음을 인식한 뒤 추적 대상을 잃으면 소리 위치를 탐색하도록 보완하고, 소음 범위·청각 차폐·플레이어 이동 소음을 조정했습니다. 2. 기록 범위 작성자 기준: SongYeChan1024 직접 커밋만 포함 기준 커밋: be4d82f — 에너미"
-published: false
+published: true
 migration_id: "3a636532580e814f9bfae12de7c282cc"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review"]
 ---
 

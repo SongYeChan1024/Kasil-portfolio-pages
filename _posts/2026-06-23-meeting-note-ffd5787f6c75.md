@@ -5,9 +5,9 @@ categories: ["회의 기록", "Unity"]
 tags: ["Notion 이전", "Unity"]
 excerpt: "오전 회의 침몽도시: 루시드 다이버 — 전자서명 완료 및 에셋 구매 협의 2026-06-23 요약 1) 한 줄 결론 (TL;DR) 전자서명 완료, Unity 에셋 구매 예산 및 우선순위 협의, 점심 후 필수 에셋 최종 확정 예정 2) 회의 개요 일시: 2026-06-23 (오전) 회의 "
 description: "오전 회의 침몽도시: 루시드 다이버 — 전자서명 완료 및 에셋 구매 협의 2026-06-23 요약 1) 한 줄 결론 (TL;DR) 전자서명 완료, Unity 에셋 구매 예산 및 우선순위 협의, 점심 후 필수 에셋 최종 확정 예정 2) 회의 개요 일시: 2026-06-23 (오전) 회의 "
-published: false
+published: true
 migration_id: "38836532580e80ca836bffd5787f6c75"
-migration_status: "review_required"
+migration_status: "published"
 migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 
