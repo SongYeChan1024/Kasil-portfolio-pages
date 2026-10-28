@@ -12,7 +12,7 @@ description: "Player Input의 Unity Events를 Presenter와 연결하고, Charact
 
 개발 환경은 Unity **6000.4.0f1**, Input System **1.19.0**, Cinemachine **2.10.7**입니다.
 
-![플레이어 더미와 CameraRoot, 스크립트 폴더가 보이는 실제 Unity 작업 화면](/assets/img/uploads/2026-10-28-after-seconds-unity-scene.jpg)
+![플레이어 더미와 CameraRoot, 스크립트 폴더가 보이는 실제 Unity 작업 화면](/assets/img/uploads/2026-10-28-after-seconds-unity-scene-clean.png)
 _캡처는 편집 모드의 작업 화면입니다. 실제 조작 확인과 별도로 플레이어·CameraRoot·스크립트 구성을 기록했습니다._
 
 | 구성 요소 | 구현한 역할 |
@@ -50,7 +50,7 @@ PlayerPresenter.Update
 
 이전에 작성했던 `PlayerInputSystem.cs`는 입력 액션을 직접 찾아 읽는 학습용 코드로 보관합니다. **현재 플레이어의 입력 경로는 Player Input 컴포넌트와 Presenter**입니다.
 
-![OnLook 입력 처리와 Rotate 다음 Move 호출 순서에 주석을 단 Visual Studio 화면](/assets/img/uploads/2026-10-28-after-seconds-player-presenter-vs.jpg)
+![OnLook 입력 처리와 Rotate 다음 Move 호출 순서에 주석을 단 Visual Studio 화면](/assets/img/uploads/2026-10-28-after-seconds-player-presenter-vs-clean.png)
 _이벤트에서 받은 값을 보관하고, Update에서 회전과 이동을 요청하는 부분을 주석과 함께 다시 읽었습니다._
 
 ### 회전한 뒤 이동하도록 순서 수정
@@ -275,7 +275,7 @@ Player_Dummy_V0.1    ← 좌우 회전: 월드 Y축
 
 이번 회전 구현은 **마우스 이동량 기준**입니다. 마우스 `delta`는 이미 이동한 양이라 감도를 곱해 회전량을 구하고, `Time.deltaTime`을 추가로 곱하지 않습니다. 게임패드 스틱은 회전 속도와 경과 시간을 기준으로 처리해야 하므로 별도 확장 대상으로 남겼습니다.
 
-![감도 계산, 플레이어 Y축 회전, 상하 각도 제한을 주석으로 설명한 PlayerLook 코드](/assets/img/uploads/2026-10-28-after-seconds-player-look-vs.jpg)
+![감도 계산, 플레이어 Y축 회전, 상하 각도 제한을 주석으로 설명한 PlayerLook 코드](/assets/img/uploads/2026-10-28-after-seconds-player-look-vs-clean.png)
 _실제 작성한 PlayerLook 코드와 이해를 확인하기 위해 단 주석입니다._
 
 현재 시야 설정 에셋에는 아래 테스트 값을 입력했습니다. 확정한 조작감이 아니라 직접 움직여 보며 조정할 시작 값입니다.
@@ -576,7 +576,7 @@ BOM은 인코딩을 식별하도록 파일 앞에 붙이는 표시입니다. Uni
 - Unity가 `PlayerInputSystem.cs`를 읽은 결과에서도 한글 의사코드와 주석이 정상이며 유니코드 대체 문자(U+FFFD)가 없는 것을 확인했습니다.
 - 집 PC에서 이어갈 수 있도록 프로젝트 README에 Unity CLI 설치, 로그인, Pipeline 연결과 조회 명령을 추가했습니다.
 
-이번 확인은 직접 조작과 컴파일·설정 조회를 기준으로 했습니다. 자동화한 게임플레이 테스트를 작성한 것은 아닙니다. 위 코드 블록은 오늘 저장된 소스를 기준으로 하며, 스크린샷은 실제 Visual Studio와 Unity 창을 캡처했습니다.
+이번 확인은 직접 조작과 컴파일·설정 조회를 기준으로 했습니다. 자동화한 게임플레이 테스트를 작성한 것은 아닙니다. 위 코드 블록은 오늘 저장된 소스를 기준으로 하며, 스크린샷은 실제 Visual Studio와 Unity 창을 캡처했습니다. 게시용 이미지에서는 마우스 포인터와 강조 표시만 정리하고 코드·주석 영역은 원본 그대로 유지했습니다.
 
 ## 다음 작업 — 2026년 10월 29일 예정
 

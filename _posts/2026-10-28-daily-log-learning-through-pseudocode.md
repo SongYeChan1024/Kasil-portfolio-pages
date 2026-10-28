@@ -9,14 +9,14 @@ tags: [Unity, CSharp, 의사코드, 학습기록]
 
 이번에는 바로 코드를 쓰지 않았다. 먼저 **의사코드로 필요한 정보와 처리 순서를 정리하고, 실제 C# 코드로 옮긴 뒤, 각 줄에 내가 이해한 내용을 주석으로 적고 검토했다.** 같은 코드를 세 번 살펴보는 방식이다. 한 번에 이해했다고 넘겼을 부분도 주석으로 설명하려고 하니 다시 생각하게 됐다. 시간이 조금 더 걸려도 이렇게 기본기를 쌓아 가는 방식이 좋다.
 
-![Visual Studio에서 PlayerPresenter의 입력·이동·시야 회전 연결 의사코드를 정리한 화면](/assets/img/uploads/2026-10-28-after-seconds-pseudocode-vs.jpg)
+![Visual Studio에서 PlayerPresenter의 입력·이동·시야 회전 연결 의사코드를 정리한 화면](/assets/img/uploads/2026-10-28-after-seconds-pseudocode-vs-clean.png)
 _코드를 쓰기 전에 필요한 참조와 시야 회전의 처리 순서를 문장으로 정리했다._
 
 입력을 받는 것과 실제로 움직이는 것을 나눠 보면서 역할도 조금씩 구분됐다. Player Input의 Invoke Unity Events로 입력을 전달하고, Presenter가 연결하고, Motor가 이동을 처리한다. 시야 회전은 PlayerLook이 맡는다. 기능이 작을 때부터 누가 무엇을 담당하는지 생각해 보는 연습이 됐다.
 
 카메라도 좌우와 위아래 회전을 나눠 생각하니 이해하기 쉬웠다. 좌우로 볼 때는 플레이어 전체를 돌리고, 위아래로 볼 때는 CameraRoot만 돌린다. 상하 각도를 제한하는 `Mathf.Clamp`도 단순히 외울 함수가 아니라, 시야가 계속 뒤집히지 않게 하는 처리로 연결해서 볼 수 있었다. 이동량에는 `Time.deltaTime`을 곱하지만, 이미 마우스가 움직인 양을 나타내는 delta에는 같은 방식으로 곱하지 않는다는 차이도 확인했다.
 
-![Visual Studio에서 PlayerLook의 실제 회전 코드와 직접 작성한 주석을 확인하는 화면](/assets/img/uploads/2026-10-28-after-seconds-player-look-vs.jpg)
+![Visual Studio에서 PlayerLook의 실제 회전 코드와 직접 작성한 주석을 확인하는 화면](/assets/img/uploads/2026-10-28-after-seconds-player-look-vs-clean.png)
 _실제 코드로 옮긴 뒤에는 각 줄이 하는 일을 내 말로 적고 다시 확인했다._
 
 <details markdown="1">
