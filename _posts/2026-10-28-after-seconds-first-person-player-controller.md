@@ -12,7 +12,7 @@ description: "Player Input의 Unity Events를 Presenter와 연결하고, Charact
 
 개발 환경은 Unity **6000.4.0f1**, Input System **1.19.0**, Cinemachine **2.10.7**입니다.
 
-![플레이어 더미와 CameraRoot, 스크립트 폴더가 보이는 실제 Unity 작업 화면](/Kasil_DevLog/assets/img/uploads/2026-10-28-after-seconds-unity-scene.jpg)
+![플레이어 더미와 CameraRoot, 스크립트 폴더가 보이는 실제 Unity 작업 화면](/assets/img/uploads/2026-10-28-after-seconds-unity-scene.jpg)
 _캡처는 편집 모드의 작업 화면입니다. 실제 조작 확인과 별도로 플레이어·CameraRoot·스크립트 구성을 기록했습니다._
 
 | 구성 요소 | 구현한 역할 |
@@ -50,7 +50,7 @@ PlayerPresenter.Update
 
 이전에 작성했던 `PlayerInputSystem.cs`는 입력 액션을 직접 찾아 읽는 학습용 코드로 보관합니다. **현재 플레이어의 입력 경로는 Player Input 컴포넌트와 Presenter**입니다.
 
-![OnLook 입력 처리와 Rotate 다음 Move 호출 순서에 주석을 단 Visual Studio 화면](/Kasil_DevLog/assets/img/uploads/2026-10-28-after-seconds-player-presenter-vs.jpg)
+![OnLook 입력 처리와 Rotate 다음 Move 호출 순서에 주석을 단 Visual Studio 화면](/assets/img/uploads/2026-10-28-after-seconds-player-presenter-vs.jpg)
 _이벤트에서 받은 값을 보관하고, Update에서 회전과 이동을 요청하는 부분을 주석과 함께 다시 읽었습니다._
 
 ### 회전한 뒤 이동하도록 순서 수정
@@ -275,7 +275,7 @@ Player_Dummy_V0.1    ← 좌우 회전: 월드 Y축
 
 이번 회전 구현은 **마우스 이동량 기준**입니다. 마우스 `delta`는 이미 이동한 양이라 감도를 곱해 회전량을 구하고, `Time.deltaTime`을 추가로 곱하지 않습니다. 게임패드 스틱은 회전 속도와 경과 시간을 기준으로 처리해야 하므로 별도 확장 대상으로 남겼습니다.
 
-![감도 계산, 플레이어 Y축 회전, 상하 각도 제한을 주석으로 설명한 PlayerLook 코드](/Kasil_DevLog/assets/img/uploads/2026-10-28-after-seconds-player-look-vs.jpg)
+![감도 계산, 플레이어 Y축 회전, 상하 각도 제한을 주석으로 설명한 PlayerLook 코드](/assets/img/uploads/2026-10-28-after-seconds-player-look-vs.jpg)
 _실제 작성한 PlayerLook 코드와 이해를 확인하기 위해 단 주석입니다._
 
 현재 시야 설정 에셋에는 아래 테스트 값을 입력했습니다. 확정한 조작감이 아니라 직접 움직여 보며 조정할 시작 값입니다.
