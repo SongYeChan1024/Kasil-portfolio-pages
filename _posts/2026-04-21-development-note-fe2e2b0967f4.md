@@ -3,8 +3,8 @@ title: "사운드 매니저 딕셔너리 구조 리팩토링 정리"
 date: 2026-04-21 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "1. 리팩토링 목표 기존에는 씬이 바뀔 때마다 SoundManager 안에서 switch(scene.name)로 어떤 사운드를 재생할지 직접 분기했다. 이번 리팩토링의 목표는 이 구조를 씬 이름을 키로 SoundProfile을 찾는 딕셔너리 구조 로 바꾸는 것이었다. 즉, 이전: 코드가"
-description: "1. 리팩토링 목표 기존에는 씬이 바뀔 때마다 SoundManager 안에서 switch(scene.name)로 어떤 사운드를 재생할지 직접 분기했다. 이번 리팩토링의 목표는 이 구조를 씬 이름을 키로 SoundProfile을 찾는 딕셔너리 구조 로 바꾸는 것이었다. 즉, 이전: 코드가"
+excerpt: "씬 이름을 키로 SoundProfile을 조회하도록 바꾸고 씬 사운드 적용을 SoundManager로 모은 과정을 정리했다."
+description: "씬 이름을 키로 SoundProfile을 조회하도록 바꾸고 씬 사운드 적용을 SoundManager로 모은 과정을 정리했다."
 published: true
 migration_id: "35e36532580e81c68f42fe2e2b0967f4"
 migration_status: "published"

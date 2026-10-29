@@ -3,8 +3,8 @@ title: "03_P0_일정표"
 date: 2026-06-19 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "\\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다. PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. 🗺️ 침몽도시: 루시드 다이버 - 프로젝트 일정표 구조 재정의안 v0"
-description: "\\ !IMPORTANT\\ 이 문서는 AI(Antigravity)가 작성한 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다. PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다. 🗺️ 침몽도시: 루시드 다이버 - 프로젝트 일정표 구조 재정의안 v0"
+excerpt: "P0 개발을 위한 전체·주별·일별 일정표와 팀별 작업을 정리한 검수 전 초안이다."
+description: "P0 개발을 위한 전체·주별·일별 일정표와 팀별 작업을 정리한 검수 전 초안이다."
 published: true
 migration_id: "38436532580e8029beb3effb30c8ee1b"
 migration_status: "published"
@@ -12,7 +12,7 @@ migration_flags: ["publication_review"]
 ---
 
 {% raw %}
-> \[!IMPORTANT\]<br />이 문서는 AI(Antigravity)가 작성한 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다.<br />PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다.
+> \[!IMPORTANT\]<br />이 문서는 검수 전 상태의 프로젝트 일정표 구조 재정의안 초안입니다.<br />PM 및 팀원들의 검토 및 승인 후 이 배너를 제거하면 ’확정 사양’으로 인정됩니다.
 
 # 🗺️ 침몽도시: 루시드 다이버 - 프로젝트 일정표 구조 재정의안 v0.3
 

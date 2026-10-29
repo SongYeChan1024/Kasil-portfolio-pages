@@ -3,8 +3,8 @@ title: "26-05-06"
 date: 2026-05-06 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity VR 환경 설정 및 Ray Interactor 실습 요약 오늘 수업 핵심 요약 Unity에서 VR 개발 환경 을 처음부터 설정하는 전체 과정을 배웠습니다. OpenXR 표준 프로토콜과 XR Interaction Toolkit 을 설치하여 VR 하드웨어와 통신하고 사용자 입력을"
-description: "Unity VR 환경 설정 및 Ray Interactor 실습 요약 오늘 수업 핵심 요약 Unity에서 VR 개발 환경 을 처음부터 설정하는 전체 과정을 배웠습니다. OpenXR 표준 프로토콜과 XR Interaction Toolkit 을 설치하여 VR 하드웨어와 통신하고 사용자 입력을"
+excerpt: "Unity VR 개발 환경 설정부터 OpenXR, XR Interaction Toolkit, Ray Interactor의 기본 상호작용까지 실습 내용을 정리했다."
+description: "Unity VR 개발 환경 설정부터 OpenXR, XR Interaction Toolkit, Ray Interactor의 기본 상호작용까지 실습 내용을 정리했다."
 published: true
 migration_id: "35e36532580e81d3b6d3de864586e491"
 migration_status: "published"
@@ -12,11 +12,9 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ---
 
 {% raw %}
-<b>Unity VR 환경 설정 및 Ray Interactor 실습</b> 
-
+<b>Unity VR 환경 설정 및 Ray Interactor 실습</b>
 
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -283,9 +281,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - [ ] 다양한 Interactor 종류(Ray, Direct, Near-Far, Poke, Gaze)를 구분할 수 있다
 - [ ] 컨트롤러 방향이 잘못되었을 때 Y값 180 조정 방법을 알고 있다
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1002,12 +998,9 @@ xr, fork, p, o, k, e fork인터렉터 있죠? 그래서 포크리프트 렉터�
 
 </details>
 
-
 <b>Unity VR Ray Interactor 이벤트 및 Locomotion 설정</b> 2026-05-06
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1234,9 +1227,7 @@ xr, fork, p, o, k, e fork인터렉터 있죠? 그래서 포크리프트 렉터�
 - [ ] 왼손 이동, 오른손 회전 방식이 VR 게임 표준인 이유를 이해했다
 - [ ] Line Renderer Material을 Default Line으로 설정해야 하는 이유를 알고 있다
 
-
 ## 메모
-
 
 ### 문제 1. Locomotion Provider의 역할 및 구조
 
@@ -1336,7 +1327,6 @@ VR에서는 사용자의 몸은 실제로 회전하지 않는데 시점만 계�
 ```
 
 이렇게 하면 사용자가 쏜 Ray가 Snap Volume 안으로 들어왔을 때, Ray의 끝점이 대상 쪽으로 보정되어 더 안정적으로 조준하고 텔레포트할 수 있다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2613,7 +2603,6 @@ snap volume 입니다. 자 그러면 내리겠습니다. 자 그래서
 
 </details>
 
-
 <b>문제 1. Locomotion Provider의 역할 및 구조</b>
 
 <b>XR Interaction Toolkit에서 Locomotion Provider 컴포넌트의 핵심적인 역할은 무엇이며,</b>
@@ -2622,10 +2611,9 @@ snap volume 입니다. 자 그러면 내리겠습니다. 자 그래서
 
 <b>위해 Locomotion System과 각 Provider(Move, Turn) 간의 관계를 설명하시오.</b>
 
-<b>Locomotion System(Locomotion Mediator)는 XR Origin 의 위치와 회전 같은 이동을 통합 관리한다.<br />예를 들어 각 입력이 한번에 입력 되었을 때 중재하는 역할을 해서 동시에 여러 Provider가 XR Origin을 제어 하지 않도록 한다.</b>
+<b>Locomotion System(Locomotion Mediator)는 XR Origin 의 위치와 회전 같은 이동을 통합 관리한다.<br />예를 들어 각 입력이 한 번에 입력되었을 때 중재하는 역할을 해서 동시에 여러 Provider가 XR Origin을 제어하지 않도록 한다.</b>
 
 <code>Locomotion Provider</code>는 XR 환경에서 사용자의 이동, 회전, 순간이동 같은 <b>이동 동작을 실제 XR Origin에 적용하기 위한 컴포넌트이다.<br /></b>Move와 Turn은 입력을 받아서 실제로 XROrigin의 위치와 회전을 바꾸기 위한 것이다
-
 
 <b>문제 2. 컨트롤러별 이동 및 회전 할당 (Left: Move / Right: Turn)</b>
 
@@ -2659,7 +2647,6 @@ Area 어디든 레이가 닿는 지점으로 <b>자유롭게</b> 텔레포트
 
 예: 순간이동 패드처럼 정확히 서야 하는 자리(방향까지 맞추고 싶을 때)
 
-
 <b>문제 4. Snap Turn과 Continuous Turn의 UX 차이</b>
 
 <b>사용자의 시점을 회전시킬 때 사용하는 Snap Turn과 Continuous Turn의 동작 방식 차이를 설명하고,</b>
@@ -2669,7 +2656,6 @@ Area 어디든 레이가 닿는 지점으로 <b>자유롭게</b> 텔레포트
 <b>더 권장되는 이유를 서술하시오.</b>
 
 <b>Snap Turn은 할당된 각도로 딱딱 끊어서 회전하게 되고 Continuous Turn 은 입력이 지속되는 동안 부드럽게 회전한다.<br /> Continuous Turn은 시점이 계속 회전 하면서 VR멀미를 유발할 가능성이 크기 때문에 Snap Turn이 더 권장 된다.</b>
-
 
 <b>문제 5. Snap Volume의 동작 원리와 설정</b>
 

@@ -3,8 +3,8 @@ title: "2026-06-30_enemy_vision_occlusion_compare"
 date: 2026-06-30 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 2026-06-30 Enemy / Vision / Occlusion Compare Previous version: 7b512a6^:path for restored files, none for newly a"
-description: "2026-06-30\\_enemy\\_vision\\_occlusion\\_compare 2026-06-30 Enemy / Vision / Occlusion Compare Previous version: 7b512a6^:path for restored files, none for newly a"
+excerpt: "적 AI의 시야각·벽 차폐 판정과 디버그 기즈모를 복원한 이전 버전 및 변경 코드를 비교해 보관했다."
+description: "적 AI의 시야각·벽 차폐 판정과 디버그 기즈모를 복원한 이전 버전 및 변경 코드를 비교해 보관했다."
 published: true
 migration_id: "38f36532580e80a38c79fec3f9c7a1d9"
 migration_status: "published"

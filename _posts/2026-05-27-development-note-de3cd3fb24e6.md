@@ -3,8 +3,8 @@ title: "2026-05-27 개발 메모"
 date: 2026-05-27 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity Photon Chat UI 구현 및 한글화 2026-05-27 요약 오늘 수업 핵심 요약 Unity에서 Photon Chat 을 활용한 실시간 채팅 UI를 구현하는 방법을 학습했습니다. TextMeshPro의 한글 폰트 에셋(SDF) 을 생성하여 채팅창에서 한글을 사용할 수 "
-description: "Unity Photon Chat UI 구현 및 한글화 2026-05-27 요약 오늘 수업 핵심 요약 Unity에서 Photon Chat 을 활용한 실시간 채팅 UI를 구현하는 방법을 학습했습니다. TextMeshPro의 한글 폰트 에셋(SDF) 을 생성하여 채팅창에서 한글을 사용할 수 "
+excerpt: "Photon Chat을 활용한 실시간 채팅 UI 구현과 TextMeshPro 한글 폰트 설정을 정리했다."
+description: "Photon Chat을 활용한 실시간 채팅 UI 구현과 TextMeshPro 한글 폰트 설정을 정리했다."
 published: true
 migration_id: "36d36532580e800d8043de3cd3fb24e6"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>Unity Photon Chat UI 구현 및 한글화</b> 2026-05-27
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -262,9 +260,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 - [ ] 오래된 블로그의 한글화 방법을 따라하지 말아야 하는 이유를 이해했다.
 - [ ] AI 도구의 장점과 한계, 개발자가 알아야 할 핵심 개념의 중요성을 이해했다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -924,12 +920,9 @@ Thank you!
 
 </details>
 
-
 <b>TextMeshPro 한글 폰트 문제 해결</b> 2026-05-27
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1141,9 +1134,7 @@ Thank you!
 - [ ] Photon Hashtable을 사용한 데이터 저장 방식을 설명할 수 있다.
 - [ ] 과제로 Photon Chat 패키지를 제출할 수 있다.
 
-
 ## 메모
-
 
 <b># TextMeshPro 한글 폰트 깨짐/안 보임 현상 해결 방법</b>
 
@@ -1212,7 +1203,6 @@ Thank you!
 <b>## ✅ 결과</b>
 
 위 과정을 거치면 채팅창에 한글을 입력했을 때, 런타임에 동적으로 글자가 생성되어 화면에 깔끔하게 출력됩니다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

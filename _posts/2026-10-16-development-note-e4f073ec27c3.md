@@ -3,8 +3,8 @@ title: "이미지 레퍼런스와 적용 정리"
 date: 2026-10-16 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "첨부 자료 동굴 속 초가집 첨부 자료 첨부 자료 첨부 자료 그리고 그 안에서 무언갈 지키듯이 서 있는 병사"
-description: "첨부 자료 동굴 속 초가집 첨부 자료 첨부 자료 첨부 자료 그리고 그 안에서 무언갈 지키듯이 서 있는 병사"
+excerpt: "동굴 속 초가집과 그 안에서 무언가를 지키듯 서 있는 병사의 이미지 레퍼런스를 모았다."
+description: "동굴 속 초가집과 그 안에서 무언가를 지키듯 서 있는 병사의 이미지 레퍼런스를 모았다."
 published: true
 migration_id: "3fb36532580e803eb450e4f073ec27c3"
 migration_status: "published"
@@ -22,5 +22,5 @@ migration_flags: []
 
 ![첨부 자료](/assets/img/uploads/notion/fe9c502abc53b54d3e4665c2ec3b06793429b3f2b84b572746ac45d0883cb693.jpg)
 
-그리고 그 안에서 무언갈 지키듯이 서 있는 병사
+그리고 그 안에서 무언가를 지키듯이 서 있는 병사
 {% endraw %}

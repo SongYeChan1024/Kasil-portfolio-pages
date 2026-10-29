@@ -3,8 +3,8 @@ title: "새 페이지"
 date: 2026-04-24 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "게임 프로젝트 진행 상황 발표 회의 2026-04-24 요약 액션 아이템 상해찬: 1-2 스테이지 리뉴얼 작업을 최종 프로젝트 기간 내 완료 1팀: 최종 발표일까지 AI 프롬프트 지속적 개선 2팀: 최종 발표일까지 QA 및 디버깅 작업 지속, 프롬프트 개선 아이템 일회성에 대한 UI 개"
-description: "게임 프로젝트 진행 상황 발표 회의 2026-04-24 요약 액션 아이템 상해찬: 1-2 스테이지 리뉴얼 작업을 최종 프로젝트 기간 내 완료 1팀: 최종 발표일까지 AI 프롬프트 지속적 개선 2팀: 최종 발표일까지 QA 및 디버깅 작업 지속, 프롬프트 개선 아이템 일회성에 대한 UI 개"
+excerpt: "게임 프로젝트의 진행 상황을 발표하고 스테이지 리뉴얼·AI 프롬프트·QA 및 디버깅 항목을 논의했다."
+description: "게임 프로젝트의 진행 상황을 발표하고 스테이지 리뉴얼·AI 프롬프트·QA 및 디버깅 항목을 논의했다."
 published: true
 migration_id: "35e36532580e8161aa73c3f62cd1e100"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>게임 프로젝트 진행 상황 발표 회의</b> 2026-04-24
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -34,7 +32,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 사운드 개별 조정 UI 추가: 초기값 리셋 기능 및 개별 음량 On/Off 기능 구현 
 - 마우스 시선 고정 기능과 UI 팝업 연동 구현 
 - 캐릭터가 맵을 뚫고 지나가는 문제 해결: 콜라이더 추가로 보정 완료 
-- 극장 맵 콜라이더 설정 수정: 메쉬 콜라이더 재활성화 
+- 극장 맵 콜라이더 설정 수정: 메시 콜라이더 재활성화
 
 #### 퍼즐 개선
 
@@ -162,9 +160,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 아이템 중복 사용 및 일회성 시스템 설명   
 - 도전과제 시스템 미구현 (코스트 문제) 
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

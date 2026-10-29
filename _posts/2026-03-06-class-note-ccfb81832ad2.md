@@ -3,8 +3,8 @@ title: "| Unity Runner 게임 기획서"
 date: 2026-03-06 12:00:00 +0900
 categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "작성일: 2026-03-05 최종 업데이트: 2026-03-05 문서 유형: 게임 기획서 (실습) 게임명: Unity Runner 진행 로그(데일리) 아래 데일리 로그에서 날짜별 진행 과정을 확인 관련 기록03/05 데일리 로그 | Unity Runner 2026-03-06\\_데일리 로"
-description: "작성일: 2026-03-05 최종 업데이트: 2026-03-05 문서 유형: 게임 기획서 (실습) 게임명: Unity Runner 진행 로그(데일리) 아래 데일리 로그에서 날짜별 진행 과정을 확인 관련 기록03/05 데일리 로그 | Unity Runner 2026-03-06\\_데일리 로"
+excerpt: "Unity Runner 실습의 발판·장애물·점수·입력·UI 요구사항과 게임 흐름을 정리한 기획서다."
+description: "Unity Runner 실습의 발판·장애물·점수·입력·UI 요구사항과 게임 흐름을 정리한 기획서다."
 published: true
 migration_id: "31336532580e80a4890accfb81832ad2"
 migration_status: "published"
@@ -22,18 +22,14 @@ migration_flags: ["publication_review"]
 
 ## 진행 로그(데일리)
 
-
 <details markdown="1">
 <summary>아래 데일리 로그에서 날짜별 진행 과정을 확인</summary>
-
 
 [관련 기록]({% endraw %}{% post_url 2026-03-06-daily-log-d74a74e36422 %}{% raw %})03/05 데일리 로그 | Unity Runner&lt;/mention&gt;
 
 [2026-03-06\_데일리 로그]({% endraw %}{% post_url 2026-03-06-daily-log-ff078183ed67 %}{% raw %})
 
-
 </details>
-
 
 ---
 

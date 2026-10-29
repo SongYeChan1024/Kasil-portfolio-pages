@@ -3,8 +3,8 @@ title: "블렌더 기초"
 date: 2026-03-29 12:00:00 +0900
 categories: ["개발 메모", "Blender"]
 tags: ["Notion 이전", "Blender"]
-excerpt: "블렌더 기초 통합본 2026-03-29 요약 주요 학습 내용 블렌더 인터페이스 : 뷰포트(작업 공간), 아웃라이너(오브젝트 관리), 속성창(설정 공간), 타임라인(애니메이션용) 화면 조작법 : 마우스 휠로 회전, Shift+휠로 이동, 휠 굴리기로 확대/축소, 물결키(\\~)로 객관적 각"
-description: "블렌더 기초 통합본 2026-03-29 요약 주요 학습 내용 블렌더 인터페이스 : 뷰포트(작업 공간), 아웃라이너(오브젝트 관리), 속성창(설정 공간), 타임라인(애니메이션용) 화면 조작법 : 마우스 휠로 회전, Shift+휠로 이동, 휠 굴리기로 확대/축소, 물결키(\\~)로 객관적 각"
+excerpt: "블렌더 인터페이스와 화면 조작, 편집 모드의 기본 도구를 학습하며 복습할 항목을 정리했다."
+description: "블렌더 인터페이스와 화면 조작, 편집 모드의 기본 도구를 학습하며 복습할 항목을 정리했다."
 published: true
 migration_id: "35e36532580e811fb86ef213e9701ea3"
 migration_status: "published"
@@ -14,16 +14,14 @@ migration_flags: ["source_citations_preserved_in_backup"]
 {% raw %}
 <b>블렌더 기초 통합본</b> 2026-03-29
 
-
 ## 요약
-
 
 ### 주요 학습 내용
 
 - <b>블렌더 인터페이스</b>: 뷰포트(작업 공간), 아웃라이너(오브젝트 관리), 속성창(설정 공간), 타임라인(애니메이션용) 
 - <b>화면 조작법</b>: 마우스 휠로 회전, Shift+휠로 이동, 휠 굴리기로 확대/축소, 물결키(\~)로 객관적 각도 전환 
 - <b>오브젝트 조작</b>: Shift+A로 생성, G(이동), R(회전), S(크기 조절), X/Y/Z축 고정 가능, Ctrl+Z로 되돌리기 
-- <b>메쉬 편집</b>: 탭키로 편집 모드 전환, 1(점), 2(선), 3(면) 모드, E키로 새로운 요소 추출, Ctrl+R로 면 나누기, Shift+Alt로 한 줄 선택, Alt+Z로 X-ray 모드 
+- <b>메시 편집</b>: 탭키로 편집 모드 전환, 1(점), 2(선), 3(면) 모드, E키로 새로운 요소 추출, Ctrl+R로 면 나누기, Shift+Alt로 한 줄 선택, Alt+Z로 X-ray 모드
 - <b>채색</b>: 레이아웃에서 셰이딩 탭으로 이동, 렌더드 모드 사용, Environment Texture로 HDRI 조명 설정, Material로 기본 재질 설정(색상, 메탈릭, 러프니스, 알파), 이미지 텍스처로 이미지 적용 
 - <b>조명</b>: Point Light(전방향), Sun Light(태양광), Spot Light(원뿔형), Area Light(면 조명), 속성창의 전구 아이콘에서 색상, 파워, 범위 등 설정 
 - <b>카메라</b>: Shift+A로 추가, G/R/S로 조절, 속성창에서 비율 설정, 넘버패드 0으로 카메라 뷰 전환, Perspective(원근), Orthographic(원근 없음), Panorama(360도) 카메라 타입, Focal Length와 Depth of Field 설정 
@@ -37,9 +35,7 @@ migration_flags: ["source_citations_preserved_in_backup"]
 
 - 모든 것을 한 번에 외우려 하지 말고, 실제 작품을 만들면서 필요할 때마다 찾아보고 복습하는 것이 효과적 
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

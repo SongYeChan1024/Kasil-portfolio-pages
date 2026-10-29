@@ -3,8 +3,8 @@ title: "2026-02-12_Elice수업 학습 내용"
 date: 2026-02-12 12:00:00 +0900
 categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Cinemachine 카메라 시스템 학습 2026-02-12 오전 요약 Action Items 포트폴리오에 Cinemachine을 적극 활용하여 카메라 연출 구현 1. FreeLookCamera 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 ^ 비"
-description: "Cinemachine 카메라 시스템 학습 2026-02-12 오전 요약 Action Items 포트폴리오에 Cinemachine을 적극 활용하여 카메라 연출 구현 1. FreeLookCamera 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 ^ 비"
+excerpt: "Cinemachine 카메라 연출과 머티리얼·조명·스카이박스의 기본 개념을 정리했다."
+description: "Cinemachine 카메라 연출과 머티리얼·조명·스카이박스의 기본 개념을 정리했다."
 published: true
 migration_id: "35e36532580e81fbabcdfe27fbdf4b90"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review"]
 {% raw %}
 <b>Cinemachine 카메라 시스템 학습</b> 2026-02-12 오전
 
-
 ## 요약
-
 
 ### Action Items
 
@@ -24,65 +22,62 @@ migration_flags: ["publication_review"]
 
 ### 1. FreeLookCamera
 
-- 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 [^{{[비공개 원문 참조]
-- Top, Middle, Bottom 3개의 리그(Rig)를 가지고 있으며, 상황에 따라 높이/거리/구도가 자연스럽게 섞임 [^{{[비공개 원문 참조]
+- 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(플레이어) 주변을 회전/상하 이동 [비공개 원문 참조]
+- Top, Middle, Bottom 3개의 리그(Rig)를 가지고 있으며, 상황에 따라 높이/거리/구도가 자연스럽게 섞임 [비공개 원문 참조]
   - Top: 위에서 내려다보는 구도 (전투/주변 파악용)
   - Middle: 기본 3인칭 추적 구도
   - Bottom: 아래에서 올려다보는 느낌 (긴장감/연출용)
-- Follow에 플레이어, Look에 플레이어 카메라 루트를 할당하여 설정 [^{{[비공개 원문 참조]
+- Follow에 플레이어, Look에 플레이어 카메라 루트를 할당하여 설정 [비공개 원문 참조]
 
 ### 2. BlendListCamera
 
-- 여러 개의 Virtual Camera를 정해진 순서대로 전환하면서 샷 리스트/미니 컷신 제작 [^{{[비공개 원문 참조]
-- 각 전환마다 블렌딩 시간(부드럽게 넘어가는 시간) 설정 가능 [^{{[비공개 원문 참조]
-- 시간 기반으로 순차적 카메라 전환 구현 [^{{[비공개 원문 참조]
-- Loop 옵션을 체크하여 반복 재생 가능 [^{{[비공개 원문 참조]
+- 여러 개의 Virtual Camera를 정해진 순서대로 전환하면서 샷 리스트/미니 컷신 제작 [비공개 원문 참조]
+- 각 전환마다 블렌딩 시간(부드럽게 넘어가는 시간) 설정 가능 [비공개 원문 참조]
+- 시간 기반으로 순차적 카메라 전환 구현 [비공개 원문 참조]
+- Loop 옵션을 체크하여 반복 재생 가능 [비공개 원문 참조]
 
 ### 3. State-DrivenCamera
 
-- Animator의 상태(State)를 기준으로 자동 카메라 전환 [^{{[비공개 원문 참조]
-- 캐릭터의 애니메이션 상태(Idle/Walk/Run 등)에 따라 해당 상황에 맞는 Virtual Camera 활성화 [^{{[비공개 원문 참조]
-- Animated Target에 플레이어 캐릭터 할당 필요 [^{{[비공개 원문 참조]
-- 실습 예시: Idle/Walk 상태에서는 보조카메라, Run 상태에서는 FreeLookCamera 작동 [^{{[비공개 원문 참조]
-- 응용: 총 쏘기, 필살기, 스킬 사용 시 카메라 전환에 활용 가능 [^{{[비공개 원문 참조]
+- Animator의 상태(State)를 기준으로 자동 카메라 전환 [비공개 원문 참조]
+- 캐릭터의 애니메이션 상태(Idle/Walk/Run 등)에 따라 해당 상황에 맞는 Virtual Camera 활성화 [비공개 원문 참조]
+- Animated Target에 플레이어 캐릭터 할당 필요 [비공개 원문 참조]
+- 실습 예시: Idle/Walk 상태에서는 보조카메라, Run 상태에서는 FreeLookCamera 작동 [비공개 원문 참조]
+- 응용: 총 쏘기, 필살기, 스킬 사용 시 카메라 전환에 활용 가능 [비공개 원문 참조]
 
 ### 4. ClearShotCamera
 
-- 여러 Virtual Camera 중 "지금 가장 잘 보이는 카메라"를 자동으로 선택하는 시스템 [^{{[비공개 원문 참조]
-- 목표물과 카메라 사이에 장애물이 나타나면 다른 카메라로 자동 전환 [^{{[비공개 원문 참조]
-- 플레이어가 건물 안/밖으로 이동할 때 시야 확보를 위한 카메라 전환에 유용 [^{{[비공개 원문 참조]
-- 실습: 3개의 카메라를 서로 다른 위치(건물 밖, 건물 안, 건물 뒤)에 배치하여 자동 전환 구현 [^{{[비공개 원문 참조]
+- 여러 Virtual Camera 중 "지금 가장 잘 보이는 카메라"를 자동으로 선택하는 시스템 [비공개 원문 참조]
+- 목표물과 카메라 사이에 장애물이 나타나면 다른 카메라로 자동 전환 [비공개 원문 참조]
+- 플레이어가 건물 안/밖으로 이동할 때 시야 확보를 위한 카메라 전환에 유용 [비공개 원문 참조]
+- 실습: 3개의 카메라를 서로 다른 위치(건물 밖, 건물 안, 건물 뒤)에 배치하여 자동 전환 구현 [비공개 원문 참조]
 
 ### 5. Dolly Camera with Track
 
-- 미리 만들어 둔 Track(레일) 위를 따라 카메라가 이동 [^{{[비공개 원문 참조]
-- 영화 촬영의 Dolly Shot 기법을 게임에 구현한 방식 [^{{[비공개 원문 참조]
-- Body 설정에서 Tracked Dolly 선택하고 Auto Dolly 체크 [^{{[비공개 원문 참조]
-- 플레이어를 따라다니면서 레일 위를 이동하는 수동적 추적 방식 [^{{[비공개 원문 참조]
-- 정밀하게 설계된 경로를 따라 이동하며 영화 같은 연출 가능 [^{{[비공개 원문 참조]
+- 미리 만들어 둔 Track(레일) 위를 따라 카메라가 이동 [비공개 원문 참조]
+- 영화 촬영의 Dolly Shot 기법을 게임에 구현한 방식 [비공개 원문 참조]
+- Body 설정에서 Tracked Dolly 선택하고 Auto Dolly 체크 [비공개 원문 참조]
+- 플레이어를 따라다니면서 레일 위를 이동하는 수동적 추적 방식 [비공개 원문 참조]
+- 정밀하게 설계된 경로를 따라 이동하며 영화 같은 연출 가능 [비공개 원문 참조]
 
 ### 6. Dolly Track with Cart
 
-- <b>Dolly Track</b>: 카메라 또는 오브젝트가 이동할 경로 데이터를 정의 [^{{[비공개 원문 참조]
-- <b>Dolly Cart</b>: Track 위를 따라 실제로 이동하는 이동 제어 컴포넌트 [^{{[비공개 원문 참조]
-- Body에서 Tracked Dolly 선택, Dolly Track 할당, Follow에 Dolly Cart 할당 [^{{[비공개 원문 참조]
-- Speed 설정으로 이동 속도 조절 가능 [^{{[비공개 원문 참조]
-- Loop 체크 해제 시 한 번만 재생 [^{{[비공개 원문 참조]
-- Dolly Camera with Track과의 차이: 타겟과 관계없이 카메라가 스스로 레일을 따라 이동하는 능동적 방식 [^{{[비공개 원문 참조]
+- <b>Dolly Track</b>: 카메라 또는 오브젝트가 이동할 경로 데이터를 정의 [비공개 원문 참조]
+- <b>Dolly Cart</b>: Track 위를 따라 실제로 이동하는 이동 제어 컴포넌트 [비공개 원문 참조]
+- Body에서 Tracked Dolly 선택, Dolly Track 할당, Follow에 Dolly Cart 할당 [비공개 원문 참조]
+- Speed 설정으로 이동 속도 조절 가능 [비공개 원문 참조]
+- Loop 체크 해제 시 한 번만 재생 [비공개 원문 참조]
+- Dolly Camera with Track과의 차이: 타겟과 관계없이 카메라가 스스로 레일을 따라 이동하는 능동적 방식 [비공개 원문 참조]
 
 ### 주요 학습 포인트
 
-- 과거에는 스크립트로 복잡하게 구현해야 했던 카메라 연출을 Cinemachine으로 코드 없이 구현 가능 [^{{[비공개 원문 참조]
+- 과거에는 스크립트로 복잡하게 구현해야 했던 카메라 연출을 Cinemachine으로 코드 없이 구현 가능 [비공개 원문 참조]
 - 각 카메라 타입의 특성을 이해하고 상황에 맞게 선택하여 사용
-- 포트폴리오 제작 시 Cinemachine을 적극 활용하여 전문적인 카메라 연출 구현 권장 [^{{[비공개 원문 참조]
-
+- 포트폴리오 제작 시 Cinemachine을 적극 활용하여 전문적인 카메라 연출 구현 권장 [비공개 원문 참조]
 
 ## 메모
 
-
 <details markdown="1">
 <summary>1.FreeLookCamera</summary>
-
 
 - 마우스가 움직이는 대로 카메라가 회전, 상황에 따라서 Top Middle Bottom 선택해서 사용
 - 마우스 입력(X/Y Axis)에 따라 카메라가 타겟(보통 플레이어) 주변을 <b>회전/상하 이동</b>한다.
@@ -93,12 +88,10 @@ migration_flags: ["publication_review"]
 
 </details>
 
-
 <details markdown="1">
 <summary>2.BledListCamera</summary>
 
-
-- 시네머신의 블랜드 리스트 카메라는 여러 개의 가상 카메라를 순차적으로 실행하여 일종의 ‘샷 리스트’나 ‘미니 컷신’을 만드는 컴포넌트
+- 시네머신의 블렌드 리스트 카메라는 여러 개의 가상 카메라를 순차적으로 실행하여 일종의 ‘샷 리스트’나 ‘미니 컷신’을 만드는 컴포넌트
 - 여러 개의 <b>Virtual Camera를 정해진 순서대로 전환</b>하면서,
 - 각 전환마다 \*\*블렌딩 시간(부드럽게 넘어가는 시간)을 줄 수 있어서
 - 간단한 <b>샷 리스트 / 미니 컷신</b>을 만들 수 있는 카메라다.
@@ -115,10 +108,8 @@ migration_flags: ["publication_review"]
 
 </details>
 
-
 <details markdown="1">
 <summary>3.State-DrivenCamera</summary>
-
 
 - 애니메이션 특정 동작 클립에 따라 카메라를 전환 시켜주는 기능
 - Animator의 상태(State)를 기준으로 자동으로 카메라를 전환한다.
@@ -152,10 +143,8 @@ Death / Finisher
 
 </details>
 
-
 <details markdown="1">
 <summary>4.ClearShotCamera</summary>
-
 
 - 목표물과 카메라 사이에 장애물이 나타나게 되면 카메라를 전환 시켜 목표물을 보여 줄 수 있게 하는 기능
 - 여러 개의 Virtual Camera 중에서
@@ -180,10 +169,8 @@ Death / Finisher
 
 </details>
 
-
 <details markdown="1">
 <summary>5.Dolly Camera with Track</summary>
-
 
 카메라를 미리 설정해 둔 레일(궤도)을 따라 움직이게 만드는 기능.
 
@@ -208,10 +195,8 @@ Death / Finisher
 
 </details>
 
-
 <details markdown="1">
 <summary>6\. Dolly Camera with Cart</summary>
-
 
 <b>Dolly Track과 Dolly Cart는 함께 사용되어, 정해진 레일(경로)을 따라 카메라나 오브젝트를 안정적으로 이동시키는 시네머신 기능이다.</b>
 
@@ -221,10 +206,8 @@ Death / Finisher
 
 </details>
 
-
 <details markdown="1">
 <summary>Dolly Track (Path / Smooth Path)</summary>
-
 
 - 카메라 또는 오브젝트가 이동할 <b>경로 데이터를 정의하는 컴포넌트</b>
 - 여러 개의 Waypoint를 설정하여 직선 또는 곡선 경로를 만들 수 있다.
@@ -233,13 +216,10 @@ Death / Finisher
 
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>Dolly Cart</summary>
-
 
 - Dolly Track 위를 따라 실제로 이동하는 <b>이동 제어 컴포넌트</b>
 - 속도 조절, 자동 이동, 스크립트 제어가 가능하다.
@@ -248,13 +228,10 @@ Death / Finisher
 
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>Virtual Camera</summary>
-
 
 - Dolly Cart에 부착되어 함께 이동하며
   <p>
@@ -265,12 +242,9 @@ Death / Finisher
 
 </details>
 
-
 ## Tracked Dolly vs Dolly Cart (핵심 차이)
 
-
 - [ ] <b>Tracked Dolly</b>
-
 
 - Virtual Camera의 Body 설정 내부에서 사용된다.
 - 타겟을 기준으로 카메라가 레일을 따라 움직이는
@@ -335,7 +309,7 @@ Death / Finisher
 
 여러개의 카메라를 섞어서 하나의 결과물을 만들어 준다.
 
-- 여러 Virtual Camera의 결과를 \*\*가중치(Weight)\*\*로 섞어서
+- 여러 Virtual Camera의 결과를 **가중치(Weight)**로 섞어서
 - 하나의 최종 카메라 결과를 만든다.
 
 한 줄 요약:
@@ -355,7 +329,6 @@ Death / Finisher
 <p>
 컷 전환이 아니라 <b>감정선처럼 스르륵 변하는 카메라</b>가 된다. 
 </p>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1232,117 +1205,112 @@ Y는 0.5cm정도 됐죠? 얘도 0.5cm
 
 </details>
 
-
 <b>ThirdPersonShootingGame 수업</b> 2026-02-12
-
 
 ## 요약
 
-
 ### Action Items
 
-- [ ] 프로젝트 에셋 다운로드 및 임포트 (TPS Assets, Weapon Effects) [^{{[비공개 원문 참조]
-- [ ] 스크립트 파일 제외하고 에셋 임포트하기 [^{{[비공개 원문 참조]
-- [ ] 프로젝트 폴더 구조 정리 (01\_Scenes, 02\_Scripts, 03\_Models, 04\_Sounds, 05\_Animations, 06\_Fonts, 07\_Images) [^{{[비공개 원문 참조]
-- [ ] PlayerCtrl 스크립트 작성 및 이동/회전 구현 [^{{[비공개 원문 참조]
+- [ ] 프로젝트 에셋 다운로드 및 임포트 (TPS Assets, Weapon Effects) [비공개 원문 참조]
+- [ ] 스크립트 파일 제외하고 에셋 임포트하기 [비공개 원문 참조]
+- [ ] 프로젝트 폴더 구조 정리 (01\_Scenes, 02\_Scripts, 03\_Models, 04\_Sounds, 05\_Animations, 06\_Fonts, 07\_Images) [비공개 원문 참조]
+- [ ] PlayerCtrl 스크립트 작성 및 이동/회전 구현 [비공개 원문 참조]
 
 ### Cinemachine 카메라 시스템 복습
 
-- <b>TargetGroupCamera</b>: 여러 목표물(플레이어, 큐브 등)을 동시에 프레임 안에 담아 촬영 [^{{[비공개 원문 참조]
-  - 보스전에서 플레이어와 보스를 함께 촬영할 때 유용 [^{{[비공개 원문 참조]
-  - Target Group에 오브젝트 추가하여 자동으로 구도 조정 [^{{[비공개 원문 참조]
-- <b>MixingCamera</b>: 여러 개의 Virtual Camera를 섞어서 하나의 결과물 생성 [^{{[비공개 원문 참조]
-  - 각 카메라의 비중(Weight)을 조절하여 혼합 효과 [^{{[비공개 원문 참조]
-  - 세 개의 자식 Virtual Camera를 다른 위치에 배치 후 비중 조절 [^{{[비공개 원문 참조]
+- <b>TargetGroupCamera</b>: 여러 목표물(플레이어, 큐브 등)을 동시에 프레임 안에 담아 촬영 [비공개 원문 참조]
+  - 보스전에서 플레이어와 보스를 함께 촬영할 때 유용 [비공개 원문 참조]
+  - Target Group에 오브젝트 추가하여 자동으로 구도 조정 [비공개 원문 참조]
+- <b>MixingCamera</b>: 여러 개의 Virtual Camera를 섞어서 하나의 결과물 생성 [비공개 원문 참조]
+  - 각 카메라의 비중(Weight)을 조절하여 혼합 효과 [비공개 원문 참조]
+  - 세 개의 자식 Virtual Camera를 다른 위치에 배치 후 비중 조절 [비공개 원문 참조]
 
 ### TPS 프로젝트 초기 설정
 
-- Unity 2022 버전, 3D Built-in Render Pipeline으로 프로젝트 생성 [^{{[비공개 원문 참조]
-- 제공된 에셋 임포트 및 폴더 구조 정리 완료 [^{{[비공개 원문 참조]
-- 스크립트 파일은 임포트하지 않고 직접 작성 예정 [^{{[비공개 원문 참조]
+- Unity 2022 버전, 3D Built-in Render Pipeline으로 프로젝트 생성 [비공개 원문 참조]
+- 제공된 에셋 임포트 및 폴더 구조 정리 완료 [비공개 원문 참조]
+- 스크립트 파일은 임포트하지 않고 직접 작성 예정 [비공개 원문 참조]
 
 ### 스테이지 제작
 
-- <b>바닥(Floor)</b>: Quad 오브젝트 사용 (한쪽 면만 렌더링되어 용량 절약) [^{{[비공개 원문 참조]
-  - Scale: X=40, Y=40, Rotation X=90 [^{{[비공개 원문 참조]
-  - Stylized Tile Texture의 Base Color와 Normal Map 적용 [^{{[비공개 원문 참조]
-  - Tiling 값을 20x20으로 설정하여 텍스처 반복 [^{{[비공개 원문 참조]
-  - Metallic 값 조절로 금속적 느낌 추가 [^{{[비공개 원문 참조]
-- <b>벽(Wall)</b>: Cube 오브젝트 사용 [^{{[비공개 원문 참조]
-  - Scale: X=40, Y=5, Z=0.5 [^{{[비공개 원문 참조]
-  - Brick Material 적용, Tiling X=5, Y=1로 설정 [^{{[비공개 원문 참조]
-  - V 키를 사용하여 정확한 모서리 스냅 [^{{[비공개 원문 참조]
-  - Ctrl+D로 복제하여 사방에 벽 배치 [^{{[비공개 원문 참조]
+- <b>바닥(Floor)</b>: Quad 오브젝트 사용 (한쪽 면만 렌더링되어 용량 절약) [비공개 원문 참조]
+  - Scale: X=40, Y=40, Rotation X=90 [비공개 원문 참조]
+  - Stylized Tile Texture의 Base Color와 Normal Map 적용 [비공개 원문 참조]
+  - Tiling 값을 20x20으로 설정하여 텍스처 반복 [비공개 원문 참조]
+  - Metallic 값 조절로 금속적 느낌 추가 [비공개 원문 참조]
+- <b>벽(Wall)</b>: Cube 오브젝트 사용 [비공개 원문 참조]
+  - Scale: X=40, Y=5, Z=0.5 [비공개 원문 참조]
+  - Brick Material 적용, Tiling X=5, Y=1로 설정 [비공개 원문 참조]
+  - V 키를 사용하여 정확한 모서리 스냅 [비공개 원문 참조]
+  - Ctrl+D로 복제하여 사방에 벽 배치 [비공개 원문 참조]
 
 ### 텍스처 및 머티리얼 개념 정리
 
-- <b>Shader</b>: 빛을 계산하고 표현하는 렌더링 규칙 [^{{[비공개 원문 참조]
-- <b>Material</b>: Shader에 색상과 텍스처를 적용한 표면 설정 [^{{[비공개 원문 참조]
-- <b>Texture</b>: 표면의 색상과 디테일 정보를 담은 이미지 데이터 [^{{[비공개 원문 참조]
-- <b>Albedo</b>: 빛 반사율, 기본 색상 정보 [^{{[비공개 원문 참조]
-- <b>Metallic</b>: 금속 재질 표현 텍스처 [^{{[비공개 원문 참조]
-- <b>Normal Map</b>: 표면의 세밀한 입체감 표현 [^{{[비공개 원문 참조]
-- <b>Height Map</b>: 텍스처 높낮이 표현, Occlusion 효과 [^{{[비공개 원문 참조]
-- <b>Occlusion</b>: 간접조명에 의한 명암 표현, 입체감 강조 [^{{[비공개 원문 참조]
-- <b>Emission</b>: 스스로 빛을 방출하는 속성 [^{{[비공개 원문 참조]
-- <b>Detail Mask</b>: Secondary Maps가 적용될 영역을 선택적으로 제한 [^{{[비공개 원문 참조]
+- <b>Shader</b>: 빛을 계산하고 표현하는 렌더링 규칙 [비공개 원문 참조]
+- <b>Material</b>: Shader에 색상과 텍스처를 적용한 표면 설정 [비공개 원문 참조]
+- <b>Texture</b>: 표면의 색상과 디테일 정보를 담은 이미지 데이터 [비공개 원문 참조]
+- <b>Albedo</b>: 빛 반사율, 기본 색상 정보 [비공개 원문 참조]
+- <b>Metallic</b>: 금속 재질 표현 텍스처 [비공개 원문 참조]
+- <b>Normal Map</b>: 표면의 세밀한 입체감 표현 [비공개 원문 참조]
+- <b>Height Map</b>: 텍스처 높낮이 표현, Occlusion 효과 [비공개 원문 참조]
+- <b>Occlusion</b>: 간접조명에 의한 명암 표현, 입체감 강조 [비공개 원문 참조]
+- <b>Emission</b>: 스스로 빛을 방출하는 속성 [비공개 원문 참조]
+- <b>Detail Mask</b>: Secondary Maps가 적용될 영역을 선택적으로 제한 [비공개 원문 참조]
 
 ### Skybox 설정
 
-- <b>6 Sided (CubeMap)</b>: 6개의 이미지(Back, Down, Front, Left, Right, Up)로 구성 [^{{[비공개 원문 참조]
-  - 드로우콜 6개 발생 [^{{[비공개 원문 참조]
-  - Window > Rendering > Lighting > Environment에서 설정 [^{{[비공개 원문 참조]
-- <b>Procedural Skybox</b>: 색상, 대기 농도, 노출, 태양 위치 등을 수치로 조절 [^{{[비공개 원문 참조]
-  - 드로우콜 1개 발생 (성능상 유리) [^{{[비공개 원문 참조]
-  - Sun Size, Atmosphere Thickness, Sky Tint, Ground, Exposure 파라미터 조절 [^{{[비공개 원문 참조]
-  - Directional Light 회전 시 태양도 함께 회전 [^{{[비공개 원문 참조]
-- <b>CubeMap Skybox</b>: 6장의 텍스처를 한 장으로 합친 형태 [^{{[비공개 원문 참조]
-  - 드로우콜 1개 발생 [^{{[비공개 원문 참조]
+- <b>6 Sided (CubeMap)</b>: 6개의 이미지(Back, Down, Front, Left, Right, Up)로 구성 [비공개 원문 참조]
+  - 드로우콜 6개 발생 [비공개 원문 참조]
+  - Window > Rendering > Lighting > Environment에서 설정 [비공개 원문 참조]
+- <b>Procedural Skybox</b>: 색상, 대기 농도, 노출, 태양 위치 등을 수치로 조절 [비공개 원문 참조]
+  - 드로우콜 1개 발생 (성능상 유리) [비공개 원문 참조]
+  - Sun Size, Atmosphere Thickness, Sky Tint, Ground, Exposure 파라미터 조절 [비공개 원문 참조]
+  - Directional Light 회전 시 태양도 함께 회전 [비공개 원문 참조]
+- <b>CubeMap Skybox</b>: 6장의 텍스처를 한 장으로 합친 형태 [비공개 원문 참조]
+  - 드로우콜 1개 발생 [비공개 원문 참조]
 
 ### 조명(Lighting) 설정
 
-- <b>Directional Light</b>: 태양과 같은 전체 균일 조명 [^{{[비공개 원문 참조]
-  - 위치는 상관없고 각도에 따라 그림자 방향 결정 [^{{[비공개 원문 참조]
-  - Shadow Type: No Shadow / Hard Shadow / Soft Shadow [^{{[비공개 원문 참조]
-  - 모바일 게임은 No Shadow 권장 (성능상 이유) [^{{[비공개 원문 참조]
-  - Rotation Y=50, X=120 정도로 설정 [^{{[비공개 원문 참조]
-  - Intensity=2, Color=흰색 설정 [^{{[비공개 원문 참조]
-- <b>Point Light</b>: 백열등처럼 중심에서 주변으로 퍼지는 조명, Range 설정 가능 [^{{[비공개 원문 참조]
-- <b>Spot Light</b>: 손전등처럼 한 방향으로 발하는 조명, 실시간 조명 중 가장 비용 높음 [^{{[비공개 원문 참조]
-- <b>Area Light</b>: 간접 조명, 라이트맵핑 필요 (추후 학습 예정) [^{{[비공개 원문 참조]
+- <b>Directional Light</b>: 태양과 같은 전체 균일 조명 [비공개 원문 참조]
+  - 위치는 상관없고 각도에 따라 그림자 방향 결정 [비공개 원문 참조]
+  - Shadow Type: No Shadow / Hard Shadow / Soft Shadow [비공개 원문 참조]
+  - 모바일 게임은 No Shadow 권장 (성능상 이유) [비공개 원문 참조]
+  - Rotation Y=50, X=120 정도로 설정 [비공개 원문 참조]
+  - Intensity=2, Color=흰색 설정 [비공개 원문 참조]
+- <b>Point Light</b>: 백열등처럼 중심에서 주변으로 퍼지는 조명, Range 설정 가능 [비공개 원문 참조]
+- <b>Spot Light</b>: 손전등처럼 한 방향으로 발하는 조명, 실시간 조명 중 가장 비용 높음 [비공개 원문 참조]
+- <b>Area Light</b>: 간접 조명, 라이트맵핑 필요 (추후 학습 예정) [비공개 원문 참조]
 
 ### Input System 설정
 
-- Project Settings에서 Active Input Handling을 "Both"로 설정 (Input Manager + Input System Package) [^{{[비공개 원문 참조]
-- 신입 사원이 자주 하는 업무: 옛날 Input Manager 방식을 새 Input System으로 전환 [^{{[비공개 원문 참조]
-- Player 오브젝트에 PlayerInput 컴포넌트 추가 [^{{[비공개 원문 참조]
-- Behavior: Invoke Unity Events로 설정 (Send Messages 대신) [^{{[비공개 원문 참조]
-- Create Actions 버튼으로 Input Action 자동 생성 [^{{[비공개 원문 참조]
-- TPSInput 스크립트 생성하여 입력 처리 분리 [^{{[비공개 원문 참조]
-- Move (Vector2), Look (Delta), Fire 액션 설정 완료 [^{{[비공개 원문 참조]
+- Project Settings에서 Active Input Handling을 "Both"로 설정 (Input Manager + Input System Package) [비공개 원문 참조]
+- 신입 사원이 자주 하는 업무: 옛날 Input Manager 방식을 새 Input System으로 전환 [비공개 원문 참조]
+- Player 오브젝트에 PlayerInput 컴포넌트 추가 [비공개 원문 참조]
+- Behavior: Invoke Unity Events로 설정 (Send Messages 대신) [비공개 원문 참조]
+- Create Actions 버튼으로 Input Action 자동 생성 [비공개 원문 참조]
+- TPSInput 스크립트 생성하여 입력 처리 분리 [비공개 원문 참조]
+- Move (Vector2), Look (Delta), Fire 액션 설정 완료 [비공개 원문 참조]
 
 ### 다음 학습 예정
 
-- Shader Graph를 이용한 셰이더 조정 [^{{[비공개 원문 참조]
-- Player 이동 및 회전 스크립트 구현 [^{{[비공개 원문 참조]
-- 프로젝트 완성 후 기획서 작성 예정 [^{{[비공개 원문 참조]
+- Shader Graph를 이용한 셰이더 조정 [비공개 원문 참조]
+- Player 이동 및 회전 스크립트 구현 [비공개 원문 참조]
+- 프로젝트 완성 후 기획서 작성 예정 [비공개 원문 참조]
 
 ### 주요 학습 포인트
 
-- 텍스처 해상도는 플랫폼에 따라 조절 필요 (모바일: 256\~512 권장) [^{{[비공개 원문 참조]
-- 그림자 렌더링이 가장 많은 부하 차지, 모바일은 No Shadow 권장 [^{{[비공개 원문 참조]
-- Skybox는 드로우콜 수를 고려하여 선택 (Procedural/CubeMap: 1, 6Sided: 6) [^{{[비공개 원문 참조]
-- V 키 활용으로 오브젝트 모서리 정확히 스냅 가능 [^{{[비공개 원문 참조]
-
+- 텍스처 해상도는 플랫폼에 따라 조절 필요 (모바일: 256\~512 권장) [비공개 원문 참조]
+- 그림자 렌더링이 가장 많은 부하 차지, 모바일은 No Shadow 권장 [비공개 원문 참조]
+- Skybox는 드로우콜 수를 고려하여 선택 (Procedural/CubeMap: 1, 6Sided: 6) [비공개 원문 참조]
+- V 키 활용으로 오브젝트 모서리 정확히 스냅 가능 [비공개 원문 참조]
 
 ## 메모
-
 
 ThirdPersonShootingGame
 
 1.스테이지 제작
 
-셰이더 머터리얼 텍스쳐
+셰이더 머티리얼 텍스처
 
 스카이박스 6Sided cupMap 프로시저럴Map
 
@@ -1350,35 +1318,35 @@ ThirdPersonShootingGame
 
 Albedo 알베도
 
-빛을 반사하는 정도 반사율 셰이딩을 위한 텍스쳐
+빛을 반사하는 정도 반사율 셰이딩을 위한 텍스처
 
 Metalic 메탈릭 속성
 
-객체 표면에 금속의 재질을 표현 하기 위한 텍스쳐
+객체 표면에 금속의 재질을 표현하기 위한 텍스처
 
 노멀맵 NormalMap
 
 <p>
-표면의 세밀한 입체감이나 질감을 표현하기 위한 텍스쳐 
+표면의 세밀한 입체감이나 질감을 표현하기 위한 텍스처
 </p>
 
 Height Map
 
-텍스쳐의 높낮이를 표현하기 위한 텍스쳐 노멀맵과 비슷하지만 좀 더 돌출 시켜 뒤에 있는 물체를 가리는 (occlusion)효과를 냄
+텍스처의 높낮이를 표현하기 위한 텍스처 노멀맵과 비슷하지만 좀 더 돌출 시켜 뒤에 있는 물체를 가리는 (occlusion)효과를 냄
 
 <p>
 Occlusion 
 </p>
 
-흑백의 텍스쳐로 간접조명에 의해 생기는 명암을 더욱 뚜렷하게 표현해 사물의 입체감과 깊이감을 살리는 역할
+흑백의 텍스처로 간접조명에 의해 생기는 명암을 더욱 뚜렷하게 표현해 사물의 입체감과 깊이감을 살리는 역할
 
 Emission 에미션
 
 스스로 빛을 방출 하는 속성
 
-Detail Mask 디테일 마스크<br />Secondary Maps 에 적용할 마스크를 설정하는 텍스쳐 슬롯
+Detail Mask 디테일 마스크<br />Secondary Maps 에 적용할 마스크를 설정하는 텍스처 슬롯
 
-특정 부분만 좀 더 세부적인 텍스쳐를 표현할 때 사용
+특정 부분만 좀 더 세부적인 텍스처를 표현할 때 사용
 
 스카이박스 6\_Sided 6드로우 콜(draw call)
 
@@ -1387,12 +1355,12 @@ Detail Mask 디테일 마스크<br />Secondary Maps 에 적용할 마스크를 �
 프로시저럴(Procedural) 1드로우 콜(draw call)
 
 <p>
-하늘에 색상 대기 농도 노출(밝기) 태양의 위치와 크기 등을 설정 해서 스카이박스를 구성 
+하늘에 색상 대기 농도 노출(밝기) 태양의 위치와 크기 등을 설정해서 스카이박스를 구성
 </p>
 
 큐브 맵 스카이박스 1드로우콜 (draw call)
 
-cubeMap skybox 방식은 먼저 큐브맵을 생성한 후 하늘을<br />표현한다. 큐브맵은 여섯방면 스카이박스와 마찬가지로<br />6장의 텍스처가 필요하며 주변 환경을 반사하는 효과에<br />주로 사용한다. 여섯방면의 이미지가 한장의 텍스처에<br />있어야 한 다.<br />skydom 방식은 게임특성에 따라 카메라 볼수 있는<br />최대거리를 제한 할때는 skydom방식을 적용하는 것이<br />적합하지 않다
+cubeMap skybox 방식은 먼저 큐브맵을 생성한 후 하늘을<br />표현한다. 큐브맵은 여섯방면 스카이박스와 마찬가지로<br />6장의 텍스처가 필요하며 주변 환경을 반사하는 효과에<br />주로 사용한다. 여섯방면의 이미지가 한장의 텍스처에<br />있어야 한다.<br />skydom 방식은 게임 특성에 따라 카메라가 볼 수 있는<br />최대거리를 제한할 때는 skydom방식을 적용하는 것이<br />적합하지 않다
 
 ---
 
@@ -1540,7 +1508,7 @@ Normal보다 더 강한 입체감을 제공.
 
 - Shader는 단순한 그래픽 옵션이 아니라
   <p>
-  👉 \*\*"빛을 설계하는 기술"\*\*이라는 것을 이해했다.
+  👉 **"빛을 설계하는 기술"**이라는 것을 이해했다.
   </p>
 - Normal / Metallic / Occlusion의 조합이
   <p>
@@ -1581,7 +1549,7 @@ Normal보다 더 강한 입체감을 제공.
   오히려 가독성이 떨어질 수 있다.
   </p>
 
-👉 \*\*"강조하고 싶은 오브젝트에만 선택적으로 사용"\*\*하는 것이 중요하다.
+👉 **"강조하고 싶은 오브젝트에만 선택적으로 사용"**하는 것이 중요하다.
 
 ---
 
@@ -1762,7 +1730,6 @@ Skybox는 씬 전체를 감싸는 배경으로,
   <p>
   스카이돔 메시가 클리핑되어 잘릴 수 있으므로 주의가 필요하다.
   </p>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -3258,7 +3225,6 @@ D-I-R 어제 그대로 할께요 D-I-R U
 
 
 </details>
-
 
 ```cs
 using System.Collections;

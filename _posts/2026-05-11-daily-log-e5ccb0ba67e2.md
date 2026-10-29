@@ -3,8 +3,8 @@ title: "데일리로그260511"
 date: 2026-05-11 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "기본 정보 날짜: 2026-05-11 주제: Unity XR — Grab(Attach/Dynamic Attach) + 양손 잡기(Select Mode: Multiple) + Activate(발사) + XR UI + AR Foundation 개요 작성자: 작성자 오늘 한 일(요약) XR "
-description: "기본 정보 날짜: 2026-05-11 주제: Unity XR — Grab(Attach/Dynamic Attach) + 양손 잡기(Select Mode: Multiple) + Activate(발사) + XR UI + AR Foundation 개요 작성자: 작성자 오늘 한 일(요약) XR "
+excerpt: "XR Grab Interactable의 잡기 위치와 양손 잡기를 실습하고, 발사 입력·XR UI·AR Foundation의 기초를 살펴봤다."
+description: "XR Grab Interactable의 잡기 위치와 양손 잡기를 실습하고, 발사 입력·XR UI·AR Foundation의 기초를 살펴봤다."
 published: true
 migration_id: "35e36532580e817183c0e5ccb0ba67e2"
 migration_status: "published"

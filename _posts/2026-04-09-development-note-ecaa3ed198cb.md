@@ -3,8 +3,8 @@ title: "에피소드 3 키워드 별 위치, 선정 이유"
 date: 2026-04-09 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "키워드 - Melody(선율),Rhythm(장단/리듬),Harmony(화성/화음) Episode 3 Scene 키워드 선정 및 위치 키워드 - Melody(선율), Rhythm(장단/리듬), Harmony(화성/화음) Episode 3-1 Scene → 선율(Melody) 선율은 곡의 "
-description: "키워드 - Melody(선율),Rhythm(장단/리듬),Harmony(화성/화음) Episode 3 Scene 키워드 선정 및 위치 키워드 - Melody(선율), Rhythm(장단/리듬), Harmony(화성/화음) Episode 3-1 Scene → 선율(Melody) 선율은 곡의 "
+excerpt: "Melody·Rhythm·Harmony를 에피소드 3의 공간과 퍼즐에 배치한 이유 및 상징을 정리했다."
+description: "Melody·Rhythm·Harmony를 에피소드 3의 공간과 퍼즐에 배치한 이유 및 상징을 정리했다."
 published: true
 migration_id: "35e36532580e81cdbe2aecaa3ed198cb"
 migration_status: "published"

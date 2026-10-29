@@ -3,8 +3,8 @@ title: "2026-02-13_엘리스 수업"
 date: 2026-02-13 12:00:00 +0900
 categories: ["수업 노트", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "2026-02-13 엘리스 Unity 수업 2026-02-13 요약 주요 학습 내용 Draw Call 최적화 Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정 ^ 비공개 원문 참조 Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하 ^ 비공개 원문"
-description: "2026-02-13 엘리스 Unity 수업 2026-02-13 요약 주요 학습 내용 Draw Call 최적화 Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정 ^ 비공개 원문 참조 Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하 ^ 비공개 원문"
+excerpt: "드로 콜과 배칭, LOD, 충돌 레이어 등 Unity 최적화 개념과 const·readonly의 차이를 정리했다."
+description: "드로 콜과 배칭, LOD, 충돌 레이어 등 Unity 최적화 개념과 const·readonly의 차이를 정리했다."
 published: true
 migration_id: "35e36532580e8131bb22c0af2bd584f0"
 migration_status: "published"
@@ -14,60 +14,56 @@ migration_flags: ["privacy_review", "publication_review"]
 {% raw %}
 <b>2026-02-13 엘리스 Unity 수업</b> 2026-02-13
 
-
 ## 요약
-
 
 ### 주요 학습 내용
 
 ### Draw Call 최적화
 
-- Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정[^{{[비공개 원문 참조]
-- Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하[^{{[비공개 원문 참조]
-- 최적화 방법: Batching, GPU Instancing, Occlusion Culling, LOD[^{{[비공개 원문 참조]
+- Draw Call은 CPU가 GPU에게 렌더링 명령을 내리는 과정[비공개 원문 참조]
+- Draw Call이 많아지면 병목 현상 발생으로 프레임 드롭 및 성능 저하[비공개 원문 참조]
+- 최적화 방법: Batching, GPU Instancing, Occlusion Culling, LOD[비공개 원문 참조]
 
 ### Built-in vs URP 렌더 파이프라인
 
-- Built-in: 광원 개수만큼 Draw Call 발생 (광원 5개 = Draw Call 5번)[^{{[비공개 원문 참조]
-- URP: 여러 광원을 한 번의 Draw Call로 처리하여 성능 최적화[^{{[비공개 원문 참조]
-- URP 사용 이유: 성능 향상, 모바일 최적화, 현대적인 렌더링 기법[^{{[비공개 원문 참조]
+- Built-in: 광원 개수만큼 Draw Call 발생 (광원 5개 = Draw Call 5번)[비공개 원문 참조]
+- URP: 여러 광원을 한 번의 Draw Call로 처리하여 성능 최적화[비공개 원문 참조]
+- URP 사용 이유: 성능 향상, 모바일 최적화, 현대적인 렌더링 기법[비공개 원문 참조]
 
 ### 애니메이션 시스템
 
-- <b>CrossFade</b>: 이전 동작과 현재 동작을 부드럽게 섞어주는 기법[^{{[비공개 원문 참조]
-- 블렌딩을 통해 두 애니메이션을 동시 재생하며 가중치 조절[^{{[비공개 원문 참조]
-- Play()는 즉시 전환되어 끊김 발생 가능, CrossFade()는 지정 시간 동안 부드럽게 전환[^{{[비공개 원문 참조]
-- 실습: PlayerCTRL 스크립트에서 이동 애니메이션 구현 (Idle, RunF, RunB, RunL, RunR, SprintF)[^{{[비공개 원문 참조]
+- <b>CrossFade</b>: 이전 동작과 현재 동작을 부드럽게 섞어주는 기법[비공개 원문 참조]
+- 블렌딩을 통해 두 애니메이션을 동시 재생하며 가중치 조절[비공개 원문 참조]
+- Play()는 즉시 전환되어 끊김 발생 가능, CrossFade()는 지정 시간 동안 부드럽게 전환[비공개 원문 참조]
+- 실습: PlayerCTRL 스크립트에서 이동 애니메이션 구현 (Idle, RunF, RunB, RunL, RunR, SprintF)[비공개 원문 참조]
 
 ### LOD (Level of Detail)
 
-- 카메라와의 거리에 따라 오브젝트 디테일 자동 조절[^{{[비공개 원문 참조]
-- 거리별 메시 단계: LOD0(최고 품질) → LOD1 → LOD2(최저 품질)[^{{[비공개 원문 참조]
-- 렌더링 부하 감소 및 프레임 레이트 향상 효과[^{{[비공개 원문 참조]
+- 카메라와의 거리에 따라 오브젝트 디테일 자동 조절[비공개 원문 참조]
+- 거리별 메시 단계: LOD0(최고 품질) → LOD1 → LOD2(최저 품질)[비공개 원문 참조]
+- 렌더링 부하 감소 및 프레임 레이트 향상 효과[비공개 원문 참조]
 
 ### Physics Manager
 
-- Unity 물리 엔진의 전역 설정 관리 시스템[^{{[비공개 원문 참조]
-- 주요 설정: Gravity, Default Material, Bounce Threshold, Sleep Threshold 등[^{{[비공개 원문 참조]
-- Layer Collision Matrix로 불필요한 충돌 연산 제거하여 성능 최적화[^{{[비공개 원문 참조]
+- Unity 물리 엔진의 전역 설정 관리 시스템[비공개 원문 참조]
+- 주요 설정: Gravity, Default Material, Bounce Threshold, Sleep Threshold 등[비공개 원문 참조]
+- Layer Collision Matrix로 불필요한 충돌 연산 제거하여 성능 최적화[비공개 원문 참조]
 
 ### C# 프로그래밍 개념
 
-- <b>const</b>: 컴파일 타임에 결정되는 진짜 상수, 기본 자료형만 가능[^{{[비공개 원문 참조]
-- <b>readonly</b>: 런타임에 생성자에서 한 번 정해지고 고정되는 값, 모든 자료형 가능[^{{[비공개 원문 참조]
-- 태그/레이어/애니메이션 이름 등 고정값은 const, 나중에 결정되는 값은 static readonly 권장[^{{[비공개 원문 참조]
+- <b>const</b>: 컴파일 타임에 결정되는 진짜 상수, 기본 자료형만 가능[비공개 원문 참조]
+- <b>readonly</b>: 런타임에 생성자에서 한 번 정해지고 고정되는 값, 모든 자료형 가능[비공개 원문 참조]
+- 태그/레이어/애니메이션 이름 등 고정값은 const, 나중에 결정되는 값은 static readonly 권장[비공개 원문 참조]
 
 ### 실습 내용
 
 - Legacy 애니메이션 시스템으로 플레이어 이동 및 애니메이션 구현
-- FixedUpdate에서 Rigidbody를 사용한 물리 기반 이동 처리[^{{[비공개 원문 참조]
-- 조건 연산자로 Walk/Run 속도 전환 구현[^{{[비공개 원문 참조]
-- 그림자 효과: Blob Shadow Projector 사용하여 모바일 최적화[^{{[비공개 원문 참조]
-- 총알 발사 시스템: Bullet 프리팹 생성 및 Layer Collision Matrix 설정[^{{[비공개 원문 참조]
-
+- FixedUpdate에서 Rigidbody를 사용한 물리 기반 이동 처리[비공개 원문 참조]
+- 조건 연산자로 Walk/Run 속도 전환 구현[비공개 원문 참조]
+- 그림자 효과: Blob Shadow Projector 사용하여 모바일 최적화[비공개 원문 참조]
+- 총알 발사 시스템: Bullet 프리팹 생성 및 Layer Collision Matrix 설정[비공개 원문 참조]
 
 ## 메모
-
 
 ## 📊 Draw Call이란?
 
@@ -130,11 +126,9 @@ CrossFade는 애니메이션 전환 시 이전 동작과 현재 동작을 부드
 
 ### ✔ CrossFade 사용 예시
 
-
 <details markdown="1">
 <summary>
 </summary>
-
 
 ```cs
 using System.Collections;
@@ -276,7 +270,6 @@ public class PlayerCTRL : MonoBehaviour
 
 </details>
 
-
 ### ✔ CrossFade vs Play의 차이
 
 <b>Play():</b> 즉시 애니메이션을 전환 (끊김 발생 가능)
@@ -372,13 +365,9 @@ Physics Manager는 Unity에서 물리 엔진의 전역 설정을 관리하는 �
   ✅ <code>static readonly</code> 추천
   </p>
 
-  
-
-
   <p>
   Resources 폴더
   </p>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

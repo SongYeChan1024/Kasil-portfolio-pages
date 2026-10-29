@@ -3,8 +3,8 @@ title: "2026-05-07 개발 메모"
 date: 2026-05-07 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "VR 인터랙션 시스템 (Climb, Haptic, Gaze) 2026-05-07 요약 오늘 수업 핵심 요약 Climb Interactable 을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다. Teleportation Anchor 와 Teleportation Multi Anch"
-description: "VR 인터랙션 시스템 (Climb, Haptic, Gaze) 2026-05-07 요약 오늘 수업 핵심 요약 Climb Interactable 을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다. Teleportation Anchor 와 Teleportation Multi Anch"
+excerpt: "Climb Interactable을 활용한 사다리 등반과 Haptic·Gaze 기반 VR 상호작용을 정리했다."
+description: "Climb Interactable을 활용한 사다리 등반과 Haptic·Gaze 기반 VR 상호작용을 정리했다."
 published: true
 migration_id: "35e36532580e8118a2e7da5ff99a41e1"
 migration_status: "published"
@@ -14,39 +14,37 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>VR 인터랙션 시스템 (Climb, Haptic, Gaze)</b> 2026-05-07
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- <b>Climb Interactable</b>을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다. 
-- <b>Teleportation Anchor</b>와 <b>Teleportation Multi Anchor Volume</b>을 사용하여 사다리 오르기 시 위치 이동을 관리하는 원리를 이해했습니다. 
-- <b>XR Interaction Toolkit</b>의 다양한 컴포넌트와 인터랙터 시스템을 활용하여 VR 상호작용을 구현하는 방법을 학습했습니다. 
-- VR 게임 개발에서 Haptic(진동), Gaze(시선 처리) 등 다양한 인터랙션 요소를 다루는 방법을 배웠으며, 이를 바탕으로 개인 VR 게임을 제작할 예정입니다. 
+- <b>Climb Interactable</b>을 활용한 사다리 오르기 기능을 구현하는 방법을 배웠습니다.
+- <b>Teleportation Anchor</b>와 <b>Teleportation Multi Anchor Volume</b>을 사용하여 사다리 오르기 시 위치 이동을 관리하는 원리를 이해했습니다.
+- <b>XR Interaction Toolkit</b>의 다양한 컴포넌트와 인터랙터 시스템을 활용하여 VR 상호작용을 구현하는 방법을 학습했습니다.
+- VR 게임 개발에서 Haptic(진동), Gaze(시선 처리) 등 다양한 인터랙션 요소를 다루는 방법을 배웠으며, 이를 바탕으로 개인 VR 게임을 제작할 예정입니다.
 
 ---
 
 ### 주요 개념 정리
 
 - <b>Climb Interactable</b>
-  - 설명: VR에서 사다리나 벽을 오르는 기능을 구현하는 컴포넌트 
-  - 사용되는 상황: 사다리 오르기, 암벽 등반 등 수직 이동이 필요한 경우 
-  - 헷갈릴 수 있는 점: Climb Interactable을 추가하면 Rigidbody가 자동으로 생성됨 
+  - 설명: VR에서 사다리나 벽을 오르는 기능을 구현하는 컴포넌트
+  - 사용되는 상황: 사다리 오르기, 암벽 등반 등 수직 이동이 필요한 경우
+  - 헷갈릴 수 있는 점: Climb Interactable을 추가하면 Rigidbody가 자동으로 생성됨
 - <b>Teleportation Anchor</b>
-  - 설명: 텔레포트 이동 시 정확한 위치와 방향을 지정하는 기능 
-  - 예시: 목표물 앞이나 옆의 특정 위치로 이동하도록 설정 
+  - 설명: 텔레포트 이동 시 정확한 위치와 방향을 지정하는 기능
+  - 예시: 목표물 앞이나 옆의 특정 위치로 이동하도록 설정
   - 사용되는 상황: 플레이어가 특정 위치로 정확하게 이동해야 할 때
 - <b>Teleportation Multi Anchor Volume</b>
-  - 설명: 사다리 오르기처럼 여러 앵커 위치를 관리하며, 가장 가까운 지점으로 이동하게 하는 시스템 
-  - 예시: Bottom Anchor, Middle Anchor, Top Anchor를 관리하여 사다리의 각 위치로 이동 
-  - 사용되는 상황: 사다리 오르기처럼 연속적인 위치 이동이 필요한 경우 
+  - 설명: 사다리 오르기처럼 여러 앵커 위치를 관리하며, 가장 가까운 지점으로 이동하게 하는 시스템
+  - 예시: Bottom Anchor, Middle Anchor, Top Anchor를 관리하여 사다리의 각 위치로 이동
+  - 사용되는 상황: 사다리 오르기처럼 연속적인 위치 이동이 필요한 경우
 - <b>XR Interactable Affordance State Provider</b>
-  - 설명: 인터랙션이 가능한 오브젝트의 상태를 감지해서 시각적으로 알려주는 역할 
-  - 사용되는 상황: 오디오 피드백, 시각적 UI 효과, Haptic 진동 등을 구현할 때 
-  - 헷갈릴 수 있는 점: 기능을 직접 실행하는 것이 아니라 중재자 역할만 함 
+  - 설명: 인터랙션이 가능한 오브젝트의 상태를 감지해서 시각적으로 알려주는 역할
+  - 사용되는 상황: 오디오 피드백, 시각적 UI 효과, Haptic 진동 등을 구현할 때
+  - 헷갈릴 수 있는 점: 기능을 직접 실행하는 것이 아니라 중재자 역할만 함
 - <b>Near-Far Interactor</b>
-  - 설명: 가까이 있으면 Grab으로 동작하고, 멀리 있으면 Ray로 동작하는 인터랙터 
+  - 설명: 가까이 있으면 Grab으로 동작하고, 멀리 있으면 Ray로 동작하는 인터랙터
   - 사용되는 상황: 거리에 따라 상호작용 방식을 자동으로 전환해야 할 때
 
 ---
@@ -55,51 +53,51 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 ### 1. Teleportation Anchor 복습 및 활용
 
-- 설명: 이전 수업에서 배운 Teleportation Anchor를 활용하여 원하는 위치로 이동하는 방법을 복습했습니다. 
-- 예시: Anchor 안에 빈 오브젝트를 만들고, Transform을 원하는 위치로 설정 
+- 설명: 이전 수업에서 배운 Teleportation Anchor를 활용하여 원하는 위치로 이동하는 방법을 복습했습니다.
+- 예시: Anchor 안에 빈 오브젝트를 만들고, Transform을 원하는 위치로 설정
 - 중요한 이유: Climb 기능 구현 시 위치 이동 관리의 기본이 됨
 
 ### 2. Climb Interactable 기본 구조 이해
 
-- 설명: 사다리 프리팹을 통해 Climb 시스템의 구조를 분석했습니다. 
-- 예시: Ladder 프리팹에는 Bottom Anchor, Middle Anchor, Top Anchor가 있으며, 각 앵커가 텔레포트 위치를 관리 
-- 중요한 이유: 사다리 오르기는 실제로 텔레포트를 활용한 위치 이동임을 이해 
+- 설명: 사다리 프리팹을 통해 Climb 시스템의 구조를 분석했습니다.
+- 예시: Ladder 프리팹에는 Bottom Anchor, Middle Anchor, Top Anchor가 있으며, 각 앵커가 텔레포트 위치를 관리
+- 중요한 이유: 사다리 오르기는 실제로 텔레포트를 활용한 위치 이동임을 이해
 
 ### 3. Handles와 Climb Interactable 설정
 
-- 설명: 사다리의 Handles(손잡이)에 Climb Interactable 컴포넌트를 추가하여 오르기 기능을 구현 
-- 예시: Left Side와 Right Side 밑에 여러 실린더 오브젝트를 배치하고, 각각에 Climb Interactable 추가 
-- 중요: Interactable이 작동하려면 Interactor가 필요함 
+- 설명: 사다리의 Handles(손잡이)에 Climb Interactable 컴포넌트를 추가하여 오르기 기능을 구현
+- 예시: Left Side와 Right Side 밑에 여러 실린더 오브젝트를 배치하고, 각각에 Climb Interactable 추가
+- 중요: Interactable이 작동하려면 Interactor가 필요함
 
 ### 4. XR Interactable Affordance State Provider 이해
 
-- 설명: 인터랙션 상태를 감지하여 시각적/청각적 피드백을 제공하는 컴포넌트의 역할을 학습 
-- 예시: Ignore Hover, Ignore Select 등의 설정으로 특정 상태만 시각적으로 표시 
+- 설명: 인터랙션 상태를 감지하여 시각적/청각적 피드백을 제공하는 컴포넌트의 역할을 학습
+- 예시: Ignore Hover, Ignore Select 등의 설정으로 특정 상태만 시각적으로 표시
 - 중요한 이유: UI 효과, 색상 변경, Haptic 피드백 등 다양한 상호작용 효과 구현에 활용
 
 ### 5. Color Affordance와 Material Property 설정
 
-- 설명: 오브젝트의 색상을 변경하여 상호작용 가능 여부를 시각적으로 표시 
-- 예시: 실린더에 Color Material Property Affordance Receiver와 렌더링 기능 추가 
+- 설명: 오브젝트의 색상을 변경하여 상호작용 가능 여부를 시각적으로 표시
+- 예시: 실린더에 Color Material Property Affordance Receiver와 렌더링 기능 추가
 
 ### 6. Near-Far Interactor 복사 및 설정
 
-- 설명: Near-Far Interactor를 XR Origin에서 복사하여 Controller에 추가 
-- 예시: Sample 프리팹 폴더에서 Near-Far Interactor를 찾아 컨트롤러에 붙여넣기 
+- 설명: Near-Far Interactor를 XR Origin에서 복사하여 Controller에 추가
+- 예시: Sample 프리팹 폴더에서 Near-Far Interactor를 찾아 컨트롤러에 붙여넣기
 - 중요한 이유: Climb 기능이 작동하려면 적절한 Interactor가 필요
 
 ---
 
 ### 실습 / 작업 순서
 
-1. 빈 오브젝트를 Anchor 안에 생성하고 원하는 위치로 이동 
-2. Anchor의 Teleportation Anchor 컴포넌트에서 Transform 지정 
-3. Sample 프리팹 폴더에서 Ladder 프리팹 찾기 
-4. Ladder 프리팹을 씬에 배치 
-5. Multi Floor Ladder도 씬에 추가 
-6. Ladder 구조 분석: Handles > 실린더들 > Climb Interactable 확인 
-7. XR Origin > Sample > 프리팹 폴더에서 Near-Far Interactor 찾기 
-8. Near-Far Interactor를 복사하여 Controller 하위에 붙여넣기 
+1. 빈 오브젝트를 Anchor 안에 생성하고 원하는 위치로 이동
+2. Anchor의 Teleportation Anchor 컴포넌트에서 Transform 지정
+3. Sample 프리팹 폴더에서 Ladder 프리팹 찾기
+4. Ladder 프리팹을 씬에 배치
+5. Multi Floor Ladder도 씬에 추가
+6. Ladder 구조 분석: Handles > 실린더들 > Climb Interactable 확인
+7. XR Origin > Sample > 프리팹 폴더에서 Near-Far Interactor 찾기
+8. Near-Far Interactor를 복사하여 Controller 하위에 붙여넣기
 9. 테스트 진행
 
 ---
@@ -122,29 +120,29 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 ### 예시와 활용 사례
 
 - 예시 1: Teleportation Anchor 활용
-  - 상황: 목표물 앞으로 정확하게 이동하고 싶을 때 
+  - 상황: 목표물 앞으로 정확하게 이동하고 싶을 때
   - 설명: Anchor Transform을 목표물 앞이나 옆으로 설정하여 정확한 위치로 이동
-  - 왜 이 예시를 사용했는지: Area나 Anchor를 적절히 활용하면 게임에서 다양한 이동 방식 구현 가능 
+  - 왜 이 예시를 사용했는지: Area나 Anchor를 적절히 활용하면 게임에서 다양한 이동 방식 구현 가능
 - 예시 2: 사다리 구조 분석
-  - 상황: Ladder 프리팹의 내부 구조 이해 
+  - 상황: Ladder 프리팹의 내부 구조 이해
   - 설명: Bottom/Middle/Top Anchor로 3개의 앵커 위치 관리, Left Side/Right Side에 각각 Handles 배치
-  - 왜 이 예시를 사용했는지: 사다리가 아닌 암벽 등 다른 오르기 시스템을 만들 때도 같은 원리 적용 가능 
+  - 왜 이 예시를 사용했는지: 사다리가 아닌 암벽 등 다른 오르기 시스템을 만들 때도 같은 원리 적용 가능
 - 예시 3: XR Interaction Toolkit의 암기 방식
-  - 상황: 다양한 컴포넌트와 시스템이 있어 복잡함 
+  - 상황: 다양한 컴포넌트와 시스템이 있어 복잡함
   - 설명: 각 컴포넌트가 무엇을 하는지 종목만 알고, 응용하는 방식으로 학습
-  - 왜 이 예시를 사용했는지: XR Interaction Toolkit은 거의 암기가 필요하며, 기본 개념을 알면 응용 가능 
+  - 왜 이 예시를 사용했는지: XR Interaction Toolkit은 거의 암기가 필요하며, 기본 개념을 알면 응용 가능
 
 ---
 
 ### 헷갈릴 수 있는 부분
 
-- 헷갈리는 개념: Climb Interactable과 Simple Interactable 
+- 헷갈리는 개념: Climb Interactable과 Simple Interactable
 - 헷갈리는 이유: 처음에 Simple Interactable을 추가했다가 Remove Component 함
 - 구분 방법: 사다리 오르기는 Climb Interactable을 사용해야 함
-- 헷갈리는 개념: XR Interactable Affordance State Provider의 역할 
+- 헷갈리는 개념: XR Interactable Affordance State Provider의 역할
 - 헷갈리는 이유: 이름이 복잡하고 직접적인 기능을 수행하는 것처럼 보임
 - 구분 방법: 실제 기능을 수행하는 것이 아니라 상태를 감지해서 시각적으로 알려주는 중재자 역할만 함
-- 헷갈리는 개념: 사다리 오르기와 텔레포트의 관계 
+- 헷갈리는 개념: 사다리 오르기와 텔레포트의 관계
 - 헷갈리는 이유: 겉으로는 기어서 올라가는 것처럼 보임
 - 구분 방법: 실제로는 텔레포트를 이용해서 가까운 앵커 지점으로 순차적으로 이동하는 방식
 
@@ -152,10 +150,10 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 ### 질문할 내용
 
-- [ ] Near-Far Interactor의 Input Configuration 설정 방법 확인 
-- [ ] Climb Provider의 Move Speed 테스트 및 적정값 확인 
-- [ ] Multi Floor Ladder와 일반 Ladder의 차이점 확인 
-- [ ] Haptic과 Gaze 기능 구현 방법 (다음 수업에서 진행 예정) 
+- [ ] Near-Far Interactor의 Input Configuration 설정 방법 확인
+- [ ] Climb Provider의 Move Speed 테스트 및 적정값 확인
+- [ ] Multi Floor Ladder와 일반 Ladder의 차이점 확인
+- [ ] Haptic과 Gaze 기능 구현 방법 (다음 수업에서 진행 예정)
 
 ---
 
@@ -170,9 +168,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - [ ] Ladder와 Multi Floor Ladder 프리팹을 찾을 수 있다
 - [ ] 다음 수업에서 배울 Haptic, Gaze 내용을 준비했다
 
-
 ## 메모
-
 
 <b>1.Climb</b>
 
@@ -183,7 +179,6 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 <b>4. HapTic</b>
 
 <b>5. Gaze</b>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -571,12 +566,9 @@ UI 뭐 이렇게 되있잖아요 그죠 자 그래서 뭐 여기 인트랙터 �
 
 </details>
 
-
 <b>VR 인터랙션 툴킷 실습 수업</b> 2026-05-07
 
-
 ## 요약
-
 
 ### 실습 과제
 
@@ -588,10 +580,10 @@ UI 뭐 이렇게 되있잖아요 그죠 자 그래서 뭐 여기 인트랙터 �
 
 ### 사다리 타기 (Climbing) 구현
 
-- 기존 샘플을 삭제하고 새로 만드는 방식으로 진행 
+- 기존 샘플을 삭제하고 새로 만드는 방식으로 진행
 - Hex Interaction Toolkit의 Demo Scene을 참고  
 - Climb Sample에서 Ladder의 Handle 설정이 핵심  
-- Handle에 Climb Interact-able 컴포넌트 추가 필요 
+- Handle에 Climb Interact-able 컴포넌트 추가 필요
 - XR Origin에서 Locomotion의 Climb Provider 설정  
 - Provider to Disable에서 Move와 Jump 설정  
 - Body는 Kinematic으로 체크 해제하여 사다리가 고정되도록 함   
@@ -599,7 +591,7 @@ UI 뭐 이렇게 되있잖아요 그죠 자 그래서 뭐 여기 인트랙터 �
 
 ### Grab 기능 구현
 
-- Cube 오브젝트에 XR Grab Interact-able 컴포넌트 추가 시 Rigidbody 자동 생성 
+- Cube 오브젝트에 XR Grab Interact-able 컴포넌트 추가 시 Rigidbody 자동 생성
 - Near Far Interactor를 양손 컨트롤러에 추가  
 - G 키로 오브젝트 잡기 테스트 가능   
 
@@ -634,7 +626,7 @@ UI 뭐 이렇게 되있잖아요 그죠 자 그래서 뭐 여기 인트랙터 �
 ### Ray Interactor 구성 요소
 
 - Ray Interactor에 Line Visual이 자동으로 생성됨  
-- Sorting Group까지 포함되어 있음 
+- Sorting Group까지 포함되어 있음
 - Near/Far Interaction용 Sphere와 Curve 필요  
 
 ### 다음 시간 계획
@@ -643,9 +635,7 @@ UI 뭐 이렇게 되있잖아요 그죠 자 그래서 뭐 여기 인트랙터 �
 - 총이나 검 에셋으로 Grab 실습   
 - UI 인터랙션을 고품질 에셋으로 다시 구현  
 
-
 ## 메모
-
 
 ## 1. XR Climb Interactable 구현
 
@@ -657,9 +647,7 @@ Unity 공식 문서에서도 Climb locomotion은 Climb Interactable을 Select �
 
 다듬으면 이렇게:
 
-
 <blockquote markdown="1">
-
 
 플레이어가 컨트롤러로 손잡이나 사다리 같은 <code>XR Climb Interactable</code>을 Select하면, 해당 Interactable을 잡은 Interactor의 이동량이 등반 입력으로 사용된다.
 
@@ -668,7 +656,6 @@ Unity 공식 문서에서도 Climb locomotion은 Climb Interactable을 Select �
 즉 <code>XR Climb Interactable</code>은 등반 가능한 대상과 기준 Transform을 제공하고, <code>Climb Provider</code>는 실제 플레이어 리그인 <code>XR Origin</code>의 위치를 변경하여 등반 이동을 구현한다.
 
 </blockquote>
-
 
 ---
 
@@ -682,9 +669,7 @@ Unity 공식 문서에서도 Climb locomotion은 Climb Interactable을 Select �
 
 다듬으면 이렇게:
 
-
 <blockquote markdown="1">
-
 
 <code>XR Grab Interactable</code>에서 <code>Attach Transform</code>을 지정하지 않으면, 오브젝트 자신의 Transform 위치가 기본 부착점으로 사용된다.
 
@@ -696,8 +681,7 @@ Unity 공식 문서에서도 Climb locomotion은 Climb Interactable을 Select �
 
 </blockquote>
 
-
-여기서 네가 쓴 \*\*“Attach용 빈 오브젝트 만들기”\*\*는 아주 좋은 포인트야.
+여기서 네가 쓴 **“Attach용 빈 오브젝트 만들기”**는 아주 좋은 포인트야.
 
 다만 “Z축을 조정한다”보다는 <b>위치와 회전을 조정한다</b>가 더 안전한 표현이야.
 
@@ -713,9 +697,7 @@ Unity 공식 문서에서도 Climb locomotion은 Climb Interactable을 Select �
 
 다듬으면 이렇게:
 
-
 <blockquote markdown="1">
-
 
 VR 환경에서 월드 스페이스 Canvas와 상호작용하려면 기존 <code>Graphic Raycaster</code> 대신 <code>Tracked Device Graphic Raycaster</code>를 사용한다.
 
@@ -727,7 +709,6 @@ VR 환경에서 월드 스페이스 Canvas와 상호작용하려면 기존 <code
 
 </blockquote>
 
-
 ---
 
 ## 4. Interaction Layer Mask 활용
@@ -738,9 +719,7 @@ VR 환경에서 월드 스페이스 Canvas와 상호작용하려면 기존 <code
 
 다듬으면 이렇게:
 
-
 <blockquote markdown="1">
-
 
 <code>Interaction Layer Mask</code>를 사용하면 Interactor와 Interactable 사이의 Hover, Select 가능 여부를 상호작용 종류별로 분리할 수 있다.
 
@@ -751,7 +730,6 @@ VR 환경에서 월드 스페이스 Canvas와 상호작용하려면 기존 <code
 이렇게 하면 Ray, Grab, Climb, Poke 같은 상호작용이 서로 잘못 반응하는 문제를 줄이고, 씬 안의 상호작용 규칙을 명확하게 관리할 수 있다.
 
 </blockquote>
-
 
 추가로 기억하면 좋은 점:
 
@@ -773,9 +751,7 @@ VR 환경에서 월드 스페이스 Canvas와 상호작용하려면 기존 <code
 
 다듬으면 이렇게:
 
-
 <blockquote markdown="1">
-
 
 Hand Tracking으로 UI를 조작할 때는 손가락 끝, 보통 검지 끝 위치에 <code>XR Poke Interactor</code>를 배치하여 찌르기 입력을 감지한다.
 
@@ -786,7 +762,6 @@ Hand Tracking으로 UI를 조작할 때는 손가락 끝, 보통 검지 끝 위�
 이 이벤트는 <code>Tracked Device Graphic Raycaster</code>와 <code>XR UI Input Module</code>을 통해 Unity UI Button의 Highlight, Pressed, OnClick 반응으로 연결된다.
 
 </blockquote>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2197,7 +2172,6 @@ UI인터랙션을 배웠습니다. 다음시간에는 뭐 괜찮은 ui 그죠 �
 시험 재료를 내놓은게 있어가지고
 
 </details>
-
 
 1. <b>XR Climb Interactable 구현의 핵심 원리</b>
    <p>

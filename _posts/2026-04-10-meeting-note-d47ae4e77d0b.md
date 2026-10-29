@@ -3,8 +3,8 @@ title: "전체 스크럼 회의"
 date: 2026-04-10 12:00:00 +0900
 categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "AI 시대 취업 준비 및 게임 프로젝트 발표 2026-04-10 요약 액션 아이템 및 다음 단계 면접 준비 시 AI 활용 능력 및 실무 경험 중심으로 자기소개서 작성 (80 스킬/경험, 20 기타) 코딩 기본기 및 알고리즘 학습 완료 네트워크 기능(채팅, 방 만들기 등) 구현 경험 쌓기"
-description: "AI 시대 취업 준비 및 게임 프로젝트 발표 2026-04-10 요약 액션 아이템 및 다음 단계 면접 준비 시 AI 활용 능력 및 실무 경험 중심으로 자기소개서 작성 (80 스킬/경험, 20 기타) 코딩 기본기 및 알고리즘 학습 완료 네트워크 기능(채팅, 방 만들기 등) 구현 경험 쌓기"
+excerpt: "AI 시대의 취업 준비와 실무 경험, 프로젝트 발표 및 Git 충돌 대응에 관한 피드백을 정리했다."
+description: "AI 시대의 취업 준비와 실무 경험, 프로젝트 발표 및 Git 충돌 대응에 관한 피드백을 정리했다."
 published: true
 migration_id: "35e36532580e81b399a0d47ae4e77d0b"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>AI 시대 취업 준비 및 게임 프로젝트 발표</b> 2026-04-10
 
-
 ## 요약
-
 
 ### 액션 아이템 및 다음 단계
 
@@ -97,9 +95,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
   - 이전 UI 버전으로 작업한 풀 리퀘스트가 제출된 상태
 - <b>해결 방안</b>: 최신 UI 버전을 메인에 먼저 푸시한 후, 다른 작업자들이 이를 기반으로 재작업   
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

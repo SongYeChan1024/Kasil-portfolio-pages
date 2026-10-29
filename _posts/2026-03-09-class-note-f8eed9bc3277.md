@@ -3,8 +3,8 @@ title: "ZombieSurvivor|게임 기획서 - 기본 템플릿"
 date: 2026-03-09 12:00:00 +0900
 categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "작성일: 2026-03-09 \\~ 최종 업데이트: 2026-03-09 문서 유형: 게임 기획서 게임명: ZombieSurvivor --- 0. 요약 장르/플랫폼: 웨이브형 좀비 탑다운 슈터 (PC) 한 줄 소개(피치): 끊임없이 몰려오는 좀비를 처치해 점수를 올리고, 탄약/체력 아이템을"
-description: "작성일: 2026-03-09 \\~ 최종 업데이트: 2026-03-09 문서 유형: 게임 기획서 게임명: ZombieSurvivor --- 0. 요약 장르/플랫폼: 웨이브형 좀비 탑다운 슈터 (PC) 한 줄 소개(피치): 끊임없이 몰려오는 좀비를 처치해 점수를 올리고, 탄약/체력 아이템을"
+excerpt: "웨이브형 좀비 탑다운 슈터 ZombieSurvivor의 플레이 흐름과 아이템·성장·구현 범위를 정리했다."
+description: "웨이브형 좀비 탑다운 슈터 ZombieSurvivor의 플레이 흐름과 아이템·성장·구현 범위를 정리했다."
 published: true
 migration_id: "84245037d9a545dc84fcf8eed9bc3277"
 migration_status: "published"
@@ -206,15 +206,12 @@ migration_flags: ["publication_review"]
 
 ## 9. 진행 로그(데일리)
 
-
 <details markdown="1">
 <summary>아래 데일리 로그에서 날짜별 진행 과정을 확인</summary>
-
 
 [데일리 로그 기본 템플릿]({% endraw %}{% post_url 2026-03-09-daily-log-9b4ac4d9b7af %}{% raw %})
 
 </details>
-
 
 ## 10. 후속 실습: 싱글 → 네트워크 멀티(협동)
 

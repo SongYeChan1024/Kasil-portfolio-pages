@@ -18,7 +18,7 @@ migration_flags: []
 | --- | --- | --- |
 | QA-PM-003 | 에너미가 평소 루트에서 벗어난 뒤 오래 추격함 | 추격 제한 범위, 어그로 감소, 복귀 조건 부족 |
 | QA-PM-004 | 플레이어가 벽을 등지고 있을 때 에너미가 공격/돌진 중 벽을 넘어옴 | 공격 돌진 이동이 NavMesh/벽 충돌 검사를 충분히 거치지 않음 |
-| QA-PM-005 | 몬스터 처치 이후 다른 몬스터가 더 이상 공격하지 않는 현상 | 사망 이벤트, 공격 상태 플래그, 타겟 유지 로직 꼬임 가능성 |
+| QA-PM-005 | 몬스터 처치 이후 다른 몬스터가 더 이상 공격하지 않는 현상 | 사망 이벤트, 공격 상태 플래그, 타깃 유지 로직 꼬임 가능성 |
 
 ## 2. 목표 AI 흐름
 
@@ -232,7 +232,7 @@ if (IsInAttackRange() && CanSeePlayer())
 | --- | --- |
 | <code>nowState</code> | 남은 에너미가 어떤 상태에 머물러 있는지 확인 |
 | <code>isAttacking</code> | 공격 중 플래그가 true로 고정되었는지 확인 |
-| <code>CurrentTarget</code> | 타겟이 null로 사라졌는지 확인 |
+| <code>CurrentTarget</code> | 타깃이 null로 사라졌는지 확인 |
 | <code>nextAttackAvailableTime</code> | 공격 쿨타임이 비정상적으로 길게 잡혔는지 확인 |
 | Animator Trigger | 공격 애니메이션 트리거가 호출되는지 확인 |
 | Death Event | 한 에너미 사망 이벤트가 다른 에너미에게 영향을 주는지 확인 |

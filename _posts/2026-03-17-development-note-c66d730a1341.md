@@ -3,8 +3,8 @@ title: "Ep.3사용 에셋 모음"
 date: 2026-03-17 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 1. 맵 환경 에셋 (Environment) 몽환적인 음악 공간 (기본 맵) - 결국 찾지 못해서 우성혁 레이서님과 같은 에셋 사용하였음 악기 - https://sketchfab.com/3d-mode"
-description: "퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 1. 맵 환경 에셋 (Environment) 몽환적인 음악 공간 (기본 맵) - 결국 찾지 못해서 우성혁 레이서님과 같은 에셋 사용하였음 악기 - https://sketchfab.com/3d-mode"
+excerpt: "음악 공간을 구성할 환경·악기 에셋과 직접 제작한 오선지 길, 퍼즐 오브젝트 후보를 모았다."
+description: "음악 공간을 구성할 환경·악기 에셋과 직접 제작한 오선지 길, 퍼즐 오브젝트 후보를 모았다."
 published: true
 migration_id: "35e36532580e81ec9075c66d730a1341"
 migration_status: "published"
@@ -16,20 +16,18 @@ migration_flags: []
 2. NPC 관련
 3. 스토리 오브젝트
 
-
 ## 1. 맵 환경 에셋 (Environment)
 
 - 몽환적인 음악 공간 (기본 맵) - 결국 찾지 못해서 우성혁 레이서님과 같은 에셋 사용하였음
 - 악기 - [https://sketchfab.com/3d-models/instruments-violin-piano-double-bass-3abd06dc681144adaea89b295246be55](https://sketchfab.com/3d-models/instruments-violin-piano-double-bass-3abd06dc681144adaea89b295246be55)
 - 스카이박스 - [https://assetstore.unity.com/packages/2d/textures-materials/sky/customizable-skybox-174576#description](https://assetstore.unity.com/packages/2d/textures-materials/sky/customizable-skybox-174576#description)
-- 오선지로 되어있는 길 - 직접 만들었음
+- 오선지로 되어 있는 길 - 직접 만들었음
 - 음표 파티클 - 직접 만들었음
 - 떠다니는 작은 음표 파티클- 직접 만들었음
 - 사운드 트랙 - [Simple Tunes for Simple Games: Volume I](https://assetstore.unity.com/packages/audio/music/orchestral/simple-tunes-for-simple-games-volume-i-253670)
 - 포스터- 직접 만들었음
 
 테마곡 모음 - [https://naver.me/GqfUwPEv](https://naver.me/GqfUwPEv)
-
 
 ---
 

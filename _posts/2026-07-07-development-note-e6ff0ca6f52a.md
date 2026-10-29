@@ -24,7 +24,6 @@ migration_flags: ["local_code_link_unlinked", "publication_review"]
 
 ### 2.1 SpawnManager.cs
 
-
 - 대상 경로: \SpawnManager.cs (line 1)\
 
 #### 이전 구조

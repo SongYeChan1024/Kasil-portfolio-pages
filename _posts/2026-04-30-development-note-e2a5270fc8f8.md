@@ -3,8 +3,8 @@ title: "2026.04.20"
 date: 2026-04-30 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "VR 개발 기초: Unity 설치와 가상현실 핵심 요소 2026-04-30 요약 오늘 수업 핵심 요약 Unity 6.3 LTS 버전 설치 및 VR 개발 환경 구축 방법을 배웠습니다. VR에서 상호작용하기 위한 세 가지 핵심 요소인 트래킹(Tracking) , 렌더링(Rendering) "
-description: "VR 개발 기초: Unity 설치와 가상현실 핵심 요소 2026-04-30 요약 오늘 수업 핵심 요약 Unity 6.3 LTS 버전 설치 및 VR 개발 환경 구축 방법을 배웠습니다. VR에서 상호작용하기 위한 세 가지 핵심 요소인 트래킹(Tracking) , 렌더링(Rendering) "
+excerpt: "Unity VR 개발 환경의 설치와 OpenXR·XR Interaction Toolkit 설정, 가상 현실의 핵심 요소를 학습했다."
+description: "Unity VR 개발 환경의 설치와 OpenXR·XR Interaction Toolkit 설정, 가상 현실의 핵심 요소를 학습했다."
 published: true
 migration_id: "35e36532580e816a8606e2a5270fc8f8"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["credential_redacted", "privacy_review", "publication_review",
 {% raw %}
 <b>VR 개발 기초: Unity 설치와 가상현실 핵심 요소</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -177,9 +175,7 @@ migration_flags: ["credential_redacted", "privacy_review", "publication_review",
 - [ ] VR에서 렌더링이 왜 중요한지, 멀미와의 관계를 설명할 수 있다.
 - [ ] 다음 수업에서 실제 VR 설정을 Unity에 적용할 준비가 되었다.
 
-
 ## 메모
-
 
 <h1>
  가상현실과 상호작용하는 세 가지 핵심 요소
@@ -272,7 +268,6 @@ Ray Interaction: 광선처럼 포인터를 쏴서 멀리 있는 오브젝트를 
 
 즉, 인터랙션은 사용자가 VR 세계 안에서 <b>직접 행동하고 반응을 얻는 구조</b>라고 볼 수 있다.
 
-
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
 
@@ -339,12 +334,9 @@ Ray Interaction: 광선처럼 포인터를 쏴서 멀리 있는 오브젝트를 
 
 </details>
 
-
 <b>Unity VR 환경 설정 및 OpenXR 구성</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -545,12 +537,9 @@ Ray Interaction: 광선처럼 포인터를 쏴서 멀리 있는 오브젝트를 
 - [ ] Hierarchy에서 마우스 우클릭 시 XR 메뉴가 나타나는지 확인할 수 있다.
 - [ ] VR 개발 환경 구축의 전체 과정을 순서대로 설명할 수 있다.
 
-
 ## 메모
 
-
-OpenXR : API : 표준 통신 규격 이라는 API를 받아 와야 한다.
-
+OpenXR : API : 표준 통신 규격이라는 API를 받아 와야 한다.
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -882,12 +871,9 @@ XR 맨 밑에 뭐가 있습니까? XR ALL IN VR 넣었죠?
 
 </details>
 
-
 <b>XR Origin 설정과 컨트롤러 구성</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1079,12 +1065,9 @@ XR 맨 밑에 뭐가 있습니까? XR ALL IN VR 넣었죠?
 - [ ] 컨트롤러의 트리거와 그랩 버튼의 차이를 구분할 수 있다.
 - [ ] Project Validation에서 경고 및 이슈를 해결할 수 있다.
 
-
 ## 메모
 
-
 XR Origin(VR) → 트래킹 기능 수행 : HMD 라고 부름
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1396,12 +1379,9 @@ XR 컨트롤 라이트, XR 컨트롤 레프트 들어가는걸 확인했죠? 여
 
 </details>
 
-
 <b>VR 컨트롤러 시각화 및 트래킹 설정 실습</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1563,9 +1543,7 @@ XR 컨트롤 라이트, XR 컨트롤 레프트 들어가는걸 확인했죠? 여
 - [ ] Camera Offset과 개별 컨트롤러 중 어디에 회전값을 설정해야 하는지 구분할 수 있다.
 - [ ] 현재 캡슐은 임시 오브젝트이며 나중에 손 모델로 교체할 예정임을 이해했다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1756,12 +1734,9 @@ T를 TY죠 TY T를 누르신 다음에 이렇게 돌린 다음에 머리를 누�
 
 </details>
 
-
 <b>VR 기술 응용 및 심리 테스트 활용 강의</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약 
 
@@ -1859,9 +1834,7 @@ T를 TY죠 TY T를 누르신 다음에 이렇게 돌린 다음에 머리를 누�
 - [ ] 기존 연극 기반 심리 치료와 VR 기반 심리 치료의 차이를 이해했다.
 - [ ] VR 기술의 다양한 활용 가능성을 인식하고 설명할 수 있다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1891,23 +1864,22 @@ T를 TY죠 TY T를 누르신 다음에 이렇게 돌린 다음에 머리를 누�
 
 </details>
 
-
-1. <b>유니티 버전 6.0 이상에서 VR환경에서 게임 컨텐츠를 만들려면<br />어떤 환경을 구성해야 하는 지 순서대로 나열 하세요</b><br />OpenXR Plugin 설치 → XR Plugin Management 설치<br />→XR Interaction Toolkit 설치→ XR Plugin Management에서 플러그인 설정<br />→OpenXR을 선택하고 Interaction Profiles에서 프로파일 설정
+1. <b>유니티 버전 6.0 이상에서 VR 환경에서 게임 콘텐츠를 만들려면<br />어떤 환경을 구성해야 하는지 순서대로 나열하세요</b><br />OpenXR Plugin 설치 → XR Plugin Management 설치<br />→XR Interaction Toolkit 설치→ XR Plugin Management에서 플러그인 설정<br />→OpenXR을 선택하고 Interaction Profiles에서 프로파일 설정
 2. <b>XR은 무엇의 약자이고 무엇을 뜻하는 가?</b>
 
 eXtended Reality 가상현실(VR), 증강현실(AR), 혼합현실(MR)을 모두 아우르는 포괄적인 개념
 
 3. <b>VR, AR, MR 각각 간단하게 설명 하세요</b>
 
-VR은 가상현실 이라는 뜻으로 가상공간에 직접 들어가서 체험을 한다.
+VR은 가상 현실이라는 뜻으로 가상 공간에 직접 들어가서 체험을 한다.
 
 AR은 증강현실로 현실 화면 위에 디지털 정보를 덧붙여 사용한다 대표적인 예로 포켓몬GO 같은 게임이 있다.
 
-MR은 혼합현실 이라는 이름으로 현실공간과 가상 오브젝트가 서로를 인식하고 상호작용 하는 기술이다.
+MR은 혼합 현실이라는 이름으로 현실 공간과 가상 오브젝트가 서로를 인식하고 상호작용 하는 기술이다.
 
 4. <b>VR 기기중 가장 대중적으로 쓰이는 기기 세가지를<br />적으세요</b>
 5. 메타 퀘스트, 애플 비전 프로, 플레이스테이션 VR
-6. <b>XR Interaction Manager의 역활 은 씬에 존재 하는<br />Interactor 와 Interactable 사이의 중재자 역활 하는 것이라고<br />한다. 여기서 Interactor Interactable이 무엇인지 설명 하세요</b>
+6. <b>XR Interaction Manager의 역할 은 씬에 존재하는<br />Interactor 와 Interactable 사이의 중재자 역할 하는 것이라고<br />한다. 여기서 Interactor Interactable이 무엇인지 설명 하세요</b>
 
 Interactor는 사용자의 손, 컨트롤러, 시선, 레이저 포인터처럼 상호작용을 시도하는 주체이다.
 
@@ -1917,12 +1889,9 @@ Interactor는 사용자의 손, 컨트롤러, 시선, 레이저 포인터처럼 
 
 XR Interaction Manager는 씬 안에서 Interactor와 Interactable 사이의 연결을 관리하며, 두 요소가 Hover, Select, Grab 같은 상호작용을 수행할 수 있도록 중재하는 역할을 한다.
 
-
 <b>Unity MCP와 Gemini Flash 연동 세션</b> 2026-04-30
 
-
 ## 요약
-
 
 ### MCP (Model Context Protocol) 개요
 
@@ -1986,9 +1955,7 @@ XR Interaction Manager는 씬 안에서 Interactor와 Interactable 사이의 연
 - GitHub MCP  
 - 추후 HyperBlock 연동 가능 
 
-
 ## 메모
-
 
 Unity MCP 와 연동 제미나이 flash랑 연결
 
@@ -2296,17 +2263,13 @@ ad-package-from-git-url
 
 </details>
 
-
 구글 API 키 Zombie Shooter Tranig Key
 
 [REDACTED_CREDENTIAL]
 
-
 <b>Unity MCP 서버 설정 강의</b> 2026-04-30
 
-
 ## 요약
-
 
 ### 개요
 
@@ -2369,9 +2332,7 @@ Unity 6와 Gemini AI를 연동하는 MCP (Model Context Protocol) 서버 설정 
 - [ ] Unity MCP 패키지가 설치되어 있어야 함 
 - [ ] 다음 수업(5월 6일)까지 준비 완료 
 
-
 ## 메모
-
 
 Unity 6 내부에 MCP 서버 세팅<br />유니티 에디터를 Gemini가 접속할 수 있는 하나의 '서버'로 만드는 과정입니다.
 
@@ -2412,7 +2373,6 @@ Type: command (또는 stdio)
 Command: 방금 유니티에서 복사한 전체 경로를 붙여넣습니다.
 
 Save를 누르면 Cursor의 Gemini가 유니티 프로젝트 내부를 훤히 들여다보고 직접 제어할 수 있게 됩니다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2679,7 +2639,6 @@ I'll make it, I'll make it I'll make it
 그죠? UI사무장용 오프모션 그죠? 오프모션 작용 한번 해보도록 할게요. 알겠죠? 자 그러면 오늘은 여기까지 하도록 하겠습니다 예 오늘 수고하셨습니다 수고 많았습니다
 
 </details>
-
 
 Unity 2022에서 MCP 서버 세팅
 

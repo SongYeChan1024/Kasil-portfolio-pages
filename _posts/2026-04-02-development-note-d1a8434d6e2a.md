@@ -3,8 +3,8 @@ title: "mos.A.I.c 에피소드별 사운드 요약표"
 date: 2026-04-02 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "UI 사운드 -Free UI Click Sound Pack Nature Sound FX - 쓸지도? 모르는 것들 General RPG SFX Pack - 각종 효과음 SFX EP.0 발자국 : 거의 무음, 유령 같은 소프트 스텝 Footsteps - Essentials Footsteps"
-description: "UI 사운드 -Free UI Click Sound Pack Nature Sound FX - 쓸지도? 모르는 것들 General RPG SFX Pack - 각종 효과음 SFX EP.0 발자국 : 거의 무음, 유령 같은 소프트 스텝 Footsteps - Essentials Footsteps"
+excerpt: "에피소드별 감정에 맞춰 환경음과 발소리의 톤을 설계하고 믹서·스냅샷 설정 방향을 정리했다."
+description: "에피소드별 감정에 맞춰 환경음과 발소리의 톤을 설계하고 믹서·스냅샷 설정 방향을 정리했다."
 published: true
 migration_id: "35e36532580e810baa61d1a8434d6e2a"
 migration_status: "published"
@@ -14,12 +14,9 @@ migration_flags: ["publication_review"]
 {% raw %}
 UI 사운드 -[Free UI Click Sound Pack](https://assetstore.unity.com/packages/audio/sound-fx/free-ui-click-sound-pack-244644)
 
-
 [Nature Sound FX](https://assetstore.unity.com/packages/audio/sound-fx/nature-sound-fx-180413#content) - 쓸지도? 모르는 것들
 
-
 [General RPG SFX Pack](https://assetstore.unity.com/packages/audio/sound-fx/general-rpg-sfx-pack-329076#content) - 각종 효과음 SFX
-
 
 ## EP.0
 
@@ -83,7 +80,7 @@ UI 사운드 -[Free UI Click Sound Pack](https://assetstore.unity.com/packages/a
 
 앞 에피소드들은 일부러 <b>“잘 안 들리게”</b> 만들고,
 
-EP.3에서 \*\*“이제 들린다”\*\*를 느끼게 해야 해.
+EP.3에서 **“이제 들린다”**를 느끼게 해야 해.
 
 ---
 

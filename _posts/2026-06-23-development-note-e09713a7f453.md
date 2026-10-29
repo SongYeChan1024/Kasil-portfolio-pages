@@ -3,8 +3,8 @@ title: "코드 변경 사항 기록"
 date: 2026-06-23 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "cs /// /// 플레이어의 이동을 처리하는 스크립트 /// using UnityEngine; public class PlayerMovement : MonoBehaviour Header(\"Player Movement Controll\") SerializeField private Rigi"
-description: "cs /// /// 플레이어의 이동을 처리하는 스크립트 /// using UnityEngine; public class PlayerMovement : MonoBehaviour Header(\"Player Movement Controll\") SerializeField private Rigi"
+excerpt: "플레이어가 항상 마우스 커서를 바라보도록 회전 구조를 바꾸고, 관련 코드 변경 이유와 동작을 정리했다."
+description: "플레이어가 항상 마우스 커서를 바라보도록 회전 구조를 바꾸고, 관련 코드 변경 이유와 동작을 정리했다."
 published: true
 migration_id: "38836532580e80db8cd8e09713a7f453"
 migration_status: "published"
@@ -374,7 +374,6 @@ private void AimTowardsMouse()
 ```
 
 무기 총알 발사 히트스캔으로 구현
-
 
 ```txt
 /// <summary>
@@ -798,7 +797,6 @@ private void GetInteraction()
 
 상호작용 하는 아이템 박스 스크립트
 
-
 ```txt
 using UnityEngine;
 
@@ -862,7 +860,6 @@ public bool Interact(int playerID)
 ```
 
 아이템 박스와 상호작용이 가능할 때 UI를 띄울 스크립트
-
 
 ```txt
 using UnityEngine;

@@ -14,9 +14,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>취업 준비 가이드 및 침몽도시 개발 업무 배정</b> 2026-07-15
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -222,7 +220,7 @@ SFX/BGM 설정창 볼륨 조절 가능, 총소리/발소리 등 랜덤 재생
 송예찬
 </td>
 <td>
-PM/컨셉 기획
+PM/콘셉트 기획
 </td>
 <td>
 스프라이트 겹침 버그 수정, 손전등 구현(시간 여유 시)
@@ -233,9 +231,7 @@ PM/컨셉 기획
 </tr>
 </table>
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -451,12 +447,9 @@ VFX는 저희 마지막 주차 때 상세 조정하면 되니까 일단 보여�
 
 </details>
 
-
 <b>침몽도시 개발 진행 회의</b> 2026-07-15
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -696,9 +689,7 @@ Git 브랜치 병합 및 풀 배포
 </tr>
 </table>
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

@@ -1,10 +1,10 @@
 ---
-title: "일일회고록 2026-04-10"
+title: "일일 회고록 2026-04-10"
 date: 2026-04-10 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "기본 정보 날짜: 2026-04-10 프로젝트: MosAIc / EP.3 작성자: 작성자 오늘 한 일(요약) EP3 로비 인트로 컷씬 자막 구조를 기존 Canvas_Cutscene 에 붙는 형태로 정리 컷씬 대사 구성 정리(나레이션/독백 중심) + 음악가 대사는 상호작용 이후로 분리 백"
-description: "기본 정보 날짜: 2026-04-10 프로젝트: MosAIc / EP.3 작성자: 작성자 오늘 한 일(요약) EP3 로비 인트로 컷씬 자막 구조를 기존 Canvas_Cutscene 에 붙는 형태로 정리 컷씬 대사 구성 정리(나레이션/독백 중심) + 음악가 대사는 상호작용 이후로 분리 백"
+excerpt: "로비 인트로 컷씬의 자막을 기존 캔버스에 연결하고 독백과 NPC 상호작용 대사를 분리했다."
+description: "로비 인트로 컷씬의 자막을 기존 캔버스에 연결하고 독백과 NPC 상호작용 대사를 분리했다."
 published: true
 migration_id: "35e36532580e819d9fa9eefdace39b8d"
 migration_status: "published"
@@ -63,10 +63,8 @@ migration_flags: []
   - 중복 폴더 격리: <code>01.Scenes/01.Scenes</code>, <code>02.Scripts/02.Scripts</code>, <code>07.Prefabs/07.Prefabs</code>
   - 씬 데이터 폴더 구분: <code>Ep3_1_Scene_Data</code>, <code>Episode3_Scene_Data</code>
 
-
 <details markdown="1">
 <summary>첨부/스크린샷(선택)</summary>
-
 
 <ul>
 <li></li>
@@ -74,10 +72,8 @@ migration_flags: []
 
 </details>
 
-
 <details markdown="1">
 <summary>회고(선택)</summary>
-
 
 - 잘한 점: 연출/데이터/프로젝트 구조를 한 번에 정리해서, 컷씬과 상호작용 흐름을 분리하는 기준을 세움
 - 아쉬운 점: 최종 동작(자막 출력/리임포트/상호작용 UI)까지는 플레이 테스트로 완전 검증을 못함

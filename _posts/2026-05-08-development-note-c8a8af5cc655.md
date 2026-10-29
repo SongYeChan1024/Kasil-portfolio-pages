@@ -3,8 +3,8 @@ title: "2026-05-08 개발 메모"
 date: 2026-05-08 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "VR 손 애니메이션 및 로코모션 시스템 구현 2026-05-08 요약 오늘 수업 핵심 요약 VR 손 애니메이션 시스템 을 구현하여 Grip (쥐기)과 Pinch (집기) 동작을 Input System과 연동했습니다. Animator Controller 와 Blend Tree 를 활용하여"
-description: "VR 손 애니메이션 및 로코모션 시스템 구현 2026-05-08 요약 오늘 수업 핵심 요약 VR 손 애니메이션 시스템 을 구현하여 Grip (쥐기)과 Pinch (집기) 동작을 Input System과 연동했습니다. Animator Controller 와 Blend Tree 를 활용하여"
+excerpt: "VR 손 애니메이션의 Grip·Pinch 입력과 이동·회전·텔레포트 등 로코모션 시스템 구현을 정리했다."
+description: "VR 손 애니메이션의 Grip·Pinch 입력과 이동·회전·텔레포트 등 로코모션 시스템 구현을 정리했다."
 published: true
 migration_id: "35e36532580e81cab034c8a8af5cc655"
 migration_status: "published"
@@ -14,111 +14,109 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 {% raw %}
 <b>VR 손 애니메이션 및 로코모션 시스템 구현</b> 2026-05-08
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- <b>VR 손 애니메이션 시스템</b>을 구현하여 <b>Grip</b>(쥐기)과 <b>Pinch</b>(집기) 동작을 Input System과 연동했습니다. 
-- <b>Animator Controller</b>와 <b>Blend Tree</b>를 활용하여 손 모델의 부드러운 애니메이션 전환을 구현했습니다. 
-- <b>Locomotion System</b>(이동 시스템)을 구성하여 <b>Dynamic Move Provider</b>와 <b>Snap Turn Provider</b>로 VR 환경에서의 이동과 회전을 구현했습니다. 
-- <b>Character Controller</b>를 추가하여 부드럽고 안정적인 캐릭터 움직임을 보장했습니다. 
-- <b>Teleportation System</b>(순간이동 시스템)을 설정하여 레이 기반의 이동 방식을 추가했습니다. 
+- <b>VR 손 애니메이션 시스템</b>을 구현하여 <b>Grip</b>(쥐기)과 <b>Pinch</b>(집기) 동작을 Input System과 연동했습니다.
+- <b>Animator Controller</b>와 <b>Blend Tree</b>를 활용하여 손 모델의 부드러운 애니메이션 전환을 구현했습니다.
+- <b>Locomotion System</b>(이동 시스템)을 구성하여 <b>Dynamic Move Provider</b>와 <b>Snap Turn Provider</b>로 VR 환경에서의 이동과 회전을 구현했습니다.
+- <b>Character Controller</b>를 추가하여 부드럽고 안정적인 캐릭터 움직임을 보장했습니다.
+- <b>Teleportation System</b>(순간이동 시스템)을 설정하여 레이 기반의 이동 방식을 추가했습니다.
 
 ### 주요 개념 정리
 
 - <b>Grip (그립)</b>
   - 설명: 컨트롤러의 측면 버튼을 눌러 손을 쥐는 동작
-  - 예시: Select Value를 사용하여 누르는 강도를 0\~1 값으로 전달 
+  - 예시: Select Value를 사용하여 누르는 강도를 0\~1 값으로 전달
   - 사용되는 상황: 물체를 잡거나 손을 쥐는 애니메이션 제어
-  - 헷갈릴 수 있는 점: Blend Tree에서 X축 파라미터로 사용됨 
+  - 헷갈릴 수 있는 점: Blend Tree에서 X축 파라미터로 사용됨
 - <b>Pinch (핀치) / Trigger (트리거)</b>
   - 설명: 컨트롤러의 방아쇠(트리거) 버튼을 눌러 손가락을 집는 동작
-  - 예시: 검지와 엄지를 맞대는 "OK" 사인 
+  - 예시: 검지와 엄지를 맞대는 "OK" 사인
   - 사용되는 상황: 정밀한 상호작용이나 총 발사 등의 동작
-  - 헷갈릴 수 있는 점: Blend Tree에서 Y축 파라미터로 사용됨 
+  - 헷갈릴 수 있는 점: Blend Tree에서 Y축 파라미터로 사용됨
 - <b>Select vs Activate</b>
   - 설명: Select는 기본 선택 동작, Activate는 추가 동작 처리
-  - 예시: Grip으로 물체를 잡은 후(Select), Trigger로 총을 발사(Activate) 
+  - 예시: Grip으로 물체를 잡은 후(Select), Trigger로 총을 발사(Activate)
   - 사용되는 상황: 연속적인 두 가지 동작을 구분할 때
-  - 헷갈릴 수 있는 점: Activate Value는 버튼 방식, Select Value는 강도 방식 
+  - 헷갈릴 수 있는 점: Activate Value는 버튼 방식, Select Value는 강도 방식
 - <b>Locomotion System (로코모션 시스템)</b>
   - 설명: VR 환경에서 사용자의 이동과 회전을 제어하는 시스템
   - 예시: Dynamic Move Provider (연속 이동), Snap Turn Provider (각도별 회전)
   - 사용되는 상황: VR 게임에서의 캐릭터 이동 구현
-  - 헷갈릴 수 있는 점: Continuous Turn과 Snap Turn의 차이 - 평균적으로 Snap Turn을 많이 사용 
+  - 헷갈릴 수 있는 점: Continuous Turn과 Snap Turn의 차이 - 평균적으로 Snap Turn을 많이 사용
 - <b>Head Relative vs Hand Relative</b>
   - 설명: 이동 방향 기준을 머리(HMD) 또는 손(컨트롤러)으로 설정
-  - 예시: Head Relative는 HMD가 바라보는 방향으로 이동 
+  - 예시: Head Relative는 HMD가 바라보는 방향으로 이동
   - 사용되는 상황: 이동 방식의 사용자 경험 개선
-  - 헷갈릴 수 있는 점: PC에서는 차이 확인이 어렵고 실제 VR 기기에서 테스트 필요 
+  - 헷갈릴 수 있는 점: PC에서는 차이 확인이 어렵고 실제 VR 기기에서 테스트 필요
 
 ### 수업 흐름별 정리
 
 ### 1. 손 모델 준비 및 초기 설정
 
-- XR Device Simulator로 키보드 입력을 통해 VR 컨트롤러 테스트 가능 
-- Left Hand Controller와 Right Hand Controller에 Sphere를 추가하여 손 위치 확인 
-- VR Hand Prefab에는 이미 손 애니메이션 클립(Grip, Pinch 등)이 준비되어 있음 
-- Text Mesh Pro 패키지가 필요한 경우 <code>Window &gt; Text Mesh Pro &gt; Import</code> 실행 
+- XR Device Simulator로 키보드 입력을 통해 VR 컨트롤러 테스트 가능
+- Left Hand Controller와 Right Hand Controller에 Sphere를 추가하여 손 위치 확인
+- VR Hand Prefab에는 이미 손 애니메이션 클립(Grip, Pinch 등)이 준비되어 있음
+- Text Mesh Pro 패키지가 필요한 경우 <code>Window &gt; Text Mesh Pro &gt; Import</code> 실행
 
 ### 2. Animator Controller 생성
 
-- Animations 폴더를 생성하고 Animator Controller 두 개 생성: Left Animator Controller, Right Animator Controller 
-- Left Hand Prefab과 Right Hand Prefab을 씬에 추가 
-- 각 Hand Prefab에 Animator 컴포넌트 추가하고 해당 Animator Controller 연결 
+- Animations 폴더를 생성하고 Animator Controller 두 개 생성: Left Animator Controller, Right Animator Controller
+- Left Hand Prefab과 Right Hand Prefab을 씬에 추가
+- 각 Hand Prefab에 Animator 컴포넌트 추가하고 해당 Animator Controller 연결
 
 ### 3. Blend Tree 설정
 
-- Parameters에 Float 값 2개 추가: Grip, Pinch 
-- Create State from New Blend Tree로 Blend Tree 생성 
-- Blend Type을 "2D Freeform Cartesian"으로 변경 
+- Parameters에 Float 값 2개 추가: Grip, Pinch
+- Create State from New Blend Tree로 Blend Tree 생성
+- Blend Type을 "2D Freeform Cartesian"으로 변경
 - VR Hand 애니메이션 클립을 추가:
   - (0, 0): Hand\_Idle
   - (1, 0): Hand\_Grip
   - (0, 1): Hand\_Pinch
-  - (1, 1): Hand\_Grip\_Pinch 
-- Right Animator Controller도 동일하게 설정 
+  - (1, 1): Hand\_Grip\_Pinch
+- Right Animator Controller도 동일하게 설정
 
 ### 4. HandAnimations 스크립트 작성
 
-- Scripts 폴더 생성 후 MonoBehaviour Script "HandAnimations" 생성 
-- InputActionReference를 통해 Grip과 Trigger 입력값을 받아 Animator의 파라미터에 전달 
-- Left Hand Prefab과 Right Hand Prefab에 HandAnimations 스크립트 추가 
+- Scripts 폴더 생성 후 MonoBehaviour Script "HandAnimations" 생성
+- InputActionReference를 통해 Grip과 Trigger 입력값을 받아 Animator의 파라미터에 전달
+- Left Hand Prefab과 Right Hand Prefab에 HandAnimations 스크립트 추가
 
 ### 5. Input Action 연결
 
-- Grip Action Reference: <code>XRI LeftHand Interaction/Select Value</code> 연결 
-- Trigger Action Reference: <code>XRI LeftHand Interaction/Activate Value</code> 연결 
-- Right Hand도 동일하게 설정 
-- 테스트: G 키로 Grip, 마우스 왼쪽 버튼으로 Pinch 동작 확인 
+- Grip Action Reference: <code>XRI LeftHand Interaction/Select Value</code> 연결
+- Trigger Action Reference: <code>XRI LeftHand Interaction/Activate Value</code> 연결
+- Right Hand도 동일하게 설정
+- 테스트: G 키로 Grip, 마우스 왼쪽 버튼으로 Pinch 동작 확인
 
 ### 6. Locomotion System 구축
 
-- 빈 오브젝트 "Locomotion" 생성 
-- Locomotion System 컴포넌트 추가 (중재자 역할) 
-- XR Body Transformer와 Character Controller가 자동으로 XR Origin에 추가됨 
+- 빈 오브젝트 "Locomotion" 생성
+- Locomotion System 컴포넌트 추가 (중재자 역할)
+- XR Body Transformer와 Character Controller가 자동으로 XR Origin에 추가됨
 - Character Controller 설정:
   - Radius: 0.2
   - Center Y: 1
   - Height: 1.7
-  - Y: 0.85 
+  - Y: 0.85
 
 ### 7. Move와 Turn 설정
 
-- Locomotion 하위에 빈 오브젝트 "Move"와 "Turn" 생성 
-- Move에 Dynamic Move Provider 추가하고 프리셋 선택 
-- Turn에 Snap Turn Provider 추가하고 프리셋 선택 
-- 기본 설정: 왼손 조이스틱으로 이동, 오른손 조이스틱으로 회전 
-- 중요: Smooth Motion Enable 체크박스로 어느 손으로 이동/회전할지 제어 가능 
+- Locomotion 하위에 빈 오브젝트 "Move"와 "Turn" 생성
+- Move에 Dynamic Move Provider 추가하고 프리셋 선택
+- Turn에 Snap Turn Provider 추가하고 프리셋 선택
+- 기본 설정: 왼손 조이스틱으로 이동, 오른손 조이스틱으로 회전
+- 중요: Smooth Motion Enable 체크박스로 어느 손으로 이동/회전할지 제어 가능
 
 ### 8. Teleportation 시스템 구현
 
-- Teleport Interactor Prefab을 Right Hand Controller에 추가 
-- Line Visual과 Line Renderer가 포함되어 있음 
-- 텔레포트 가능한 영역의 Layer를 "Teleport"로 설정 
-- Input Action 설정이 필요하지만 3.0 버전에서는 프리셋이 제거됨 
+- Teleport Interactor Prefab을 Right Hand Controller에 추가
+- Line Visual과 Line Renderer가 포함되어 있음
+- 텔레포트 가능한 영역의 Layer를 "Teleport"로 설정
+- Input Action 설정이 필요하지만 3.0 버전에서는 프리셋이 제거됨
 
 ### 실습 / 작업 순서
 
@@ -140,25 +138,24 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 <p>
 \<table header-
 
-
 </p>
 
 ### 예시와 활용 사례
 
 - <b>예시 1: Grip과 Pinch 동시 사용</b>
-  - 상황: G 키를 누르면서 마우스 왼쪽 버튼을 함께 누름 
+  - 상황: G 키를 누르면서 마우스 왼쪽 버튼을 함께 누름
   - 설명: Blend Tree의 (1, 1) 위치로 이동하여 두 동작이 혼합된 애니메이션 재생
   - 왜 이 예시를 사용했는지: 실제 VR에서 물체를 잡고 동시에 트리거를 당기는 상황 구현
 - <b>예시 2: Select와 Activate의 활용</b>
-  - 상황: 총을 들고(Grip + Select) 발사(Trigger + Activate) 
+  - 상황: 총을 들고(Grip + Select) 발사(Trigger + Activate)
   - 설명: 기본 동작 후 추가 동작을 처리할 때 Activate 사용
   - 왜 이 예시를 사용했는지: 중요: 복합적인 상호작용 구현의 핵심 개념
 - <b>예시 3: 왼손 이동, 오른손 회전</b>
-  - 상황: 평균적인 VR 게임의 조작 방식 
+  - 상황: 평균적인 VR 게임의 조작 방식
   - 설명: 왼손 조이스틱으로 W/A/S/D 이동, 오른손 조이스틱으로 좌우 회전
-  - 왜 이 예시를 사용했는지: 게임 조작의 일반적인 규칙이지만, 개인 취향에 따라 변경 가능 
+  - 왜 이 예시를 사용했는지: 게임 조작의 일반적인 규칙이지만, 개인 취향에 따라 변경 가능
 - <b>예시 4: Smooth Motion Enable 토글</b>
-  - 상황: 이동과 회전을 어느 손으로 제어할지 전환 
+  - 상황: 이동과 회전을 어느 손으로 제어할지 전환
   - 설명: Left Hand Controller와 Right Hand Controller의 Smooth Motion Enable 체크박스 조정
   - 왜 이 예시를 사용했는지: 사용자가 원하는 조작 방식으로 커스터마이징 가능
 
@@ -166,32 +163,32 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 
 - <b>헷갈리는 개념</b>: Grip과 Pinch가 Blend Tree에서 X축과 Y축 중 어디에 매핑되는지
 - <b>헷갈리는 이유</b>: 둘 다 손가락 동작이라 구분이 모호함
-- <b>구분 방법</b>: Grip은 X축(손 전체를 쥐는 동작), Pinch는 Y축(검지와 엄지로 집는 동작) 
+- <b>구분 방법</b>: Grip은 X축(손 전체를 쥐는 동작), Pinch는 Y축(검지와 엄지로 집는 동작)
 
 ---
 
 - <b>헷갈리는 개념</b>: Select Value vs Activate Value
 - <b>헷갈리는 이유</b>: 둘 다 입력값을 받는 것처럼 보임
-- <b>구분 방법</b>: Select Value는 누르는 강도(0\~1), Activate Value도 강도지만 추가 동작 처리용 
+- <b>구분 방법</b>: Select Value는 누르는 강도(0\~1), Activate Value도 강도지만 추가 동작 처리용
 
 ---
 
 - <b>헷갈리는 개념</b>: Snap Turn vs Continuous Turn
 - <b>헷갈리는 이유</b>: 둘 다 회전 기능
-- <b>구분 방법</b>: Snap Turn은 각도 단위로 끊어서 회전(평균적으로 많이 사용), Continuous는 연속 회전 
+- <b>구분 방법</b>: Snap Turn은 각도 단위로 끊어서 회전(평균적으로 많이 사용), Continuous는 연속 회전
 
 ---
 
 - <b>헷갈리는 개념</b>: 프리셋 적용 여부
 - <b>헷갈리는 이유</b>: 버전에 따라 프리셋이 자동 적용되거나 수동 설정 필요
-- <b>구분 방법</b>: XR Interaction Toolkit 3.0 버전에서는 일부 프리셋(텔레포트 등)이 제거됨 
+- <b>구분 방법</b>: XR Interaction Toolkit 3.0 버전에서는 일부 프리셋(텔레포트 등)이 제거됨
 
 ### 질문할 내용
 
 - [ ] Character Controller의 Radius와 Height 값을 프로젝트에 맞게 조정하는 기준은?
 - [ ] Head Relative와 Hand Relative의 실제 VR 기기에서의 체감 차이는?
 - [ ] Teleportation의 Input Action을 3.0 버전에서 수동으로 연결하는 방법은?
-- [ ] Haptic(진동)과 Sort Order(우선순위) 설정은 어떻게 활용하는지? 
+- [ ] Haptic(진동)과 Sort Order(우선순위) 설정은 어떻게 활용하는지?
 - [ ] Continuous Move Provider를 사용하는 경우와 Dynamic Move Provider의 차이점은?
 
 ### 복습 체크리스트
@@ -206,9 +203,7 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 - [ ] XR Device Simulator로 키보드 테스트하는 방법을 안다.
 - [ ] Layer Mask를 Teleport로 설정하는 이유를 이해했다.
 
-
 ## 메모
-
 
 HandAnimations 스크립트
 
@@ -835,61 +830,58 @@ Continuous Turn Provider 그렇죠? 근데 평균적으로 스냅 턴을 많이 
 
 </details>
 
-
 <b>Unity XR 텔레포트 및 상호작용 설정</b> 2026-05-08
 
-
 ## 요약
-
 
 ### 실습 과제
 
 - [ ] 텔레포트 앵커 여러 개 복사하여 배치하기   
-- [ ] 세 가지 Movement Type (Instantaneous, Kinematic, Velocity Tracking) 테스트하기 
+- [ ] 세 가지 Movement Type (Instantaneous, Kinematic, Velocity Tracking) 테스트하기
 - [ ] 총기류(Gun Pistol, Gun Rifle)에 Velocity Tracking 방식 적용하기  
-- [ ] 양손 잡기 위한 Secondary Attach 설정 구현하기 
+- [ ] 양손 잡기 위한 Secondary Attach 설정 구현하기
 
 ### Teleport Interactor 설정
 
-- XR Interaction Toolkit 샘플에서 Teleport Interactor 프리팹 가져오기 
-- Right Hand Controller 하위에 Teleport Interactor 추가 
-- Interaction Layer를 일반 레이어가 아닌 전용 Interaction Layer로 설정 (매우 중요) 
+- XR Interaction Toolkit 샘플에서 Teleport Interactor 프리팹 가져오기
+- Right Hand Controller 하위에 Teleport Interactor 추가
+- Interaction Layer를 일반 레이어가 아닌 전용 Interaction Layer로 설정 (매우 중요)
 - Handedness를 Right로 설정  
 - XRI Right Interaction Rotate Manipulation 선택  
 
 ### 텔레포트 안정화 설정
 
 - Right Hand Controller 하위에 빈 오브젝트 생성 후 "순간이동 안정화 도착"으로 명명   
-- 위치를 (0, 0, 0)으로 초기화 
+- 위치를 (0, 0, 0)으로 초기화
 - XR Transform Stabilizer 컴포넌트 추가  
-- Target에 Teleport Interactor 연결 
+- Target에 Teleport Interactor 연결
 
 ### Ray Origin 설정
 
-- Right Hand Prefab 하위에 Ray Origin 빈 오브젝트 생성 
-- Ray Origin을 Teleport Interactor의 Line Visual > Line Origin Transform에 연결 
+- Right Hand Prefab 하위에 Ray Origin 빈 오브젝트 생성
+- Ray Origin을 Teleport Interactor의 Line Visual > Line Origin Transform에 연결
 - Ray Origin 위치를 손바닥 안쪽으로 조정 (엄지손가락 방향)   
 
 ### 입력 설정
 
 - Selector Input: Right Locomotion Teleport Mode 선택  
 - Activate Input: Right Interaction Activate Value 선택  
-- Selector는 그립 버튼, Activator는 트리거 버튼에 매핑 
+- Selector는 그립 버튼, Activator는 트리거 버튼에 매핑
 
 ### Teleportation Provider 추가
 
 - Locomotion 하위에 "Teleport" 빈 오브젝트 생성  
-- Teleportation Provider 컴포넌트 추가 
+- Teleportation Provider 컴포넌트 추가
 
 ### 텔레포트 동작 문제 해결
 
-- 플레이 시 Teleport Interactor가 자동으로 꺼지는 것은 정상 동작 
-- 텔레포트 입력을 주는 동안에만 레이가 활성화되는 구조 
-- 버전 변화로 인해 자동으로 켜고 끄는 시스템으로 변경됨 
+- 플레이 시 Teleport Interactor가 자동으로 꺼지는 것은 정상 동작
+- 텔레포트 입력을 주는 동안에만 레이가 활성화되는 구조
+- 버전 변화로 인해 자동으로 켜고 끄는 시스템으로 변경됨
 
 ### Movement Type 비교 (노트 참고)
 
-<b>Instantaneous (즉시 이동)</b> 
+<b>Instantaneous (즉시 이동)</b>
 
 - Transform 좌표를 직접 덮어쓰는 방식
 - 장애물을 통과함
@@ -897,14 +889,14 @@ Continuous Turn Provider 그렇죠? 근데 평균적으로 스냅 턴을 많이 
 - 물리적 무게감 없음
 - 추천 용도: 메뉴 UI, 열쇠, 카드 등 가벼운 소품
 
-<b>Kinematic (키네매틱 이동)</b> 
+<b>Kinematic (키네매틱 이동)</b>
 
 - Rigidbody.MovePosition 사용
 - 장애물을 밀어냄 (통과하지 않음)
 - 최소한의 물리적 반응 보장
 - 추천 용도: 레버, 손잡이, 문 고리 등
 
-<b>Velocity Tracking (속도 추적)</b> 
+<b>Velocity Tracking (속도 추적)</b>
 
 - Velocity/Force를 계산하여 제어
 - 장애물에 막힘 (실제 물리 법칙 적용)
@@ -915,10 +907,10 @@ Continuous Turn Provider 그렇죠? 근데 평균적으로 스냅 턴을 많이 
 
 - Left/Right Hand Controller에 XR Direct Interactor 컴포넌트 추가  
 - Interaction Layer Mask를 "Grabbable"로 설정 (Nothing 상태에서 Grabbable만 선택)  
-- Sphere Collider 추가 후 Is Trigger 체크 
+- Sphere Collider 추가 후 Is Trigger 체크
 - Radius를 0.1로 설정  
 
-### 입력 연결 (프리셋 없어서 수동 설정 필요) 
+### 입력 연결 (프리셋 없어서 수동 설정 필요)
 
 <b>Left Hand Controller:</b>
 
@@ -932,55 +924,53 @@ Continuous Turn Provider 그렇죠? 근데 평균적으로 스냅 턴을 많이 
 
 ### 잡기 가능한 오브젝트 설정
 
-<b>Instantaneous Interactable:</b> 
-
-- XR Grab Interactable 컴포넌트 추가
-- Interaction Layer를 Grabbable로 설정 
-- Mesh Collider 추가 후 Convex 체크  
-- Movement Type: Instantaneous (기본값)
-
-<b>Kinematic Interactable:</b> 
+<b>Instantaneous Interactable:</b>
 
 - XR Grab Interactable 컴포넌트 추가
 - Interaction Layer를 Grabbable로 설정
-- Mesh Collider 추가 후 Convex 체크 
+- Mesh Collider 추가 후 Convex 체크  
+- Movement Type: Instantaneous (기본값)
+
+<b>Kinematic Interactable:</b>
+
+- XR Grab Interactable 컴포넌트 추가
+- Interaction Layer를 Grabbable로 설정
+- Mesh Collider 추가 후 Convex 체크
 - Movement Type: Kinematic
 
-<b>Velocity Tracking Interactable:</b> 
+<b>Velocity Tracking Interactable:</b>
 
 - XR Grab Interactable 컴포넌트 추가
 - Interaction Layer를 Grabbable로 설정
 - Mesh Collider 추가 후 Convex 체크, Collider를 상위로 드래그하여 연결  
-- Rigidbody의 Is Kinematic 체크 해제 
+- Rigidbody의 Is Kinematic 체크 해제
 - Movement Type을 Velocity Tracking으로 변경  
 
 ### 개발 최적화 팁 (노트에서)
 
-- 반응성이 우선인 도구: Instantaneous 사용 
-- 몰입감이 중요한 상호작용 (휘두르기/던지기): Velocity Tracking 필수 
+- 반응성이 우선인 도구: Instantaneous 사용
+- 몰입감이 중요한 상호작용 (휘두르기/던지기): Velocity Tracking 필수
 - 배경 소품 (책꽂이 등): Kinematic으로 설정하여 성능 최적화  
 
 ### 애니메이터 설정 수정
 
 - VR Hand 애니메이터에서 Pinch를 Trigger로 변경 필요  
-- 양손 모두 Grip/Trigger 설정 확인 
+- 양손 모두 Grip/Trigger 설정 확인
 
 ### 문제 해결
 
 <b>Blender 파일 인식 문제:</b>  
 
-- PC에 Blender 소프트웨어 미설치 시 발생 
-- Unity가 백그라운드에서 Blender를 실행하여 .fbx로 자동 변환하는데, Blender가 없으면 파일 해석 불가 
+- PC에 Blender 소프트웨어 미설치 시 발생
+- Unity가 백그라운드에서 Blender를 실행하여 .fbx로 자동 변환하는데, Blender가 없으면 파일 해석 불가
 - 해결 방법: Blender 설치 또는 임시로 다른 메쉬(Sphere, Cube 등)로 대체  
 
-<b>버전 호환성:</b> 
+<b>버전 호환성:</b>
 
 - 6.0 초반 URP 기준 모델링이라 6.3 이상 버전에서 문제 발생 가능
 - 셰이더 및 URP 설정이 크게 변경됨
 
-
 ## 메모
-
 
 [Instantanious Interactable,Kinematic Interactable....docx](https://naver.me/xqb5h3U9)
 
@@ -1101,7 +1091,6 @@ Velocity/Force 제어
 1. <b>반응성이 우선인 도구:</b> Instantaneous를 사용하되, 시각적으로 어색하지 않게 보정하세요.
 2. <b>몰입감이 중요한 상호작용:</b> 플레이어가 휘두르거나 던져야 하는 물체는 반드시 Velocity Tracking을 사용해 손맛을 살리세요.
 3. <b>성능 최적화:</b> 1인 개발 시 CPU 리소스를 아끼려면 배경의 잔잔한 소품들은 가급적 Kinematic으로 설정해 물리 충돌 계산의 복잡도를 낮추는 것이 유리합니다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1853,48 +1842,45 @@ Notion AI가 이 회의를 기록하고 있습니다.
 
 </details>
 
-
 <b>VR 상호작용 및 무기 잡기 구현 수업</b> 2026-05-08
 
-
 ## 요약
-
 
 ### 액션 아이템
 
 - [ ] 학생들: 라이플 직접 설정하기  
-- [ ] 학생들: 데모 씬에서 손모양 애니메이션으로 사다리 오르기 구현 
+- [ ] 학생들: 데모 씬에서 손모양 애니메이션으로 사다리 오르기 구현
 - [ ] 학생들: 손모양 모델링으로 물건 잡기(그랩) 구현  
-- [ ] 학생들: 텔레포트 기능 추가 
-- [ ] 학생들: 완성된 프로젝트 패키지로 제출 
+- [ ] 학생들: 텔레포트 기능 추가
+- [ ] 학생들: 완성된 프로젝트 패키지로 제출
 
 ### 갤럭시 트래킹 및 움직임 개선
 
-- 갤럭시 트래킹 사용 시 책상을 잡으면 화면이 떨리는 문제 발생 
+- 갤럭시 트래킹 사용 시 책상을 잡으면 화면이 떨리는 문제 발생
 - 부드러운 움직임을 위해 조작 방법 조정 필요  
-- 키보드로 조작하는 것이 어려움 
-- 개선 후 떨림이 줄어들었지만 여전히 약간 존재 
+- 키보드로 조작하는 것이 어려움
+- 개선 후 떨림이 줄어들었지만 여전히 약간 존재
 
 ### XR Grab Interactable 설정
 
-- XR Grab Interactable 컴포넌트 추가 
+- XR Grab Interactable 컴포넌트 추가
 - Mesh Collider 추가 및 설정  
 - Interaction Layer Mask 설정  
-- 갤럭시 vs 인터액션 레이어 선택 기준: 야외나 장애물 없는 경우 인터액션 사용, 그 외는 갤럭시 사용 
+- 갤럭시 vs 인터액션 레이어 선택 기준: 야외나 장애물 없는 경우 인터액션 사용, 그 외는 갤럭시 사용
 
 ### Physics 설정
 
 - Edit > Project Settings > Physics로 이동  
-- 레이어 매트릭스에서 통과/충돌 설정 
-- 오브젝트가 많아지면 레이어 설정 필수 
+- 레이어 매트릭스에서 통과/충돌 설정
+- 오브젝트가 많아지면 레이어 설정 필수
 
 ### Gun Pistol Attach Transform 설정
 
 - Gun Pistol 오브젝트 선택 및 Attach Transform 추가   
-- Attach Transform: 잡을 때 미리 정의된 위치로 고정되게 잡히는 기능 
+- Attach Transform: 잡을 때 미리 정의된 위치로 고정되게 잡히는 기능
 - 위치 지정 중요성: 잘못 설정하면 이상하게 잡힘   
-- Attach Transform 위치 조정 방법: 더블클릭하여 E키로 회전 조정 
-- 최대한 총구 근처로 위치 조정 
+- Attach Transform 위치 조정 방법: 더블클릭하여 E키로 회전 조정
+- 최대한 총구 근처로 위치 조정
 - 방향 조절 필요  
 
 ### 두 가지 잡기 방법
@@ -1903,51 +1889,49 @@ Notion AI가 이 회의를 기록하고 있습니다.
 
 - Gun Pistol에서 Use Dynamic Attach 옵션 활성화
 - 총의 어느 부분을 잡아도 자동으로 올바르게 잡힘
-- 웬만하면 정상적으로 잡힘 
+- 웬만하면 정상적으로 잡힘
 
 두 번째 방법: Attach Transform 정확한 위치 설정   
 
 - 위치와 방향을 정확하게 측정하여 설정
-- 원하는 위치에 정확히 배치 
+- 원하는 위치에 정확히 배치
 
 ### 양손 컨트롤 설정
 
 - Left Hand Prefabs와 Right Hand Prefabs 복사  
-- Secondary Attach Transform: 양손으로 교차해서 잡을 때 사용 
-- 이전 시간에 학습한 내용 복습 
+- Secondary Attach Transform: 양손으로 교차해서 잡을 때 사용
+- 이전 시간에 학습한 내용 복습
 
 ### 실습 과제: 라이플 설정
 
 - Gun Pistol 옆에 있는 라이플을 학생들이 직접 설정  
-- Use Dynamic Attach 체크 필요 
+- Use Dynamic Attach 체크 필요
 
 ### 손모양 애니메이션
 
-- 오늘 학습한 주요 내용: 손모양 모델링을 이용한 상호작용 
-- 포지션, 플라잉, 그래픽 등 모두 할 수 있어야 함 
-- 이전 시간 내용: 그랩, 텔레포트, 헬리콥터, 그래프 
+- 오늘 학습한 주요 내용: 손모양 모델링을 이용한 상호작용
+- 포지션, 플라잉, 그래픽 등 모두 할 수 있어야 함
+- 이전 시간 내용: 그랩, 텔레포트, 헬리콥터, 그래프
 
 ### 데모 씬 설정
 
 - 저장 후 데모 씬 열기   
 - VR Device Simulator 추가 필요  
-- VR 기반 시뮬레이터 설정 
+- VR 기반 시뮬레이터 설정
 - Templates > Demo Scene에서 Ctrl+V로 붙여넣기  
-- 컨트롤러 확인 
+- 컨트롤러 확인
 - XR Origin, Interaction Manager 삭제   
 
 ### 최종 과제 요구사항
 
-- XR Rig에 Character Controller 추가 
-- 손모양 애니메이션으로 사다리 오르기 구현 
+- XR Rig에 Character Controller 추가
+- 손모양 애니메이션으로 사다리 오르기 구현
 - 손모양 모델링으로 물건 잡기 (클라잉/그랩)  
-- 텔레포트 기능 추가 (이미 설정되어 있어 쉬울 것) 
-- 완성 후 패키지로 제출 
-- 10분 휴식 후 실습 진행 
-
+- 텔레포트 기능 추가 (이미 설정되어 있어 쉬울 것)
+- 완성 후 패키지로 제출
+- 10분 휴식 후 실습 진행
 
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2211,7 +2195,6 @@ Please, don't ever leave me.
 오늘도 영상 봐주셔서 감사합니다!
 
 </details>
-
 
 DemoScene 에서 XR Origin 에 손 모양 모델링을 넣고 애니메이션 적용 후 Move Turn Grab Teleport Climb 이 되게 만들기
 {% endraw %}

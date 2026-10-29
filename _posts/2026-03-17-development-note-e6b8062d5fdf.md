@@ -3,8 +3,8 @@ title: "Episode 3 – 에셋 리스트 (1)"
 date: 2026-03-17 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Episode 3 - 멈춰버린 노래 맵 환경 멜로디 오브젝트 배경 장식 퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 https://assetstore.unity.com/packages/vfx/particles/polygonal-s-low-pol"
-description: "Episode 3 - 멈춰버린 노래 맵 환경 멜로디 오브젝트 배경 장식 퍼즐 오브젝트 - 음표 배열, 리듬 퍼즐, 순서 기억 퍼즐 NPC 관련 스토리 오브젝트 https://assetstore.unity.com/packages/vfx/particles/polygonal-s-low-pol"
+excerpt: "에피소드 3의 음악 공간을 위한 환경·장식·퍼즐·스토리 오브젝트 후보를 분류했다."
+description: "에피소드 3의 음악 공간을 위한 환경·장식·퍼즐·스토리 오브젝트 후보를 분류했다."
 published: true
 migration_id: "35e36532580e81c480d0e6b8062d5fdf"
 migration_status: "published"
@@ -53,7 +53,6 @@ Episode 3 - 멈춰버린 노래
 - 잉크병 / 펜
 - 음악가의 노트 (스토리 단서)
 
-
 ---
 
 ## 3. 배경 장식 오브젝트 (Decoration)
@@ -65,7 +64,6 @@ Episode 3 - 멈춰버린 노래
 - 색이 변하는 빛 기둥
 - 잔상 효과 (이전 기억 흔적)
 - 공간에 떠다니는 작은 종이 조각
-
 
 ## 4. 퍼즐 오브젝트 (Puzzle Objects)
 
@@ -98,7 +96,6 @@ Episode 3 - 멈춰버린 노래
 - 기억 재생 효과 (빛이 흐르는 연출)
 - 선택 상태 표시 이펙트
 - 실패 시 초기화 효과
-
 
 ---
 

@@ -14,9 +14,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>개발 스탠드업 및 발표 준비 회의</b> 2026-07-08
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -35,7 +33,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 목적: 목요일 시연 준비 상태 확인, 발표 자료 준비 방향 논의, 개발 작업 배분
 </li>
 <li>
-참석자/역할: 장수영 (PM/프로듀서), 강다영 (TD/개발), 우성혁 (디렉터), 김남혜 (PD), 김나윤 (레벨 디자인), 송예찬 (컨셉 기획)
+참석자/역할: 장수영 (PM/프로듀서), 강다영 (TD/개발), 우성혁 (디렉터), 김남혜 (PD), 김나윤 (레벨 디자인), 송예찬 (콘셉트 기획)
 </li>
 <li>
 안건(의제): 
@@ -79,7 +77,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
   - 영향 범위: 리소스/품질
   - 반영 대상: 에셋 구매 계획, 다음 주 리소스 적용
 - <b>결정:</b> 프리즘 유탄 스킬 구현 방식 확정 
-  - 근거/맥락: 0.5초 지연 후 폭발 → AOE 데미지 → 2.5초간 디코이 유지
+  - 근거/맥락: 0.5초 지연 후 폭발 → AOE 대미지 → 2.5초간 디코이 유지
   - 영향 범위: 개발/기획
   - 반영 대상: 스킬 구현, 기획서
 - <b>보류:</b> 네트워크(Photon) 구현 여부 
@@ -92,7 +90,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 - [ ] 김남혜 PD — 툰쉐이더 에셋 조사 및 요청서 작성 — 팀원 확인 후 요청서 제출 — 금일 중 
 - [ ] 아이템 레어도별 인벤토리 슬롯 이미지 변경 구현 — 슬롯 이미지 변경 확인 — 목요일 시연 전 
 - [ ] 아이템 버리기 기능 에러 디버깅 — 버그 수정 완료 — 목요일 시연 전 
-- [ ] 스킬 사용 시 마나 소모 및 데미지 계산 보완 — 프리즘 유탄 스킬 정상 작동 — 목요일 시연 전 
+- [ ] 스킬 사용 시 마나 소모 및 대미지 계산 보완 — 프리즘 유탄 스킬 정상 작동 — 목요일 시연 전
 - [ ] 게임 씬 로딩 시 UI 표시 타이밍 후처리 작업 — UI 로딩 순서 정상화 — 목요일 시연 전 
 - [ ] 장수영 프로듀서, 우성혁 디렉터 — 발표 자료 제작 업무 명확히 분배 — 업무 분담표 완성 — 발표 10일 전까지 
 - [ ] World Scene 구현 계속 진행 — 씬 구현 완료 — 목요일 시연 전 
@@ -101,7 +99,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 
 - <b>변경 요약:</b> 프리즘 유탄 스킬 동작 순서 명확화
 - <b>변경 전 → 변경 후</b>
-  - 스킬 동작: 불명확한 순서 → 발사(0초) → 0.5초 지연 → 폭발+AOE 데미지 → 2.5초간 디코이 어그로 유지 → 소멸 (총 3초) 
+  - 스킬 동작: 불명확한 순서 → 발사(0초) → 0.5초 지연 → 폭발+AOE 대미지 → 2.5초간 디코이 어그로 유지 → 소멸 (총 3초)
 - <b>영향 받는 마일스톤/검수:</b> 목요일 시연
 
 ### 8) 리스크 & 블로커 (Risks / Blockers)
@@ -121,9 +119,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
   - 네트워크 구현 최종 결정
   - 발표 자료 진행 상황 체크
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

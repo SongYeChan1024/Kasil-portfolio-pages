@@ -1,10 +1,10 @@
 ---
-title: "20261021_NCAI"
+title: "NCAI Blender 실습 이미지와 과제 첨부 기록"
 date: 2026-10-21 12:00:00 +0900
 categories: ["수업 노트", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "원본 첨부: assignment_02.blend (별도 로컬 보관) 원본 첨부: 20261021_송예찬.zip (별도 로컬 보관) 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료"
-description: "원본 첨부: assignment_02.blend (별도 로컬 보관) 원본 첨부: 20261021_송예찬.zip (별도 로컬 보관) 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료 첨부 자료"
+excerpt: "NCAI Blender 실습 이미지와 과제 첨부 기록. 원본 Blender 파일과 압축 파일은 별도로 로컬에 보관했다."
+description: "NCAI Blender 실습 이미지와 과제 첨부 기록. 원본 Blender 파일과 압축 파일은 별도로 로컬에 보관했다."
 published: true
 migration_id: "40036532580e80bc99eef2ab2703accc"
 migration_status: "published"

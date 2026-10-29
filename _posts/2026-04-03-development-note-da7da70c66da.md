@@ -3,8 +3,8 @@ title: "SoundManager 스크립트"
 date: 2026-04-03 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "cs using System.Collections.Generic; using UnityEngine; using UnityEngine.SceneManagement; /// /// 프로젝트 전체의 사운드를 총괄하는 매니저 /// - BGM /// - Ambient(환경음) /// - UI "
-description: "cs using System.Collections.Generic; using UnityEngine; using UnityEngine.SceneManagement; /// /// 프로젝트 전체의 사운드를 총괄하는 매니저 /// - BGM /// - Ambient(환경음) /// - UI "
+excerpt: "프로젝트의 BGM·환경음·UI·효과음을 관리하는 SoundManager 구현 코드를 보관한 기록이다."
+description: "프로젝트의 BGM·환경음·UI·효과음을 관리하는 SoundManager 구현 코드를 보관한 기록이다."
 published: true
 migration_id: "35e36532580e81f4a3b9da7da70c66da"
 migration_status: "published"

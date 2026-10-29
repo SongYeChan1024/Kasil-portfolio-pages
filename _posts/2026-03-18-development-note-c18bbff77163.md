@@ -3,8 +3,8 @@ title: "2026-03-18_팀 모으미_프로젝트 MosAIc 진행"
 date: 2026-03-18 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-18 요약 작업 진행 사항 에피소드 2 작업 공간 마무리 후 그림 진입 시 씬 전환 기술 구현 및 UI 배치 예정 스테이지 1의 얼음 미끄럼 포즈 구현 완료, 피드백 대기 중 에피소드 4 퍼즐 맵 제작 진행 중 기획서 정리 작업:"
-description: "팀 모으미 프로젝트 MosAIc 진행 회의 2026-03-18 요약 작업 진행 사항 에피소드 2 작업 공간 마무리 후 그림 진입 시 씬 전환 기술 구현 및 UI 배치 예정 스테이지 1의 얼음 미끄럼 포즈 구현 완료, 피드백 대기 중 에피소드 4 퍼즐 맵 제작 진행 중 기획서 정리 작업:"
+excerpt: "에피소드별 맵·연출 작업 상황을 공유하고 음표 이펙트의 페이드와 색상 적용 문제를 정리했다."
+description: "에피소드별 맵·연출 작업 상황을 공유하고 음표 이펙트의 페이드와 색상 적용 문제를 정리했다."
 published: true
 migration_id: "35e36532580e8193914fc18bbff77163"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>팀 모으미 프로젝트 MosAIc 진행 회의</b> 2026-03-18
 
-
 ## 요약
-
 
 ### 작업 진행 사항
 
@@ -30,9 +28,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 - 팀원들은 진행 중 전파할 내용이나 이슈 발생 시 바로 공유 
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -56,7 +52,6 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 
 </details>
-
 
 ## 기본 정보
 
@@ -480,10 +475,8 @@ public class PopNotes : MonoBehaviour
 
 ![첨부 자료](/assets/img/uploads/notion/62bd98546f195d790d982dc9e8314cf5edf18240cc5c8b020f09533c64ab9f70.png)
 
-
 <details markdown="1">
 <summary>첨부/스크린샷(선택)</summary>
-
 
 <ul>
 <li></li>
@@ -491,10 +484,8 @@ public class PopNotes : MonoBehaviour
 
 </details>
 
-
 <details markdown="1">
 <summary>회고(선택)</summary>
-
 
 - 잘한 점:
 - 아쉬운 점:

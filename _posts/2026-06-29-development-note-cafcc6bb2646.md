@@ -3,8 +3,8 @@ title: "코드변경사항 기록//0629"
 date: 2026-06-29 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29\\_inventory\\_sortie\\_chest\\_restore 2026-06-29 개발 보고서 1. 작업 개요 오늘은 로비의 출격 준비 UI부터 인게임 퀵슬롯, 상자와 인벤토리 간 아이"
-description: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29\\_inventory\\_sortie\\_chest\\_restore 2026-06-29 개발 보고서 1. 작업 개요 오늘은 로비의 출격 준비 UI부터 인게임 퀵슬롯, 상자와 인벤토리 간 아이"
+excerpt: "출격 준비와 퀵슬롯 복원, 상자·인벤토리 이동 및 바닥 아이템 획득 예외 처리를 하나의 흐름으로 복구했다."
+description: "출격 준비와 퀵슬롯 복원, 상자·인벤토리 이동 및 바닥 아이템 획득 예외 처리를 하나의 흐름으로 복구했다."
 published: true
 migration_id: "38e36532580e80559a0ecafcc6bb2646"
 migration_status: "published"

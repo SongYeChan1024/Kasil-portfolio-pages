@@ -1,10 +1,10 @@
 ---
-title: "새 페이지"
+title: "수업 일정 및 기획서 관리"
 date: 2026-06-05 12:00:00 +0900
 categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "수업 일정 및 기획서 관리 2026-06-05 요약 오늘 수업 핵심 요약 수업에서는 일정과 시간 엄수 의 중요성을 강조했습니다. 티칭과 코칭을 병행하는 수업 방식 으로 진행되며, 자격증, Notion 과제, 기획서 작성, 취업 시즌 등 다양한 활동을 관리합니다. 현업 실무자들의 기획서를"
-description: "수업 일정 및 기획서 관리 2026-06-05 요약 오늘 수업 핵심 요약 수업에서는 일정과 시간 엄수 의 중요성을 강조했습니다. 티칭과 코칭을 병행하는 수업 방식 으로 진행되며, 자격증, Notion 과제, 기획서 작성, 취업 시즌 등 다양한 활동을 관리합니다. 현업 실무자들의 기획서를"
+excerpt: "수업 일정과 과제 마감 관리의 중요성을 살펴보고, 현업 기획서를 학습 자료로 활용하는 방법을 정리했다."
+description: "수업 일정과 과제 마감 관리의 중요성을 살펴보고, 현업 기획서를 학습 자료로 활용하는 방법을 정리했다."
 published: true
 migration_id: "37636532580e80c68b9fc2936e01eeee"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["source_citations_preserved_in_backup"]
 {% raw %}
 <b>수업 일정 및 기획서 관리</b> 2026-06-05
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -69,9 +67,7 @@ migration_flags: ["source_citations_preserved_in_backup"]
 - [ ] 티칭과 코칭의 차이를 구분할 수 있다.
 - [ ] 현업 기획서를 참고하는 이유를 설명할 수 있다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -83,12 +79,9 @@ migration_flags: ["source_citations_preserved_in_backup"]
 
 </details>
 
-
 회의 2026-06-05
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

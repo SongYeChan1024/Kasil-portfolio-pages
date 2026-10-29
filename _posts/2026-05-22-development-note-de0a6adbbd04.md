@@ -3,8 +3,8 @@ title: "2026-05-22 개발 메모"
 date: 2026-05-22 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "Photon 네트워킹 고급 문제 해결 및 킬 카운터 UI 구현 2026-05-22 요약 오늘 수업 핵심 요약 Photon 멀티플레이어 게임에서 발생하는 4가지 핵심 문제 와 실무적 해결 방법을 학습했습니다. Custom Properties(룸 프로퍼티) 를 활용한 상태 기반 동기화가 B"
-description: "Photon 네트워킹 고급 문제 해결 및 킬 카운터 UI 구현 2026-05-22 요약 오늘 수업 핵심 요약 Photon 멀티플레이어 게임에서 발생하는 4가지 핵심 문제 와 실무적 해결 방법을 학습했습니다. Custom Properties(룸 프로퍼티) 를 활용한 상태 기반 동기화가 B"
+excerpt: "Photon 멀티플레이의 상태 동기화·경쟁 조건·재접속·위치 끊김 문제와 킬 카운터 UI 구현을 정리했다."
+description: "Photon 멀티플레이의 상태 동기화·경쟁 조건·재접속·위치 끊김 문제와 킬 카운터 UI 구현을 정리했다."
 published: true
 migration_id: "36836532580e80b8837bde0a6adbbd04"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 {% raw %}
 <b>Photon 네트워킹 고급 문제 해결 및 킬 카운터 UI 구현</b> 2026-05-22
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -178,7 +176,6 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 <p>
 \<table header
 
-
 </p>
 
 ---
@@ -266,9 +263,7 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 - [ ] ContainsKey()로 Custom Properties 존재 여부를 확인하는 방법을 익혔다.
 - [ ] 탱크가 아파치를 격추시킨 킬 카운트 구현 과제를 완료할 수 있다.
 
-
 ## 메모
-
 
 ### <b>문제 1. \[레이트 조인 및 상태 동기화 문제\]</b>
 
@@ -367,7 +362,6 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 <b>뒤이어 들어온 클라이언트 B의 요청 시점에는 플래그가 이미true이므로 무시하거나 거절 RPC를 보냅니다.4.오브젝트 파괴 및 보상 지급:동기화 완료.승인된 클라이언트 A에게 보상을 주라는 RPC를 보내거나 룸 프로퍼티를 갱신한 뒤,마스터 클라이언트가PhotonNetwork.Destroy()를 호출하여 필드에서 아이템을 완전히 삭제합니다.</b>
 
 - 뒤이어 들어온 클라이언트 B의 요청 시점에는 플래그가 이미true이므로 무시하거나 거절 RPC를 보냅니다.4.오브젝트 파괴 및 보상 지급:동기화 완료.승인된 클라이언트 A에게 보상을 주라는 RPC를 보내거나 룸 프로퍼티를 갱신한 뒤,마스터 클라이언트가PhotonNetwork.Destroy()를 호출하여 필드에서 아이템을 완전히 삭제합니다.
-
 
 ### <b>문제 3. 모바일/무선 환경의 일시적 단선 처리</b>
 
@@ -511,7 +505,6 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 <b>//RPC를 쓰지 않고, 포톤 서버를 통해 실시간으로 커스텀 패킷을 직접 날릴 때 PhotonNetwork.RaiseEvent라는 기능을 씁니다</b>
 
 <b>// 이때 서버가 던져주는 원본 데이터 형태인 EventData나 전송 옵션을 설정하는 RaiseEventOptions, SendOptions 등이 이 네임스페이스에 포함되어 있습니다.</b>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1339,12 +1332,9 @@ Thank you!
 
 </details>
 
-
 <b>Photon Custom Properties 코드 작성 시 네임스페이스 주의사항</b> 2026-05-22
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1405,7 +1395,6 @@ Thank you!
 <p>
 \<table header-
 
-
 </p>
 
 ---
@@ -1450,9 +1439,7 @@ Thank you!
 - [ ] Photon Hashtable과 System.Collections.Hashtable의 차이를 구분할 수 있다.
 - [ ] Custom Properties 관련 컴파일 에러 발생 시 네임스페이스부터 확인하는 습관을 가진다.
 
-
 ## 메모
-
 
 <b>AI(ChatGPT, Claude 등)에게 \*”포톤 커스텀 프로퍼티 바꾸는 코드 짜줘”\*라고 하면,</b>
 
@@ -1463,7 +1450,6 @@ Thank you!
 <b>System.Collections.Hashtable로 인식해 버립니다. 결국 “타입이 맞지 않아 포톤 프로퍼티에 넣을 수 없다”는</b>
 
 <b>컴파일 에러가 터지는데, 초보자분들이 여기서 정말 많이 헤맵니다.</b>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1674,7 +1660,6 @@ rpc-targeton-all, 그 다음에 콤마, 그 다음에 뭐에요? character-numbe
 자 지금부터 한번 해봅니다
 
 </details>
-
 
 탱크 아파치 게임 싱글 게임은 완성 되어서 임포트 되어있음 포톤엔진 사이트에서 방을 만들고 APPID를 생성하고 PUN2를 임포트 해서 탱크와 탱크는 PVP탱크와 아파치 PVE 로 구성하고 방 접속은 랜덤 매치 메이킹 방식과 방을 만들어서 접속 하는 방식, 방을 나가면 방이 사라지고 마스터 클라이언트가 바뀌더라도 자음 접속 유저가 물려받게 구성한다, 탱크끼리는 서로 Kill수가 기록 되도록 만들어라.
 {% endraw %}

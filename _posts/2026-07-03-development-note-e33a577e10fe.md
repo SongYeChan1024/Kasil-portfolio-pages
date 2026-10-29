@@ -610,7 +610,7 @@ public class GameManager : MonoBehaviour
 
 #### 설명
 
-기존 <code>EnemyMovement</code>는 시야 판정, 소리 조사, 추적, 공격, 데미지 판정까지 모두 한 클래스 안에 몰려 있었습니다. 수정 후에는 이 스크립트를 실제 MonoBehaviour 진입점으로 남기고, 판단은 <code>EnemyBrain</code>, 감지는 <code>EnemyPerception</code>, 소리 조사는 <code>EnemyNoiseListener</code>, 이동은 <code>EnemyLocomotion</code>, 전투는 <code>EnemyCombat</code>에 넘기도록 재구성했습니다. 또한 애니메이션 이벤트에서 들어오는 1타/2타 스윙을 <code>HandleAttackSwing()</code>으로 받아 각 타격을 분리 처리하도록 바뀌었습니다.
+기존 <code>EnemyMovement</code>는 시야 판정, 소리 조사, 추적, 공격, 대미지 판정까지 모두 한 클래스 안에 몰려 있었습니다. 수정 후에는 이 스크립트를 실제 MonoBehaviour 진입점으로 남기고, 판단은 <code>EnemyBrain</code>, 감지는 <code>EnemyPerception</code>, 소리 조사는 <code>EnemyNoiseListener</code>, 이동은 <code>EnemyLocomotion</code>, 전투는 <code>EnemyCombat</code>에 넘기도록 재구성했습니다. 또한 애니메이션 이벤트에서 들어오는 1타/2타 스윙을 <code>HandleAttackSwing()</code>으로 받아 각 타격을 분리 처리하도록 바뀌었습니다.
 
 #### 수정된 스크립트 전체
 
@@ -1066,7 +1066,7 @@ public class EnemyPresenter : MonoBehaviour
 
 #### 설명
 
-<code>EnemyPresenter</code>는 여전히 Movement와 Animator를 연결하는 접착 계층 역할을 맡지만, 공격 이벤트 연결 방식이 바뀌었습니다. 이전에는 애니메이터의 단일 <code>OnGetAttack</code>를 <code>CheckAndApplyDamage()</code>에 바로 연결했다면, 지금은 <code>OnAttackSwing</code>을 <code>HandleAttackSwing()</code>에 연결해서 애니메이션 이벤트가 “데미지 직접 적용”이 아니라 “몇 번째 스윙인지 통지”만 하도록 바뀌었습니다.
+<code>EnemyPresenter</code>는 여전히 Movement와 Animator를 연결하는 접착 계층 역할을 맡지만, 공격 이벤트 연결 방식이 바뀌었습니다. 이전에는 애니메이터의 단일 <code>OnGetAttack</code>를 <code>CheckAndApplyDamage()</code>에 바로 연결했다면, 지금은 <code>OnAttackSwing</code>을 <code>HandleAttackSwing()</code>에 연결해서 애니메이션 이벤트가 “대미지 직접 적용”이 아니라 “몇 번째 스윙인지 통지”만 하도록 바뀌었습니다.
 
 #### 수정된 스크립트 전체
 
@@ -1133,7 +1133,7 @@ public class EnemyPresenter : MonoBehaviour
 
 #### 설명
 
-<code>EnemyBrain</code>은 상위 의사결정 전용 모듈입니다. 현재 타겟을 유지할지, 새 타겟을 볼지, 소리 조사로 넘어갈지, 추적할지, 공격을 시작할지를 한 곳에서 판단합니다. 즉 “무엇을 할지”를 정하는 계층을 따로 빼서, 나중에 순찰이나 루시드 낙인 같은 상태가 추가되더라도 의사결정만 확장할 수 있는 기반을 만든 것입니다.
+<code>EnemyBrain</code>은 상위 의사결정 전용 모듈입니다. 현재 타깃을 유지할지, 새 타깃을 볼지, 소리 조사로 넘어갈지, 추적할지, 공격을 시작할지를 한 곳에서 판단합니다. 즉 “무엇을 할지”를 정하는 계층을 따로 빼서, 나중에 순찰이나 루시드 낙인 같은 상태가 추가되더라도 의사결정만 확장할 수 있는 기반을 만든 것입니다.
 
 #### 수정된 스크립트 전체
 
@@ -1880,7 +1880,7 @@ public class EnemyLocomotion
 
 #### 설명
 
-<code>EnemyCombat</code>은 이번 2연격 기반을 만드는 핵심 모듈입니다. 공격 시작 가능 거리, 공격 쿨다운, 선딜, 애니메이션 전체 길이, 회복 시간, 1타/2타별 돌진 거리와 시간, 1타/2타별 데미지를 전부 이곳에서 관리합니다. <code>RunCombo()</code>는 공격 애니메이션을 한 번 재생하고, 실제 타격은 애니메이션 이벤트로 들어온 <code>ExecuteSwing()</code>이 처리하기 때문에 “애니메이션 1회 + 스윙 2회” 구조를 자연스럽게 만들 수 있습니다.
+<code>EnemyCombat</code>은 이번 2연격 기반을 만드는 핵심 모듈입니다. 공격 시작 가능 거리, 공격 쿨다운, 선딜, 애니메이션 전체 길이, 회복 시간, 1타/2타별 돌진 거리와 시간, 1타/2타별 대미지를 전부 이곳에서 관리합니다. <code>RunCombo()</code>는 공격 애니메이션을 한 번 재생하고, 실제 타격은 애니메이션 이벤트로 들어온 <code>ExecuteSwing()</code>이 처리하기 때문에 “애니메이션 1회 + 스윙 2회” 구조를 자연스럽게 만들 수 있습니다.
 
 #### 수정된 스크립트 전체
 

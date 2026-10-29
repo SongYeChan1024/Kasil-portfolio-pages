@@ -3,8 +3,8 @@ title: "체스리스트"
 date: 2026-04-23 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Ep3\\_2Manager.cs (line 39) 기준으로 useTopDownRhythmPuzzle는 켜져 있어. Ep3\\_2\\_Scene.unity (line 3091)에 Ep3\\_2TopDownRhythmPuzzle 컴포넌트도 이미 붙여뒀어. startPuzzleController와 "
-description: "Ep3\\_2Manager.cs (line 39) 기준으로 useTopDownRhythmPuzzle는 켜져 있어. Ep3\\_2\\_Scene.unity (line 3091)에 Ep3\\_2TopDownRhythmPuzzle 컴포넌트도 이미 붙여뒀어. startPuzzleController와 "
+excerpt: "탑다운 리듬 퍼즐을 씬에 연결한 뒤 확인할 프리팹·인스펙터 설정과 테스트 순서를 정리했다."
+description: "탑다운 리듬 퍼즐을 씬에 연결한 뒤 확인할 프리팹·인스펙터 설정과 테스트 순서를 정리했다."
 published: true
 migration_id: "35e36532580e810c90f2e03865c20d83"
 migration_status: "published"

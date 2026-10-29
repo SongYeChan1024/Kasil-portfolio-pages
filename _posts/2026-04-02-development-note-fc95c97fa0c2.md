@@ -24,7 +24,6 @@ migration_flags: ["publication_review"]
 - 희미한 조명
 - 음악가 NPC의 뒷모습 또는 옆모습
 
-
 ![첨부 자료](/assets/img/uploads/notion/75efd9c5ffd403b1adc5a87ef947ecca7aea34c5bc7b3a5b436136854790714a.png)
 
 ![첨부 자료](/assets/img/uploads/notion/21d5f882881a35c041d558754ad6942a692801483c086a767abeaa657c770798.png)
@@ -39,17 +38,13 @@ migration_flags: ["publication_review"]
 
 ![첨부 자료](/assets/img/uploads/notion/5dc6c8a56cf9ccd3693c131f58ee32013f02ffe414981bfa7f2981b331629a9b.png)
 
-
 <b>3-2 리듬 점프 퍼즐 진행 -톤앤 매너 수정후에 다시 컷신 확인</b>
-
 
 ![첨부 자료](/assets/img/uploads/notion/5f3738fd3101cdd502682e9e557286e8911492d844b494bd085bdd31c064fc7d.png)
 
 ![첨부 자료](/assets/img/uploads/notion/ffd4588316efbe9db986be7188d0b3ee788e41da4df57837daed8fda10525a6f.png)
 
-
 <b>그랜드 피아노 컷신 - 음악가와 플레이어가 그랜드 피아노 에 같이 앉아서 연주하는 컷신</b>
-
 
 ### 보여주면 좋은 것
 

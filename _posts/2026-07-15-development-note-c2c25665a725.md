@@ -14,9 +14,7 @@ migration_flags: ["publication_review"]
 {% raw %}
 [2026-07-15\_tutorial\_scene\_flow\_code\_analysis]({% endraw %}{% post_url 2026-07-15-development-note-ef91da36f944 %}{% raw %})
 
-
 이 문서는 2026-07-15 기준 튜토리얼 씬 구축 및 베타 병합 후 로컬 변경 상태 점검 내용을 정리한 코드 변경 사항 기록이다. AI가 작성한 초안이므로 PM/기획자 검토 후 확정한다.
-
 
 # 1. 한 줄 결론
 

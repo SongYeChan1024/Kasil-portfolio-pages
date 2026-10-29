@@ -1,10 +1,10 @@
 ---
-title: "일일회고록 2026-04-08"
+title: "일일 회고록 2026-04-08"
 date: 2026-04-08 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "기본 정보 날짜: 2026년 4월 8일 프로젝트: MosAIc / Moz.A.I.c (시나리오 리뉴얼: EP.3 “멈춰버린 노래”) 작성자: 작성자 오늘 한 일(요약) EP.3 진입 흐름을 재정리: EP.2 종료 → 로비 복귀 → 기억의 문 → “음악 작업실”로 진입 EP.3 로비 씬 "
-description: "기본 정보 날짜: 2026년 4월 8일 프로젝트: MosAIc / Moz.A.I.c (시나리오 리뉴얼: EP.3 “멈춰버린 노래”) 작성자: 작성자 오늘 한 일(요약) EP.3 진입 흐름을 재정리: EP.2 종료 → 로비 복귀 → 기억의 문 → “음악 작업실”로 진입 EP.3 로비 씬 "
+excerpt: "에피소드 3의 진입과 로비·음악 퍼즐·퇴장 흐름을 재정리하며 멈춰버린 노래의 시나리오를 다듬었다."
+description: "에피소드 3의 진입과 로비·음악 퍼즐·퇴장 흐름을 재정리하며 멈춰버린 노래의 시나리오를 다듬었다."
 published: true
 migration_id: "35e36532580e814c9c1bfe5c87ab1ac2"
 migration_status: "published"
@@ -55,7 +55,7 @@ migration_flags: []
 
 ## 참고 링크/자료
 
-- [관련 기록]({% endraw %}{% post_url 2026-04-08-daily-log-fe5c87ab1ac2 %}{% raw %})일일회고록 2026-04-08&lt;/mention&gt;
+- [관련 기록]({% endraw %}{% post_url 2026-04-08-daily-log-fe5c87ab1ac2 %}{% raw %})일일 회고록 2026-04-08&lt;/mention&gt;
 
 ## 첨부/스크린샷(선택)
 

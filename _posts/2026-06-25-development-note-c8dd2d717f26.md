@@ -3,8 +3,8 @@ title: "2026-06-25_script_full_compare"
 date: 2026-06-25 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "2026-06-25 Script Full Compare Previous version: HEAD:path Current version: working tree Output encoding: UTF-8 with BOM Assets/02\\_Scripts/System/ItemBox.cs Pr"
-description: "2026-06-25 Script Full Compare Previous version: HEAD:path Current version: working tree Output encoding: UTF-8 with BOM Assets/02\\_Scripts/System/ItemBox.cs Pr"
+excerpt: "상자·인벤토리·UI의 슬롯 이동 구조를 비교하기 위해 이전 버전과 작업 트리의 전체 스크립트를 함께 보관한 기록이다."
+description: "상자·인벤토리·UI의 슬롯 이동 구조를 비교하기 위해 이전 버전과 작업 트리의 전체 스크립트를 함께 보관한 기록이다."
 published: true
 migration_id: "38a36532580e80639840c8dd2d717f26"
 migration_status: "published"
@@ -893,7 +893,6 @@ public class PlayerInventory : MonoBehaviour
 ```
 
 ### Current Script
-
 
 ```cs
 /// <summary>

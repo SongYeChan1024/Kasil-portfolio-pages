@@ -3,8 +3,8 @@ title: "2026-05-29 개발 메모"
 date: 2026-05-29 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Firebase와 Unity 연동 수업 2026-05-29 요약 오늘 수업 핵심 요약 Firebase 와 Unity 를 연동하는 방법과 Firebase의 요금제 체계(Spark vs Blaze)를 배웠습니다. Unity에서 HP 시스템 , 스코어 매니저 , 애니메이션 시스템 을 구현하여"
-description: "Firebase와 Unity 연동 수업 2026-05-29 요약 오늘 수업 핵심 요약 Firebase 와 Unity 를 연동하는 방법과 Firebase의 요금제 체계(Spark vs Blaze)를 배웠습니다. Unity에서 HP 시스템 , 스코어 매니저 , 애니메이션 시스템 을 구현하여"
+excerpt: "Firebase와 Unity의 연동 방법, 요금제 및 비동기 결과를 메인 스레드에서 처리하는 방식을 정리했다."
+description: "Firebase와 Unity의 연동 방법, 요금제 및 비동기 결과를 메인 스레드에서 처리하는 방식을 정리했다."
 published: true
 migration_id: "36f36532580e80b6a6bfcb9d7f21229b"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>Firebase와 Unity 연동 수업</b> 2026-05-29
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -214,7 +212,7 @@ Unity와 Firebase 간 JSON 데이터 통신을 위한 직렬화/역직렬화 패
 Animator
 </td>
 <td>
-애니메이션 제어. SetFloat("파라미터명", 값)으로 
+애니메이션 제어. SetFloat("파라미터명", 값)으로
 </td>
 </tr>
 <tr>
@@ -418,9 +416,7 @@ yield return new WaitForSeconds(float)
 - [ ] Photon과 Firebase의 역할을 구분할 수 있다
 - [ ] 게임 오버 시 오브젝트 생성을 중단하도록 조건문을 추가할 수 있다
 
-
 ## 메모
-
 
 파이어 베이스와 Unity 연동
 
@@ -465,7 +461,6 @@ Spark 요금제, Blaze 요금제
 | 실제 출시 예정 게임 | <b>Blaze</b> | 유저 증가, 서버 기능, 파일 저장, 확장 대응 가능 |
 | 이미지, 세이브 파일, 프로필 사진 업로드 필요 | <b>Blaze</b> | Cloud Storage 사용에 Blaze가 필요 |
 | 서버에서 보상 지급, 랭킹 검증, 비정상 플레이 방지 로직 필요 | <b>Blaze</b> | Cloud Functions 같은 백엔드 로직 사용 가능 |
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1349,12 +1344,9 @@ Thank you!
 
 </details>
 
-
 <b>Firebase 데이터베이스 URL 설정 및 Unity 연동 실습</b> 2026-05-29
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1439,7 +1431,7 @@ Thank you!
 
 - 설명: 데이터베이스 규칙 탭에서 읽기와 쓰기 권한을 true로 설정
 - <b>중요:</b> 테스트용으로만 사용하고, 실제 배포 시에는 반드시 보안 규칙 수정 필요
-- 현재 설정은 누구나 데이터를 읽고 수정할 수 있어 해킹 위험 있음
+- 현재설정은 누구나 데이터를 읽고 수정할 수 있어 해킹 위험 있음
 
 ---
 
@@ -1590,11 +1582,9 @@ Thank you!
 - [ ] 테스트 모드 보안 규칙의 위험성을 이해하고 배포 전 수정 필요성을 안다
 - [ ] SDK 임포트 후 Console 창에서 오류를 확인하는 방법을 안다
 
-
 ## 메모
 
-
-구글 파이어 베이스 데이터 베이스 URL 주소
+Google Firebase 데이터베이스 URL 주소
 
 [https://fir-project-b5f2b-default-rtdb.firebaseio.com/](https://console.firebase.google.com/project/fir-project-b5f2b/database/fir-project-b5f2b-default-rtdb/data/~2F?hl=ko)
 
@@ -1639,7 +1629,6 @@ Firebase Realtime Database나 Firestore의 리스너 콜백은 비동기적으�
 이 참조 위치에 값을 저장할 때는 <code>SetValueAsync()</code>를 사용한다. 예를 들어 <code>goldRef.SetValueAsync(1000)</code>을 호출하면 <code>users/user123/gold</code> 위치의 값이 <code>1000</code>으로 덮어써진다. 이 메서드가 비동기 방식인 이유는 Firebase 저장 작업이 Unity 내부에서 바로 끝나는 작업이 아니라, 네트워크를 통해 서버에 요청을 보내고 응답을 기다려야 하는 작업이기 때문이다.
 
 만약 이 과정을 동기 방식으로 처리하면 서버 응답을 기다리는 동안 Unity의 메인 스레드가 멈추게 된다. 그러면 게임 화면이 끊기거나 입력이 지연될 수 있다. 따라서 게임 클라이언트에서는 Firebase 읽기와 쓰기 작업을 비동기로 처리하여 게임 흐름은 계속 유지하고, 저장이 완료된 뒤 콜백에서 결과를 처리해야 한다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -3623,7 +3612,6 @@ We need number 1.
 
 </details>
 
-
 <b>문제1</b>
 
 <b>게임 내에서 플레이어의 인벤토리, 재화, 혹은 실시간 방 상태(Room State) 등을 저장할 때</b>
@@ -3984,22 +3972,19 @@ Firebase Realtime Database나 Firestore의 리스너 콜백은 비동기적으�
 
 이를 해결하기 위해서는 Firebase 콜백 안에서 Unity 오브젝트를 직접 제어하지 말고, <code>ContinueWithOnMainThread()</code>나 <code>UnityMainThreadDispatcher.Enqueue()</code>를 사용해 UI 갱신과 GameObject 제어 코드를 Unity 메인 스레드에서 실행해야 한다. 즉, Firebase 콜백은 데이터만 받아 오고, 실제 화면 변경은 메인 스레드로 넘겨 처리하는 방식이 안전하다.
 
-응, 이 둘은 둘 다 \*\*“Firebase 쪽 비동기 결과를 Unity 메인 스레드에서 처리하게 해주는 방법”\*\*이야.
+응, 이 둘은 둘 다 **“Firebase 쪽 비동기 결과를 Unity 메인 스레드에서 처리하게 해주는 방법”**이야.
 
 하지만 쓰는 위치와 목적이 조금 달라.
 
 핵심부터 말하면:
 
-
 <blockquote markdown="1">
-
 
 <b><code>ContinueWithOnMainThread()</code></b><b>는 Firebase Task 전용 자동 배달</b>
 
 <b><code>UnityMainThreadDispatcher.Enqueue()</code></b><b>는 직접 메인 스레드 줄서기에 넣는 수동 배달</b>
 
 </blockquote>
-
 
 Unity는 대부분의 UI, GameObject, Transform API를 메인 스레드에서만 안전하게 호출할 수 있어. Unity 공식 문서에서도 대부분의 Unity API는 thread-safe하지 않고 메인 스레드에서만 호출 가능하다고 설명해.
 

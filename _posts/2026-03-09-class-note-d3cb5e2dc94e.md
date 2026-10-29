@@ -3,8 +3,8 @@ title: "2026-03-09_엘리스 수업 메모"
 date: 2026-03-09 12:00:00 +0900
 categories: ["수업 노트", "Unreal"]
 tags: ["Notion 이전", "Unreal"]
-excerpt: "디지털 휴먼 기술과 Unity 개발 교육 2026-03-09 요약 액션 아이템 학생들은 Unity 헤어 시스템 패키지를 다운로드하고 실습 예제를 따라 진행 챕터 테스트 완료 Unity와 Unreal Engine 모두 학습하여 경력 스펙 강화 GitHub의 Unity Hair 시스템 참고"
-description: "디지털 휴먼 기술과 Unity 개발 교육 2026-03-09 요약 액션 아이템 학생들은 Unity 헤어 시스템 패키지를 다운로드하고 실습 예제를 따라 진행 챕터 테스트 완료 Unity와 Unreal Engine 모두 학습하여 경력 스펙 강화 GitHub의 Unity Hair 시스템 참고"
+excerpt: "디지털 휴먼의 피부·헤어·립싱크 표현과 Unity에서의 FK·IK 활용을 학습한 기록이다."
+description: "디지털 휴먼의 피부·헤어·립싱크 표현과 Unity에서의 FK·IK 활용을 학습한 기록이다."
 published: true
 migration_id: "35e36532580e8147b5a8d3cb5e2dc94e"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>디지털 휴먼 기술과 Unity 개발 교육</b> 2026-03-09
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -66,7 +64,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 
 <b>디지털 휴먼의 주요 특징:</b> 
 
-- 고품질 PBR 쉐이더를 통해 피부, 머리카락, 눈 등의 디테일 극대화
+- 고품질 PBR 셰이더를 통해 피부, 머리카락, 눈 등의 디테일 극대화
 - HDRP를 활용한 사실적인 조명과 라이팅
 - 블렌드 스페이스로 얼굴 근육의 미세한 움직임까지 표현 가능 
 
@@ -84,7 +82,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 - 스킨 어태치먼트를 사용해 눈, 치아, 혀 등 개별 파츠를 본체에 자연스럽게 부착하고 동기화된 움직임 구현
 - 아이 스킨 어태치먼트, 티스 스킨 어태치먼트, 텅 스킨 어태치먼트로 구분
 
-<b>전용 쉐이더 시스템:</b> 
+<b>전용 셰이더 시스템:</b>
 
 - 디지털 휴먼 스킨(피부)
 - 디지털 휴먼 아이즈(눈)
@@ -107,7 +105,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 
 <b>Unity Hair 시스템 특징:</b> 
 
-- 헤어 쉐이더와 물리 효과를 적용하여 사실적인 움직임 구현
+- 헤어 셰이더와 물리 효과를 적용하여 사실적인 움직임 구현
 - 디지털 휴먼의 생동감을 높이는 중요한 요소
 
 <b>Hair Physics 주요 설정:</b>   
@@ -182,9 +180,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 - Unity를 2-3년 정도 학습한 후 Unreal Engine도 학습하면 경력 스펙에 큰 도움
 - 두 엔진 모두 다룰 수 있으면 취업 시장에서 경쟁력 향상
 
-
 ## 메모
-
 
 <b>PBR은 Physically Based Rendering(물리 기반 렌더링)의 약자로,</b>
 
@@ -251,7 +247,6 @@ PBR은 실제 물리 법칙에 기반한 수치를 사용하기 때문에
 입력에 맞춰 0.1초 내외의 지연시간으로 입 모양을 생성합니다.
 
 [<b>https://github.com/Unity-Technologies/com.unity.demoteam.hair</b>](https://github.com/Unity-Technologies/com.unity.demoteam.hair)
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -740,12 +735,9 @@ bring me all your love
 
 </details>
 
-
 <b>좀비 슈터 게임 개발 강의</b> 2026-03-09
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -1016,18 +1008,14 @@ item.Use(target);
 - 아이템 시스템 완성
 - 적 AI 구현
 
-
 ## 메모
-
 
 3D 캐릭터 리깅(인공관절) 구현
 
 웨이브형 좀비 탑다운 슈터 게임 ZonbieSurvivor 제작
 
-
 <details markdown="1">
 <summary>실시간 글로벌 일루미네이션(Realtime Global Illumination)(GI)</summary>
-
 
 ## : 게임 실행 중에 빛을 계속 계산
 
@@ -1056,10 +1044,8 @@ item.Use(target);
 
 </details>
 
-
 <details markdown="1">
 <summary>베이크된 글로벌 일루미네이션(Baked Global Illumination)(GI)</summary>
-
 
 ## : 미리 구워서 저장해 둔 조명을 사용
 
@@ -1128,7 +1114,6 @@ item.Use(target);
 <b>Realtime + Baked를 섞어서 사용하는 경우가 많음.</b>
 
 </details>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2478,7 +2463,6 @@ x값으로 움직입니다. y값으로 그러니까 ad값을 받아서 x쪽으�
 
 
 </details>
-
 
 # FK (Forward Kinematics) 정운동학
 

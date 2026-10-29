@@ -1,10 +1,10 @@
 ---
-title: "26-03-17_일일회고록"
+title: "26-03-17_일일 회고록"
 date: 2026-03-17 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Scrum 스토리라인 작성, 게임 진행 방식 구성 필요 캐릭터 및 맵에 사용할 에셋 탐색 및 선정 --- 첨부 자료 Project --- 오늘 진행한 작업 GitHub 및 리포지토리 생성 스테이지 3에 사용할 에셋 일부 선정 이젤과 캐릭터 에셋 구성 완료 진행 중인 작업 스테이지별 에셋"
-description: "Scrum 스토리라인 작성, 게임 진행 방식 구성 필요 캐릭터 및 맵에 사용할 에셋 탐색 및 선정 --- 첨부 자료 Project --- 오늘 진행한 작업 GitHub 및 리포지토리 생성 스테이지 3에 사용할 에셋 일부 선정 이젤과 캐릭터 에셋 구성 완료 진행 중인 작업 스테이지별 에셋"
+excerpt: "스토리와 게임 진행 방식을 논의하고 에피소드 3의 환경·악기·퍼즐용 에셋 후보를 정리했다."
+description: "스토리와 게임 진행 방식을 논의하고 에피소드 3의 환경·악기·퍼즐용 에셋 후보를 정리했다."
 published: true
 migration_id: "35e36532580e81c09c0cdbdcda98c1e3"
 migration_status: "published"
@@ -19,7 +19,6 @@ Scrum
 스토리라인 작성, 게임 진행 방식 구성 필요
 
 캐릭터 및 맵에 사용할 에셋 탐색 및 선정
-
 
 ---
 
@@ -37,19 +36,16 @@ Project
 - 스테이지 3에 사용할 에셋 일부 선정
 - 이젤과 캐릭터 에셋 구성 완료
 
-
 #### 진행 중인 작업
 
 - 스테이지별 에셋 일부 선정 아직 완료가 덜 되어서 더 찾아볼 예정
 - 현재 캐릭터들의 디자인과 에셋구성은 완료 하였음
-
 
 #### 내일 개발 계획 및 목표
 
 - NPC AI 연동 및 애니메이션 구현
 - 스테이지별 레벨디자인 착수
 - 로비 구성 및 UI 디자인
-
 
 <h3 color="purple_bg">
 Trouble Shooting
@@ -64,7 +60,6 @@ Trouble Shooting
 1. 문제 발생 조건 파악
 2. 결과 검증, 해결
 
-
 ## 그 외 과제 제출 (선택기입)
 
 <h3 color="purple_bg">
@@ -78,7 +73,6 @@ Github / Blog
 - Github: [https://github.com/WooSeonghyeok/Moumi\_moz.A.I.c\_Documents#](https://github.com/WooSeonghyeok/Moumi_moz.A.I.c_Documents#)
 - Blog:
 - Velog:
-
 
 <h3 color="purple_bg">
 기술탐구
@@ -133,7 +127,6 @@ Episode 3 - 멈춰버린 노래
 - 잉크병 / 펜
 - 음악가의 노트 (스토리 단서)
 
-
 ---
 
 ## 3. 배경 장식 오브젝트 (Decoration)
@@ -145,7 +138,6 @@ Episode 3 - 멈춰버린 노래
 - 색이 변하는 빛 기둥
 - 잔상 효과 (이전 기억 흔적)
 - 공간에 떠다니는 작은 종이 조각
-
 
 ## 4. 퍼즐 오브젝트 (Puzzle Objects)
 
@@ -178,7 +170,6 @@ Episode 3 - 멈춰버린 노래
 - 기억 재생 효과 (빛이 흐르는 연출)
 - 선택 상태 표시 이펙트
 - 실패 시 초기화 효과
-
 
 ---
 

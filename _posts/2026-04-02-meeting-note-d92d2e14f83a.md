@@ -3,8 +3,8 @@ title: "개별 면담 2026-04-02"
 date: 2026-04-02 12:00:00 +0900
 categories: ["회의 기록", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "취업 및 프로젝트 진행 상담 2026-04-02 요약 실행 항목 송카실: Notion 포트폴리오 업데이트 후 링크 공유 송카실: \"게임 잡는 사람\" 등에서 채용 공고 유심히 확인 송카실: Notion에 프로젝트 중 막힌 문제와 해결 방법 추가 송카실: Notion에 향후 게임에 추가할 "
-description: "취업 및 프로젝트 진행 상담 2026-04-02 요약 실행 항목 송카실: Notion 포트폴리오 업데이트 후 링크 공유 송카실: \"게임 잡는 사람\" 등에서 채용 공고 유심히 확인 송카실: Notion에 프로젝트 중 막힌 문제와 해결 방법 추가 송카실: Notion에 향후 게임에 추가할 "
+excerpt: "개발자 역할 변화와 AI 도구 활용, 취업 준비 및 포트폴리오 관리에 관한 회의 내용을 정리했다."
+description: "개발자 역할 변화와 AI 도구 활용, 취업 준비 및 포트폴리오 관리에 관한 회의 내용을 정리했다."
 published: true
 migration_id: "35e36532580e8191a046d92d2e14f83a"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>취업 및 프로젝트 진행 상담</b> 2026-04-02
 
-
 ## 요약
-
 
 ### 실행 항목
 
@@ -80,9 +78,7 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 - 시니어 개발자들도 AI 도구를 잘 다루지 못하면 어려움 겪는 상황  
 - 채용 공고를 보고 회사마다 원하는 요건을 파악하는 것이 중요  
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

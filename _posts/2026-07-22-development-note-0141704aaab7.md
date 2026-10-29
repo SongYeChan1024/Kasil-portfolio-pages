@@ -3,8 +3,8 @@ title: "DEBUG-TD-004"
 date: 2026-07-22 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-004 | | 관련 버그 | | | 이슈명 | 플레이어의 총알 Ray가 적에게 도착했으나 실제 TakeDamage 판정을 발동시키지 않는 경우가 간헐적으로 발생하는 현상 | | 담당 기능 "
-description: "1. 기본 정보 | 항목 | 내용 | | --- | --- | | 디버깅 ID | DEBUG-TD-004 | | 관련 버그 | | | 이슈명 | 플레이어의 총알 Ray가 적에게 도착했으나 실제 TakeDamage 판정을 발동시키지 않는 경우가 간헐적으로 발생하는 현상 | | 담당 기능 "
+excerpt: "조준과 발사 Raycast의 시작점 차이로 적중 판정이 누락되는 현상을 분석하고, 발사 거리 보정 방향과 검증 기준을 정리했다."
+description: "조준과 발사 Raycast의 시작점 차이로 적중 판정이 누락되는 현상을 분석하고, 발사 거리 보정 방향과 검증 기준을 정리했다."
 published: true
 migration_id: "d3136532580e83519cdf0141704aaab7"
 migration_status: "published"
@@ -25,7 +25,7 @@ migration_flags: ["local_code_link_unlinked"]
 | 발생 씬 | DemoScene |
 | 상태 | 해결 완료 |
 | 우선순위 | Critical |
-| 원인 유형 | 공격 Raycast가 ‘조준’ → ‘발사’의 2단계로 이루어져 있는 구조에서 조준 Ray와 발사 Ray의 좌표 값 시차 |
+| 원인 유형 | 공격 Raycast가 ‘조준’ → ‘발사’의 2단계로 이루어져 있는 구조에서 조준 Ray와 발사 Ray의 좌푯값 시차 |
 
 ## 2. 문제 현상
 
@@ -33,15 +33,15 @@ migration_flags: ["local_code_link_unlinked"]
 
 ## 3. 원인 분석
 
-이번 프로젝트에서 플레이어의 기본 공격 메소드는
+이번 프로젝트에서 플레이어의 기본 공격 메서드는 다음 순서로 진행된다.
 
 1. aimOrigin 지점에서 마우스 커서 방향으로 배치된 firePoint 정면 방향을 향해 1차 Raycast를 실행한다.
 2. 1차 RayCast가 hitMask에 해당하는 LayerMask에 속한 적 Collider에 히트하면 히트한 지점을 targetPoint로 지정한다.
 3. muzzleOrigin 지점에서 targetPoint 방향으로 2차 Raycast를 실행할 shotDirection을 구한다.
-4. muzzleOrigin이 벽 collider과 겹치는 상황에 대비해 약간 뒤쪽에 safeShotOrigin을 살정하고, safeShotOrigin 지점에서 shotDirection 방향으로 2차 Raycast를 실행한다.
-5. 2차 Raycast가 hitMask에 해당하는 LayerMask에 속한 적 Collider에 히트하면 히트한 적에게 TakeDamage 메소드를 전달해 HP를 감소시킨다.
+4. muzzleOrigin이 벽 collider와 겹치는 상황에 대비해 약간 뒤쪽에 safeShotOrigin을 설정하고, safeShotOrigin 지점에서 shotDirection 방향으로 2차 Raycast를 실행한다.
+5. 2차 Raycast가 hitMask에 해당하는 LayerMask에 속한 적 Collider에 히트하면 히트한 적에게 TakeDamage 메서드를 전달해 HP를 감소시킨다.
 
-의 순서로 진행되는데, 이때 2차 Raycast의 길이가 <code>targetPoint와 muzzleOrigin 사이의 거리</code> + <code>4. 에서 safeShotOrigin을 설정하기 위해 muzzleOrigin에서 뒤로 떨어뜨린 안전 거리</code>만큼으로 정해진다.
+이때 2차 Raycast의 길이가 <code>targetPoint와 muzzleOrigin 사이의 거리</code> + <code>4. 에서 safeShotOrigin을 설정하기 위해 muzzleOrigin에서 뒤로 떨어뜨린 안전 거리</code>만큼으로 정해진다.
 
 여기서 <code>aimOrigin = transform.position + Vector3.up * aimOriginHeight</code>, <code>muzzleOrigin = firePoint.position</code>으로 서로 다른 위치를 지정하고 있어, 1차 Raycast에서 히트한 targetPoint와 2차 Raycast의 끝 지점이 일치하지 않을 수 있다.
 
@@ -59,7 +59,7 @@ migration_flags: ["local_code_link_unlinked"]
 ## 5. 수정 방향
 
 <p>
-1차 Raycast에서 히트한 지점을 향해 2차 Raycast를 발사할 경우, 1차 Raycast에서 반환받은 플레이어와 적 사이의 거리보다 약간 더 길게 2차 Raycast를 발사하도록 Ray 최대 길이 보정을 실시해준다. 
+1차 Raycast에서 히트한 지점을 향해 2차 Raycast를 발사할 경우, 1차 Raycast에서 반환받은 플레이어와 적 사이의 거리보다 약간 더 길게 2차 Raycast를 발사하도록 Ray의 최대 길이를 보정한다.
 </p>
 
 ## 6. 검증 방법

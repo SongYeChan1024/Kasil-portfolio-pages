@@ -1,10 +1,10 @@
 ---
-title: "새 페이지"
+title: "Roblox·Photon 네트워크 게임 개발 실습"
 date: 2026-05-19 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity 네트워크 게임 개발 - Roblox & Photon 실습 2026-05-19 요약 오늘 수업 핵심 요약 Roblox Studio 설치 와 템플릿 기반 간단한 게임 체험을 진행했습니다. Unity에서 Photon Realtime을 사용한 네트워크 멀티플레이 구현을 시작했습니다."
-description: "Unity 네트워크 게임 개발 - Roblox & Photon 실습 2026-05-19 요약 오늘 수업 핵심 요약 Roblox Studio 설치 와 템플릿 기반 간단한 게임 체험을 진행했습니다. Unity에서 Photon Realtime을 사용한 네트워크 멀티플레이 구현을 시작했습니다."
+excerpt: "Roblox Studio 실습과 Photon 네트워크 게임 개발을 진행하고, 마스터 클라이언트와 UI 구성 개념을 정리했다."
+description: "Roblox Studio 실습과 Photon 네트워크 게임 개발을 진행하고, 마스터 클라이언트와 UI 구성 개념을 정리했다."
 published: true
 migration_id: "36536532580e8037a610cdb4413aebf4"
 migration_status: "published"
@@ -14,17 +14,15 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>Unity 네트워크 게임 개발 - Roblox & Photon 실습</b> 2026-05-19
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- <b>Roblox Studio 설치</b>와 템플릿 기반 간단한 게임 체험을 진행했습니다. 
-- Unity에서 <b>Photon Realtime을 사용한 네트워크 멀티플레이</b> 구현을 시작했습니다. 
-- <b>Object Pooling과 네트워크 동기화를 함께 구현</b>하는 방법을 배웠으며, 이는 메모리 최적화와 네트워크 성능을 동시에 고려한 중요한 기법입니다. 
-- <b>Master Client</b> 개념과 Master Client가 나갔을 때 자동으로 다음 클라이언트가 이어받는 메커니즘을 이해했습니다. 
-- <b>IPunPrefabPool 인터페이스</b>를 사용하여 Object Pooling과 Photon 네트워크를 통합하는 고급 기법을 실습했습니다. 
+- <b>Roblox Studio 설치</b>와 템플릿 기반 간단한 게임 체험을 진행했습니다.
+- Unity에서 <b>Photon Realtime을 사용한 네트워크 멀티플레이</b> 구현을 시작했습니다.
+- <b>Object Pooling과 네트워크 동기화를 함께 구현</b>하는 방법을 배웠으며, 이는 메모리 최적화와 네트워크 성능을 동시에 고려한 중요한 기법입니다.
+- <b>Master Client</b> 개념과 Master Client가 나갔을 때 자동으로 다음 클라이언트가 이어받는 메커니즘을 이해했습니다.
+- <b>IPunPrefabPool 인터페이스</b>를 사용하여 Object Pooling과 Photon 네트워크를 통합하는 고급 기법을 실습했습니다.
 
 ---
 
@@ -32,94 +30,94 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 
 - <b>Roblox Studio</b>
   - 설명: 메타버스 플랫폼인 Roblox에서 게임을 만들 수 있는 개발 툴
-  - 예시: 템플릿(City, Castle, Racing 등)을 선택해서 빠르게 게임 체험 가능 
+  - 예시: 템플릿(City, Castle, Racing 등)을 선택해서 빠르게 게임 체험 가능
   - 사용되는 상황: 간단하고 빠르게 메타버스 게임을 만들고 싶을 때
-  - 헷갈릴 수 있는 점: Roblox, 제페토, 메이플월드 등 여러 메타버스 플랫폼이 있지만 Roblox가 가장 유명함 
+  - 헷갈릴 수 있는 점: Roblox, 제페토, 메이플월드 등 여러 메타버스 플랫폼이 있지만 Roblox가 가장 유명함
 - <b>Photon Realtime</b>
-  - 설명: Unity에서 실시간 멀티플레이 네트워크를 구현할 수 있는 라이브러리 
+  - 설명: Unity에서 실시간 멀티플레이 네트워크를 구현할 수 있는 라이브러리
   - 예시: 여러 플레이어가 동시에 접속해서 같은 공간에서 게임을 플레이
   - 사용되는 상황: 멀티플레이어 게임 개발 시 기본 네트워크 기능 제공
 - <b>Master Client (마스터 클라이언트)</b>
-  - 설명: 방을 생성한 첫 번째 플레이어(호스트)로, 적(enemy) 생성 등의 중요한 로직을 담당 
+  - 설명: 방을 생성한 첫 번째 플레이어(호스트)로, 적(enemy) 생성 등의 중요한 로직을 담당
   - 예시: 4명이 접속한 방에서 적 헬리콥터는 Master Client만 생성해야 함 (모든 클라이언트가 생성하면 16개가 됨)
   - 사용되는 상황: 네트워크 게임에서 오브젝트 생성 권한 관리
-  - 헷갈릴 수 있는 점: Master Client가 나가면 방이 사라지는 것이 아니라, 두 번째로 접속한 사람이 자동으로 Master Client를 이어받음 
+  - 헷갈릴 수 있는 점: Master Client가 나가면 방이 사라지는 것이 아니라, 두 번째로 접속한 사람이 자동으로 Master Client를 이어받음
 - <b>Object Pooling (오브젝트 풀링)</b>
   - 설명: 오브젝트를 미리 생성해두고 재사용하는 메모리 최적화 기법
   - 예시: 총알이나 적 헬리콥터를 매번 생성(Instantiate)하고 파괴(Destroy)하지 않고, 큐(Queue)에서 꺼내서 재사용
   - 사용되는 상황: 게임에서 반복적으로 생성/파괴되는 오브젝트가 많을 때 메모리 성능 향상
-  - 헷갈릴 수 있는 점: 네트워크 환경에서 Object Pooling을 유지하면서 동기화하려면 IPunPrefabPool 인터페이스 필요 
+  - 헷갈릴 수 있는 점: 네트워크 환경에서 Object Pooling을 유지하면서 동기화하려면 IPunPrefabPool 인터페이스 필요
 - <b>IPunPrefabPool 인터페이스</b>
-  - 설명: Photon에서 제공하는 인터페이스로, Object Pooling과 네트워크 동기화를 함께 구현 
+  - 설명: Photon에서 제공하는 인터페이스로, Object Pooling과 네트워크 동기화를 함께 구현
   - 예시: Instantiate()와 Destroy() 메서드를 오버라이드해서 네트워크 상에서 풀링 동작
   - 사용되는 상황: Object Pooling을 유지하면서 모든 클라이언트에게 오브젝트를 동기화해야 할 때
-  - 헷갈릴 수 있는 점: 이전 방식(노가다 방식)은 더 이상 사용 불가, 현재는 IPunPrefabPool만 지원됨 
+  - 헷갈릴 수 있는 점: 이전 방식(노가다 방식)은 더 이상 사용 불가, 현재는 IPunPrefabPool만 지원됨
 
 ---
 
 ### 수업 흐름별 정리
 
-### 1. Roblox Studio 설치 및 체험 
+### 1. Roblox Studio 설치 및 체험
 
 - 설명: Roblox 회원가입 후 검색창에 "create roblox" 입력하여 Creator Studio 다운로드
 - 예시: 스타터 버튼 클릭 → Get Roblox Studio 다운로드 → 설치 파일 실행
 - 중요한 이유: 메타버스 플랫폼 개발 경험 및 간단한 게임 제작 도구 이해
 
-### 2. Roblox 템플릿 체험 
+### 2. Roblox 템플릿 체험
 
 - 설명: 전체 보기에서 다양한 템플릿(Castle, Village, Racing, City 등) 선택 가능
-- 예시: City 템플릿 선택 → Play 버튼 → 캐릭터로 이동 및 차량 탑승 (1번 키로 탑승, 2번 키로 하차) 
+- 예시: City 템플릿 선택 → Play 버튼 → 캐릭터로 이동 및 차량 탑승 (1번 키로 탑승, 2번 키로 하차)
 - 중요한 이유: 빠르게 게임 구조를 이해하고 체험할 수 있음
 
-### 3. Unity Photon Realtime 설정 
+### 3. Unity Photon Realtime 설정
 
 - 설명: Unity에서 네트워크 멀티플레이를 위해 Photon Realtime 라이브러리 추가
 - 예시: <code>using Photon.Realtime;</code> 추가
 - 중요한 이유: Unity 자체 네트워크 기능은 제한적이므로 Photon 사용
 
-### 4. Apache Helicopter Spawn 설정 
+### 4. Apache Helicopter Spawn 설정
 
 - 설명: 적(Apache 헬리콥터)을 네트워크 상에서 마스터 클라이언트만 생성하도록 설정
 - 예시: Battle Field 씬에서 Apache Spawner와 Spawn Point 활성화
-- <code>중요:</code> 모든 클라이언트가 적을 생성하면 중복 생성되므로 Master Client만 책임 
+- <code>중요:</code> 모든 클라이언트가 적을 생성하면 중복 생성되므로 Master Client만 책임
 
-### 5. MonoBehaviour → MonoBehaviourPunCallbacks 변경 
+### 5. MonoBehaviour → MonoBehaviourPunCallbacks 변경
 
 - 설명: Photon 콜백 함수를 사용하기 위해 스크립트 상속 클래스 변경
 - 예시: <code>MonoBehaviour</code> → <code>MonoBehaviourPunCallbacks</code>
 - 중요한 이유: Photon 네트워크 이벤트를 처리할 수 있음
 
-### 6. OnMasterClientSwitched 구현 
+### 6. OnMasterClientSwitched 구현
 
 - 설명: Master Client가 방을 나갈 경우 다음 클라이언트가 자동으로 이어받는 메커니즘
 - 예시: 방장이 나가도 방이 폭파되지 않고 두 번째 접속자가 Master Client 역할 수행
-- 중요한 이유: 옛날 게임(예: 스타크래프트)에서는 방장이 나가면 방이 사라졌지만, 현대 게임은 자동 전환 지원 
+- 중요한 이유: 옛날 게임(예: 스타크래프트)에서는 방장이 나가면 방이 사라졌지만, 현대 게임은 자동 전환 지원
 
-### 7. IPunPrefabPool 인터페이스 구현 
+### 7. IPunPrefabPool 인터페이스 구현
 
 - 설명: Object Pooling과 네트워크 동기화를 함께 구현하기 위한 인터페이스
 - 예시: <code>, IPunPrefabPool</code> 추가 → 우클릭 → Implement Interface → Instantiate()와 Destroy() 메서드 자동 생성
-- 중요한 이유: 가장 최적화되고 우수한 방식 
+- 중요한 이유: 가장 최적화되고 우수한 방식
 
-### 8. Prefab 이름을 문자열로 관리 
+### 8. Prefab 이름을 문자열로 관리
 
 - 설명: GameObject가 아닌 string으로 Prefab 이름 저장
 - 예시: <code>public string apachePrefabName = "Apache";</code> (Resources 폴더 내 이름과 일치)
 - 중요한 이유: Resources.Load()로 동적 로딩 시 문자열 필요
 
-### 9. Queue를 사용한 Object Pooling 
+### 9. Queue를 사용한 Object Pooling
 
 - 설명: Apache 헬리콥터는 Queue로 관리 (FIFO 구조)
 - 예시: <code>Queue&lt;GameObject&gt; apacheQ;</code> - Dequeue()로 꺼내고 Enqueue()로 반환
 - 중요한 이유: Object Pooling은 선입선출 구조가 적합
 
-### 10. 네트워크 상태 검사 및 Master Client 확인 
+### 10. 네트워크 상태 검사 및 Master Client 확인
 
 - 설명: 적 생성 전 두 가지 조건 검사
 - 예시: <code>if (PhotonNetwork.IsConnected &amp;&amp; PhotonNetwork.IsMasterClient)</code>
 - 중요한 이유: 네트워크 연결 상태와 Master Client 여부를 모두 확인해야 함
 
-### 11. 동적 확장(Dynamic Expansion) 구현 
+### 11. 동적 확장(Dynamic Expansion) 구현
 
 - 설명: Pool 크기가 부족할 경우 자동으로 새 오브젝트 생성
 - 예시: Pool에 오브젝트가 없으면 <code>Instantiate()</code>로 새로 생성
@@ -131,27 +129,27 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 
 <b>Roblox Studio 설치 및 실행:</b>
 
-1. 웹 검색창에 "create roblox" 입력 
+1. 웹 검색창에 "create roblox" 입력
 2. Creator Roblox 페이지에서 Starter 클릭
-3. Get Roblox Studio 다운로드 
-4. 설치 파일(RobloxStudioInstaller.exe) 실행 
-5. 템플릿 선택 (전체 보기에서 City 등 선택) 
-6. Play 버튼으로 게임 체험 
+3. Get Roblox Studio 다운로드
+4. 설치 파일(RobloxStudioInstaller.exe) 실행
+5. 템플릿 선택 (전체 보기에서 City 등 선택)
+6. Play 버튼으로 게임 체험
 
 <b>Unity Apache Spawner 네트워크 설정:</b>
 
-1. Battle Field 씬 열기 
-2. Apache Spawner와 Spawn Point 오브젝트 활성화 
+1. Battle Field 씬 열기
+2. Apache Spawner와 Spawn Point 오브젝트 활성화
 3. Apache Spawner 스크립트 열기
-4. <code>using Photon.Realtime;</code> 추가 
-5. <code>MonoBehaviour</code> → <code>MonoBehaviourPunCallbacks</code> 변경 
-6. <code>, IPunPrefabPool</code> 인터페이스 추가 
-7. 우클릭 → Implement Interface 선택 
-8. <code>Instantiate()</code>와 <code>Destroy()</code> 메서드 구현 
-9. <code>public override void OnMasterClientSwitched()</code> 메서드 추가 
-10. Prefab 이름을 string 타입으로 변경 
-11. Start에서 Master Client 검사 추가 
-12. Pool이 부족한 경우 동적 확장 로직 추가 
+4. <code>using Photon.Realtime;</code> 추가
+5. <code>MonoBehaviour</code> → <code>MonoBehaviourPunCallbacks</code> 변경
+6. <code>, IPunPrefabPool</code> 인터페이스 추가
+7. 우클릭 → Implement Interface 선택
+8. <code>Instantiate()</code>와 <code>Destroy()</code> 메서드 구현
+9. <code>public override void OnMasterClientSwitched()</code> 메서드 추가
+10. Prefab 이름을 string 타입으로 변경
+11. Start에서 Master Client 검사 추가
+12. Pool이 부족한 경우 동적 확장 로직 추가
 
 <b>빌드 및 테스트:</b>
 
@@ -217,19 +215,19 @@ public override void OnMasterClientSwitched()
 
 - <b>예시 1: Roblox 템플릿 체험</b>
   - 상황: Roblox Studio 설치 후 게임 만들기
-  - 설명: City 템플릿 선택하면 도시 맵과 차량이 미리 배치됨 
+  - 설명: City 템플릿 선택하면 도시 맵과 차량이 미리 배치됨
   - 왜 이 예시를 사용했는지: 템플릿으로 빠르게 게임 구조 이해 가능
 - <b>예시 2: Master Client의 필요성</b>
   - 상황: 4명이 멀티플레이 게임 접속
-  - 설명: 각 클라이언트가 적을 생성하면 4×4=16개 평행우주에서 총 16배의 적 생성 
+  - 설명: 각 클라이언트가 적을 생성하면 4×4=16개 평행우주에서 총 16배의 적 생성
   - 왜 이 예시를 사용했는지: Master Client 개념의 중요성 강조
 - <b>예시 3: 옛날 게임의 방장 이탈 문제</b>
   - 상황: 2000년대 초반 스타크래프트 배틀넷
-  - 설명: 4대4 게임 중 질 것 같으면 방장이 나가버려서 방이 없어지고 전적에도 기록 안 됨 
+  - 설명: 4대4 게임 중 질 것 같으면 방장이 나가버려서 방이 없어지고 전적에도 기록 안 됨
   - 왜 이 예시를 사용했는지: OnMasterClientSwitched()의 필요성을 실제 사례로 설명
 - <b>예시 4: Object Pooling 필요성</b>
   - 상황: 네트워크 게임에서 총알 발사
-  - 설명: 여러 플레이어가 수천 발 발사하면 메모리에 악영향 
+  - 설명: 여러 플레이어가 수천 발 발사하면 메모리에 악영향
   - 왜 이 예시를 사용했는지: Object Pooling의 성능 개선 효과 설명
 
 ---
@@ -244,7 +242,7 @@ public override void OnMasterClientSwitched()
 
 - <b>헷갈리는 개념:</b> Queue vs List 선택 기준
 - <b>헷갈리는 이유:</b> 둘 다 컬렉션이지만 용도가 다름
-- <b>구분 방법:</b> Object Pooling은 FIFO(선입선출) 구조라 Queue 사용. Spawn Point는 랜덤 선택이라 List 사용 
+- <b>구분 방법:</b> Object Pooling은 FIFO(선입선출) 구조라 Queue 사용. Spawn Point는 랜덤 선택이라 List 사용
 
 ---
 
@@ -256,16 +254,16 @@ public override void OnMasterClientSwitched()
 
 - <b>헷갈리는 개념:</b> GameObject 타입 vs string 타입 Prefab
 - <b>헷갈리는 이유:</b> 둘 다 Prefab을 참조할 수 있음
-- <b>구분 방법:</b> Resources.Load()로 동적 로딩할 때는 string 타입 필요. Inspector에서 직접 드래그하면 GameObject 타입 
+- <b>구분 방법:</b> Resources.Load()로 동적 로딩할 때는 string 타입 필요. Inspector에서 직접 드래그하면 GameObject 타입
 
 ---
 
 ### 질문할 내용
 
-- [ ] IPunPrefabPool의 Instantiate()와 Destroy() 메서드 내부 동작 원리 더 확인 
+- [ ] IPunPrefabPool의 Instantiate()와 Destroy() 메서드 내부 동작 원리 더 확인
 - [ ] Master Client 전환 시 기존에 생성된 적들은 어떻게 관리되는지 확인
 - [ ] Pool Size를 얼마로 설정하는 것이 적절한지 기준 알아보기
-- [ ] #region과 #endregion의 정확한 사용법 및 장점 확인 
+- [ ] #region과 #endregion의 정확한 사용법 및 장점 확인
 - [ ] Photon.Realtime 외에 다른 네트워크 라이브러리 비교해보기
 - [ ] 동적 확장 로직이 너무 자주 발생하면 성능에 문제가 없는지 확인
 
@@ -284,9 +282,7 @@ public override void OnMasterClientSwitched()
 - [ ] 동적 확장 로직의 필요성을 설명할 수 있다.
 - [ ] 실습 순서를 다시 따라 할 수 있다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -970,50 +966,47 @@ Q 카운트가 0보다 크다면
 
 </details>
 
-
 <b>Unity Photon 네트워크 - 통합 Prefab Pool 관리</b> 2026-05-19
-
 
 ## 요약
 
-
 ### 오늘 수업 핵심 요약
 
-- <b>Apache 헬리콥터에 PhotonView와 PhotonTransformView 컴포넌트를 추가</b>하여 네트워크 동기화를 구현했습니다. 
-- <b>IPunPrefabPool을 ApacheSpawner에서 사용하면서 발생한 문제</b>를 발견했습니다. Apache는 정상적으로 생성되지만, 탱크가 생성되지 않는 현상이 발생했습니다. 
-- 문제의 원인은 <b>ApacheSpawner가 Photon의 전역 Prefab Pool 제어권을 독점</b>하고 있어서 다른 오브젝트(탱크)가 생성되지 않는 것이었습니다. 
-- <b>GameManager에 통합 Prefab Pool 관리 시스템을 구현</b>하여 모든 Prefab을 중앙에서 관리하도록 설계했습니다. 
-- <b>Dictionary를 사용한 서브풀 관리 방식</b>과 RegisterPrefabPool/UnregisterPrefabPool 메서드를 통해 확장성 있는 구조를 만들었습니다. 
+- <b>Apache 헬리콥터에 PhotonView와 PhotonTransformView 컴포넌트를 추가</b>하여 네트워크 동기화를 구현했습니다.
+- <b>IPunPrefabPool을 ApacheSpawner에서 사용하면서 발생한 문제</b>를 발견했습니다. Apache는 정상적으로 생성되지만, 탱크가 생성되지 않는 현상이 발생했습니다.
+- 문제의 원인은 <b>ApacheSpawner가 Photon의 전역 Prefab Pool 제어권을 독점</b>하고 있어서 다른 오브젝트(탱크)가 생성되지 않는 것이었습니다.
+- <b>GameManager에 통합 Prefab Pool 관리 시스템을 구현</b>하여 모든 Prefab을 중앙에서 관리하도록 설계했습니다.
+- <b>Dictionary를 사용한 서브풀 관리 방식</b>과 RegisterPrefabPool/UnregisterPrefabPool 메서드를 통해 확장성 있는 구조를 만들었습니다.
 
 ---
 
 ### 주요 개념 정리
 
-- <b>PhotonView 컴포넌트</b> 
+- <b>PhotonView 컴포넌트</b>
   - 설명: 네트워크 상에서 오브젝트를 동기화하기 위해 필요한 Photon의 기본 컴포넌트
   - 예시: Apache 프리팹에 PhotonView 추가 후 네트워크 생성 가능
   - 사용되는 상황: 네트워크 상에서 동기화가 필요한 모든 오브젝트
-  - 헷갈릴 수 있는 점: PhotonView가 없으면 "PhotonView Missing" 오류 발생 
-- <b>Serialization (직렬화 유형)</b> 
+  - 헷갈릴 수 있는 점: PhotonView가 없으면 "PhotonView Missing" 오류 발생
+- <b>Serialization (직렬화 유형)</b>
   - 설명: 네트워크 통신 방식을 설정하는 옵션
   - 예시: Unreliable Change (UDP), Reliable Delta Compressed (TCP/IP)
   - 사용되는 상황: 데이터 중요도에 따라 선택. 스피드 중심 게임은 Unreliable, 데이터 중요한 게임은 Reliable
-  - 헷갈릴 수 있는 점: Unreliable Change는 상황에 따라 자동으로 바뀜 
-- <b>PhotonTransformView 컴포넌트</b> 
+  - 헷갈릴 수 있는 점: Unreliable Change는 상황에 따라 자동으로 바뀜
+- <b>PhotonTransformView 컴포넌트</b>
   - 설명: 오브젝트의 Position과 Rotation을 네트워크 상에서 송수신하는 컴포넌트
   - 예시: Apache 헬리콥터의 움직임과 회전을 동기화
   - 사용되는 상황: 움직이는 오브젝트의 Transform 동기화
-- <b>IPunPrefabPool 독점 문제</b> 
+- <b>IPunPrefabPool 독점 문제</b>
   - 설명: 특정 클래스에서 <code>PhotonNetwork.PrefabPool = this</code>를 설정하면 해당 클래스가 Photon의 전역 Prefab Pool 제어권을 독점
   - 예시: ApacheSpawner가 전역 Pool을 독점하면 탱크가 생성되지 않음
   - 사용되는 상황: IPunPrefabPool을 여러 클래스에서 사용할 때 발생
-  - 헷갈릴 수 있는 점: Apache는 정상 생성되지만 탱크는 생성되지 않는 현상 
-- <b>통합 Prefab Pool 관리</b> 
+  - 헷갈릴 수 있는 점: Apache는 정상 생성되지만 탱크는 생성되지 않는 현상
+- <b>통합 Prefab Pool 관리</b>
   - 설명: 모든 Prefab을 GameManager에서 중앙 집중식으로 관리하는 방식
   - 예시: GameManager가 <code>PhotonNetwork.PrefabPool = this</code>로 메인 Pool을 담당
   - 사용되는 상황: 여러 종류의 네트워크 오브젝트를 관리할 때
   - 헷갈릴 수 있는 점: 거대 프로젝트에서는 별도의 공용 Pool Manager를 만들 수도 있지만, 중소규모는 GameManager에서 처리
-- <b>Dictionary 서브풀</b> 
+- <b>Dictionary 서브풀</b>
   - 설명: <code>Dictionary&lt;string, IPunPrefabPool&gt;</code> 타입으로 각 Prefab 이름과 해당 Pool을 쌍으로 관리
   - 예시: "Apache" → ApacheSpawner의 IPunPrefabPool, "Tank" → 탱크 Pool
   - 사용되는 상황: 여러 개의 서브풀을 효율적으로 관리
@@ -1023,67 +1016,67 @@ Q 카운트가 0보다 크다면
 
 ### 수업 흐름별 정리
 
-### 1. Apache Prefab에 PhotonView 추가 
+### 1. Apache Prefab에 PhotonView 추가
 
 - 설명: 네트워크 동기화를 위해 Apache Prefab에 컴포넌트 추가
 - 예시: Resources 폴더의 Apache Prefab 선택 → Add Component → PhotonView
 - <code>중요:</code> PhotonView가 없으면 "PhotonView Missing" 오류 발생
 
-### 2. PhotonTransformView 추가 및 설정 
+### 2. PhotonTransformView 추가 및 설정
 
 - 설명: Position과 Rotation 동기화를 위한 컴포넌트 추가
 - 예시: PhotonTransformView 추가 → Synchronize Position, Synchronize Rotation 체크
 - 중요한 이유: 헬리콥터의 움직임을 모든 클라이언트에 송수신
 
-### 3. Serialization 설정 
+### 3. Serialization 설정
 
 - 설명: PhotonView의 Serialization 유형을 Unreliable Change로 설정
 - 예시: Unreliable Change는 UDP 기반, 상황에 따라 TCP로 전환 가능
 - 중요한 이유: 게임 특성(스피드 vs 데이터 중요도)에 따라 선택
 
-### 4. 플레이 테스트 및 오류 확인 
+### 4. 플레이 테스트 및 오류 확인
 
 - 설명: Play 모드로 실행하여 Apache 생성 확인
 - 예시: Random Join Room → Apache는 생성되지만 탱크는 생성되지 않음
 - 중요한 이유: IPunPrefabPool 독점 문제 발견
 
-### 5. 문제 원인 파악 
+### 5. 문제 원인 파악
 
 - 설명: ApacheSpawner에서 IPunPrefabPool을 사용하면서 발생한 문제
 - 예시: <code>PhotonNetwork.PrefabPool = this</code> 코드로 인해 전역 Pool 독점
 - <code>중요:</code> ApacheSpawner가 Photon의 전역 Prefab Pool 제어권을 독점하여 탱크 생성 불가
 
-### 6. GameManager에 IPunPrefabPool 구현 
+### 6. GameManager에 IPunPrefabPool 구현
 
 - 설명: GameManager 클래스에 IPunPrefabPool 인터페이스 추가
 - 예시: <code>, IPunPrefabPool</code> 추가 → Implement Interface
 - 중요한 이유: GameManager가 메인 Prefab Pool 관리자 역할
 
-### 7. using 문 추가 
+### 7. using 문 추가
 
 - 설명: Photon.Realtime 네임스페이스 추가
 - 예시: <code>using Photon.Realtime;</code> 또는 <code>using Photon.Pun;</code>
 - 중요한 이유: Photon 관련 클래스 사용을 위해 필요
 
-### 8. Dictionary 서브풀 선언 
+### 8. Dictionary 서브풀 선언
 
 - 설명: 여러 Prefab Pool을 관리할 Dictionary 선언
 - 예시: <code>private Dictionary&lt;string, IPunPrefabPool&gt; subPools;</code>
 - 중요한 이유: 쌍으로 이루어진 Key-Value 구조로 효율적 관리
 
-### 9. Dictionary 초기화 및 메인 Pool 설정 
+### 9. Dictionary 초기화 및 메인 Pool 설정
 
 - 설명: OnEnable에서 GameManager를 Photon의 메인 Prefab Pool로 설정
 - 예시: <code>PhotonNetwork.PrefabPool = this;</code>
 - <code>중요:</code> GameManager가 Photon의 메인 Prefab Pool 제어권을 가짐
 
-### 10. RegisterPrefabPool 메서드 구현 
+### 10. RegisterPrefabPool 메서드 구현
 
 - 설명: 서브풀을 등록하는 메서드
 - 예시: <code>public void RegisterPrefabPool(string prefabName, IPunPrefabPool pool)</code>
 - 중요한 이유: 등록되지 않은 경우에만 Dictionary에 추가
 
-### 11. UnregisterPrefabPool 메서드 구현 
+### 11. UnregisterPrefabPool 메서드 구현
 
 - 설명: 서브풀을 해제하는 메서드
 - 예시: <code>public void UnregisterPrefabPool(string prefabName)</code> → <code>subPools.Remove(prefabName)</code>
@@ -1095,29 +1088,29 @@ Q 카운트가 0보다 크다면
 
 <b>Apache Prefab 네트워크 컴포넌트 추가:</b>
 
-1. Resources 폴더에서 Apache Prefab 선택 
-2. Add Component → PhotonView 추가 
-3. PhotonTransformView 컴포넌트 추가 
+1. Resources 폴더에서 Apache Prefab 선택
+2. Add Component → PhotonView 추가
+3. PhotonTransformView 컴포넌트 추가
 4. Synchronize Position, Synchronize Rotation 설정
-5. Serialization을 Unreliable Change로 설정 
+5. Serialization을 Unreliable Change로 설정
 6. Prefab 저장
 
 <b>GameManager에 통합 Pool 관리 구현:</b>
 
-1. GameManager 스크립트 열기 
-2. <code>using Photon.Realtime;</code> 추가 (또는 <code>using Photon.Pun;</code>) 
-3. 클래스 선언에 <code>, IPunPrefabPool</code> 추가 
-4. 우클릭 → Implement Interface 선택 
-5. <code>private Dictionary&lt;string, IPunPrefabPool&gt; subPools;</code> 선언 
-6. OnEnable에서 <code>PhotonNetwork.PrefabPool = this;</code> 설정 
-7. <code>RegisterPrefabPool</code> 메서드 작성 
-8. <code>UnregisterPrefabPool</code> 메서드 작성 
+1. GameManager 스크립트 열기
+2. <code>using Photon.Realtime;</code> 추가 (또는 <code>using Photon.Pun;</code>)
+3. 클래스 선언에 <code>, IPunPrefabPool</code> 추가
+4. 우클릭 → Implement Interface 선택
+5. <code>private Dictionary&lt;string, IPunPrefabPool&gt; subPools;</code> 선언
+6. OnEnable에서 <code>PhotonNetwork.PrefabPool = this;</code> 설정
+7. <code>RegisterPrefabPool</code> 메서드 작성
+8. <code>UnregisterPrefabPool</code> 메서드 작성
 9. 스크립트 저장
 
 <b>테스트:</b>
 
-1. Unity Play 모드 실행 
-2. Random Join Room 클릭 
+1. Unity Play 모드 실행
+2. Random Join Room 클릭
 3. Apache와 탱크가 모두 정상 생성되는지 확인
 
 ---
@@ -1184,19 +1177,19 @@ public void UnregisterPrefabPool(string prefabName)
 
 ### 예시와 활용 사례
 
-- <b>예시 1: PhotonView 없이 네트워크 생성 시도</b> 
+- <b>예시 1: PhotonView 없이 네트워크 생성 시도</b>
   - 상황: Apache Prefab에 PhotonView가 없는 상태에서 네트워크 생성
   - 설명: 콘솔에 "PhotonView Missing" 오류 발생
   - 왜 이 예시를 사용했는지: PhotonView의 필수성 강조
-- <b>예시 2: Serialization 유형 선택</b> 
+- <b>예시 2: Serialization 유형 선택</b>
   - 상황: FPS 게임 vs 보드게임
   - 설명: FPS는 Unreliable(UDP)로 빠른 통신, 보드게임은 Reliable(TCP)로 정확한 데이터 전송
   - 왜 이 예시를 사용했는지: 게임 장르에 따른 통신 방식 선택 중요성
-- <b>예시 3: IPunPrefabPool 독점 문제</b> 
+- <b>예시 3: IPunPrefabPool 독점 문제</b>
   - 상황: ApacheSpawner에서 <code>PhotonNetwork.PrefabPool = this</code> 설정
   - 설명: ApacheSpawner가 전역 Pool 제어권을 독점하여 다른 오브젝트(탱크) 생성 불가
   - 왜 이 예시를 사용했는지: 중앙 집중식 Pool 관리의 필요성 설명
-- <b>예시 4: Dictionary 서브풀 구조</b> 
+- <b>예시 4: Dictionary 서브풀 구조</b>
   - 상황: 여러 종류의 Prefab을 관리해야 하는 상황
   - 설명: "Apache" → ApacheSpawner Pool, "Tank" → 탱크 Pool로 쌍을 이루어 관리
   - 왜 이 예시를 사용했는지: 확장성 있는 Pool 관리 구조 이해
@@ -1207,25 +1200,25 @@ public void UnregisterPrefabPool(string prefabName)
 
 - <b>헷갈리는 개념:</b> PhotonView vs PhotonTransformView
 - <b>헷갈리는 이유:</b> 둘 다 Photon 관련 컴포넌트이고 이름이 비슷함
-- <b>구분 방법:</b> PhotonView는 네트워크 동기화의 기본 컴포넌트(필수), PhotonTransformView는 Transform 동기화 전용 컴포넌트(선택) 
+- <b>구분 방법:</b> PhotonView는 네트워크 동기화의 기본 컴포넌트(필수), PhotonTransformView는 Transform 동기화 전용 컴포넌트(선택)
 
 ---
 
 - <b>헷갈리는 개념:</b> Unreliable Change vs Reliable Delta Compressed
 - <b>헷갈리는 이유:</b> 통신 방식의 차이를 이해하기 어려움
-- <b>구분 방법:</b> Unreliable은 UDP(빠르지만 손실 가능), Reliable은 TCP(느리지만 정확). Unreliable Change는 상황에 따라 자동 전환 
+- <b>구분 방법:</b> Unreliable은 UDP(빠르지만 손실 가능), Reliable은 TCP(느리지만 정확). Unreliable Change는 상황에 따라 자동 전환
 
 ---
 
 - <b>헷갈리는 개념:</b> 전역 Pool 독점 문제
 - <b>헷갈리는 이유:</b> Apache는 생성되는데 탱크는 왜 안 생성되는지 이해 어려움
-- <b>구분 방법:</b> <code>PhotonNetwork.PrefabPool = this</code>로 설정하면 해당 클래스가 전역 Pool을 독점. 중앙 관리 방식으로 해결 
+- <b>구분 방법:</b> <code>PhotonNetwork.PrefabPool = this</code>로 설정하면 해당 클래스가 전역 Pool을 독점. 중앙 관리 방식으로 해결
 
 ---
 
 - <b>헷갈리는 개념:</b> Dictionary의 Key-Value 구조
 - <b>헷갈리는 이유:</b> string과 IPunPrefabPool을 쌍으로 관리하는 개념
-- <b>구분 방법:</b> Key는 Prefab 이름(string), Value는 해당 Prefab의 Pool 객체(IPunPrefabPool 인터페이스) 
+- <b>구분 방법:</b> Key는 Prefab 이름(string), Value는 해당 Prefab의 Pool 객체(IPunPrefabPool 인터페이스)
 
 ---
 
@@ -1252,9 +1245,7 @@ public void UnregisterPrefabPool(string prefabName)
 - [ ] PhotonNetwork.PrefabPool = this의 의미를 설명할 수 있다.
 - [ ] 실습 순서를 다시 따라 할 수 있다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1516,12 +1507,9 @@ unregister죠
 
 </details>
 
-
 <b>Unity Photon 네트워크 - UI 구현 및 방 목록 시스템</b> 2026-05-19
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1810,14 +1798,11 @@ return false;
 - [ ] Room Item UI를 생성하고 버튼을 추가할 수 있다.
 - [ ] 실습 순서를 다시 따라 할 수 있다.
 
-
 ## 메모
-
 
 <b>.</b>
 
 <b>안좋은 예 1<br />// 만약 딕셔너리에 “Tank”라는 키가 없으면 바로 에러(KeyNotFoundException)가 발생하며 게임이 멈춥니다.<br />GameObject tankPrefab = myDict\[“Tank”\];<br />안좋은 예 2<br />// 에러는 안 나지만, 딕셔너리 내부를 두 번(1번: 있는지 찾기, 2번: 꺼내기) 검색하므로 성능이 낭비됩니다.<br />if (myDict.ContainsKey(“Tank”)) // 1등 검사 (내부 탐색)<br />\{<br />GameObject tankPrefab = myDict\[“Tank”\]; // 2등 꺼내기 (내부 탐색 또 실행)<br />\}<br />TryGetValue는 내부 검색을 딱 한 번만 수행하면서, “값이 있으면 가져오고, 없으면 안전하게 false를 반환<br />문법의 핵심: out 키워드<br />TryGetValue 뒤에 붙는 out 키워드가 처음엔 낯설 수 있습니다.<br />메서드의 반환값(bool): 성공하면 true, 실패하면 false를 반환하여 if문 제어에 쓰입니다.<br />out 변수: 메서드가 실행되면서 찾은 실제 데이터를 그 자리에서 만들어서 넣어주는 통로입니다.<br />옛날 C# 버전과 달리, 요즘은 out var result 형태로 미리 변수를 선언하지 않고 if문 안에서 바로<br />선언해서 쓸 수 있어 코드가 매우 깔끔해집니다.</b>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2533,7 +2518,6 @@ UI만 만들고 마쳐야 할 것 같습니다.
 
 </details>
 
-
 <b>Q1. \[네트워크 기초: 권한 분리\]</b>
 
 <b>포톤(Photon PUN 2)을 사용하여 멀티플레이 환경을 구축할 때, ‘총알이 날아가는 이펙트와 소리’를 재생하는</b>
@@ -2597,7 +2581,6 @@ AI에게 코드를 요청할 때는 첫째, Unity 버전과 사용 중인 패키
 <b>이 NPC가 AI 특유의 딱딱한 말투를 버리고 “친절한 톤으로 존댓말을 쓰는 박물관 큐레이터”라는 역할을 연기하도록 만들려면,</b>
 
 <b>API를 호출할 때 어떤 요소(Prompt 영역)를 설정해 주어야 하는지 서술하시오.</b>
-
 
 <b>Q8. \[크로스 플랫폼: 입력 시스템\]</b>
 

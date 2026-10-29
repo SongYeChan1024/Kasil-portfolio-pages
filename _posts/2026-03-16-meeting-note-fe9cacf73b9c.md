@@ -3,8 +3,8 @@ title: "2차 프로젝트-03-16_오전 회의 내용"
 date: 2026-03-16 12:00:00 +0900
 categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "Moz.A.I.c 게임 프로젝트 기획 회의 2026-03-16 요약 Action Items Unity 버전 최종 결정 (필요한 AI 기능 확인 후) 영 스테이지(튜토리얼 로비) 구조 설계 스테이지별 스토리 세부 기획 (시작점, 결승점, 통과점 설정) RPG 요소 추가 검토 (레벨업 시스"
-description: "Moz.A.I.c 게임 프로젝트 기획 회의 2026-03-16 요약 Action Items Unity 버전 최종 결정 (필요한 AI 기능 확인 후) 영 스테이지(튜토리얼 로비) 구조 설계 스테이지별 스토리 세부 기획 (시작점, 결승점, 통과점 설정) RPG 요소 추가 검토 (레벨업 시스"
+excerpt: "Moz.A.I.c의 로비와 스테이지 구조, AI NPC 및 성장 요소를 논의하고 후속 기획 항목을 정리했다."
+description: "Moz.A.I.c의 로비와 스테이지 구조, AI NPC 및 성장 요소를 논의하고 후속 기획 항목을 정리했다."
 published: true
 migration_id: "35e36532580e818fac7bfe9cacf73b9c"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>Moz.A.I.c 게임 프로젝트 기획 회의</b> 2026-03-16
 
-
 ## 요약
-
 
 ### Action Items
 
@@ -116,14 +114,11 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - AI NPC의 외형 생성 방식 (랜덤 생성은 어려울 것으로 예상) 
 - 튜토리얼 설계 
 
-
 ## 메모
-
 
 <p>
 PC 쪽 개발 선호 
 </p>
-
 
 Project : Moz.A.I.c
 
@@ -142,7 +137,6 @@ World : Archive of Fragments
 ↓
 
 Moz.A.I.c (모자이크 그림 완성)
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

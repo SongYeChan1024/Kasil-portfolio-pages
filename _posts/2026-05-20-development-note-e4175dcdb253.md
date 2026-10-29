@@ -3,8 +3,8 @@ title: "2026-05-20 개발 메모"
 date: 2026-05-20 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity VR 멀티플레이 개발 수업 - 룸 리스트 UI 및 버그 수정 2026-05-20 요약 오늘 수업 핵심 요약 Photon2 멀티플레이 복습 문제를 풀이하며 RPC 타겟, 컬링 기법, AI 프롬프트 작성법, 메타버스 아바타 표준 포맷 등을 점검했습니다. Unity UI 시스템 을"
-description: "Unity VR 멀티플레이 개발 수업 - 룸 리스트 UI 및 버그 수정 2026-05-20 요약 오늘 수업 핵심 요약 Photon2 멀티플레이 복습 문제를 풀이하며 RPC 타겟, 컬링 기법, AI 프롬프트 작성법, 메타버스 아바타 표준 포맷 등을 점검했습니다. Unity UI 시스템 을"
+excerpt: "Photon 네트워킹 복습 문제를 풀고, 룸 리스트 UI 구현과 버그 수정 내용을 정리했다."
+description: "Photon 네트워킹 복습 문제를 풀고, 룸 리스트 UI 구현과 버그 수정 내용을 정리했다."
 published: true
 migration_id: "36636532580e80d79fcbe4175dcdb253"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 {% raw %}
 <b>Unity VR 멀티플레이 개발 수업 - 룸 리스트 UI 및 버그 수정</b> 2026-05-20
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -35,7 +33,7 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
   설명: Photon2에서 네트워크 메시지를 누구에게 전송할지 지정하는 옵션
   </li>
   <li>
-  예시: 
+  예시:
 
   - <code>RPC Target All</code>: 총알 이펙트와 소리처럼 모두에게 보여야 하는 것
   - <code>RPC Target Owner</code>: 탱크 체력처럼 소유주에게만 전송
@@ -52,7 +50,6 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 <p>
 \<table header-
-
 
 </p>
 
@@ -247,9 +244,7 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 - [ ] Lerp, Slerp, RotateTowards의 차이를 설명하고 적절한 상황에 사용할 수 있다
 - [ ] AI에게 Unity 코드를 요청할 때 LTS 버전과 패키지 버전을 명시하는 이유를 설명할 수 있다
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -855,12 +850,9 @@ attribute를 하나 넣읍시다
 
 </details>
 
-
 <b>Unity VR 멀티플레이 개발 수업 - UI 카메라 추적 및 방 목록 시스템</b> 2026-05-20
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1070,7 +1062,7 @@ attribute를 하나 넣읍시다
 <table header-row="true">
 <tr>
 <td>
-오류 
+오류
 </td>
 <td></td>
 </tr>
@@ -1159,9 +1151,7 @@ Anchored가 체크되지 않아 중력 영향을 받음
 - [ ] Roblox Studio에서 Anchored와 Transparency 속성의 역할을 설명할 수 있다
 - [ ] 개념을 이해하면 코드 작성이 가능하다는 것을 체감했다
 
-
 ## 메모
-
 
 ## 문제 1. 오브젝트 생성 및 소유권
 
@@ -1380,7 +1370,6 @@ Photon의 네트워크 오브젝트 생성과 파괴를 오브젝트 풀과 연�
 요약하면,
 
 <b>방에 남을 것은 Room Object로 만들고, 자주 변하는 값은 변화가 있을 때만 보내고, 마스터가 바뀌면 새 마스터가 상태를 복구하고, 생성/파괴 반복은 IPunPrefabPool로 눌러 담는다</b>입니다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2697,7 +2686,6 @@ W를 누르면 안되지. 죄송합니다. 유니티인줄 알았네. 자, 유�
 네 문제를 풀어서 가드에 전용 게시판에 올려주십시오.
 
 </details>
-
 
 <b>문제 1 (오브젝트 생성 및 소유권)</b>
 

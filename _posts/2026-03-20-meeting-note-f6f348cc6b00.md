@@ -3,8 +3,8 @@ title: "오후 전체 스크럼 후 회의 기록 정리"
 date: 2026-03-20 12:00:00 +0900
 categories: ["회의 기록", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "게임 개발 회의 2026-03-20 요약 액션 아이템 매니저 시스템 완성 (스테이지 매니저, 풀링 매니저, 이펙트 매니저, 퍼즐 매니저) 3-1 퍼즐 완성 후 2번 퍼즐 작업 시나리오 보강 - NPC 대화 중심으로 스토리 전개 퍼즐 개수 3개에서 2개로 축소 난이도 조정을 위한 데이터 "
-description: "게임 개발 회의 2026-03-20 요약 액션 아이템 매니저 시스템 완성 (스테이지 매니저, 풀링 매니저, 이펙트 매니저, 퍼즐 매니저) 3-1 퍼즐 완성 후 2번 퍼즐 작업 시나리오 보강 - NPC 대화 중심으로 스토리 전개 퍼즐 개수 3개에서 2개로 축소 난이도 조정을 위한 데이터 "
+excerpt: "매니저 시스템과 퍼즐 제작, NPC 대화 중심의 시나리오 보강 및 난이도 조정을 논의했다."
+description: "매니저 시스템과 퍼즐 제작, NPC 대화 중심의 시나리오 보강 및 난이도 조정을 논의했다."
 published: true
 migration_id: "35e36532580e8147bfc4f6f348cc6b00"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["source_citations_preserved_in_backup"]
 {% raw %}
 <b>게임 개발 회의</b> 2026-03-20
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -79,9 +77,7 @@ migration_flags: ["source_citations_preserved_in_backup"]
 
 - 식사 후 7시 재소집 예정 
 
-
 ## 메모
-
 
 재시도 횟수에 따라서 분기가 달라 질 수 있다
 
@@ -94,7 +90,6 @@ migration_flags: ["source_citations_preserved_in_backup"]
 에피소드 2에서는 색처리
 
 에피소드 3에서는 청각처리
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -229,12 +224,9 @@ AI로 이미지를 다 좀 일관성 있게 찍어서 해야 되나요?
 
 </details>
 
-
 <b>회의</b> 2026-03-20
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -283,12 +275,9 @@ AI로 이미지를 다 좀 일관성 있게 찍어서 해야 되나요?
 - 퍼즐 완료 후 마을 색깔 복원으로 기억 회복 표현 
 - 엔딩 구간에서 기억의 색 돌아오는 연출 
 
-
 ## 메모
 
-
 3-2 스테이지 퍼즐은 점프맵 과 음악 요소를 섞어서 만들 것
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

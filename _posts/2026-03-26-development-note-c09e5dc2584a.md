@@ -3,8 +3,8 @@ title: "오늘 할일 2026-03-26"
 date: 2026-03-26 12:00:00 +0900
 categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "기본 정보 날짜: 2026-03-26 프로젝트: 작성자: 작성자 오늘 할 일 x 에피소드 3-2 퍼즐 기획서 완성후 노션에 공유 x 에피소드 3-3 맵 기획 Episode 3 결과 보고 구조 연동 전체 맵의 톤을 위해서 레벨 디자인 후 제작 6-3. 후속 작업 항목 팀 작업 맵 병합 이"
-description: "기본 정보 날짜: 2026-03-26 프로젝트: 작성자: 작성자 오늘 할 일 x 에피소드 3-2 퍼즐 기획서 완성후 노션에 공유 x 에피소드 3-3 맵 기획 Episode 3 결과 보고 구조 연동 전체 맵의 톤을 위해서 레벨 디자인 후 제작 6-3. 후속 작업 항목 팀 작업 맵 병합 이"
+excerpt: "에피소드 3-2 기획서 공유와 3-3 맵 기획, 맵 병합 이후 후속 작업을 정리했다."
+description: "에피소드 3-2 기획서 공유와 3-3 맵 기획, 맵 병합 이후 후속 작업을 정리했다."
 published: true
 migration_id: "35e36532580e81d3abb2c09e5dc2584a"
 migration_status: "published"
@@ -20,9 +20,7 @@ migration_flags: ["publication_review"]
 
 ## 오늘 할 일
 
-
-- [x] 에피소드 3-2 퍼즐 기획서 완성후 노션에 공유 
-
+- [x] 에피소드 3-2 퍼즐 기획서 완성 후 노션에 공유
 
 - [x] 에피소드 3-3 맵 기획
 - [ ] Episode 3 결과 보고 구조 연동
@@ -72,10 +70,8 @@ migration_flags: ["publication_review"]
 <li></li>
 </ul>
 
-
 <details markdown="1">
 <summary>첨부/스크린샷(선택)</summary>
-
 
 <ul>
 <li></li>
@@ -83,10 +79,8 @@ migration_flags: ["publication_review"]
 
 </details>
 
-
 <details markdown="1">
 <summary>회고(선택)</summary>
-
 
 - 잘한 점:
 - 아쉬운 점:

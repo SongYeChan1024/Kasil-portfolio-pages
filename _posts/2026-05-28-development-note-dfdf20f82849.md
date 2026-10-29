@@ -3,8 +3,8 @@ title: "2026-05-28 개발 메모"
 date: 2026-05-28 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity UI 설정 및 Canvas Scaler 수업 2026-05-28 요약 오늘 수업 핵심 요약 Unity에서 CanvasScaler 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 Scale With Screen Size 모드를 실습했습니다. Fi"
-description: "Unity UI 설정 및 Canvas Scaler 수업 2026-05-28 요약 오늘 수업 핵심 요약 Unity에서 CanvasScaler 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 Scale With Screen Size 모드를 실습했습니다. Fi"
+excerpt: "Canvas Scaler와 반응형 UI 설정을 학습하고, Firebase 연동에 필요한 패키지와 스레드 처리 개념을 정리했다."
+description: "Canvas Scaler와 반응형 UI 설정을 학습하고, Firebase 연동에 필요한 패키지와 스레드 처리 개념을 정리했다."
 published: true
 migration_id: "36e36532580e80d19e10dfdf20f82849"
 migration_status: "published"
@@ -14,22 +14,20 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 {% raw %}
 <b>Unity UI 설정 및 Canvas Scaler 수업</b> 2026-05-28
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- Unity에서 <b>CanvasScaler</b> 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 <b>Scale With Screen Size</b> 모드를 실습했습니다. 
-- <b>Firebase 연동 준비</b> 작업으로 Android 빌드 설정과 Package Name 설정 방법을 학습했습니다. 
-- 메인 씬의 UI 레이아웃을 설계하고, <b>앵커(Anchor) 시스템</b>을 활용해 다양한 해상도에서도 UI 위치가 고정되도록 반응형 UI를 구현했습니다. 
-- LittleWarS 에셋팩을 활용해 게임 스타트 버튼, 상점 버튼, 유저 버튼 등의 UI 요소를 배치하고 디자인했습니다. 
-- 이번 수업은 Firebase 데이터베이스 연동을 위한 기초 작업으로, 향후 메인 씬, 상점 씬, 유저 씬, 게임 씬 총 4개의 씬을 제작할 예정입니다. 
+- Unity에서 <b>CanvasScaler</b> 컴포넌트의 UI Scale Mode 옵션들을 배우고, 모바일 게임 개발에 적합한 <b>Scale With Screen Size</b> 모드를 실습했습니다.
+- <b>Firebase 연동 준비</b> 작업으로 Android 빌드 설정과 Package Name 설정 방법을 학습했습니다.
+- 메인 씬의 UI 레이아웃을 설계하고, <b>앵커(Anchor) 시스템</b>을 활용해 다양한 해상도에서도 UI 위치가 고정되도록 반응형 UI를 구현했습니다.
+- LittleWarS 에셋팩을 활용해 게임 스타트 버튼, 상점 버튼, 유저 버튼 등의 UI 요소를 배치하고 디자인했습니다.
+- 이번 수업은 Firebase 데이터베이스 연동을 위한 기초 작업으로, 향후 메인 씬, 상점 씬, 유저 씬, 게임 씬 총 4개의 씬을 제작할 예정입니다.
 
 ### 주요 개념 정리
 
 - <b>CanvasScaler - UI Scale Mode</b>
-  - 설명: Canvas 내 UI 요소들이 화면 크기 변화에 따라 어떻게 스케일링될지 결정하는 설정 
+  - 설명: Canvas 내 UI 요소들이 화면 크기 변화에 따라 어떻게 스케일링될지 결정하는 설정
   - 사용되는 상황: 다양한 해상도의 디바이스를 지원하는 모바일/PC 게임 개발 시
   - 헷갈릴 수 있는 점: 세 가지 모드(Constant Pixel Size, Scale With Screen Size, Constant Physical Size)의 차이를 명확히 이해해야 함
 
@@ -42,92 +40,92 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 - <b>Screen Match Mode</b>
   <ul>
   <li>
-  설명: Scale With Screen Size 모드에서 가로(Width)와 세로(Height) 중 어느 쪽을 기준으로 스케일을 맞출지 결정하는 옵션 
+  설명: Scale With Screen Size 모드에서 가로(Width)와 세로(Height) 중 어느 쪽을 기준으로 스케일을 맞출지 결정하는 옵션
   </li>
   <li>
-  예시: 
+  예시:
 
-  - Match Width or Height: 슬라이더 0\~1로 조절 (가로형 게임은 1/Height, 세로형 게임은 0/Width) 
-  - Expand: UI가 잘리지 않도록 캔버스를 확장 (여백 발생 가능) 
-  - Shrink: UI를 화면 안에 강제로 축소 (UI가 작아지는 문제로 실무에서 거의 사용 안 함) 
+  - Match Width or Height: 슬라이더 0\~1로 조절 (가로형 게임은 1/Height, 세로형 게임은 0/Width)
+  - Expand: UI가 잘리지 않도록 캔버스를 확장 (여백 발생 가능)
+  - Shrink: UI를 화면 안에 강제로 축소 (UI가 작아지는 문제로 실무에서 거의 사용 안 함)
   </li>
   </ul>
 - <b>Anchor(앵커)</b>
   - 설명: UI 요소의 위치를 부모 요소의 특정 지점에 고정시키는 시스템
   - 사용되는 상황: 해상도가 변경되어도 UI 위치가 올바르게 유지되어야 할 때
-  - 헷갈릴 수 있는 점: 앵커를 설정하지 않고 Middle Center만 사용하면 해상도 변경 시 UI 위치가 엉망이 됨 
+  - 헷갈릴 수 있는 점: 앵커를 설정하지 않고 Middle Center만 사용하면 해상도 변경 시 UI 위치가 엉망이 됨
 - <b>Screen Space - Camera</b>
-  - 설명: Canvas의 Render Mode 중 하나로, 카메라를 통해 UI를 렌더링하는 방식 
+  - 설명: Canvas의 Render Mode 중 하나로, 카메라를 통해 UI를 렌더링하는 방식
   - 사용되는 상황: UI에 카메라 효과를 적용하거나 3D 공간에서 UI를 표현할 때
   - 예시: Main Camera를 Render Camera로 지정
 - <b>Firebase Package Name</b>
-  - 설명: Firebase와 Unity 앱을 연결하기 위한 고유 식별자 
-  - 예시: com.EliseCompany.FireBasePro\_01 
+  - 설명: Firebase와 Unity 앱을 연결하기 위한 고유 식별자
+  - 예시: com.EliseCompany.FireBasePro\_01
   - 사용되는 상황: Firebase 데이터베이스를 Unity 프로젝트에 연동할 때 필수
-  - 헷갈릴 수 있는 점: Override Default Package Name을 체크 해제 후 재체크해야 변경사항이 적용됨 
+  - 헷갈릴 수 있는 점: Override Default Package Name을 체크 해제 후 재체크해야 변경사항이 적용됨
 
 ### 수업 흐름별 정리
 
 ### 1. 프로젝트 설정 및 Firebase 준비
 
-- 설명: 눈 피하기 게임 제작을 위한 기본 스펙 정리 및 Firebase 연동 준비 
+- 설명: 눈 피하기 게임 제작을 위한 기본 스펙 정리 및 Firebase 연동 준비
 - 게임 스펙:
   - 가로 이동 플레이어
   - 위에서 떨어지는 눈 피하기
-  - 체력 100, 눈 맞을 때 데미지 20 (5번 맞으면 게임 오버) 
-  - 게임 재화: 코인, 스코어, 플레이어 캐릭터 종류 (5\~6가지) 
-- 중요: Firebase를 사용해 게임 점수, 코인, 선택한 캐릭터 정보를 데이터베이스에 저장 
+  - 체력 100, 눈 맞을 때 데미지 20 (5번 맞으면 게임 오버)
+  - 게임 재화: 코인, 스코어, 플레이어 캐릭터 종류 (5\~6가지)
+- 중요: Firebase를 사용해 게임 점수, 코인, 선택한 캐릭터 정보를 데이터베이스에 저장
 
 ### 2. Android 빌드 설정
 
-- 설명: Firebase 연동을 위해 Android 플랫폼 설정 필수 
+- 설명: Firebase 연동을 위해 Android 플랫폼 설정 필수
 - 중요한 이유: Firebase 앱과 Unity를 연결하려면 Android Build Support가 설치되어 있어야 함
 - 실습 순서:
-  1. File > Build Settings 열기 
-  2. Player Settings 클릭 
-  3. Android 탭으로 이동 
-  4. Other Settings에서 Override Default Package Name 체크 
-  5. Company Name과 Product Name 설정 (예: EliseCompany, FireBasePro\_01) 
-  6. Package Name 복사 후 메모장에 저장 (Firebase 설정 시 사용) 
+  1. File > Build Settings 열기
+  2. Player Settings 클릭
+  3. Android 탭으로 이동
+  4. Other Settings에서 Override Default Package Name 체크
+  5. Company Name과 Product Name 설정 (예: EliseCompany, FireBasePro\_01)
+  6. Package Name 복사 후 메모장에 저장 (Firebase 설정 시 사용)
 
 ### 3. Canvas 및 Camera 설정
 
-- 설명: UI를 화면에 표시하기 위한 기본 Canvas 설정 
+- 설명: UI를 화면에 표시하기 위한 기본 Canvas 설정
 - 실습 내용:
-  - Game View를 Full HD 1920x1080으로 설정 
-  - Canvas의 Render Mode를 Screen Space - Camera로 변경 
-  - Main Camera를 Render Camera에 할당 
-  - Main Camera의 Background를 밝은 노란색(FFCO)으로 변경 
-- 중요: 2D 프로젝트에서는 Main Camera의 Projection이 Orthographic으로 설정됨 
+  - Game View를 Full HD 1920x1080으로 설정
+  - Canvas의 Render Mode를 Screen Space - Camera로 변경
+  - Main Camera를 Render Camera에 할당
+  - Main Camera의 Background를 밝은 노란색(FFCO)으로 변경
+- 중요: 2D 프로젝트에서는 Main Camera의 Projection이 Orthographic으로 설정됨
 
 ### 4. CanvasScaler 설정
 
-- 설명: 반응형 UI를 만들기 위한 CanvasScaler 설정 
+- 설명: 반응형 UI를 만들기 위한 CanvasScaler 설정
 - 실습 내용:
-  - UI Scale Mode: Scale With Screen Size 선택 
-  - Reference Resolution: 1920 x 1080 (Full HD) 
-  - Screen Match Mode: Expand 
-- 중요: 대부분의 상용 게임(99%)은 Scale With Screen Size 모드를 사용 
+  - UI Scale Mode: Scale With Screen Size 선택
+  - Reference Resolution: 1920 x 1080 (Full HD)
+  - Screen Match Mode: Expand
+- 중요: 대부분의 상용 게임(99%)은 Scale With Screen Size 모드를 사용
 
 ### 5. 메인 씬 UI 제작
 
-- 설명: 게임 시작, 상점, 유저 버튼 및 닉네임 표시 영역 제작 
+- 설명: 게임 시작, 상점, 유저 버튼 및 닉네임 표시 영역 제작
 - 제작한 UI 요소:
-  - 게임 스타트 버튼 (Y: -300) 
-  - 상점 버튼 (Top Right 앵커, X: -70, Y: -30) 
-  - 유저 버튼 (상점 버튼 아래) 
-  - 닉네임 패널 (Top Middle 앵커, Y: -80, Width: 300, Height: 100) 
-  - 유닛 이미지 (Middle Center, Y: 100, 250x250) 
-- 중요: LittleWarS Asset Pack의 Bar Front 스프라이트를 버튼 Source Image로 사용 
+  - 게임 스타트 버튼 (Y: -300)
+  - 상점 버튼 (Top Right 앵커, X: -70, Y: -30)
+  - 유저 버튼 (상점 버튼 아래)
+  - 닉네임 패널 (Top Middle 앵커, Y: -80, Width: 300, Height: 100)
+  - 유닛 이미지 (Middle Center, Y: 100, 250x250)
+- 중요: LittleWarS Asset Pack의 Bar Front 스프라이트를 버튼 Source Image로 사용
 
 ### 6. 앵커를 활용한 반응형 UI 배치
 
-- 설명: 해상도가 변경되어도 UI 위치가 고정되도록 앵커 설정 
+- 설명: 해상도가 변경되어도 UI 위치가 고정되도록 앵커 설정
 - 예시:
-  - 상점 버튼: Top Right 앵커로 오른쪽 상단에 고정 
-  - 닉네임 패널: Top Middle 앵커로 상단 중앙에 고정 
+  - 상점 버튼: Top Right 앵커로 오른쪽 상단에 고정
+  - 닉네임 패널: Top Middle 앵커로 상단 중앙에 고정
   - 게임 스타트 버튼: Middle Center 앵커 사용
-- 중요: 앵커를 설정하지 않으면 해상도 변경 시 UI가 엉망이 됨 
+- 중요: 앵커를 설정하지 않으면 해상도 변경 시 UI가 엉망이 됨
 
 ### 실습 / 작업 순서
 
@@ -135,47 +133,47 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 1. Unity Hub 열기
 2. Unity 2022 버전 옆의 설정(⚙️) 클릭
-3. 모듈 추가(Add Modules) 선택 
-4. Android Build Support 체크 
+3. 모듈 추가(Add Modules) 선택
+4. Android Build Support 체크
 5. 설치 완료
 
 ### Canvas 및 CanvasScaler 설정
 
 1. Hierarchy에서 UI > Image 생성 (Canvas 자동 생성됨)
-2. Game View를 Full HD 1920x1080으로 설정 
-3. Canvas 선택 > Render Mode를 Screen Space - Camera로 변경 
-4. Main Camera를 Render Camera 필드에 드래그 앤 드롭 
-5. Canvas Scaler 컴포넌트에서 UI Scale Mode를 Scale With Screen Size로 설정 
-6. Reference Resolution: 1920 x 1080 입력 
-7. Screen Match Mode를 Expand로 설정 
+2. Game View를 Full HD 1920x1080으로 설정
+3. Canvas 선택 > Render Mode를 Screen Space - Camera로 변경
+4. Main Camera를 Render Camera 필드에 드래그 앤 드롭
+5. Canvas Scaler 컴포넌트에서 UI Scale Mode를 Scale With Screen Size로 설정
+6. Reference Resolution: 1920 x 1080 입력
+7. Screen Match Mode를 Expand로 설정
 
 ### 메인 씬 UI 버튼 제작
 
-1. Canvas 우클릭 > UI > Legacy > Button 생성 
-2. 버튼 이름을 GameStart\_btn으로 변경 
-3. 버튼 위치: Y값 -300 설정 
-4. 버튼 크기: Width 200, Height 50 (나중에 230 x 90으로 조정) 
-5. 자식 Text 오브젝트에서 텍스트를 "게임 시작"으로 변경 
-6. Font Size 30, Bold 스타일 적용 
-7. LittleWarS > Sprites에서 Bar Front 스프라이트를 버튼의 Source Image로 설정 
-8. 같은 방식으로 Shop\_btn과 User\_btn 생성 
+1. Canvas 우클릭 > UI > Legacy > Button 생성
+2. 버튼 이름을 GameStart\_btn으로 변경
+3. 버튼 위치: Y값 -300 설정
+4. 버튼 크기: Width 200, Height 50 (나중에 230 x 90으로 조정)
+5. 자식 Text 오브젝트에서 텍스트를 "게임 시작"으로 변경
+6. Font Size 30, Bold 스타일 적용
+7. LittleWarS > Sprites에서 Bar Front 스프라이트를 버튼의 Source Image로 설정
+8. 같은 방식으로 Shop\_btn과 User\_btn 생성
 
 ### 닉네임 및 캐릭터 이미지 배치
 
-1. Canvas 우클릭 > UI > Panel 생성, 이름을 Nickname\_Panel로 변경 
-2. 앵커를 Top Middle로 설정 
-3. Y: -80, Width: 300, Height: 100 설정 
-4. Bar Front 스프라이트를 Source Image로 설정, Alpha 200으로 조정 
-5. Nickname\_Panel 우클릭 > UI > Text 생성, "닉네임"으로 텍스트 설정 
-6. Canvas 우클릭 > UI > Image 생성, Unit\_Image로 이름 변경 
-7. Middle Center 앵커, Y: 100, 크기 250 x 250 (나중에 Width 320으로 조정) 
-8. LittleWarS > Sprites > Characters에서 BS\_Idle 스프라이트 할당 
+1. Canvas 우클릭 > UI > Panel 생성, 이름을 Nickname\_Panel로 변경
+2. 앵커를 Top Middle로 설정
+3. Y: -80, Width: 300, Height: 100 설정
+4. Bar Front 스프라이트를 Source Image로 설정, Alpha 200으로 조정
+5. Nickname\_Panel 우클릭 > UI > Text 생성, "닉네임"으로 텍스트 설정
+6. Canvas 우클릭 > UI > Image 생성, Unit\_Image로 이름 변경
+7. Middle Center 앵커, Y: 100, 크기 250 x 250 (나중에 Width 320으로 조정)
+8. LittleWarS > Sprites > Characters에서 BS\_Idle 스프라이트 할당
 
 ### 씬 저장 및 이름 변경
 
-1. Ctrl + S로 씬 저장 
-2. Hierarchy에서 씬 이름 우클릭 > Select Scene Asset 
-3. Project 창에서 씬 이름을 "Main\_Scene"으로 변경 
+1. Ctrl + S로 씬 저장
+2. Hierarchy에서 씬 이름 우클릭 > Select Scene Asset
+3. Project 창에서 씬 이름을 "Main\_Scene"으로 변경
 
 ### 코드 / 설정 / 컴포넌트 정리
 
@@ -190,55 +188,51 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 ### 예시와 활용 사례
 
-- 예시 1: 반응형 UI 테스트 
+- 예시 1: 반응형 UI 테스트
   - 상황: Game View에서 해상도를 변경하며 UI 배치 확인
   - 설명: 1920x1080에서 4K로 변경해도 UI가 같이 커지며 위치가 유지됨
   - 왜 이 예시를 사용했는지: 앵커 시스템과 Scale With Screen Size가 올바르게 작동하는지 검증하기 위해
-- 예시 2: LittleWarS Asset Pack 활용 
+- 예시 2: LittleWarS Asset Pack 활용
   - 상황: Sprites 폴더에서 Bar Front와 Character 스프라이트 찾기
   - 설명: 검색창에 "bar" 또는 "character" 입력해서 필요한 스프라이트 빠르게 검색
   - 왜 이 예시를 사용했는지: 에셋팩의 스프라이트가 많아 검색 기능 활용이 효율적
 
 ### 헷갈릴 수 있는 부분
 
-- 헷갈리는 개념: Override Default Package Name 체크박스 
+- 헷갈리는 개념: Override Default Package Name 체크박스
 - 헷갈리는 이유: 체크만 하면 되는 것이 아니라, 체크 해제 후 다시 체크해야 Package Name이 정상 반영됨
 - 구분 방법: Company Name과 Product Name 변경 후 반드시 체크 해제 → 재체크 수행
 - 헷갈리는 개념: Panel vs Image
 - 헷갈리는 이유: 닉네임 영역을 만들 때 Panel을 사용했지만, 결과적으로 Image와 동일한 기능
 - 구분 방법: Panel은 기본적으로 Background 이미지가 있는 컨테이너, Image는 단순 이미지 표시 용도
 - 헷갈리는 개념: Anchor 설정 안 함 vs Middle Center만 사용
-- 헷갈리는 이유: Middle Center도 앵커처럼 보이지만, 해상도 변경 시 UI가 엉망이 됨 
+- 헷갈리는 이유: Middle Center도 앵커처럼 보이지만, 해상도 변경 시 UI가 엉망이 됨
 - 구분 방법: Top Right, Top Middle 등 명확한 앵커 포인트를 설정해야 반응형 UI 구현 가능
 
 ### 질문할 내용
 
-- [ ] Firebase 무료 플랜의 제약사항과 유료 전환 시점은 언제인지 확인 
-- [ ] 유저가 많아지면 Firebase에서 Fusion + AWS로 전환하는 구체적인 기준 확인 
-- [ ] LittleWarS Asset Pack Bolt 2D와 유사 에셋의 차이점 확인 
-- [ ] 닉네임 데이터가 Firebase에서 실시간으로 불러와지는 구조 복습 
+- [ ] Firebase 무료 플랜의 제약사항과 유료 전환 시점은 언제인지 확인
+- [ ] 유저가 많아지면 Firebase에서 Fusion + AWS로 전환하는 구체적인 기준 확인
+- [ ] LittleWarS Asset Pack Bolt 2D와 유사 에셋의 차이점 확인
+- [ ] 닉네임 데이터가 Firebase에서 실시간으로 불러와지는 구조 복습
 
 ### 복습 체크리스트
 
-- [ ] CanvasScaler의 세 가지 UI Scale Mode를 설명하고, Scale With Screen Size가 상용 게임에서 주로 사용되는 이유를 설명할 수 있다. 
-- [ ] Screen Match Mode의 Match Width or Height, Expand, Shrink 차이를 이해하고 Expand를 선택한 이유를 설명할 수 있다. 
-- [ ] Android Build Settings에서 Package Name을 설정하는 과정을 다시 따라 할 수 있다. 
-- [ ] Anchor 시스템을 활용해 Top Right, Top Middle, Middle Center 등 다양한 위치에 UI를 배치할 수 있다. 
-- [ ] 메인 씬, 상점 씬, 유저 씬, 게임 씬 구조를 이해하고 각 씬의 역할을 설명할 수 있다. 
-- [ ] LittleWarS Asset Pack에서 스프라이트를 검색하고 UI에 적용할 수 있다. 
-- [ ] Reference Resolution을 1920x1080으로 설정한 이유와 Full HD의 의미(High Definition)를 설명할 수 있다. 
-
+- [ ] CanvasScaler의 세 가지 UI Scale Mode를 설명하고, Scale With Screen Size가 상용 게임에서 주로 사용되는 이유를 설명할 수 있다.
+- [ ] Screen Match Mode의 Match Width or Height, Expand, Shrink 차이를 이해하고 Expand를 선택한 이유를 설명할 수 있다.
+- [ ] Android Build Settings에서 Package Name을 설정하는 과정을 다시 따라 할 수 있다.
+- [ ] Anchor 시스템을 활용해 Top Right, Top Middle, Middle Center 등 다양한 위치에 UI를 배치할 수 있다.
+- [ ] 메인 씬, 상점 씬, 유저 씬, 게임 씬 구조를 이해하고 각 씬의 역할을 설명할 수 있다.
+- [ ] LittleWarS Asset Pack에서 스프라이트를 검색하고 UI에 적용할 수 있다.
+- [ ] Reference Resolution을 1920x1080으로 설정한 이유와 Full HD의 의미(High Definition)를 설명할 수 있다.
 
 ## 메모
-
 
 FireBase에 넣을 패키지 네임(PakageName)
 
 com.EliseCompany.FireBasePro\_01
 
-
 메인씬, 상점씬 각씬을 디자인할 예정
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -948,9 +942,7 @@ B.S. 아이들
 
 </details>
 
-
 CanvasScaler
-
 
 <b>Match Width or Height 가로(Width)와 세로(Height) 중</b>
 
@@ -969,12 +961,9 @@ CanvasScaler
 
 <b>UI가 화면 밖으로 나가는 것을 막기 위해 강제로 구겨 넣는 방식인데, 실무에서는 UI가 너무 작아지는 문제가 있어 잘 쓰지 않습니다.</b>
 
-
 <b>Unity 게임 플레이 씬 제작 및 ScriptableObject 활용</b> 2026-05-28
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
@@ -1009,7 +998,6 @@ CanvasScaler
 
 <p>
 \<table header-row
-
 
 </p>
 
@@ -1519,9 +1507,7 @@ CanvasScaler
 - [ ] OnTriggerEnter2D와 태그를 활용한 충돌 처리를 구현할 수 있다.
 - [ ] UI Image의 Fill Type을 Horizontal로 설정하여 HP 게이지를 만들 수 있다.
 
-
 ## 메모
-
 
 # ScriptableObject
 
@@ -1742,7 +1728,6 @@ ScriptableObject는 Unity에서 <b>데이터를 에셋으로 만들어 관리하
 이렇게 나누면 프로젝트 구조가 훨씬 깔끔해져.
 
 데이터가 서랍별로 정리되는 느낌이라, 나중에 기능이 늘어나도 코드가 덜 엉켜.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -3616,20 +3601,18 @@ hp-gauge-back 했어요 자 그러면 그 밑에
 
 </details>
 
-
 FireBase In Unity
 
-두가지의 패키지가 필요 하다
+두 가지의 패키지가 필요하다
 
 1. UnityMainThreadDIspatcher<br />FireBase 로그인 콜백 - 백그라운드 스레드<br />유니티 UI 주메인 에서 만 실행<br />Unity의 UI, GameObject 조작은 반드시 메인 스레드 에서만 가능.<br />FireBase 콜백 백그라운드 스레드<br />직접 UI를 건드리면 크래시 → 메인 스레드로 전달 해야 한다.
 2. Newtonsoft.Json (Json.NET) 이 필요한 이유<br />Firebase Realtime Database / Firestore 에서 데이터를 주고받을 때<br />JSON 직렬화가 필요
-
 
 - Canvas Scaler 컴포넌트의 주요 목적은 무엇일까요?<br />Canvas 안에 있는 UI 요소들의 전체적인 크기와 비율을 조정하는 것<br />즉, 해상도나 화면 크기가 달라져도 버튼, 텍스트, 이미지 같은 UI가 너무 작아지거나 커지지 않도록 조절한다.
 - 화면 해상도에 따라 UI 크기를 비례적으로 조절하는 Canvas Scaler 모드는 무엇인가요?<br />화면 해상도에 따라 UI 크기를 비례적으로 조절하는 Canvas Scaler 모드는 <b>Scale With Screen Size</b>이다.
 - 다양한 화면 해상도에서 UI 요소의 위치를 일관되게 유지하기 위해 사용되는 기능은 무엇일까요<br />Anchor <br />다양한 해상도에서 UI 요소의 위치를 일관되게 유지하기 위해 사용하는 기능은 <b>Rect Transform의 Anchor</b>이다.
 - 여러 게임 아이템 데이터를 효율적으로 관리하기 위해 하나의 스크립트를 공유할 수 있는 Unity 기능은 무엇인가요?<br />ScriptableObject<br />ScriptableObject를 사용하면 아이템 이름, 설명, 가격, 능력치 같은 데이터를 에셋으로 만들어 관리할 수 있고, 여러 오브젝트가 같은 데이터를 공유할 수 있어 유지보수와 데이터 관리가 쉬워진다.
 - Unity에서 UI 요소를 생성할 때, 일반적으로 어떤 게임 오브젝트의 하위에 배치해야 할까요<br /><b>Canvas</b><br />Unity에서 UI 요소는 일반적으로 <b>Canvas 게임 오브젝트의 하위 오브젝트</b>로 배치해야 한다.
-- FireBase랑 Unity엔진이랑 연동 해서 DB를 구성 하려면 두가지 패키지가 필요하다.각각 무엇이고 왜필요한지 서술하세요<br />UnityMainThreadDIspatcher<br />Firebase에서 받아온 데이터 처리나 콜백 작업을 Unity의 메인 스레드에서 실행하기 위해 필요하다<br />Newtonsoft.Json (Json.NET)<br />Firebase에서 주고받는 데이터를 JSON 형식으로 변환하거나(직렬화), JSON 데이터를 C# 객체로 다시 변환(역직렬화)하기 위해 필요하다.
-- 지금 유니티 포톤2 파이어 베이스 조합으로 게임 개발 중인데차후 유저가 많아지면 어떻게 바꾸어야 하나 대규모가 되었을 때<br />Photon Fusion + AWS<br />대규모 구조에서는 Photon Fusion이 <b>실시간 멀티플레이 동기화</b>를 담당하고, AWS가 <b>게임 서버와 백엔드 인프라</b>를 담당하게 된다.<br /><br />
+- Firebase와 Unity 엔진을 연동해서 DB를 구성하려면 두 가지 패키지가 필요하다. 각각 무엇이며 왜 필요한지 서술하세요.<br />UnityMainThreadDIspatcher<br />Firebase에서 받아온 데이터 처리나 콜백 작업을 Unity의 메인 스레드에서 실행하기 위해 필요하다<br />Newtonsoft.Json (Json.NET)<br />Firebase에서 주고받는 데이터를 JSON 형식으로 변환하거나(직렬화), JSON 데이터를 C# 객체로 다시 변환(역직렬화)하기 위해 필요하다.
+- 현재 Unity·Photon 2·Firebase 조합으로 게임을 개발 중인데, 이후 이용자가 늘어 규모가 커지면 구조를 어떻게 바꾸어야 할까?<br />Photon Fusion + AWS<br />대규모 구조에서는 Photon Fusion이 <b>실시간 멀티플레이 동기화</b>를 담당하고, AWS가 <b>게임 서버와 백엔드 인프라</b>를 담당하게 된다.<br /><br />
 {% endraw %}

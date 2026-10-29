@@ -29,7 +29,7 @@ migration_flags: ["publication_review"]
 | 스크립트 | 변경 목적 |
 | --- | --- |
 | EnemyLocomotion.cs | 에너미 돌진 중 벽 관통 방지 |
-| EnemyCombat.cs | 벽 너머 공격 데미지 차단 |
+| EnemyCombat.cs | 벽 너머 공격 대미지 차단 |
 | PlayerMovement.cs | 구르기 중 벽 관통 및 잔여 속도 밀림 방지 |
 | PlayerWeapon.cs | 벽 타격 시 null 참조 로그 오류 방지 |
 | Default Local Group.asset | 에픽 아티팩트 아이콘 Addressables 누락 등록 |
@@ -469,7 +469,7 @@ public class EnemyCombat
 
 ### 3-2. 설명
 
-에너미 공격 판정이 벽 너머 플레이어에게 들어갈 수 있는 문제를 막기 위해 데미지 적용 직전에 벽 차단 검사를 추가했다. 기존에는 공격 범위와 타겟 여부 중심으로 데미지를 적용했지만, 수정 후에는 공격자와 타겟 사이에 Wall Collider가 있으면 데미지를 적용하지 않는다.
+에너미 공격 판정이 벽 너머 플레이어에게 들어갈 수 있는 문제를 막기 위해 대미지 적용 직전에 벽 차단 검사를 추가했다. 기존에는 공격 범위와 타깃 여부 중심으로 대미지를 적용했지만, 수정 후에는 공격자와 타깃 사이에 Wall Collider가 있으면 대미지를 적용하지 않는다.
 
 ### 3-3. 바뀐 스크립트 전체
 
@@ -929,7 +929,7 @@ public class PlayerWeapon : MonoBehaviour
 
 ### 3-2. 설명
 
-플레이어 총격이 벽이나 FenceCollider 같은 비전투 오브젝트를 맞췄을 때 target이 null인 상태에서 디버그 로그가 target.EntityFaction을 참조해 NullReference가 발생하던 문제를 수정했다. 데미지 로직은 이미 null 체크가 있었으므로, 로그 출력도 target이 있을 때만 실행되도록 최소 수정했다.
+플레이어 총격이 벽이나 FenceCollider 같은 비전투 오브젝트를 맞췄을 때 target이 null인 상태에서 디버그 로그가 target.EntityFaction을 참조해 NullReference가 발생하던 문제를 수정했다. 대미지 로직은 이미 null 체크가 있었으므로, 로그 출력도 target이 있을 때만 실행되도록 최소 수정했다.
 
 ### 3-3. 바뀐 스크립트 전체
 
@@ -1178,7 +1178,7 @@ public class PlayerWeapon : MonoBehaviour
 | --- | --- |
 | 이동 전 | 목적지까지 이동 가능한지 검사 |
 | 이동 중 | SweepTest/SphereCast로 충돌 예상 지점 보정 |
-| 공격 직전 | 벽이 있으면 데미지 적용 차단 |
+| 공격 직전 | 벽이 있으면 대미지 적용 차단 |
 | 로그 출력 | null 대상 접근 방지 |
 | 리소스 로드 | Addressables 누락 키 등록 |
 

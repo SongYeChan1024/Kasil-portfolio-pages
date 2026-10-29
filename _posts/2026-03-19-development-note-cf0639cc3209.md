@@ -3,8 +3,8 @@ title: "2026-03-19_팀 모으미_Project Mosaic 진행"
 date: 2026-03-19 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "팀 모으미 회의 - 장비 지원 및 AI 강의 현황 2026-03-19 요약 주요 논의 사항 장비 지원 요청 : 노션 AI 회의 기록 장비를 요청했으나 회사에서 시연만 허락함 장비 지원의 어려움 : 원격 근무로 인한 장비 손상, 택배 문제 등의 우려가 있었으나, 본인들이 책임지겠다고 하여"
-description: "팀 모으미 회의 - 장비 지원 및 AI 강의 현황 2026-03-19 요약 주요 논의 사항 장비 지원 요청 : 노션 AI 회의 기록 장비를 요청했으나 회사에서 시연만 허락함 장비 지원의 어려움 : 원격 근무로 인한 장비 손상, 택배 문제 등의 우려가 있었으나, 본인들이 책임지겠다고 하여"
+excerpt: "장비 지원 요청과 AI 강의 진행 상황을 공유한 모으미 팀의 회의 기록이다."
+description: "장비 지원 요청과 AI 강의 진행 상황을 공유한 모으미 팀의 회의 기록이다."
 published: true
 migration_id: "35e36532580e81f6a180cf0639cc3209"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>팀 모으미 회의 - 장비 지원 및 AI 강의 현황</b> 2026-03-19
 
-
 ## 요약
-
 
 ### 주요 논의 사항
 
@@ -37,9 +35,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 불만이나 건의사항이 있으면 차분하게 대화로 해결하자고 제안 
 - 실수나 오류가 있을 수 있으니 비난하지 말고 편하게 얘기해 달라고 요청 
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

@@ -3,8 +3,8 @@ title: "2026-06-26_enemy_vision_compare"
 date: 2026-06-26 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "2026-06-26 Enemy Vision Compare Previous version: 23ab6ad:path Current version: working tree Output encoding: UTF-8 Assets/02\\_Scripts/System/Enemy/EnemyMovemen"
-description: "2026-06-26 Enemy Vision Compare Previous version: 23ab6ad:path Current version: working tree Output encoding: UTF-8 Assets/02\\_Scripts/System/Enemy/EnemyMovemen"
+excerpt: "적 AI 시야 판정과 디버그 기즈모의 이전 버전 및 변경 코드를 비교해 보관했다."
+description: "적 AI 시야 판정과 디버그 기즈모의 이전 버전 및 변경 코드를 비교해 보관했다."
 published: true
 migration_id: "38b36532580e80b3b5d5fe24037cd279"
 migration_status: "published"

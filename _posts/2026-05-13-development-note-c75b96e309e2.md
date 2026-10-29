@@ -3,8 +3,8 @@ title: "챕터테스트"
 date: 2026-05-13 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "1. 겹치는 구간의 길이 구하기 주석 포함 코드 cs usingSystem; publicclassSolution publicstaticintsolution(stringa,stringb) // 첫 번째 선분 문자열을 중심점과 길이로 분리 int lineA=ParseLine(a); // 두"
-description: "1. 겹치는 구간의 길이 구하기 주석 포함 코드 cs usingSystem; publicclassSolution publicstaticintsolution(stringa,stringb) // 첫 번째 선분 문자열을 중심점과 길이로 분리 int lineA=ParseLine(a); // 두"
+excerpt: "겹치는 선분의 길이 계산과 헬로빗 당근 탐지 문제의 C# 코드 및 풀이 과정을 정리했다."
+description: "겹치는 선분의 길이 계산과 헬로빗 당근 탐지 문제의 C# 코드 및 풀이 과정을 정리했다."
 published: true
 migration_id: "35f36532580e80588d54c75b96e309e2"
 migration_status: "published"

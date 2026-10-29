@@ -3,8 +3,8 @@ title: "2026-02-23_엘리스 수업 메모"
 date: 2026-02-23 12:00:00 +0900
 categories: ["수업 노트", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "Unity 리로드 애니메이션 구현 수업 2026-02-23 요약 실습 과제 x 송카실: Enemy에서 구현한 리로드 시스템을 SWAT 캐릭터에도 동일하게 구현 x 송카실: 완성된 코드와 작동 화면을 캡처하여 제출 (빌드는 선택사항) 학습 목표 오늘 수업의 주요 학습 목표는 10발을 발사"
-description: "Unity 리로드 애니메이션 구현 수업 2026-02-23 요약 실습 과제 x 송카실: Enemy에서 구현한 리로드 시스템을 SWAT 캐릭터에도 동일하게 구현 x 송카실: 완성된 코드와 작동 화면을 캡처하여 제출 (빌드는 선택사항) 학습 목표 오늘 수업의 주요 학습 목표는 10발을 발사"
+excerpt: "적 캐릭터의 재장전 애니메이션과 Animator 레이어·가중치, 회전 표현을 정리했다."
+description: "적 캐릭터의 재장전 애니메이션과 Animator 레이어·가중치, 회전 표현을 정리했다."
 published: true
 migration_id: "35e36532580e814f9683e1d9f2db2d1c"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>Unity 리로드 애니메이션 구현 수업</b> 2026-02-23
 
-
 ## 요약
-
 
 ### 실습 과제
 
@@ -218,17 +216,13 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 코드는 외울 필요 없으며 논리적 흐름 이해가 중요  
 - 신입 개발자 수준에서는 기존 코드 이해와 활용 능력이 핵심
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>1.Reload 재장전 10발을 발사 하면 자동으로 Reload 애니메이션 실행 되게 구현</summary>
 
-
 <details markdown="1">
 <summary>Avatar Mask</summary>
-
 
 <b>Avatar Mask</b>는 말 그대로
 
@@ -258,10 +252,8 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 </details>
 
-
 <details markdown="1">
 <summary>Weight(가중치)</summary>
-
 
 - 계단 감지하면 Weight를 0 → 1로 <b>서서히 증가</b> (Lerp)<br />
 - 평소 Weight = 0
@@ -319,10 +311,8 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 </details>
 
-
 <details markdown="1">
 <summary>Blending 옵션의 Override 와 Additive</summary>
-
 
 ## Override (덮어쓰기 모드)
 
@@ -419,10 +409,8 @@ Additive는 <b>기준 포즈가 중요</b>
 
 </details>
 
-
 <details markdown="1">
 <summary>IK Pass</summary>
-
 
 ## IK Pass 란?
 
@@ -548,10 +536,8 @@ IK Pass는
 
 </details>
 
-
 <details markdown="1">
 <summary>FK<b>(Forward Kinematic)</b>와 IK(Inverse  Kinematic)</summary>
-
 
 <b>FK(Forward Kinematic) 전진 운동학, 검을 휘두를 때<br />현실세계 : 어깨 -> 팔 ->손목 사람 중심으로 움직인다.</b>
 
@@ -658,10 +644,8 @@ IK (Inverse  Kinematic)  역 운동학, 게임 검을 휘두를 때<br />게임�
 
 </details>
 
-
 <details markdown="1">
 <summary>실습 스크린샷</summary>
-
 
 ```cs
         using System.Collections;
@@ -777,9 +761,7 @@ public class SwatFire : MonoBehaviour
 
 </details>
 
-
 </details>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1423,24 +1405,19 @@ I still don't know why 이런 나의 맘이 튀어나오려 해 너를 볼 때 A
 
 </details>
 
-
 회의 2026-02-23
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>2.MuzzleFlash 총구 화염 효과</summary>
 
-
 <details markdown="1">
 <summary>1\) Particle System로 만드는 방식 (PC 나 Mac 플랫폼)</summary>
 
-
 ### 구성
 
-- <b>Particle System</b>: 화염 스프라이트(혹은 간단한 메쉬)로 0.03\~0.1초만 튀기기
+- <b>Particle System</b>: 화염 스프라이트(혹은 간단한 메시)로 0.03\~0.1초만 튀기기
 - 옵션으로 <b>Light</b>: 아주 짧게 켜졌다 꺼지는 빛
 
 ### 파티클 추천 세팅
@@ -1462,10 +1439,8 @@ I still don't know why 이런 나의 맘이 튀어나오려 해 너를 볼 때 A
 
 </details>
 
-
 <details markdown="1">
 <summary>2\) “이미지 1장”을 잠깐 켰다 끄는 방식 (모바일)</summary>
-
 
 총구 앞에 <code>Quad</code>나 <code>SpriteRenderer</code> 하나 붙여두고
 
@@ -1482,19 +1457,15 @@ I still don't know why 이런 나의 맘이 튀어나오려 해 너를 볼 때 A
 
 </details>
 
-
 <details markdown="1">
 <summary>3\) VFX Graph (고급, 화려함)</summary>
-
 
 URP/HDRP에서 더 멋있게 하고 싶을 때.
 
 </details>
 
-
 <details markdown="1">
 <summary>Quaternion.Euler 과 Quaternion.LookRotation</summary>
-
 
 # <code>Quaternion.Euler</code> 의 정의
 
@@ -1504,16 +1475,13 @@ URP/HDRP에서 더 멋있게 하고 싶을 때.
 
 즉,
 
-
 <blockquote markdown="1">
-
 
 X, Y, Z 축을 기준으로 각각 회전할 각도를 입력하면
 
 그 회전을 표현하는 Quaternion을 생성한다.
 
 </blockquote>
-
 
 ---
 
@@ -1598,10 +1566,8 @@ transform.rotation=Quaternion.LookRotation(dir);
 
 </details>
 
-
 <details markdown="1">
 <summary>실습 내용</summary>
-
 
 ![첨부 자료](/assets/img/uploads/notion/f97997b9bbc8cfedc6c948c566ac09d0c55bcdf5d8a32b6c9fa309125137767b.png)
 
@@ -1611,17 +1577,13 @@ transform.rotation=Quaternion.LookRotation(dir);
 
 </details>
 
-
 </details>
-
 
 <details markdown="1">
 <summary>3.적 캐릭터 피격 및 혈흔 효과(Blood Decl Effect)</summary>
 
-
 <details markdown="1">
 <summary>Die 애니메이션 3가지 중 하나가 랜덤으로 실행 되게 만들기</summary>
-
 
 ![첨부 자료](/assets/img/uploads/notion/5def1824312d39e22b7c51d5ae60f468985671757d526ead02ff03aa1412d0d9.png)
 
@@ -1629,7 +1591,7 @@ transform.rotation=Quaternion.LookRotation(dir);
 
 ![첨부 자료](/assets/img/uploads/notion/d499ad9254bf3bdb7a7c49a8120dd59d876e715e88034063eac344f7be1eb8e5.png)
 
-- 무브먼트 레이어 안에 서브 스테이트 머신이 존재 하는 모습
+- 무브먼트 레이어 안에 서브 스테이트 머신이 존재하는 모습
 
 ```cs
 using System.Collections;
@@ -1667,7 +1629,7 @@ public class SwatDamage : MonoBehaviour
 
 ```
 
-- SwatDamage 스크립트로 블러드 이펙트와 데미지 판정 다이 함수를 실행 함
+- SwatDamage 스크립트로 블러드 이펙트와 데미지 판정 다이 함수를 실행함
 
 ![첨부 자료](/assets/img/uploads/notion/8a19f6a7c09fc7d3e0bb25d406f2c0477d077cb8a7690c7bc8f5060e0949e7c4.png)
 
@@ -1675,13 +1637,10 @@ public class SwatDamage : MonoBehaviour
 
 </details>
 
-
 </details>
-
 
 <details markdown="1">
 <summary>4.플레이어의 애니메이션 타입 Legacy →Mecanim:Humunoid 방식으로 바꾸기</summary>
-
 
 ![첨부 자료](/assets/img/uploads/notion/d0eeed8f12b4cb507049621c3e5c13217ca89ddb2401d17f31b6faa954912d5e.png)
 
@@ -1690,7 +1649,6 @@ public class SwatDamage : MonoBehaviour
 ![첨부 자료](/assets/img/uploads/notion/973c95d580d48f8f7859a527e7629299fec050a075160c2eade3dfcdc36787e0.png)
 
 </details>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -3024,7 +2982,6 @@ state machine 이라고 합니다.
 
 
 </details>
-
 
 ### Resources 폴더 특징 (메모용)
 

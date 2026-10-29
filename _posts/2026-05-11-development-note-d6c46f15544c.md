@@ -3,8 +3,8 @@ title: "2026-05-11 개발 메모"
 date: 2026-05-11 12:00:00 +0900
 categories: ["개발 메모", "CSharp"]
 tags: ["Notion 이전", "CSharp"]
-excerpt: "Unity VR - XR Grab Interactive 및 총기 조작 구현 2026-05-11 요약 오늘 수업 핵심 요약 XR Grab Interactable 의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 "
-description: "Unity VR - XR Grab Interactive 및 총기 조작 구현 2026-05-11 요약 오늘 수업 핵심 요약 XR Grab Interactable 의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 "
+excerpt: "XR Grab Interactable의 Attach Transform과 Dynamic Attach를 비교하고, 양손 총기 조작과 발사 입력을 정리했다."
+description: "XR Grab Interactable의 Attach Transform과 Dynamic Attach를 비교하고, 양손 총기 조작과 발사 입력을 정리했다."
 published: true
 migration_id: "35e36532580e81108dc1d6c46f15544c"
 migration_status: "published"
@@ -14,17 +14,15 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 {% raw %}
 <b>Unity VR - XR Grab Interactive 및 총기 조작 구현</b> 2026-05-11
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- <b>XR Grab Interactable</b>의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 방법을 배웠습니다. 
-- 양손으로 총을 잡을 때 발생하는 위치 불일치 문제를 해결하기 위해 <b>XRGrabInteractableFixed 커스텀 스크립트</b>를 작성하여 왼손과 오른손의 Attach Transform을 개별적으로 관리하는 방법을 학습했습니다. 
-- <b>Select Mode를 Multiple로 설정</b>하여 양손으로 총을 잡는 기능을 구현하고, Primary/Secondary Attach Transform을 사용하여 두 손의 잡는 위치를 각각 지정하는 방법을 실습했습니다. 
-- <b>Activated 이벤트</b>를 활용하여 총알 발사 기능을 구현하는 기초 작업을 진행했습니다. 
-- 실제 VR에서는 Use Dynamic Attach를 사용하면 어디를 잡든 자연스럽게 잡히므로, PC 키보드 테스트보다 훨씬 편리하다는 점을 강조했습니다. 
+- <b>XR Grab Interactable</b>의 Attach Transform과 Use Dynamic Attach 기능을 활용하여 VR에서 오브젝트를 잡는 위치를 제어하는 방법을 배웠습니다.
+- 양손으로 총을 잡을 때 발생하는 위치 불일치 문제를 해결하기 위해 <b>XRGrabInteractableFixed 커스텀 스크립트</b>를 작성하여 왼손과 오른손의 Attach Transform을 개별적으로 관리하는 방법을 학습했습니다.
+- <b>Select Mode를 Multiple로 설정</b>하여 양손으로 총을 잡는 기능을 구현하고, Primary/Secondary Attach Transform을 사용하여 두 손의 잡는 위치를 각각 지정하는 방법을 실습했습니다.
+- <b>Activated 이벤트</b>를 활용하여 총알 발사 기능을 구현하는 기초 작업을 진행했습니다.
+- 실제 VR에서는 Use Dynamic Attach를 사용하면 어디를 잡든 자연스럽게 잡히므로, PC 키보드 테스트보다 훨씬 편리하다는 점을 강조했습니다.
 
 ---
 
@@ -32,29 +30,28 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 - <b>Attach Transform</b>
   - 설명: XR Grab Interactable 컴포넌트에서 오브젝트를 잡을 때 손의 위치를 결정하는 Transform입니다.
-  - 예시: 총의 손잡이 부분에 빈 오브젝트를 만들어 Attach Transform으로 지정하면 그 위치로 손이 고정됩니다. 
+  - 예시: 총의 손잡이 부분에 빈 오브젝트를 만들어 Attach Transform으로 지정하면 그 위치로 손이 고정됩니다.
   - 사용되는 상황: 총, 검, 도구 등 특정 부분을 잡아야 하는 오브젝트에 사용합니다.
   - 헷갈릴 수 있는 점: Attach Transform을 설정하지 않으면 오브젝트의 중심점(Pivot)을 기준으로 잡힙니다.
 - <b>Use Dynamic Attach</b>
-  - 설명: 체크하면 오브젝트를 잡는 순간의 손 위치가 그대로 유지되어, 어디를 잡든 자연스럽게 잡힙니다. 
-  - 예시: 총을 총구 쪽에서 잡으면 총구 쪽으로 손이 위치하고, 손잡이 쪽에서 잡으면 손잡이 쪽으로 손이 위치합니다. 
-  - 사용되는 상황: VR에서 더 현실적인 잡기 경험을 제공하고 싶을 때 사용합니다. 
-  - 헷갈릴 수 있는 점: PC 키보드로 테스트하기는 어렵지만, VR 헤드셋을 쓰고 손으로 조작하면 거의 완벽하게 작동합니다. 
+  - 설명: 체크하면 오브젝트를 잡는 순간의 손 위치가 그대로 유지되어, 어디를 잡든 자연스럽게 잡힙니다.
+  - 예시: 총을 총구 쪽에서 잡으면 총구 쪽으로 손이 위치하고, 손잡이 쪽에서 잡으면 손잡이 쪽으로 손이 위치합니다.
+  - 사용되는 상황: VR에서 더 현실적인 잡기 경험을 제공하고 싶을 때 사용합니다.
+  - 헷갈릴 수 있는 점: PC 키보드로 테스트하기는 어렵지만, VR 헤드셋을 쓰고 손으로 조작하면 거의 완벽하게 작동합니다.
 - <b>Select Mode: Multiple</b>
-  - 설명: 하나의 오브젝트를 여러 손으로 동시에 잡을 수 있게 하는 설정입니다. 
-  - 예시: 라이플처럼 큰 총은 오른손으로 방아쇠를 잡고 왼손으로 총구 쪽을 받칠 수 있습니다. 
+  - 설명: 하나의 오브젝트를 여러 손으로 동시에 잡을 수 있게 하는 설정입니다.
+  - 예시: 라이플처럼 큰 총은 오른손으로 방아쇠를 잡고 왼손으로 총구 쪽을 받칠 수 있습니다.
   - 사용되는 상황: 양손으로 조작해야 하는 무기나 도구에 사용합니다.
 - <b>Primary Attach Transform / Secondary Attach Transform</b>
-  - 설명: Select Mode가 Multiple일 때, 첫 번째 손과 두 번째 손의 잡는 위치를 각각 지정할 수 있습니다. 
-  - 예시: 라이플의 경우 Primary는 손잡이/방아쇠 부분, Secondary는 총구 쪽 받침 부분에 위치시킵니다. 
+  - 설명: Select Mode가 Multiple일 때, 첫 번째 손과 두 번째 손의 잡는 위치를 각각 지정할 수 있습니다.
+  - 예시: 라이플의 경우 Primary는 손잡이/방아쇠 부분, Secondary는 총구 쪽 받침 부분에 위치시킵니다.
 - <b>Interactor.handedness</b>
-  - 설명: Interactor의 왼손/오른손 구분을 문자열(string) 비교가 아닌 enum 값으로 체크하는 방식으로, 더 최적화된 방법입니다. 
-  - 예시: <code>interactor.handedness == InteractorHandedness.Left</code> 형태로 사용합니다. 
+  - 설명: Interactor의 왼손/오른손 구분을 문자열(string) 비교가 아닌 enum 값으로 체크하는 방식으로, 더 최적화된 방법입니다.
+  - 예시: <code>interactor.handedness == InteractorHandedness.Left</code> 형태로 사용합니다.
   - 사용되는 상황: 왼손/오른손에 따라 다른 동작을 구현할 때 사용합니다.
 
 <p>
 \<table header-row="true
-
 
 </p>
 
@@ -64,31 +61,31 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 ### 1. XR Grab Interactable 기본 설정
 
-- 설명: XR Grab Interactable 컴포넌트의 Attach Transform과 Use Dynamic Attach 기능을 소개했습니다. 
-- 예시: Use Dynamic Attach를 체크하면 총을 어디서 잡든 그 위치 그대로 잡힙니다. 
+- 설명: XR Grab Interactable 컴포넌트의 Attach Transform과 Use Dynamic Attach 기능을 소개했습니다.
+- 예시: Use Dynamic Attach를 체크하면 총을 어디서 잡든 그 위치 그대로 잡힙니다.
 - 중요한 이유: VR에서 자연스러운 상호작용을 구현하기 위한 기본 설정입니다.
 
 ### 2. Attach Transform 위치 조정
 
-- 설명: Attach Transform에 빈 오브젝트를 만들어 위치를 조정하면 손이 그 위치로 고정됩니다. 
-- 예시: 총의 손잡이 위치에 Transform을 생성하고 Position 값을 (0.12, 0.07, -0.32) 등으로 조정했습니다. 
-- 중요: 정확한 위치 값은 여러 번 테스트하여 찾아야 합니다. 
+- 설명: Attach Transform에 빈 오브젝트를 만들어 위치를 조정하면 손이 그 위치로 고정됩니다.
+- 예시: 총의 손잡이 위치에 Transform을 생성하고 Position 값을 (0.12, 0.07, -0.32) 등으로 조정했습니다.
+- 중요: 정확한 위치 값은 여러 번 테스트하여 찾아야 합니다.
 
 ### 3. 양손 잡기 문제 해결 - XRGrabInteractableFixed 스크립트 작성
 
-- 설명: 오른손으로 총을 잡다가 왼손으로 옮기면 미세하게 위치가 어긋나는 문제가 발생하는데, 이를 해결하기 위해 커스텀 스크립트를 작성했습니다. 
-- 중요: XRGrabInteractable을 상속받아 OnSelectEntered 메서드를 오버라이드하고, 왼손/오른손에 따라 다른 Attach Transform을 적용하는 방식입니다. 
+- 설명: 오른손으로 총을 잡다가 왼손으로 옮기면 미세하게 위치가 어긋나는 문제가 발생하는데, 이를 해결하기 위해 커스텀 스크립트를 작성했습니다.
+- 중요: XRGrabInteractable을 상속받아 OnSelectEntered 메서드를 오버라이드하고, 왼손/오른손에 따라 다른 Attach Transform을 적용하는 방식입니다.
 
 ### 4. Select Mode Multiple 및 Primary/Secondary Attach Transform
 
-- 설명: 라이플처럼 양손으로 잡아야 하는 총은 Select Mode를 Multiple로 설정하고, Primary와 Secondary Attach Transform을 각각 지정합니다. 
-- 예시: 오른손은 방아쇠 부분(Primary), 왼손은 총구 받침 부분(Secondary)을 잡도록 설정했습니다. 
+- 설명: 라이플처럼 양손으로 잡아야 하는 총은 Select Mode를 Multiple로 설정하고, Primary와 Secondary Attach Transform을 각각 지정합니다.
+- 예시: 오른손은 방아쇠 부분(Primary), 왼손은 총구 받침 부분(Secondary)을 잡도록 설정했습니다.
 
 ### 5. 총알 발사 기능 구현 - Activated 이벤트 사용
 
-- 설명: Activate 이벤트를 사용하여 방아쇠를 당겼을 때 총알이 발사되도록 구현하기 시작했습니다. 
-- 예시: Gun 스크립트를 만들고 AddListener를 통해 동적으로 이벤트를 연결했습니다. 
-- 중요: Select는 잡는 것(Grip), Activate는 방아쇠(Trigger)를 의미합니다. 
+- 설명: Activate 이벤트를 사용하여 방아쇠를 당겼을 때 총알이 발사되도록 구현하기 시작했습니다.
+- 예시: Gun 스크립트를 만들고 AddListener를 통해 동적으로 이벤트를 연결했습니다.
+- 중요: Select는 잡는 것(Grip), Activate는 방아쇠(Trigger)를 의미합니다.
 
 ---
 
@@ -96,26 +93,26 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 <b>XRGrabInteractableFixed 스크립트 작성 순서:</b>
 
-1. Scripts 폴더에서 마우스 우클릭 > Create > MonoBehaviour Script로 <code>XRGrabInteractableFixed</code> 스크립트 생성 
-2. MonoBehaviour 대신 <code>XRGrabInteractable</code>을 상속받도록 변경 
-3. <code>using UnityEngine.XR.Interaction.Toolkit.Interactables</code> 네임스페이스 자동 생성 확인 
-4. <code>[SerializeField] private Transform leftHandAttachTransform;</code> 선언 
-5. <code>[SerializeField] private Transform rightHandAttachTransform;</code> 선언 
-6. <code>protected override void OnSelectEntered(SelectEnterEventArgs args)</code> 메서드 작성 
-7. Interactor의 handedness를 체크하여 Left면 leftHandAttachTransform을, Right면 rightHandAttachTransform을 attachTransform.position과 rotation에 할당 
-8. 빌드 후 Gun Pistol 오브젝트에 기존 XRGrabInteractable 제거하고 XRGrabInteractableFixed 컴포넌트 추가 
-9. Right Attach Transform과 Left Attach Transform 빈 오브젝트를 각각 만들어 Inspector에서 연결 
+1. Scripts 폴더에서 마우스 우클릭 > Create > MonoBehaviour Script로 <code>XRGrabInteractableFixed</code> 스크립트 생성
+2. MonoBehaviour 대신 <code>XRGrabInteractable</code>을 상속받도록 변경
+3. <code>using UnityEngine.XR.Interaction.Toolkit.Interactables</code> 네임스페이스 자동 생성 확인
+4. <code>[SerializeField] private Transform leftHandAttachTransform;</code> 선언
+5. <code>[SerializeField] private Transform rightHandAttachTransform;</code> 선언
+6. <code>protected override void OnSelectEntered(SelectEnterEventArgs args)</code> 메서드 작성
+7. Interactor의 handedness를 체크하여 Left면 leftHandAttachTransform을, Right면 rightHandAttachTransform을 attachTransform.position과 rotation에 할당
+8. 빌드 후 Gun Pistol 오브젝트에 기존 XRGrabInteractable 제거하고 XRGrabInteractableFixed 컴포넌트 추가
+9. Right Attach Transform과 Left Attach Transform 빈 오브젝트를 각각 만들어 Inspector에서 연결
 
 <b>Gun 스크립트로 총알 발사 이벤트 연결 순서:</b>
 
-1. Scripts 폴더에서 <code>Gun</code> 스크립트 생성 
-2. <code>private XRGrabInteractableFixed grabFixed;</code> 선언 
-3. <code>Awake()</code>에서 <code>grabFixed = GetComponent&lt;XRGrabInteractableFixed&gt;();</code> 
-4. <code>grabFixed.activated.AddListener(Shoot);</code> 동적 리스너 추가 
-5. <code>void Shoot(ActivateEventArgs args)</code> 메서드 작성 (매개변수 필수) 
-6. <code>OnDisable()</code>에서 <code>grabFixed.activated.RemoveListener(Shoot);</code> 리스너 제거 
-7. Gun Pistol에 Gun 스크립트 추가 
-8. 플레이 모드에서 방아쇠(Trigger) 입력 시 Debug.Log 출력 확인 
+1. Scripts 폴더에서 <code>Gun</code> 스크립트 생성
+2. <code>private XRGrabInteractableFixed grabFixed;</code> 선언
+3. <code>Awake()</code>에서 <code>grabFixed = GetComponent&lt;XRGrabInteractableFixed&gt;();</code>
+4. <code>grabFixed.activated.AddListener(Shoot);</code> 동적 리스너 추가
+5. <code>void Shoot(ActivateEventArgs args)</code> 메서드 작성 (매개변수 필수)
+6. <code>OnDisable()</code>에서 <code>grabFixed.activated.RemoveListener(Shoot);</code> 리스너 제거
+7. Gun Pistol에 Gun 스크립트 추가
+8. 플레이 모드에서 방아쇠(Trigger) 입력 시 Debug.Log 출력 확인
 
 ---
 
@@ -152,12 +149,12 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 ### 예시와 활용 사례
 
 - 예시 1: Gun Pistol (권총)
-  - 상황: 한 손으로 잡는 작은 총 
-  - 설명: XRGrabInteractableFixed를 사용하여 왼손/오른손 각각 다른 위치로 잡히도록 설정 
+  - 상황: 한 손으로 잡는 작은 총
+  - 설명: XRGrabInteractableFixed를 사용하여 왼손/오른손 각각 다른 위치로 잡히도록 설정
   - 왜 이 예시를 사용했는지: 양손 전환 문제를 해결하는 가장 기본적인 예시
 - 예시 2: Gun Rifle (라이플)
-  - 상황: 양손으로 잡아야 하는 큰 총 
-  - 설명: Select Mode를 Multiple로 설정하고 Primary/Secondary Attach Transform을 각각 지정 
+  - 상황: 양손으로 잡아야 하는 큰 총
+  - 설명: Select Mode를 Multiple로 설정하고 Primary/Secondary Attach Transform을 각각 지정
   - 왜 이 예시를 사용했는지: 양손 동시 잡기 및 Primary/Secondary 개념을 보여주기 위함
 
 ---
@@ -166,21 +163,21 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 
 - 헷갈리는 개념: Select와 Activate
   - 헷갈리는 이유: 둘 다 "선택"처럼 들리지만 의미가 다릅니다.
-  - 구분 방법: Select는 Grip(잡기), Activate는 Trigger(방아쇠)입니다. 
+  - 구분 방법: Select는 Grip(잡기), Activate는 Trigger(방아쇠)입니다.
 - 헷갈리는 개념: Attach Transform 직접 지정 vs Use Dynamic Attach
   - 헷갈리는 이유: 두 방법 모두 잡는 위치를 제어하지만 방식이 다릅니다.
-  - 구분 방법: Attach Transform은 정확한 위치 고정, Use Dynamic Attach는 잡는 순간의 위치 유지입니다. 
+  - 구분 방법: Attach Transform은 정확한 위치 고정, Use Dynamic Attach는 잡는 순간의 위치 유지입니다.
 - 헷갈리는 개념: `interactor.transform.name` vs interactor.handedness
   - 헷갈리는 이유: 둘 다 왼손/오른손을 구분하지만 성능 차이가 있습니다.
-  - 구분 방법: string 비교는 느리고, handedness enum 비교가 더 최적화되어 있습니다. 
+  - 구분 방법: string 비교는 느리고, handedness enum 비교가 더 최적화되어 있습니다.
 
 ---
 
 ### 질문할 내용
 
-- [ ] Gun Rifle에서 플레이 모드 시 XR Origin 아래 동적으로 생기는 오브젝트의 위치를 참조하는 방법 
+- [ ] Gun Rifle에서 플레이 모드 시 XR Origin 아래 동적으로 생기는 오브젝트의 위치를 참조하는 방법
 - [ ] Projectile Movement 방식과 Raycast 방식 중 어느 것이 VR 총알 발사에 더 적합한지
-- [ ] Use Dynamic Attach를 체크했을 때 XR Origin에 생기는 Dynamic Attach Transform의 정확한 역할 
+- [ ] Use Dynamic Attach를 체크했을 때 XR Origin에 생기는 Dynamic Attach Transform의 정확한 역할
 
 ---
 
@@ -194,9 +191,7 @@ migration_flags: ["empty_source_table_rows_verified", "local_code_link_unlinked"
 - [ ] Select(잡기)와 Activate(방아쇠)의 차이를 명확히 구분할 수 있다.
 - [ ] interactor.handedness를 사용하여 왼손/오른손을 효율적으로 구분할 수 있다.
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -1012,12 +1007,9 @@ addListener 라고 해주면 됩니다.
 
 </details>
 
-
 <b>VR/AR 개발 수업</b> 2026-05-11
 
-
 ## 요약
-
 
 ### 수업 개요
 
@@ -1030,7 +1022,7 @@ addListener 라고 해주면 됩니다.
 - 피스톨을 잡고 트리거 버튼을 누르면 콘솔에 "빵"이 출력되도록 설정  
 - Projectile Movement 방식으로 총알 발사 구현   
 - Sphere를 생성하고 사이즈를 줄여서 총알로 사용   
-- 트리거 버튼을 눌렀을 때 발사되고 3초 후 삭제되도록 설정 
+- 트리거 버튼을 눌렀을 때 발사되고 3초 후 삭제되도록 설정
 - Speed는 500으로 설정  
 
 ### VR UI 인터랙션 설정
@@ -1058,8 +1050,8 @@ addListener 라고 해주면 됩니다.
 
 ### 현실 기술 종류
 
-- AR (Augmented Reality): 증강현실, 포켓몬고가 대표적 사례 
-- VR (Virtual Reality): 가상현실 
+- AR (Augmented Reality): 증강현실, 포켓몬고가 대표적 사례
+- VR (Virtual Reality): 가상현실
 - MR (Mixed Reality): 혼합현실, 마이크로소프트 홀로렌즈 (550만원)  
 - XR, SR: 홀로그램 기반 엔터테인먼트 활용  
 
@@ -1067,7 +1059,7 @@ addListener 라고 해주면 됩니다.
 
 - AR Foundation 4.26 버전과 AR Core 4.1 버전 등 버전 관리 중요   
 - AR Kit: iOS용 플러그인  
-- AR Core: Android용 플러그인 
+- AR Core: Android용 플러그인
 - AR Foundation: 공통 필수 플러그인  
 - 바닥 감지, 얼굴 감지, 포인트 감지의 세 가지 기본 AR 기능 제공   
 - Android 개발자 모드 활성화 필요   
@@ -1076,8 +1068,8 @@ addListener 라고 해주면 됩니다.
 
 - Unity Hub에서 AR 템플릿 선택하여 새 프로젝트 생성   
 - XR Plugin Management에서 AR Core 활성화  
-- Minimum API Level 24 이상 설정 필요 
-- AR Session Origin 오브젝트 사용 
+- Minimum API Level 24 이상 설정 필요
+- AR Session Origin 오브젝트 사용
 
 ### 액션 아이템
 
@@ -1090,12 +1082,10 @@ addListener 라고 해주면 됩니다.
 
 ### 다음 수업 계획
 
-- VR 수업 종료 후 AR 수업 진행 
+- VR 수업 종료 후 AR 수업 진행
 - AR Face 및 AR Plane 실습 진행 예정   
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

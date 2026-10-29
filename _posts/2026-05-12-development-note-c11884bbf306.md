@@ -3,8 +3,8 @@ title: "2026-05-12 개발 메모"
 date: 2026-05-12 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "실습용 프로젝트 ThunderBolt 17cbfd2e-da17-497c-9ddc-b567138a7dd3 네트워크 통신과 Photon 동기화 옵션 2026-05-12 요약 액션 아이템 Photon 대시보드에서 새로운 앱 생성하기 (Thunderbolt 6 등) 생성한 앱 ID를 메모장에 "
-description: "실습용 프로젝트 ThunderBolt 17cbfd2e-da17-497c-9ddc-b567138a7dd3 네트워크 통신과 Photon 동기화 옵션 2026-05-12 요약 액션 아이템 Photon 대시보드에서 새로운 앱 생성하기 (Thunderbolt 6 등) 생성한 앱 ID를 메모장에 "
+excerpt: "ThunderBolt 실습을 위한 Photon 설정과 네트워크 통신·동기화 옵션을 정리했다."
+description: "ThunderBolt 실습을 위한 Photon 설정과 네트워크 통신·동기화 옵션을 정리했다."
 published: true
 migration_id: "35e36532580e81d9ad29c11884bbf306"
 migration_status: "published"
@@ -16,12 +16,9 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 17cbfd2e-da17-497c-9ddc-b567138a7dd3
 
-
 <b>네트워크 통신과 Photon 동기화 옵션</b> 2026-05-12
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -49,12 +46,12 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - <b>재전송:</b> 데이터가 유실되었거나 순서가 꼬였을 경우 다시 보내달라고 요청  
 - <b>패킷:</b> 1024 바이트 단위로 묶어서 전송  
 - <b>속도:</b> UDP에 비해 느리지만 절망적으로 느린 것은 아님  
-- <b>장점:</b> 데이터의 정확성을 보장함 
+- <b>장점:</b> 데이터의 정확성을 보장함
 - <b>사용 예시:</b>
   - 보드게임 (데이터 정확성이 중요)  
   - 웹 브라우징 (HTTP)  
-  - 이메일 
-  - 파일 전송 (FTP) 
+  - 이메일
+  - 파일 전송 (FTP)
   - 데이터가 하나라도 틀리면 안 되는 서비스  
 
 ### UDP (User Datagram Protocol)
@@ -62,33 +59,33 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - <b>비유:</b> 편지  
 - <b>특징:</b> 비연결형 프로토콜  
 - <b>연결 방식:</b> 상대방이 데이터를 받을 준비가 되었는지 확인하지 않고 일방적으로 전송   
-- <b>신뢰성:</b> 신뢰성이 거의 없음 - 데이터가 순서대로 도착하는지, 중간에 유실되는지 확인하지 않음 
+- <b>신뢰성:</b> 신뢰성이 거의 없음 - 데이터가 순서대로 도착하는지, 중간에 유실되는지 확인하지 않음
 - <b>속도:</b> 확인 절차가 필요 없어 TCP보다 빠르고 오버헤드가 적음  
 - <b>편지 비유 설명:</b> 같은 날 동시에 여러 편지를 보내도 어느 것이 먼저 도착할지 알 수 없음 - 순서가 보장되지 않음  
 - <b>사용 예시:</b>
-  - 실시간 스트리밍 
-  - 온라인 게임 
-  - 화상 통화 
+  - 실시간 스트리밍
+  - 온라인 게임
+  - 화상 통화
   - FPS 게임, TPS 게임 등 속도가 중요한 게임  
-  - 데이터가 조금 유실되어도 실시간성이 중요한 서비스 
+  - 데이터가 조금 유실되어도 실시간성이 중요한 서비스
 
 ### PhotonView Synchronization 옵션
 
-- <b>Off:</b> 동기화 없음, <code>OnPhotonSerializeView</code>가 호출되지 않음, RPC만 사용 
-  - 사용 사례: 점수 업데이트, 채팅 등 특정 시점에만 데이터 전송이 필요한 경우 
+- <b>Off:</b> 동기화 없음, <code>OnPhotonSerializeView</code>가 호출되지 않음, RPC만 사용
+  - 사용 사례: 점수 업데이트, 채팅 등 특정 시점에만 데이터 전송이 필요한 경우
 - <b>Unreliable (UDP 방식):</b> 데이터 변경 여부와 상관없이 매 틱(프레임)마다 패킷 전송, 손실 가능성 있음   
   - 사용 사례: 초당 전송 횟수가 많고 데이터가 누락되어도 다음 패킷이 금방 덮어쓰는 자유 이동  
 - <b>Unreliable On Change (변경 시 전송, UDP):</b> 데이터에 변경 사항이 발생했을 때만 패킷 전송, 가장 많이 쓰이는 합리적인 옵션   
   - 사용 사례: 움직임이 멈춰있을 때 불필요한 패킷 발생을 막고 싶을 때, 대부분의 캐릭터 이동  
 - <b>Reliable Delta Compressed (TCP 방식):</b> 마지막으로 보낸 데이터와 비교해 변경된 값만 전송하며 도착을 보장, 부하가 가장 큼   
-  - 사용 사례: 매우 중요한 상태 값(체력, 장착 장비 등)이 반드시 전달되어야 할 때 
+  - 사용 사례: 매우 중요한 상태 값(체력, 장착 장비 등)이 반드시 전달되어야 할 때
 
 ### Photon Unity Networking 실무 팁
 
-- <b>권장 옵션:</b> 가급적 'Unreliable On Change'를 기본으로 사용 - 트래픽 비용을 아끼고 네트워크 부하를 줄이는 효율적인 선택 
+- <b>권장 옵션:</b> 가급적 'Unreliable On Change'를 기본으로 사용 - 트래픽 비용을 아끼고 네트워크 부하를 줄이는 효율적인 선택
 - <b>Photon Transform View:</b> 위치, 회전, 크기 동기화 시 사용, Lerp/Smooth 설정으로 끊김 보정 가능   
-- <b>Photon Animator View:</b> 애니메이션 파라미터 동기화 시 사용 
-- <b>IPunObservable 직접 제어:</b> 복잡한 데이터(인벤토리 정보 등) 실시간 동기화 시 <code>OnPhotonSerializeView</code> 메서드에서 <code>stream.SendNext()</code>와 <code>stream.ReceiveNext()</code> 직접 구현 
+- <b>Photon Animator View:</b> 애니메이션 파라미터 동기화 시 사용
+- <b>IPunObservable 직접 제어:</b> 복잡한 데이터(인벤토리 정보 등) 실시간 동기화 시 <code>OnPhotonSerializeView</code> 메서드에서 <code>stream.SendNext()</code>와 <code>stream.ReceiveNext()</code> 직접 구현
 - <b>주의사항:</b> 하나의 GameObject에 너무 많은 PhotonView를 넣지 말 것 - 루트 객체에 하나만 두고 하위 데이터를 한 번에 직렬화하는 것이 성능상 유리
 
 ### Photon Engine 종류
@@ -102,11 +99,9 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 - 메타버스에는 네트워크 통신, TCP/IP, UDP, 서버 구축이 모두 포함됨  
 - 면접 시 네트워크 통신 기본 개념, 서버 지식, 데이터 통신 지식을 요구함  
-- 신입에게도 서버 지식을 요구하는 추세 
-
+- 신입에게도 서버 지식을 요구하는 추세
 
 ## 메모
-
 
 <b>네트워크 통신에서 데이터를 주고 받는 방식</b>
 
@@ -130,7 +125,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 <b>웹브라우징 (http)이메일 파일전송(FTP)등 데이터가 하나라도 틀리면</b>
 
-<b>안되는 서비스에 사용 한다.</b>
+<b>안 되는 서비스에 사용한다.</b>
 
 <b>2.UDP(User Datagram Protocol) 비유 : 편지</b>
 
@@ -247,7 +242,6 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 > <b>Pro Tip:</b> 멀티플레이어 게임 서버나 물리 엔진 연산 시, 메인 스레드를 <b>논 블록킹</b> 상태로 유지하는 것이 끊김 없는(Stutter-free) 경험의 핵심입니다.
 
 현재 진행 중인 프로젝트에서 이 개념들을 적용할 때, Unity의 Coroutine이나 C#의 Task(async/await) 중 어떤 방식을 주로 선호하시나요?
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -716,22 +710,19 @@ pvp
 
 </details>
 
-
 <b>Unity 탱크 게임 개발 강의</b> 2026-05-12
 
-
 ## 요약
-
 
 ### 탱크 프리팹 설정 및 머티리얼 적용
 
 - 탱크 프리팹을 Resources 폴더에 추가  
 - Material 폴더에서 메인 머티리얼을 가져와서 적용  
-- Universal Render Pipeline Lit 셰이더 사용 
+- Universal Render Pipeline Lit 셰이더 사용
 - Body Mesh에 메인 머티리얼 적용  
 - Base Map에 국방색 텍스처를 드래그하여 추가  
 - Normal Map도 동일한 방식으로 추가  
-- Surface Type은 Opaque로 유지 (Transparent 사용하지 않음) 
+- Surface Type은 Opaque로 유지 (Transparent 사용하지 않음)
 - Main Wheel Mesh와 Track에도 동일한 방식으로 머티리얼 설정   
 
 ### Photon View 컴포넌트 정리
@@ -750,8 +741,8 @@ pvp
 
 - Cinemachine Camera Follow 생성  
 - 카메라 회전을 -90도에서 -170도 정도로 조정  
-- Lens FOV를 40으로 설정 
-- Near Clip Plane을 0.015로 설정 
+- Lens FOV를 40으로 설정
+- Near Clip Plane을 0.015로 설정
 - Tracking Target을 Tank로 설정  
 - Mode를 Perspective로 설정 (3D 게임이므로)  
 - Rotation Controller를 Rotation Composer로 변경  
@@ -771,10 +762,10 @@ pvp
 - Extension에서 Decolider 추가 (Collider는 사라짐)   
 - Terrain 레이어 생성 및 적용   
 - Tank 레이어도 생성하여 설정  
-- Decolider에서 Nothing과 Terrain 선택 
+- Decolider에서 Nothing과 Terrain 선택
 - Y Offset과 Use Follow Target 체크  
-- Camera Radius를 20으로 설정 
-- Damping을 0.5로 유지 
+- Camera Radius를 20으로 설정
+- Damping을 0.5로 유지
 - Maximum Effort를 50으로 설정 (높이 조정 값)  
 
 ### Input System 설정
@@ -783,42 +774,42 @@ pvp
 - Create Action으로 썬더볼트 액션 생성  
 - Move 액션 생성 (Look은 필요 없음)  
 - Invoke Unity Events 방식 사용  
-- Any 설정 유지 (플랫폼 호환성) 
-- Default Map을 Player로 설정 
+- Any 설정 유지 (플랫폼 호환성)
+- Default Map을 Player로 설정
 
 ### TankInput 스크립트 작성
 
 - Scripts/Tank 폴더에 TankInput.cs 생성  
 - Unity.InputSystem 네임스페이스 추가  
 - OnMove 함수 작성 (InputAction.CallbackContext 파라미터)  
-- moveDir Vector3 변수로 입력값 저장 
+- moveDir Vector3 변수로 입력값 저장
 - x값과 z값에 입력 매핑 (Vector2이므로)  
 - 디버그 로그로 입력 확인  
 
 ### TankMove 스크립트 작성
 
-- TankMove.cs 생성하여 이동 처리 
-- Rigidbody 컴포넌트 참조 
-- moveSpeed를 10으로 설정 (SerializeField로 노출) 
-- rotateSpeed를 90도로 설정 
+- TankMove.cs 생성하여 이동 처리
+- Rigidbody 컴포넌트 참조
+- moveSpeed를 10으로 설정 (SerializeField로 노출)
+- rotateSpeed를 90도로 설정
 - Header 특성으로 인스펙터에서 섹션 구분  
 - Transform 컴포넌트 참조  
 - FixedUpdate에서 Rigidbody 이동 처리  
 - rb.MovePosition으로 전진/후진 이동  
 - rb.MoveRotation으로 좌우 회전  
 - 입력값에 moveSpeed와 rotateSpeed 곱하기  
-- Time.fixedDeltaTime 사용하여 프레임 독립적 이동 
+- Time.fixedDeltaTime 사용하여 프레임 독립적 이동
 
 ### 카메라와 탱크 연동 테스트
 
 - Cinemachine Follow가 탱크를 제대로 따라가는지 확인  
 - 언덕 올라갈 때 카메라가 지형을 관통하지 않는지 테스트  
-- Decolider 설정으로 문제 해결 확인 
+- Decolider 설정으로 문제 해결 확인
 
 ### TrackAnim 스크립트 작성 (고급 기능)
 
 - TrackAnim.cs 생성하여 무한궤도 애니메이션 처리  
-- MeshRenderer 컴포넌트 참조 
+- MeshRenderer 컴포넌트 참조
 - Material Property Block 사용 이유 설명:
   - 탱크가 100대일 때 Material을 각각 생성하지 않고 공유  
   - Draw Call 최적화 (CPU가 GPU에게 한 번만 그리기 명령)   
@@ -827,8 +818,8 @@ pvp
   - static int baseMapId = Shader.PropertyToID("\_BaseMap")
   - static int baseMapSTId = Shader.PropertyToID("\_BaseMap\_ST")
 - MaterialPropertyBlock 인스턴스 생성  
-- targetId를 -1로 초기화 
-- targetSTId도 -1로 초기화 
+- targetId를 -1로 초기화
+- targetSTId도 -1로 초기화
 - HasProperty로 텍스처 속성 존재 확인  
 - GetTextureScale과 GetTextureOffset으로 초기값 가져오기  
 
@@ -836,26 +827,24 @@ pvp
 
 - <b>Draw Call</b>: CPU가 GPU에게 렌더링 명령을 내리는 것  
   - 탱크 100대면 원래 Draw Call이 100번 발생
-  - Material Property Block 사용시 1번만 발생하면서 100대를 한꺼번에 그림 
+  - Material Property Block 사용시 1번만 발생하면서 100대를 한꺼번에 그림
 - <b>SharedMaterial vs Material</b>: SharedMaterial은 여러 오브젝트가 공유, Material은 각각 복사본 생성  
 - <b>Static 변수</b>: 탱크가 몇 대든 1개만 생성하고 공유  
-- <b>Shader.PropertyToID</b>: 문자열 대신 int ID 사용으로 성능 향상 
+- <b>Shader.PropertyToID</b>: 문자열 대신 int ID 사용으로 성능 향상
 
 ### Unity 6.0 버전 사용 권장
 
 - Unity 6.3 이상 버전 사용 권장 (AI 연동 등 장점)  
-- Cinemachine 3.0부터 많은 변경사항 있음 
+- Cinemachine 3.0부터 많은 변경사항 있음
 - 메타버스보다 최신 툴 익히는 것이 더 중요  
 
 ### 레이어 설정
 
 - Terrain 레이어 생성 (레이어 6번)  
-- Tank 레이어 생성 
-- Turret 레이어 생성 
-
+- Tank 레이어 생성
+- Turret 레이어 생성
 
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

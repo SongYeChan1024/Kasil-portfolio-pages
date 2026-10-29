@@ -3,8 +3,8 @@ title: "데일리 로그 260508"
 date: 2026-05-08 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "기본 정보 날짜: 2026-05-08 주제: Unity XR — 손 모델/손 애니메이션(Input System) + Locomotion(Move/Turn/Teleport) + Climb 연결 실습 환경: XR Device Simulator(Mock Runtime) 기반 키보드/마우스 테"
-description: "기본 정보 날짜: 2026-05-08 주제: Unity XR — 손 모델/손 애니메이션(Input System) + Locomotion(Move/Turn/Teleport) + Climb 연결 실습 환경: XR Device Simulator(Mock Runtime) 기반 키보드/마우스 테"
+excerpt: "Unity XR의 손 모델과 입력 바인딩을 점검하고, 손 애니메이션·이동·회전·텔레포트·등반 기능의 연결을 실습했다."
+description: "Unity XR의 손 모델과 입력 바인딩을 점검하고, 손 애니메이션·이동·회전·텔레포트·등반 기능의 연결을 실습했다."
 published: true
 migration_id: "35e36532580e817f97a2c246cffdf8eb"
 migration_status: "published"

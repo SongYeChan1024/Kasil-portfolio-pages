@@ -3,8 +3,8 @@ title: "2026-03-04_엘리스 수업 메모"
 date: 2026-03-04 12:00:00 +0900
 categories: ["수업 노트", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "Unity 적 AI 시야 기반 추적 시스템 구현 2026-03-04 요약 학습 목표 및 구현 사항 적 캐릭터가 거리가 아닌 시야로 플레이어를 감지하도록 AI 개선하기 배럴과 박스 장애물 뒤에 있을 때 총알 발사 방지하기 Unity Editor 클래스(DrawWireDisc, DrawSo"
-description: "Unity 적 AI 시야 기반 추적 시스템 구현 2026-03-04 요약 학습 목표 및 구현 사항 적 캐릭터가 거리가 아닌 시야로 플레이어를 감지하도록 AI 개선하기 배럴과 박스 장애물 뒤에 있을 때 총알 발사 방지하기 Unity Editor 클래스(DrawWireDisc, DrawSo"
+excerpt: "적 AI의 시야 기반 추적과 에디터 시각화를 실습하고 Unity 조명 모드와 라이트 베이킹을 정리했다."
+description: "적 AI의 시야 기반 추적과 에디터 시각화를 실습하고 Unity 조명 모드와 라이트 베이킹을 정리했다."
 published: true
 migration_id: "35e36532580e81d1bdf1f6a8cd2c1eb9"
 migration_status: "published"
@@ -14,24 +14,22 @@ migration_flags: ["privacy_review", "publication_review", "source_citations_pres
 {% raw %}
 <b>Unity 적 AI 시야 기반 추적 시스템 구현</b> 2026-03-04
 
-
 ## 요약
-
 
 ### 학습 목표 및 구현 사항
 
 - [ ] 적 캐릭터가 거리가 아닌 시야로 플레이어를 감지하도록 AI 개선하기  
 - [ ] 배럴과 박스 장애물 뒤에 있을 때 총알 발사 방지하기  
 - [ ] Unity Editor 클래스(DrawWireDisc, DrawSolidArc)를 활용한 시야각 시각화 구현하기  
-- [ ] 내비게이션 메쉬 베이킹으로 장애물 회피 경로 설정하기  
+- [ ] 내비게이션 메시 베이킹으로 장애물 회피 경로 설정하기  
 
 ### 장애물 설정 및 배치
 
-사이버 박스 3D 모델을 Unity Asset Store에서 다운로드하고 프로젝트에 추가했습니다.   모델의 쉐이더가 누락되어 Legacy Shader의 Bumped Specular로 설정했습니다.   사이버 박스의 크기를 0.45\~0.5로 조정하고   씬에 4개를 배치했습니다.  
+사이버 박스 3D 모델을 Unity Asset Store에서 다운로드하고 프로젝트에 추가했습니다.   모델의 셰이더가 누락되어 Legacy Shader의 Bumped Specular로 설정했습니다.   사이버 박스의 크기를 0.45\~0.5로 조정하고   씬에 4개를 배치했습니다.  
 
 박스에 Box Collider를 추가하고   "Box"라는 새 레이어를 생성하여 할당했습니다.   Cinemachine Virtual Camera의 Obstacle Detection 설정에 Box 레이어를 추가하여 카메라가 장애물을 감지하고 당겨지도록 구성했습니다.  
 
-### 내비게이션 메쉬 베이킹
+### 내비게이션 메시 베이킹
 
 Window > AI > Navigation을 통해 Navigation 창을 열었습니다.   사이버 박스 프리팹을 선택하고 Lighting 옵션에서 Static을 "Everything"으로 설정했습니다.   
 
@@ -114,9 +112,7 @@ Enemy 폴더에 <code>EnemyFOV.cs</code> 스크립트를 생성했습니다.
 </li>
 </ul>
 
-
 ## 메모
-
 
 <b>적 캐릭터의 지능화된 AI</b>
 
@@ -128,29 +124,27 @@ Enemy 폴더에 <code>EnemyFOV.cs</code> 스크립트를 생성했습니다.
 
 <b>상관 없이 사격 하는 문제를</b>
 
-<b>인간의 눈 처럼 시야로 파악 할 수 있게 구현</b>
+<b>인간의 눈 처럼 시야로 파악할 수 있게 구현</b>
 
 유니티엣서 제공하는 Editor 클래스 사용<br />DrawWireDisc(원형) 와 DrawSolidArc(부채꼴
 
 <b>Editor클래스는 유니티 IDE를 구성하는 API(함수의집합)</b>
 
-<b>런타임 실시간에서 다른 스크립트에서 참조 할 수 없다</b>
+<b>런타임 실시간에서 다른 스크립트에서 참조할 수 없다</b>
 
 <b>즉 디자인 시점에서만 사용할 수 있는 클래스로</b>
 
 <b>사용자 정의 window(창)또는 인스펙터의 UI를 자유롭게</b>
 
-<b>구성하거나 확장 할 수 있기에 자신만의 저작툴을</b>
+<b>구성하거나 확장할 수 있기에 자신만의 저작툴을</b>
 
 <b>개발 시 능률을 높이는 데 활용 할 수 있다.</b>
-
 
 <b>라이트 맵핑 LightMapping 정적인 객체</b>
 
 <b>라이트 프로브 LightProbe 동적인 객체</b>
 
 <b>씬관리 SceneManage</b>
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -996,12 +990,9 @@ Degree란 뜻인데, Degree to Radian이란 뜻인데, 이렇게 합시다. 일�
 
 </details>
 
-
 <b>Unity Enemy AI 및 Navigation 시스템 구현</b> 2026-03-04
 
-
 ## 요약
-
 
 ### Action Items
 
@@ -1100,9 +1091,7 @@ Degree란 뜻인데, Degree to Radian이란 뜻인데, 이렇게 합시다. 일�
 - Convex 옵션으로 메시 콜라이더를 단순화하여 자원 절약 
 - GitHub Copilot의 자동완성은 항상 정확하지 않으므로 주의 
 
-
 ## 메모
-
 
 <b>Vector3 fromAnglePos = fov.CirclePoint(-fov.viewAngle \* 0.5f);</b>
 
@@ -1110,15 +1099,13 @@ Degree란 뜻인데, Degree to Radian이란 뜻인데, 이렇게 합시다. 일�
 
 <b>//viewAngle은 부채꼴의 사잇각으로 시작점의 각도는(-viewAngle /2) 이고 종료점의 각도는 (+viewAngle /2) 이다.</b>
 
-
 <b>NavMesh Obstacle Carve 속성</b>
 
-<b>Move Threhold : 속성값의 거리만큼 이동 했을 때 베이크 한다.</b>
+<b>Move Threhold : 속성값의 거리만큼 이동 했을 때 베이크한다.</b>
 
 <b>Time To Stationary : 동일 위치에서 정지 했는 지 여부를 판단할 시간</b>
 
-<b>Carve Only Stationary : 체크 하면 이동 중에는 실시간 베이크 하지 않는다.</b>
-
+<b>Carve Only Stationary : 체크 하면 이동 중에는 실시간 베이크하지 않는다.</b>
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2149,12 +2136,9 @@ G.G.Q 플레이어
 
 </details>
 
-
 <b>Unity 조명 시스템: 라이트 맵핑과 라이트 프로브</b> 2026-03-04
 
-
 ## 요약
-
 
 ### 전역 조명 (Global Illumination)
 
@@ -2275,20 +2259,17 @@ G.G.Q 플레이어
 - 한 번 베이킹 후 다시 베이킹하면 속도가 빨라짐 
 - 추가 조명 배치 후 재베이킹 가능  
 
-
 ## 메모
 
+라이트 맵핑 LightMapping 정적인 객체<br />씬에 배치된 모든 3D 모델에 영향을 미치는 직접조명 간접조명 및 그림자를 텍스처로 미리 만드는 과정을 의미한다.<br />동적인 객체의 조명 효과는 LightProbe 를 통해 적용한다.
 
-라이트 맵핑 LightMapping 정적인 객체<br />씬에 배치된 모든 3D 모델에 열향을 미치는 직접조명 간접조명 및 그림자를 텍스쳐로 미리 만드는 과정을 의미한다.<br />동적인 객체의 조명 효과는 LightProbe 를 통해 적용 한다.
+전역 조명 : 3D 지오메트리에서 직접 광원과 다른 물체에 반사된 간접 조명 및 그림자를 렌더링 하는 것을 말한다.
 
-전역 조명 : 3D 지오 메트리에서 직접 광원과 다른 물체에 반사된 간접 조명 및 그림자를 랜더링 하는것을 말한다.
+전역 조명의 연산처리는 많은 부하를 주기 때문에 하드웨어의 성능에 따라서 실시간 연산이 거의 불가능한 경우가 있다.
 
-전역 조명의 연산처리는 많은 부하를 주기 때문에 하드웨어의 성능에 따라서 실시간 연산이 거의 불가능 한 경우가 있다.
+따라서 유니티는  실시간 전역조명(Realtime GI) 미리계산된 전역 조명 (Precomputed Realtime GI)을 처리하는 기능을 제공한다.
 
-따라서 유니티는  실시간 전역조명(Realtime GI) 미리계산된 전역 조명 (Precomputed Realtime GI)을 처리하는 기능을 제공 한다.
-
-조명모드<br />Realtime 모드 : 실시간 조명으로 설정하는 것 으로 씬에 직접 광원을 적용하며 매 프레임 마다 조명 연산을 해서 화면을 업데이트 한다. 연산 부하가 크다.<br />Mixed 모드 : <br />1. Baked Indirect : 간접 광원만 미리 계산 해 베이크 하며 그림자는 베이크 대상에서 제외 된다. Mixed모드로 설정된 조명은 씬에서 실시간 조명 기능을 유지 중급 사양의 PC나 고성능 모바일 디바이스에 적합<br />2. Subtractive : 정적인 객체의 직,간점 광원과 그림자를 모두 베이크 한다, 모바일 디바이스의 환경에 적합하다.<br />3.ShadowMask : 직접 광원은 실시간 조명으로 처리하고 간접광원과 LightProbe 는 LightMap 에 저장한다(이미지로 저장해서 카메라에서 믹싱후 랜더링) , 그림자는 별도의 텍스쳐인 섀도우 마스크에 저장한다.<br />
-
+조명모드<br />Realtime 모드 : 실시간 조명으로 설정하는 것 으로 씬에 직접 광원을 적용하며 매 프레임마다 조명 연산을 해서 화면을 업데이트한다. 연산 부하가 크다.<br />Mixed 모드 : <br />1. Baked Indirect : 간접 광원만 미리 계산해 베이크 하며 그림자는 베이크 대상에서 제외 된다. Mixed모드로 설정된 조명은 씬에서 실시간 조명 기능을 유지 중급 사양의 PC나 고성능 모바일 디바이스에 적합<br />2. Subtractive : 정적인 객체의 직·간접 광원과 그림자를 모두 베이크한다, 모바일 디바이스의 환경에 적합하다.<br />3.ShadowMask : 직접 광원은 실시간 조명으로 처리하고 간접광원과 LightProbe 는 LightMap 에 저장한다(이미지로 저장해서 카메라에서 믹싱후 렌더링) , 그림자는 별도의 텍스처인 섀도우 마스크에 저장한다.<br />
 
 라이트 프로브 LightProbe 동적인 객체
 
@@ -2299,9 +2280,7 @@ Light Probe는 씬에 배치한 <b>프로브 지점에서 베이크된 간접 �
 
 스테이지에서 조명이 있는 곳 주변에 라이트 프로브를 배치하고, 라이트 맵을 베이킹할 때 라이트 프로브 주변부의 광원 데이터를 저장해 둔다. 이후 근처를 지나가는 동적 오브젝트에 해당 광원 데이터를 전달하고 오브젝트 색상과 보간해, 마치 실시간 조명과 같은 효과를 내는 방식이다.
 
-
 씬 관리 SceneManage
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -2896,7 +2875,6 @@ But I made you look, I made you look
 
 
 </details>
-
 
 | Mode | 특징 | 사용환경 |
 | --- | --- | --- |

@@ -3,8 +3,8 @@ title: "2026-05-14 개발 메모"
 date: 2026-05-14 12:00:00 +0900
 categories: ["개발 메모", "Unreal"]
 tags: ["Notion 이전", "Unreal"]
-excerpt: "Unity 멀티플레이어 및 메타버스 기술 강의 2026-05-14 요약 오늘 수업 핵심 요약 Photon 엔진의 3가지 멀티플레이어 솔루션 (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다. 입문자는 PUN 2 로 시작하고, 프로젝트 규모가 커지면 Fu"
-description: "Unity 멀티플레이어 및 메타버스 기술 강의 2026-05-14 요약 오늘 수업 핵심 요약 Photon 엔진의 3가지 멀티플레이어 솔루션 (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다. 입문자는 PUN 2 로 시작하고, 프로젝트 규모가 커지면 Fu"
+excerpt: "Photon의 멀티플레이 솔루션을 비교하고, Unity 네트워크 개발과 메타버스 활용 사례를 정리했다."
+description: "Photon의 멀티플레이 솔루션을 비교하고, Unity 네트워크 개발과 메타버스 활용 사례를 정리했다."
 published: true
 migration_id: "36036532580e80da8dbdedad94f8f3f4"
 migration_status: "published"
@@ -14,45 +14,43 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 {% raw %}
 <b>Unity 멀티플레이어 및 메타버스 기술 강의</b> 2026-05-14
 
-
 ## 요약
-
 
 ### 오늘 수업 핵심 요약
 
-- <b>Photon 엔진의 3가지 멀티플레이어 솔루션</b> (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다. 
-- 입문자는 <b>PUN 2</b>로 시작하고, 프로젝트 규모가 커지면 <b>Fusion 2</b>로 전환하는 것이 권장됩니다. 
-- <b>메타버스 산업 활용 사례</b>와 경제 생태계, NFT 개념, 미래 전망을 학습했습니다. 
-- Unity에서 <b>언리얼 엔진용 3D 모델</b>(Apache 헬기)을 가져올 때 <b>좌표축을 맞추는 실습</b>을 진행했습니다. 
+- <b>Photon 엔진의 3가지 멀티플레이어 솔루션</b> (PUN 2, Fusion 2, Quantum 3)의 특징과 선택 기준을 배웠습니다.
+- 입문자는 <b>PUN 2</b>로 시작하고, 프로젝트 규모가 커지면 <b>Fusion 2</b>로 전환하는 것이 권장됩니다.
+- <b>메타버스 산업 활용 사례</b>와 경제 생태계, NFT 개념, 미래 전망을 학습했습니다.
+- Unity에서 <b>언리얼 엔진용 3D 모델</b>(Apache 헬기)을 가져올 때 <b>좌표축을 맞추는 실습</b>을 진행했습니다.
 
 ---
 
 ### 주요 개념 정리
 
 - <b>PUN 2 (Photon Unity Networking 2)</b>
-  - 설명: 가장 오래되고 널리 사용되는 입문용 멀티플레이어 엔진. PhotonView 컴포넌트, RPC(Remote Procedure Call), 상태 동기화 방식 사용 
+  - 설명: 가장 오래되고 널리 사용되는 입문용 멀티플레이어 엔진. PhotonView 컴포넌트, RPC(Remote Procedure Call), 상태 동기화 방식 사용
   - 예시: 간단한 멀티플레이어 게임, 네트워크 기초 학습용
   - 사용되는 상황: 포트폴리오용 프로젝트, 기존 PUN 프로젝트 유지보수
-  - 헷갈릴 수 있는 점: 동시 접속자 30\~32인 이상, 정밀한 판정이 필요한 게임에는 부적합 
+  - 헷갈릴 수 있는 점: 동시 접속자 30\~32인 이상, 정밀한 판정이 필요한 게임에는 부적합
 - <b>Fusion 2</b>
-  - 설명: 현재 가장 권장되는 고성능 상태 동기화 엔진. 틱 기반, 클라이언트 사이드 예측 및 롤백 지원 
+  - 설명: 현재 가장 권장되는 고성능 상태 동기화 엔진. 틱 기반, 클라이언트 사이드 예측 및 롤백 지원
   - 예시: FPS, 배틀로얄, 액션 RPG, 협동 게임
-  - 사용되는 상황: 새 Unity 멀티플레이어 게임, 100인 이상 대규모 멀티플레이어 
+  - 사용되는 상황: 새 Unity 멀티플레이어 게임, 100인 이상 대규모 멀티플레이어
   - 헷갈릴 수 있는 점: Host 모드, Server 모드, Shared 모드 등 여러 구조를 지원하여 PUN보다 복잡함
 - <b>Quantum 3</b>
-  - 설명: 결정론적 예측 엔진으로 지연이 거의 없음. 정밀한 경쟁 게임용 
+  - 설명: 결정론적 예측 엔진으로 지연이 거의 없음. 정밀한 경쟁 게임용
   - 예시: 격투, 스포츠, RTS, e스포츠형 PvP
   - 사용되는 상황: 정밀한 판정과 동기화가 필수인 경쟁 게임
-  - 헷갈릴 수 있는 점: Unity 기존 워크플로우와 다른 전용 C# 코딩 규칙을 따라야 하며 학습 난이도가 매우 높음. 현재 권장하지 않음 
+  - 헷갈릴 수 있는 점: Unity 기존 워크플로우와 다른 전용 C# 코딩 규칙을 따라야 하며 학습 난이도가 매우 높음. 현재 권장하지 않음
 - <b>NFT (Non-Fungible Token, 대체 불가능한 토큰)</b>
-  - 설명: 디지털 세상의 유일무이한 정품 인증서. 블록체인 기술로 디지털 데이터의 진위와 소유권을 증명 
-  - 예시: 디지털 예술작품, 게임 아이템, 스포츠 하이라이트 영상, 한정판 카드, 멤버십 티켓 
+  - 설명: 디지털 세상의 유일무이한 정품 인증서. 블록체인 기술로 디지털 데이터의 진위와 소유권을 증명
+  - 예시: 디지털 예술작품, 게임 아이템, 스포츠 하이라이트 영상, 한정판 카드, 멤버십 티켓
   - 사용되는 상황: 희소성과 소유권 증명이 중요한 디지털 자산
-  - 헷갈릴 수 있는 점: 비트코인 같은 암호화폐와 다름. 비트코인은 대체 가능하지만 NFT는 대체 불가능 
+  - 헷갈릴 수 있는 점: 비트코인 같은 암호화폐와 다름. 비트코인은 대체 가능하지만 NFT는 대체 불가능
 - <b>메타버스 경제 생태계</b>
-  - 설명: 2021년을 기점으로 급성장한 가상세계 기반 경제 시스템. 2028년 예상 시장 규모가 크게 증가 예상 
+  - 설명: 2021년을 기점으로 급성장한 가상세계 기반 경제 시스템. 2028년 예상 시장 규모가 크게 증가 예상
   - 예시: 로블록스, 포트나이트, 가상 콘서트, 가상 부동산 거래
-  - 사용되는 상황: 게임/엔터테인먼트, 업무/교육, 의료/과학, 금융/투자, 커머스/패션 등 다양한 산업 
+  - 사용되는 상황: 게임/엔터테인먼트, 업무/교육, 의료/과학, 금융/투자, 커머스/패션 등 다양한 산업
 
 ---
 
@@ -60,45 +58,45 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 
 ### 1. Photon 엔진 3가지 솔루션 비교
 
-- Photon 엔진의 주요 제품: PUN 2, Fusion 2, Quantum 3 
-- <b>PUN 2</b>: 입문용, 배우기 쉽고 커뮤니티 자료가 풍부하지만 성능 최적화에 한계 
-- <b>Fusion 2</b>: 현재 가장 권장되는 선택지. 상태 동기화, 예측, 지연 보정 우수. 100인 이상 소화 가능 
-- <b>Quantum 3</b>: 결정론적 시뮬레이션, 지연 거의 없음. 하지만 학습 난이도 매우 높아 권장하지 않음 
-- 중요: 입문자는 PUN 2로 시작 → 포트폴리오 구성 → Fusion 2로 전환하는 경로 권장 
+- Photon 엔진의 주요 제품: PUN 2, Fusion 2, Quantum 3
+- <b>PUN 2</b>: 입문용, 배우기 쉽고 커뮤니티 자료가 풍부하지만 성능 최적화에 한계
+- <b>Fusion 2</b>: 현재 가장 권장되는 선택지. 상태 동기화, 예측, 지연 보정 우수. 100인 이상 소화 가능
+- <b>Quantum 3</b>: 결정론적 시뮬레이션, 지연 거의 없음. 하지만 학습 난이도 매우 높아 권장하지 않음
+- 중요: 입문자는 PUN 2로 시작 → 포트폴리오 구성 → Fusion 2로 전환하는 경로 권장
 
 ### 2. 메타버스 산업 활용 사례
 
-- <b>게임/엔터테인먼트</b>: 로블록스, 포트나이트, 가상 콘서트 
-- <b>업무/교육</b>: 가상 회의실, 3D 직무훈련 시뮬레이션 (예: 국방부 VR 전술훈련) 
-- <b>커머스/패션</b>: 가상 피팅룸, 디지털 쇼룸, NFT 한정판 패션 
-- <b>부동산</b>: 가상 토지 거래, 스마트 시티, 디지털 트윈 
-- <b>의료/과학</b>: 수술 시뮬레이션, 가상 협업 연구 
+- <b>게임/엔터테인먼트</b>: 로블록스, 포트나이트, 가상 콘서트
+- <b>업무/교육</b>: 가상 회의실, 3D 직무훈련 시뮬레이션 (예: 국방부 VR 전술훈련)
+- <b>커머스/패션</b>: 가상 피팅룸, 디지털 쇼룸, NFT 한정판 패션
+- <b>부동산</b>: 가상 토지 거래, 스마트 시티, 디지털 트윈
+- <b>의료/과학</b>: 수술 시뮬레이션, 가상 협업 연구
 
 ### 3. NFT 개념과 특징
 
-- NFT는 블록체인으로 디지털 데이터의 진품 여부와 주인을 증명하는 기술 
-- 핵심 특징: 희소성, 소유권 증명, 추적 가능성 
-- 활용 분야: 디지털 예술, 게임 아이템, 수집품, 멤버십/티켓 
-- 긍정적 측면: 창작자의 직접 판매 가능, 2차 판매 시 로열티 수익 
-- 부정적 측면: 가격 변동성, 저작권 문제, 기술적 리스크 
-- 중요: 우리나라는 아직 게임으로 돈을 버는 것이 불법이나, 다른 나라는 합법화 추세 
+- NFT는 블록체인으로 디지털 데이터의 진품 여부와 주인을 증명하는 기술
+- 핵심 특징: 희소성, 소유권 증명, 추적 가능성
+- 활용 분야: 디지털 예술, 게임 아이템, 수집품, 멤버십/티켓
+- 긍정적 측면: 창작자의 직접 판매 가능, 2차 판매 시 로열티 수익
+- 부정적 측면: 가격 변동성, 저작권 문제, 기술적 리스크
+- 중요: 우리나라는 아직 게임으로 돈을 버는 것이 불법이나, 다른 나라는 합법화 추세
 
 ### 4. 메타버스 미래 전망
 
-- 2025년: 5G 메타버스 대중화, 하드웨어 경량화, 홀로그램 기술 발전 기대 
-- 2027년: 실감형 촉각 피드백, 멀티버스 통합 
-- 2030년: 현실과 가상 완전 통합, 뇌-컴퓨터 인터페이스 
-- 홀로그램이 개발되면 모니터/디스플레이가 필요 없어질 수 있음. Unity와 Unreal로 홀로그램 콘텐츠 제작 가능 
-- 일론 머스크의 예측 중 일부는 실현되지 않을 수 있음 (자율주행 완전 대중화, 화성 이주, 피지컬 로봇 등) 
+- 2025년: 5G 메타버스 대중화, 하드웨어 경량화, 홀로그램 기술 발전 기대
+- 2027년: 실감형 촉각 피드백, 멀티버스 통합
+- 2030년: 현실과 가상 완전 통합, 뇌-컴퓨터 인터페이스
+- 홀로그램이 개발되면 모니터/디스플레이가 필요 없어질 수 있음. Unity와 Unreal로 홀로그램 콘텐츠 제작 가능
+- 일론 머스크의 예측 중 일부는 실현되지 않을 수 있음 (자율주행 완전 대중화, 화성 이주, 피지컬 로봇 등)
 
 ### 5. Unity 실습: Apache 헬기 모델 설정
 
-- 탱크는 완성되어 리소스(Resources)에 저장 
-- Apache 헬기 모델을 씬에 배치 
-- 크기 조정: Scale을 4에서 3.5로 조정 
-- 중요: 언리얼 엔진용 모델을 Unity로 가져올 때 좌표축이 맞지 않음 
-- 로터(회전날개) 축 맞추기: 부모 오브젝트 생성하여 Unity 축에 맞춤 
-- 테일(꼬리) 로터도 동일한 방법으로 축 조정 
+- 탱크는 완성되어 리소스(Resources)에 저장
+- Apache 헬기 모델을 씬에 배치
+- 크기 조정: Scale을 4에서 3.5로 조정
+- 중요: 언리얼 엔진용 모델을 Unity로 가져올 때 좌표축이 맞지 않음
+- 로터(회전날개) 축 맞추기: 부모 오브젝트 생성하여 Unity 축에 맞춤
+- 테일(꼬리) 로터도 동일한 방법으로 축 조정
 
 ---
 
@@ -106,25 +104,25 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 
 #### Apache 헬기 모델 좌표축 맞추기
 
-1. Models 폴더에서 Apache 리소스를 씬에 배치 
-2. 탱크와 크기 비교 후 Scale을 3.5로 조정 
-3. Z축이 Unity 좌표와 맞지 않아 Body를 Y축으로 90도 회전 
+1. Models 폴더에서 Apache 리소스를 씬에 배치
+2. 탱크와 크기 비교 후 Scale을 3.5로 조정
+3. Z축이 Unity 좌표와 맞지 않아 Body를 Y축으로 90도 회전
 4. Rotor(회전날개) 축 맞추기:
-   - Unpack Prefab 
-   - 빈 오브젝트 생성 → "RotorPivot"으로 이름 변경 
-   - MyGizmo 스크립트 추가 
-   - Rotor를 RotorPivot 하위로 이동 
-   - E를 눌러 Y축 회전 확인 
+   - Unpack Prefab
+   - 빈 오브젝트 생성 → "RotorPivot"으로 이름 변경
+   - MyGizmo 스크립트 추가
+   - Rotor를 RotorPivot 하위로 이동
+   - E를 눌러 Y축 회전 확인
 5. Tail(꼬리) 로터 축 맞추기:
-   - 빈 오브젝트 생성 → "TailPivot"으로 이름 변경 
-   - Tail의 Transform Position을 복사 
-   - TailPivot에 위치 붙여넣기 
-   - MyGizmo 추가하고 Tail을 TailPivot 하위로 이동 
-   - 위치 조정 후 회전 테스트 
+   - 빈 오브젝트 생성 → "TailPivot"으로 이름 변경
+   - Tail의 Transform Position을 복사
+   - TailPivot에 위치 붙여넣기
+   - MyGizmo 추가하고 Tail을 TailPivot 하위로 이동
+   - 위치 조정 후 회전 테스트
 6. Animation으로 회전 테스트:
-   - 기존 Animation 삭제 
-   - RotorPivot 선택 → Window > Animation 
-   - Create Animation → "Rotor" 생성 
+   - 기존 Animation 삭제
+   - RotorPivot 선택 → Window > Animation
+   - Create Animation → "Rotor" 생성
 
 ---
 
@@ -132,7 +130,6 @@ migration_flags: ["empty_source_table_rows_verified", "publication_review", "sou
 
 <p>
 \<table header
-
 
 </p>
 
@@ -171,7 +168,7 @@ Rotor가 Z축으로 회전하는데 Y축으로 회전해야 함
 모델 자체의 축이 Unity 축과 다름
 </td>
 <td>
-빈 오브젝트(RotorPivot)를 부모로 생성하여 Unity 축에 맞추고, 자식으로 
+빈 오브젝트(RotorPivot)를 부모로 생성하여 Unity 축에 맞추고, 자식으로
 </td>
 </tr>
 <tr>
@@ -193,14 +190,14 @@ TailPivot 빈 오브젝트 생성 후 Tail을 하위에 배치하여 축 보
 
 - 예시 1: 포트폴리오 전략
   - 상황: 네트워크 게임을 처음 만드는 경우
-  - 설명: PUN 2로 간단한 멀티플레이어 게임을 만들어 Steam에 출시 → 접속자가 늘어나면 Fusion 2로 전환 
+  - 설명: PUN 2로 간단한 멀티플레이어 게임을 만들어 Steam에 출시 → 접속자가 늘어나면 Fusion 2로 전환
   - 왜 이 예시를 사용했는지: 실무적으로 검증된 개발 경로이며, 회사에서도 네트워크 기초 지식을 인정받을 수 있음
 - 예시 2: VR 군사 훈련 시뮬레이션
-  - 상황: 국방부에서 전술훈련을 VR로 전환하는 프로젝트 
+  - 상황: 국방부에서 전술훈련을 VR로 전환하는 프로젝트
   - 설명: 기존 차트 기반 정신교육을 VR FPS 형식으로 구현. 특정 지점에서 지시사항이 팝업으로 표시
   - 왜 이 예시를 사용했는지: 메타버스가 실제 업무/교육 분야에서 어떻게 활용되는지 보여줌
 - 예시 3: NFT 활용 - 암표 방지
-  - 상황: 공연 티켓을 NFT로 발행 
+  - 상황: 공연 티켓을 NFT로 발행
   - 설명: 블록체인으로 소유권과 거래 내역이 투명하게 공개되어 암표 거래 방지
   - 왜 이 예시를 사용했는지: NFT의 실용적인 활용 사례
 
@@ -213,10 +210,10 @@ TailPivot 빈 오브젝트 생성 후 Tail을 하위에 배치하여 축 보
 - 구분 방법: PUN 2는 입문/학습용(32인 이하), Fusion 2는 실전/대규모용(100인 이상). 새 프로젝트라면 Fusion 2 권장
 - 헷갈리는 개념: NFT vs 비트코인
 - 헷갈리는 이유: 둘 다 블록체인 기술을 사용
-- 구분 방법: 비트코인은 대체 가능한 암호화폐(1만원처럼 교환 가능), NFT는 대체 불가능한 디지털 자산(유명 화가 그림처럼 유일무이) 
+- 구분 방법: 비트코인은 대체 가능한 암호화폐(1만원처럼 교환 가능), NFT는 대체 불가능한 디지털 자산(유명 화가 그림처럼 유일무이)
 - 헷갈리는 개념: Unity 좌표축 vs 언리얼 엔진 좌표축
 - 헷갈리는 이유: 시각적으로 비슷해 보이지만 Z축 방향이 다름
-- 구분 방법: 언리얼 모델을 Unity로 가져오면 Z축이 맞지 않으므로 부모 오브젝트를 만들어 축을 보정해야 함 
+- 구분 방법: 언리얼 모델을 Unity로 가져오면 Z축이 맞지 않으므로 부모 오브젝트를 만들어 축을 보정해야 함
 
 ---
 
@@ -224,9 +221,9 @@ TailPivot 빈 오브젝트 생성 후 Tail을 하위에 배치하여 축 보
 
 - [ ] Fusion 2의 Host/Server/Shared 모드 차이점과 각각 언제 사용하는지 확인 필요
 - [ ] Apache 헬기에 애니메이션을 추가하는 방법 복습 필요 (수업 중 완료하지 못함)
-- [ ] Sound Manager 구현 방법 다음 수업에서 확인 
-- [ ] 탱크 UI 크기가 너무 크다는 피드백 - 수정 방법 연습 
-- [ ] Unity MCP 연동으로 위치 잡기 기능이 어떻게 작동하는지 확인 
+- [ ] Sound Manager 구현 방법 다음 수업에서 확인
+- [ ] 탱크 UI 크기가 너무 크다는 피드백 - 수정 방법 연습
+- [ ] Unity MCP 연동으로 위치 잡기 기능이 어떻게 작동하는지 확인
 
 ---
 
@@ -239,16 +236,13 @@ TailPivot 빈 오브젝트 생성 후 Tail을 하위에 배치하여 축 보
 - [ ] 부모 오브젝트를 이용한 피벗 조정 방법을 다시 따라 할 수 있다
 - [ ] Animation 윈도우에서 회전 애니메이션을 만드는 순서를 기억한다
 
-
 ## 메모
-
 
 | 구분 | 핵심 느낌 | 장점 | 단점 | 추천 상황 |
 | --- | --- | --- | --- | --- |
 | <b>PUN 2</b> | 입문용, 기존 방식 | 배우기 쉽고 자료가 많음. <code>PhotonView</code>, RPC, 방 생성 흐름이 직관적 | 오래된 방식이고 새 프로젝트 기준으로는 우선순위가 낮음 | 간단한 멀티 연습, 기존 PUN 프로젝트 유지 |
 | <b>Fusion 2</b> | 현재 Unity 멀티플레이 기본 선택지 | 상태 동기화, 예측, 지연 보정, Host/Server/Shared 구조 지원 | PUN보다 구조가 조금 더 복잡함 | 새 Unity 멀티게임, 협동, RPG, 액션, 캐주얼 대전 |
 | <b>Quantum 3</b> | 정밀 경쟁 게임용 | 결정론적 시뮬레이션, rollback, 판정 일관성 강함 | 학습 난도 높고 일반 Unity 코드 흐름과 다름 | 격투, 스포츠, RTS, e스포츠형 PvP |
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -565,41 +559,38 @@ Z는 90 자 그래서 테일피버스
 
 </details>
 
-
 <b>Unity Apache 헬기 AI 구현 실습</b> 2026-05-14
-
 
 ## 요약
 
-
 ### 오늘 수업 핵심 요약
 
-- <b>Apache 헬기 모델의 로터(회전날개) 애니메이션</b>을 Animation 윈도우로 제작하고 회전 속도를 조정하는 방법을 실습했습니다. 
-- 헬기에 <b>Audio Source를 추가하고 로터 사운드</b>를 적용하여 실감나는 효과를 구현했습니다. 
-- Apache 바디에 <b>국방색 Material을 적용</b>하고 노말맵을 추가하여 질감을 개선했습니다. 
-- <b>Patrol AI 시스템</b>을 구현하여 헬기가 지정된 포인트를 순찰하도록 만들었습니다. 
-- <b>가장 가까운 탱크를 찾아 공격</b>하는 AI 로직을 구현하고, 멀티플레이어 환경에서 여러 탱크 중 가까운 대상을 선택하는 방법을 학습했습니다. 
+- <b>Apache 헬기 모델의 로터(회전날개) 애니메이션</b>을 Animation 윈도우로 제작하고 회전 속도를 조정하는 방법을 실습했습니다.
+- 헬기에 <b>Audio Source를 추가하고 로터 사운드</b>를 적용하여 실감나는 효과를 구현했습니다.
+- Apache 바디에 <b>국방색 Material을 적용</b>하고 노말맵을 추가하여 질감을 개선했습니다.
+- <b>Patrol AI 시스템</b>을 구현하여 헬기가 지정된 포인트를 순찰하도록 만들었습니다.
+- <b>가장 가까운 탱크를 찾아 공격</b>하는 AI 로직을 구현하고, 멀티플레이어 환경에서 여러 탱크 중 가까운 대상을 선택하는 방법을 학습했습니다.
 
 ---
 
 ### 주요 개념 정리
 
-- <b>RotateToward</b> 
+- <b>RotateToward</b>
   - 설명: 부드러운 회전을 구현하는 함수. Slerp와 달리 거리에 관계없이 일정한 속도로 회전
   - 예시: <code>Quaternion.RotateTowards(currentRotation, targetRotation, Time.deltaTime * rotateSpeed)</code>
   - 사용되는 상황: AI가 목표 지점이나 적을 향해 회전할 때
   - 헷갈릴 수 있는 점: Slerp는 거리가 가까울수록 빨라지지만, RotateToward는 일정한 속도로 부드럽게 회전
-- <b>sqrMagnitude</b> 
+- <b>sqrMagnitude</b>
   - 설명: 벡터의 거리를 제곱 값으로 반환. 실제 거리 계산보다 CPU 부담이 적음
   - 예시: <code>Vector3.Distance</code>는 정확하지만 무겁고, <code>sqrMagnitude</code>는 가볍지만 비교용으로 충분
   - 사용되는 상황: 거리 비교가 많은 AI 로직, 최적화가 필요한 반복문
   - 헷갈릴 수 있는 점: 실제 거리 80m를 비교하려면 <code>80 * 80 = 6400</code>으로 계산해야 함
-- <b>Physics.OverlapSphere</b> 
+- <b>Physics.OverlapSphere</b>
   - 설명: 특정 반경 내의 모든 Collider를 배열로 반환하는 함수
   - 예시: <code>Physics.OverlapSphere(apacheTr.position, attackDistance, targetMask)</code>
   - 사용되는 상황: 범위 내 적 탐지, 폭발 범위 판정, 근처 오브젝트 검색
   - 헷갈릴 수 있는 점: LayerMask를 지정하지 않으면 모든 Collider가 검색되어 성능 저하
-- <b>null 체크의 중요성</b> 
+- <b>null 체크의 중요성</b>
   - 설명: 타겟이 null일 때 참조하면 NullReferenceException 발생
   - 예시: 타겟 탱크를 찾지 못했거나, 탱크가 파괴되었을 때
   - 사용되는 상황: AI 공격 로직, 타겟 추적 시스템
@@ -609,14 +600,14 @@ Z는 90 자 그래서 테일피버스
 
 ### 수업 흐름별 정리
 
-### 1. Apache 헬기 로터 애니메이션 제작 
+### 1. Apache 헬기 로터 애니메이션 제작
 
 - Animation 윈도우에서 새 Animation 생성 (Rotor)
 - Transform Rotation의 X축을 애니메이션으로 제어
 - 시작 프레임(0)에 0도, 끝 프레임에 360도 설정하여 연속 회전 구현
 - 중요: 애니메이션 속도를 조절하려면 타임라인을 늘리거나 줄여서 조정
 
-### 2. 헬기 사운드 추가 
+### 2. 헬기 사운드 추가
 
 - Apache 오브젝트에 Audio Source 컴포넌트 추가
 - Loop 체크, Force Mono 체크
@@ -624,7 +615,7 @@ Z는 90 자 그래서 테일피버스
 - Pitch를 1.3으로 올려서 날카로운 소리 구현
 - Volume은 0.8로 조정
 
-### 3. Apache 바디 Material 교체 
+### 3. Apache 바디 Material 교체
 
 - Materials 폴더에 "Apache\_BodyMain" Material 생성
 - 국방색 Base Map 적용
@@ -632,14 +623,14 @@ Z는 90 자 그래서 테일피버스
 - Body의 Material을 새로 만든 Apache\_BodyMain으로 교체
 - Metallic과 Smoothness 조정하여 금속성 재질 표현
 
-### 4. 헬기 물리 설정 (Rigidbody, Collider) 
+### 4. 헬기 물리 설정 (Rigidbody, Collider)
 
 - Apache 오브젝트에 Rigidbody 추가, Use Gravity 체크 해제 (공중에 떠있어야 함)
 - Body에 Capsule Collider 추가 (방향: X축, Radius: 17, Height: 35)
 - 중요: Collider를 크게 만든 이유는 총알이 잘 맞도록 하기 위함
 - Collider와 Rigidbody를 같은 오브젝트에 배치하여 충돌 감지
 
-### 5. Patrol AI 구성 
+### 5. Patrol AI 구성
 
 - FSM(Finite State Machine) 방식으로 상태 관리: Patrol, Attack, Crash
 - <code>List&lt;Transform&gt; patrolList</code>에 순찰 포인트 저장
@@ -647,14 +638,14 @@ Z는 90 자 그래서 테일피버스
 - Start에서 <code>GetComponentsInChildren</code>으로 PatrolPoint 자식 오브젝트들을 리스트에 추가
 - Patrol 상태에서 목적지까지 거리가 2.5 이하가 되면 nextIdx 증가하여 다음 지점으로 이동
 
-### 6. Patrol 이동 로직 구현 
+### 6. Patrol 이동 로직 구현
 
 - 목적지와 Apache의 거리를 <code>sqrMagnitude</code>로 계산
 - <code>Quaternion.RotateTowards</code>로 부드러운 회전 구현
 - <code>transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self)</code>로 로컬 좌표 기준 전진
 - 목적지 거리가 2.5 이하가 되면 다음 인덱스로 증가하고, 순환 구조로 계속 순찰
 
-### 7. 가장 가까운 탱크 찾기 (FindNearestTank) 
+### 7. 가장 가까운 탱크 찾기 (FindNearestTank)
 
 - 멀티플레이어 환경에서 여러 탱크 중 가장 가까운 탱크를 찾는 로직
 - <code>Physics.OverlapSphere</code>로 80m 반경 내 모든 탱크 Collider 검색
@@ -662,7 +653,7 @@ Z는 90 자 그래서 테일피버스
 - 현재 거리(<code>currentSqrDist</code>)가 최소 거리(<code>minSqrDist</code>)보다 작으면 업데이트
 - 중요: null 체크를 먼저 하고, 타겟을 찾지 못하면 return
 
-### 8. Tank Attack 로직 
+### 8. Tank Attack 로직
 
 - Patrol 중 80m 반경 내에 탱크가 들어오면 Attack 상태로 전환
 - <code>FindNearestTank()</code>로 타겟 탱크 갱신
@@ -670,7 +661,7 @@ Z는 90 자 그래서 테일피버스
 - <code>RotateTowards</code>로 타겟을 향해 회전 (이동하지 않고 제자리에서 공격)
 - 발사 간격(<code>fireRate</code>)을 체크하여 일정 시간마다 Raycast 발사
 
-### 9. 레이저 빔 설정 
+### 9. 레이저 빔 설정
 
 - Apache 하위에 빈 오브젝트 "Fire\_Left", "Fire\_Right" 생성하여 발사 위치 지정
 - 탱크의 Cannon Mesh에서 Line Renderer 컴포넌트를 복사하여 붙여넣기
@@ -683,32 +674,32 @@ Z는 90 자 그래서 테일피버스
 
 #### Apache Patrol AI 구현 순서
 
-1. Apache 오브젝트에 ApacheAI 스크립트 추가 
-2. <code>List&lt;Transform&gt; patrolList</code> 선언 및 Start에서 PatrolPoint들을 GetComponentsInChildren으로 수집 
-3. <code>nextIdx</code> 변수로 다음 목적지 인덱스 관리 
-4. <code>PatrolMove()</code> 함수 생성하여 목적지까지 거리 계산 (<code>sqrMagnitude</code> 사용) 
-5. <code>RotateTowards</code>로 목적지를 향해 부드럽게 회전 
-6. <code>Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self)</code>로 전진 
-7. 목적지 거리가 2.5 이하가 되면 <code>nextIdx++</code> 후 <code>nextIdx %= patrolList.Count</code>로 순환 
+1. Apache 오브젝트에 ApacheAI 스크립트 추가
+2. <code>List&lt;Transform&gt; patrolList</code> 선언 및 Start에서 PatrolPoint들을 GetComponentsInChildren으로 수집
+3. <code>nextIdx</code> 변수로 다음 목적지 인덱스 관리
+4. <code>PatrolMove()</code> 함수 생성하여 목적지까지 거리 계산 (<code>sqrMagnitude</code> 사용)
+5. <code>RotateTowards</code>로 목적지를 향해 부드럽게 회전
+6. <code>Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.Self)</code>로 전진
+7. 목적지 거리가 2.5 이하가 되면 <code>nextIdx++</code> 후 <code>nextIdx %= patrolList.Count</code>로 순환
 
 #### 가장 가까운 탱크 찾기 구현 순서
 
-1. <code>FindNearestTank()</code> 함수 생성 
-2. <code>Physics.OverlapSphere(apacheTr.position, attackDistance, targetMask)</code> 호출하여 탱크 배열 받기 
-3. <code>float minSqrDist = float.MaxValue</code> 초기화 
-4. 반복문으로 각 탱크와의 거리 계산 (<code>sqrMagnitude</code>) 
-5. <code>if (currentSqrDist &lt;= minSqrDist)</code> 조건으로 최소 거리 업데이트 
-6. <code>targetTank = tank.transform.position</code> 저장 
+1. <code>FindNearestTank()</code> 함수 생성
+2. <code>Physics.OverlapSphere(apacheTr.position, attackDistance, targetMask)</code> 호출하여 탱크 배열 받기
+3. <code>float minSqrDist = float.MaxValue</code> 초기화
+4. 반복문으로 각 탱크와의 거리 계산 (<code>sqrMagnitude</code>)
+5. <code>if (currentSqrDist &lt;= minSqrDist)</code> 조건으로 최소 거리 업데이트
+6. <code>targetTank = tank.transform.position</code> 저장
 
 #### Attack 로직 구현 순서
 
-1. <code>TankAttack()</code> 함수 생성 
-2. 타겟 탱크가 null이면 <code>FindNearestTank()</code> 호출 
-3. 그래도 null이면 Patrol 상태로 전환 후 return 
-4. 타겟과의 거리 계산 (sqrMagnitude) 
-5. <code>RotateTowards</code>로 타겟을 향해 회전 (이동하지 않음) 
-6. <code>currentTime += Time.deltaTime</code> 후 <code>fireRate</code>보다 크면 발사 
-7. <code>Physics.Raycast</code>로 레이저 발사 및 충돌 체크 
+1. <code>TankAttack()</code> 함수 생성
+2. 타겟 탱크가 null이면 <code>FindNearestTank()</code> 호출
+3. 그래도 null이면 Patrol 상태로 전환 후 return
+4. 타겟과의 거리 계산 (sqrMagnitude)
+5. <code>RotateTowards</code>로 타겟을 향해 회전 (이동하지 않음)
+6. <code>currentTime += Time.deltaTime</code> 후 <code>fireRate</code>보다 크면 발사
+7. <code>Physics.Raycast</code>로 레이저 발사 및 충돌 체크
 
 ---
 
@@ -744,7 +735,7 @@ Z는 90 자 그래서 테일피버스
 </tr>
 <tr>
 <td>
-애니메이션 키가 
+애니메이션 키가
 </td>
 </tr>
 <tr>
@@ -776,15 +767,15 @@ Collider 축이 맞지 않음 (Z축으로 설정
 
 ### 예시와 활용 사례
 
-- 예시 1: 멀티플레이어 환경에서 가장 가까운 적 찾기 
+- 예시 1: 멀티플레이어 환경에서 가장 가까운 적 찾기
   - 상황: 여러 명의 네트워크 플레이어가 탱크를 조종하는 환경
   - 설명: 헬기는 모든 탱크를 적으로 인식하고, <code>Physics.OverlapSphere</code>로 반경 내 모든 탱크를 찾아 거리 비교 후 가장 가까운 탱크를 타겟으로 설정
   - 왜 이 예시를 사용했는지: 멀티플레이어 게임에서 필수적인 AI 로직이며, 여러 대상 중 우선순위를 정하는 실무 기법
-- 예시 2: RotateTowards로 부드러운 회전 구현 
+- 예시 2: RotateTowards로 부드러운 회전 구현
   - 상황: AI가 목표 지점이나 적을 향해 회전할 때
   - 설명: Slerp는 거리가 가까울수록 빨라져서 부자연스럽지만, RotateTowards는 일정한 속도로 회전하여 자연스러움
   - 왜 이 예시를 사용했는지: AI 회전 구현에서 더 나은 방법을 보여주기 위함
-- 예시 3: sqrMagnitude를 사용한 거리 비교 최적화 
+- 예시 3: sqrMagnitude를 사용한 거리 비교 최적화
   - 상황: 많은 오브젝트의 거리를 비교해야 하는 경우
   - 설명: <code>Vector3.Distance</code>는 정확하지만 제곱근 계산으로 CPU 부담이 크고, <code>sqrMagnitude</code>는 제곱 값만 계산하여 가벼움
   - 왜 이 예시를 사용했는지: 게임 최적화에서 자주 사용되는 테크닉
@@ -793,13 +784,13 @@ Collider 축이 맞지 않음 (Z축으로 설정
 
 ### 헷갈릴 수 있는 부분
 
-- 헷갈리는 개념: Slerp vs RotateTowards 
+- 헷갈리는 개념: Slerp vs RotateTowards
 - 헷갈리는 이유: 둘 다 회전을 부드럽게 만드는 함수
 - 구분 방법: Slerp는 거리가 가까울수록 회전 속도가 빨라져서 부자연스럽고, RotateTowards는 일정한 속도로 회전하여 AI에 더 적합
-- 헷갈리는 개념: sqrMagnitude vs Distance 
+- 헷갈리는 개념: sqrMagnitude vs Distance
 - 헷갈리는 이유: 둘 다 거리를 측정하는 방법
 - 구분 방법: Distance는 실제 거리를 반환하지만 제곱근 계산으로 무겁고, sqrMagnitude는 제곱 값만 반환하여 가벼움. 거리 비교만 할 때는 sqrMagnitude 사용 (80m → 6400으로 비교)
-- 헷갈리는 개념: null 체크 순서 
+- 헷갈리는 개념: null 체크 순서
 - 헷갈리는 이유: 언제 null 체크를 해야 하는지 헷갈림
 - 구분 방법: 타겟을 참조하기 전에 항상 null 체크를 먼저 해야 함. null인 채로 참조하면 NullReferenceException 발생
 
@@ -807,9 +798,9 @@ Collider 축이 맞지 않음 (Z축으로 설정
 
 ### 질문할 내용
 
-- [ ] 헬기가 착륙할 때 프로펠러를 서서히 멈추는 애니메이션 구현 방법 확인 필요 
+- [ ] 헬기가 착륙할 때 프로펠러를 서서히 멈추는 애니메이션 구현 방법 확인 필요
 - [ ] Sound Manager 구현 방법 다음 수업에서 확인
-- [ ] Raycast 발사 로직 완성하지 못함 - 다음 수업에서 이어서 진행 
+- [ ] Raycast 발사 로직 완성하지 못함 - 다음 수업에서 이어서 진행
 - [ ] 레이저 빔이 실제로 발사되고 충돌 판정이 작동하는지 테스트 필요
 - [ ] 멀티플레이어 환경에서 여러 탱크가 생성되었을 때 정상 작동하는지 확인
 
@@ -828,9 +819,7 @@ Collider 축이 맞지 않음 (Z축으로 설정
 - [ ] null 체크의 중요성과 순서를 이해했다
 - [ ] 가장 가까운 대상을 찾는 알고리즘을 구현할 수 있다
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

@@ -3,8 +3,8 @@ title: "2026-06-22 데일리 로그"
 date: 2026-06-22 12:00:00 +0900
 categories: ["데일리 로그"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "📝 개발일지 — 송예찬 (v1.1.0) 문서 네이밍 & 버전 관리 규칙 파일명 형식: 개발일지_YYYYMMDD_이름.vX.Y.Z.md (예: 개발일지_20260619_송예찬.v1.0.0.md ) 버전업 규칙 : 개발일지를 최초 작성한 후, 새로운 작업 추가 지시나 변경 사항으로 내용을 "
-description: "📝 개발일지 — 송예찬 (v1.1.0) 문서 네이밍 & 버전 관리 규칙 파일명 형식: 개발일지_YYYYMMDD_이름.vX.Y.Z.md (예: 개발일지_20260619_송예찬.v1.0.0.md ) 버전업 규칙 : 개발일지를 최초 작성한 후, 새로운 작업 추가 지시나 변경 사항으로 내용을 "
+excerpt: "프로젝트 폰트와 Notion 일정 자료를 정리하고, 기획 확정 킥오프 및 소모품·관제사 고유명사 조율 내용을 기록했다."
+description: "프로젝트 폰트와 Notion 일정 자료를 정리하고, 기획 확정 킥오프 및 소모품·관제사 고유명사 조율 내용을 기록했다."
 published: true
 migration_id: "38736532580e80adafa7ecde0e55bb57"
 migration_status: "published"
@@ -14,13 +14,11 @@ migration_flags: ["private_link_removed", "publication_review"]
 {% raw %}
 # 📝 개발일지 — 송예찬 (v1.1.0)
 
-
 <b>문서 네이밍 & 버전 관리 규칙</b><br />
 
 - 파일명 형식: <code>개발일지_YYYYMMDD_이름.vX.Y.Z.md</code> (예: <code>개발일지_20260619_송예찬.v1.0.0.md</code>)<br />
 - <b>버전업 규칙</b>: 개발일지를 최초 작성한 후, 새로운 작업 추가 지시나 변경 사항으로 내용을 수정해야 할 경우 기존 파일을 직접 수정하지 않고, 버전 번호를 올린 새로운 md 파일(예: <code>v1.0.0</code> -> <code>v1.0.1</code> 또는 <code>v1.1.0</code>)을 생성하여 작성<br />
 - <b>v1.1.0 변경 이유</b>: 저녁 식사 이후 진행된 소모품 및 관제사 고유명사 조율 회의 결과 반영
-
 
 <b>작성일</b>: 2026-06-22
 
@@ -52,7 +50,7 @@ migration_flags: ["private_link_removed", "publication_review"]
 
 <ul>
 <li>
-<b>내용</b>: 
+<b>내용</b>:
 
 - UI/UX 가독성 및 개발 효율성을 위해 프로젝트 공식 폰트를 선정했습니다.
 </li>
@@ -70,7 +68,7 @@ migration_flags: ["private_link_removed", "publication_review"]
 
 <ul>
 <li>
-<b>내용</b>: 
+<b>내용</b>:
 
 - Notion 팀 페이지에 2\~7주차 스프린트 로드맵과 간트차트, 주별 마일스톤 이미지를 최종 제작하여 게시 및 최신화하였습니다.
 </li>

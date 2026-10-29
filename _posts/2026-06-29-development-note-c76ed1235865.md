@@ -3,8 +3,8 @@ title: "2026-06-29_inventory_sortie_chest_compare"
 date: 2026-06-29 12:00:00 +0900
 categories: ["개발 메모", "Unity"]
 tags: ["Notion 이전", "Unity"]
-excerpt: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29 Inventory / Sortie / Chest Compare Previous version: b6598e9:path Current version: working tree Output "
-description: "2026-06-29\\_inventory\\_sortie\\_chest\\_compare 2026-06-29 Inventory / Sortie / Chest Compare Previous version: b6598e9:path Current version: working tree Output "
+excerpt: "로비 출격 준비부터 인게임 퀵슬롯·상자·바닥 아이템까지 이어지는 흐름을 복구한 코드 변경을 비교해 보관했다."
+description: "로비 출격 준비부터 인게임 퀵슬롯·상자·바닥 아이템까지 이어지는 흐름을 복구한 코드 변경을 비교해 보관했다."
 published: true
 migration_id: "38e36532580e80b0b0cfc76ed1235865"
 migration_status: "published"

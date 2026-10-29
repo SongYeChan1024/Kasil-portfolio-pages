@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>침몽도시: 루시드 다이버 베타빌드 수정 및 발표 준비 회의</b> 2026-07-20
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -27,7 +25,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 일시: 2026-07-20 (일요일)
 - 회의 유형: 데일리/스탠드업
 - 목적: 베타빌드 버그 현황 파악, 발표 준비 역할 분담, 개발 마감 일정 확정
-- 참석자/역할: 강다영 TD (개발), 장수영 프로듀서 (PM), 우성혁 디렉터 (시스템 기획), 작성자 PD (시나리오 기획), 송예찬 PM (컨셉 기획), 코치(외부 인사)
+- 참석자/역할: 강다영 TD (개발), 장수영 프로듀서 (PM), 우성혁 디렉터 (시스템 기획), 작성자 PD (시나리오 기획), 송예찬 PM (콘셉트 기획), 코치(외부 인사)
 - 안건(의제):
   - 베타빌드 버그 수정 현황 및 작업 분배
   - 발표자료 제작 방식 및 담당자 확정
@@ -81,7 +79,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
   - 영향 범위: 코드 품질, 포트폴리오
   - 반영 대상: 개발 문서
 - <b>보류:</b> 볼류메트릭 포그 패키지 적용 
-  - 다음 회의에서 결정할 기준/필요 자료: 버전 충돌 해결 방안, 라이트 설정 값, 프리팹 수정 범위
+  - 다음 회의에서 결정할 기준/필요 자료: 버전 충돌 해결 방안, 라이트 설정값, 프리팹 수정 범위
   - 담당/기한: 작성자 PD / 패키지 설치 및 적용 테스트
 
 ### 6) 액션 아이템 (Action Items → 티켓화 기준)
@@ -127,9 +125,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
   - 발표 역할 분담 및 시간 배분 확정
   - 리허설 준비 사항 점검
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

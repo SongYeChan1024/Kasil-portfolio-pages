@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>침몽도시: 루시드 다이버 발표 준비 점검 회의</b> 2026-07-23
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -154,9 +152,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 </tr>
 </table>
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -268,12 +264,9 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 </details>
 
-
 <b>침몽도시: 루시드 다이버 외부 피드백 및 발표 준비 회의</b> 2026-07-23
 
-
 ## 요약
-
 
 ### 1) 한 줄 결론 (TL;DR)
 
@@ -399,9 +392,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 </li>
 </ul>
 
-
 ## 메모
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>

@@ -3,8 +3,8 @@ title: "mos.A.I.c PPT 발표시트 정리용 문서"
 date: 2026-04-17 12:00:00 +0900
 categories: ["개발 메모", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "PPT 발표시트 정리 (MosAIc / EP.3) 1) 한 줄 요약 EP.3를 중심으로 퍼즐 진행 + 컷씬/연출 + NPC 이동(NavMesh) + 저장/예외 안정화 + 사운드 시스템 까지 “플레이 흐름” 기준으로 정리/개선했다. --- 2) 내가 맡아서 한 핵심 기여(요약) A. 컷씬"
-description: "PPT 발표시트 정리 (MosAIc / EP.3) 1) 한 줄 요약 EP.3를 중심으로 퍼즐 진행 + 컷씬/연출 + NPC 이동(NavMesh) + 저장/예외 안정화 + 사운드 시스템 까지 “플레이 흐름” 기준으로 정리/개선했다. --- 2) 내가 맡아서 한 핵심 기여(요약) A. 컷씬"
+excerpt: "에피소드 3의 퍼즐·컷씬·NPC 이동·저장 안정화·사운드 작업을 발표하기 위한 기여 내용과 체크리스트다."
+description: "에피소드 3의 퍼즐·컷씬·NPC 이동·저장 안정화·사운드 작업을 발표하기 위한 기여 내용과 체크리스트다."
 published: true
 migration_id: "35e36532580e81cc90aae0f6cf5e4a46"
 migration_status: "published"

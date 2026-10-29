@@ -3,8 +3,8 @@ title: "mos.A.I.c 사운드 시스템 구현도 및 가이드"
 date: 2026-04-06 12:00:00 +0900
 categories: ["개발 메모", "학습 기록"]
 tags: ["Notion 이전", "학습 기록"]
-excerpt: "사운드 시스템 사용 가이드 1\\. 개요 우리 프로젝트의 사운드는 SoundManager 를 중심으로 관리한다. 배경음과 환경음은 SoundProfile + SoundController 를 통해 씬 시작 시 자동 적용되며, 플레이어 사운드는 PlayerSound , UI 사운드는 UISo"
-description: "사운드 시스템 사용 가이드 1\\. 개요 우리 프로젝트의 사운드는 SoundManager 를 중심으로 관리한다. 배경음과 환경음은 SoundProfile + SoundController 를 통해 씬 시작 시 자동 적용되며, 플레이어 사운드는 PlayerSound , UI 사운드는 UISo"
+excerpt: "SoundManager를 중심으로 씬·플레이어·UI·오브젝트 사운드를 등록하고 사용하는 방법을 정리한 가이드다."
+description: "SoundManager를 중심으로 씬·플레이어·UI·오브젝트 사운드를 등록하고 사용하는 방법을 정리한 가이드다."
 published: true
 migration_id: "35e36532580e812f8e69eac280dcf0f0"
 migration_status: "published"
@@ -14,10 +14,8 @@ migration_flags: []
 {% raw %}
 # 사운드 시스템 사용 가이드
 
-
 <details markdown="1">
 <summary>1\. 개요</summary>
-
 
 우리 프로젝트의 사운드는 <code>SoundManager</code>를 중심으로 관리한다.
 
@@ -35,17 +33,13 @@ migration_flags: []
 
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>2\. 핵심 스크립트 역할 정리</summary>
 
-
 <details markdown="1">
 <summary>SoundManager</summary>
-
 
 프로젝트 전체 사운드 재생 담당.
 
@@ -63,10 +57,8 @@ migration_flags: []
 
 </details>
 
-
 <details markdown="1">
 <summary>SoundProfile</summary>
-
 
 씬별 사운드 설정 데이터.
 
@@ -84,10 +76,8 @@ migration_flags: []
 
 </details>
 
-
 <details markdown="1">
 <summary>SoundController</summary>
-
 
 씬 시작 시 <code>SoundProfile</code>을 읽어서 적용하는 스크립트.
 
@@ -101,10 +91,8 @@ migration_flags: []
 
 </details>
 
-
 <details markdown="1">
 <summary>PlayerSound</summary>
-
 
 플레이어 전용 사운드 담당.
 
@@ -122,10 +110,8 @@ migration_flags: []
 
 </details>
 
-
 <details markdown="1">
 <summary>UISoundTrigger</summary>
-
 
 UI 버튼용 사운드 스크립트.
 
@@ -139,10 +125,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>SoundTrigger</summary>
-
 
 오브젝트 상호작용용 사운드 스크립트.
 
@@ -159,16 +143,12 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 </details>
-
 
 ---
 
-
 <details markdown="1">
 <summary>3\. 씬 기본 사운드 적용 방법 (SoundProfile + SoundController)</summary>
-
 
 대상:
 
@@ -191,10 +171,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>4\. 플레이어 사운드 적용 방법 (PlayerSound)</summary>
-
 
 대상:
 
@@ -222,10 +200,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>5\. UI 사운드 적용 방법 (UISoundTrigger)</summary>
-
 
 대상:
 
@@ -257,10 +233,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>6\. 오브젝트 상호작용 사운드 적용 방법 (SoundTrigger)</summary>
-
 
 대상:
 
@@ -286,17 +260,13 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>7\. 예시</summary>
 
-
 <details markdown="1">
 <summary>예시 1) 문 열림 사운드</summary>
-
 
 구성:
 
@@ -314,10 +284,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>예시 2) 포탈 통과 사운드</summary>
-
 
 구성:
 
@@ -335,10 +303,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>예시 3) 퍼즐 성공 / 실패 사운드</summary>
-
 
 구성:
 
@@ -358,10 +324,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>예시 4) 씬 시작 사운드</summary>
-
 
 구성:
 
@@ -380,20 +344,15 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>8\. 실제 작업 시 주의사항</summary>
 
-
 <details markdown="1">
 <summary>1\) Enum만 있다고 재생되지 않음</summary>
-
 
 사운드는 반드시 <code>SoundManager</code> 인스펙터에 실제 클립이 등록되어 있어야 한다.
 
@@ -408,28 +367,22 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>2\) <code>SoundTrigger</code>를 붙여도 자동 재생되지 않음</summary>
-
 
 오브젝트에 <code>SoundTrigger</code>가 있어도, 오브젝트 로직에서 <code>Play()</code>를 호출해야 실제로 소리가 난다.
 
 </details>
 
-
 <details markdown="1">
 <summary>3\) <code>UISoundTrigger</code>도 버튼에 붙여야 함</summary>
-
 
 버튼이 있어도 <code>UISoundTrigger</code>가 없으면 UI 사운드는 자동으로 나지 않는다.
 
 </details>
 
-
 <details markdown="1">
 <summary>4\) 플레이어 사운드는 프리팹 고정값이 아니라 씬에서 주입됨</summary>
-
 
 플레이어 프리팹에 <code>PlayerSound</code>는 붙어 있지만,
 
@@ -437,10 +390,8 @@ UI 버튼용 사운드 스크립트.
 
 </details>
 
-
 <details markdown="1">
 <summary>5\) <code>None</code>이면 재생되지 않음</summary>
-
 
 BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는다.
 
@@ -448,10 +399,8 @@ BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는�
 
 </details>
 
-
 <details markdown="1">
 <summary>6\) 클립 미등록 시 재생되지 않음</summary>
-
 
 해당 enum 타입이 <code>SoundManager</code>에 등록되어 있지 않으면 재생되지 않는다.
 
@@ -461,13 +410,10 @@ BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는�
 
 </details>
 
-
 </details>
-
 
 <details markdown="1">
 <summary>9\. 사운드 추가 체크리스트</summary>
-
 
 새로운 사운드를 넣을 때는 아래 순서로 확인한다.
 
@@ -483,10 +429,8 @@ BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는�
 
 </details>
 
-
 <details markdown="1">
 <summary>10\. 사운드가 재생되지 않을 때 확인 순서</summary>
-
 
 1. <code>SoundManager</code>에 해당 클립이 등록되어 있는지 확인
 2. enum 타입이 올바르게 선택되어 있는지 확인
@@ -498,13 +442,10 @@ BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는�
 
 </details>
 
-
 ---
-
 
 <details markdown="1">
 <summary>11\. 현재 사운드 시스템 구조 요약</summary>
-
 
 - <code>SoundManager</code><br />프로젝트 전체 사운드 재생 및 클립 등록 담당
 - <code>SoundProfile</code><br />씬별 기본 사운드 설정 담당
@@ -515,10 +456,8 @@ BGM, Ambient, UI, SFX 모두 <code>None</code>으로 두면 재생되지 않는�
 
 </details>
 
-
 <details markdown="1">
 <summary>12\. 한 줄 정리</summary>
-
 
 씬 기본 사운드는 <code>SoundProfile + SoundController</code>,
 

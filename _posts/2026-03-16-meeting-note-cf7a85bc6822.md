@@ -3,8 +3,8 @@ title: "팀 모으미-프로젝트 moz.A.I.c - 오후 부스팅 회의"
 date: 2026-03-16 12:00:00 +0900
 categories: ["회의 기록", "게임 기획"]
 tags: ["Notion 이전", "게임 기획"]
-excerpt: "팀 모으미 - moz.A.I.c 프로젝트 부스팅 회의 2026-03-16 요약 액션 아이템 각자 에피소드별 에셋 찾아오기 (로우폴리 그래픽 컨셉) 에피소드 1 (별을 모으는 소녀) 에셋 찾기 에피소드 2 (사라진 그림) 에셋 찾기 에피소드 3 (멈춰버린 노래) 에셋 찾기 에피소드 4 및"
-description: "팀 모으미 - moz.A.I.c 프로젝트 부스팅 회의 2026-03-16 요약 액션 아이템 각자 에피소드별 에셋 찾아오기 (로우폴리 그래픽 컨셉) 에피소드 1 (별을 모으는 소녀) 에셋 찾기 에피소드 2 (사라진 그림) 에셋 찾기 에피소드 3 (멈춰버린 노래) 에셋 찾기 에피소드 4 및"
+excerpt: "모으미 팀의 에피소드별 에셋 조사와 퍼즐·스토리 구성을 논의한 부스팅 회의 기록이다."
+description: "모으미 팀의 에피소드별 에셋 조사와 퍼즐·스토리 구성을 논의한 부스팅 회의 기록이다."
 published: true
 migration_id: "35e36532580e819b9bf5cf7a85bc6822"
 migration_status: "published"
@@ -14,9 +14,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 {% raw %}
 <b>팀 모으미 - moz.A.I.c 프로젝트 부스팅 회의</b> 2026-03-16
 
-
 ## 요약
-
 
 ### 액션 아이템
 
@@ -91,9 +89,7 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 - 나갔다 들어오는 구조가 몰입도를 해치지 않을지 우려 → 코치님께 문의 예정 
 - AI 프롬프트에 게임 세계관, 스킬 등을 함께 입력하여 제한 가능 
 
-
 ## 메모
-
 
 # 🌙 동화 1 – 별을 모으는 소녀
 
@@ -119,16 +115,13 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 그날 이후 사람들은 말했습니다.
 
-
 <blockquote markdown="1">
-
 
 “별이 빛나는 이유는
 
 누군가가 그것을 잊지 않고 기억하고 있기 때문이래.”
 
 </blockquote>
-
 
 ---
 
@@ -160,16 +153,13 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 그리고 사람들은 그 그림을 보며 말했습니다.
 
-
 <blockquote markdown="1">
-
 
 “이 그림은 단순한 그림이 아니야.
 
 세상의 색이 담긴 이야기야.”
 
 </blockquote>
-
 
 ---
 
@@ -201,16 +191,13 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 그 노래를 들은 사람들은 이렇게 말했습니다.
 
-
 <blockquote markdown="1">
-
 
 “이 노래는 단순한 음악이 아니라
 
 세상의 기억이 담긴 이야기야.”
 
 </blockquote>
-
 
 ---
 
@@ -230,16 +217,13 @@ migration_flags: ["publication_review", "source_citations_preserved_in_backup"]
 
 그것이 바로 <b>Moz.A.I.c</b>입니다.
 
-
 <blockquote markdown="1">
-
 
 흩어진 조각들이 모여
 
 하나의 이야기가 된다.
 
 </blockquote>
-
 
 # 🌌 Final Episode – 마지막 이야기의 기록자
 
@@ -315,9 +299,7 @@ Archive의 중심에서 한 존재가 나타납니다.
 
 > “이야기는 누군가가 기억할 때만 존재합니다.”
 
-
 <blockquote markdown="1">
-
 
 “하지만 그 이야기를 이어 주는 존재가 없다면
 
@@ -325,16 +307,13 @@ Archive의 중심에서 한 존재가 나타납니다.
 
 </blockquote>
 
-
 <blockquote markdown="1">
-
 
 “그래서 Archive는
 
 <b>이야기를 이어 줄 사람</b>을 기다리고 있었습니다.”
 
 </blockquote>
-
 
 ---
 
@@ -370,9 +349,7 @@ Archive의 공간이 조용히 빛나기 시작합니다.
 
 > “세상에는 수많은 이야기들이 있다.”
 
-
 <blockquote markdown="1">
-
 
 “하지만 누군가 그것을 기억하고 이어 준다면
 
@@ -380,11 +357,9 @@ Archive의 공간이 조용히 빛나기 시작합니다.
 
 </blockquote>
 
-
 플레이어는 이제
 
 <b>이야기의 기록자</b>가 됩니다.
-
 
 <details markdown="1">
 <summary>전체 받아쓰기 펼치기</summary>
@@ -808,7 +783,6 @@ MBC 뉴스 이덕영입니다.
 
 </details>
 
-
 <p>
 [https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-village-environment-286054#content](https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-village-environment-286054#content) 
 </p>
@@ -817,14 +791,11 @@ MBC 뉴스 이덕영입니다.
 
 플레이어 - 독자 컨셉 - 플레이어의 생김새를 정하기 보단 하얀색으로 칠해서 겉에 하얀빛이 나오는 블러 처리
 
-
 ![첨부 자료](/assets/img/uploads/notion/d771cefdf8f1375773dc4beea9f1ea6c8badf3cd4989d9ea8e06a5c57251322a.png)
-
 
 ![첨부 자료](/assets/img/uploads/notion/478f6b71890a7905dd0671111f87f031f1b4ebdd59ec3ac9746f7858f99569d6.png)
 
 ![첨부 자료](/assets/img/uploads/notion/eef910b49a3d10cbb0472beeafa57b6cd3d826b83af8b8dae2bcaf6f74cddada.png)
-
 
 ![첨부 자료](/assets/img/uploads/notion/c12b75b7f880c1f4edf2d0189a11151ea5dc781cf9cd9a11cb63d63eb9791096.png)
 {% endraw %}
