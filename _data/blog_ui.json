@@ -114,7 +114,13 @@
       },
       {
         "categories": [
-          "데일리 로그"
+          "데일리 로그",
+          "개발일지",
+          "개발 메모",
+          "데일리로그",
+          "수업 노트",
+          "회의 기록",
+          "학습 기록"
         ],
         "all": false,
         "show_top": true,
@@ -132,7 +138,7 @@
         "show_side": true,
         "id": "notion-class-notes",
         "title": "수업 노트",
-        "parent": ""
+        "parent": "daily-log"
       },
       {
         "categories": [
@@ -143,7 +149,7 @@
         "show_side": true,
         "id": "notion-development-notes",
         "title": "개발 메모",
-        "parent": ""
+        "parent": "daily-log"
       },
       {
         "categories": [
@@ -154,7 +160,7 @@
         "show_side": true,
         "id": "notion-references",
         "title": "참고 자료",
-        "parent": ""
+        "parent": "daily-log"
       },
       {
         "categories": [
@@ -165,7 +171,7 @@
         "show_side": true,
         "id": "notion-meeting-notes",
         "title": "회의 기록",
-        "parent": ""
+        "parent": "daily-log"
       }
     ]
   }
