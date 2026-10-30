@@ -40,5 +40,5 @@
       logout() { session.clear(); return super.logout(); }
     };
   }
-  root.KasilLoginSession = { createSession, createBackend };
+  root.KasilLoginSession = { createSession, createBackend, key };
 })(typeof window === "undefined" ? globalThis : window);

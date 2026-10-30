@@ -21,8 +21,10 @@ jobs:
         run: |
           npm install --global pnpm@11.25.0
           pnpm --dir tools/category-preview install --frozen-lockfile
-      - name: Test editor, cache and category menus
-        run: node --test tools/editor-regression.test.mjs tools/cache-regression.test.mjs tools/category-regression.test.mjs
+      - name: Test editor, cache, category menus and private notes
+        run: node --test tools/editor-regression.test.mjs tools/cache-regression.test.mjs tools/category-regression.test.mjs tools/sticky-notes-regression.test.mjs tools/sticky-notes-dom.test.mjs tools/sticky-notes-ui.test.mjs
+        env:
+          RUN_BROWSER_TESTS: '1'
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.4

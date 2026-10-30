@@ -6,6 +6,7 @@ layout: default
 {% comment %}Decap hash URLs are client-side routes; their entry pages are checked separately.{% endcomment %}
 {% assign manage_url = '/admin/#/collections/blog_settings/entries/appearance' | relative_url %}
 <link rel="stylesheet" href="{{ '/assets/css/blog-board.css' | relative_url }}?v=20261027-tree-tags">
+<link rel="stylesheet" href="{{ '/assets/css/sticky-notes.css' | relative_url }}?v=20261030">
 <section class="blog-board" data-accent="{{ blog.accent | escape }}" data-home="{{ '/' | relative_url }}">
   <header class="blog-cover{% if blog.banner_image and blog.banner_image != empty %} has-cover-image{% endif %}">
     {% if blog.banner_image and blog.banner_image != empty %}<img class="blog-cover-image" src="{{ blog.banner_image | escape }}" alt="" fetchpriority="high">{% endif %}
@@ -40,6 +41,36 @@ layout: default
       <noscript><p>전체 글을 표시하고 있습니다. <a href="{{ '/categories/' | relative_url }}">카테고리별 목록 보기</a></p></noscript>
     </div>
     <aside class="blog-right" aria-label="프로필과 카테고리">
+      <section class="blog-sticky" data-sticky-notes aria-labelledby="sticky-notes-title">
+        <div class="blog-sticky-heading">
+          <h2 id="sticky-notes-title">나의 포스트잇</h2>
+          <span aria-hidden="true">↙</span>
+        </div>
+        <button class="blog-sticky-add" type="button" data-note-add disabled>＋ 포스트잇 붙이기</button>
+        <p class="blog-sticky-hint" data-note-scope>본인 계정으로 로그인하면 다른 PC에서도 이어서 볼 수 있어요.</p>
+        <form class="blog-sticky-login" data-note-login>
+          <label for="sticky-token">GitHub 전용 토큰</label>
+          <input id="sticky-token" name="token" type="password" autocomplete="off" spellcheck="false" placeholder="블로그 로그인 토큰" required>
+          <label class="blog-sticky-remember"><input name="remember" type="checkbox"> 이 브라우저에 로그인 유지</label>
+          <button type="submit">메모 열기</button>
+        </form>
+        <div class="blog-sticky-account" data-note-account hidden>
+          <span data-note-user></span>
+          <div><button type="button" data-note-refresh>새로 불러오기</button><button type="button" data-note-lock>로그아웃</button></div>
+        </div>
+        <details class="blog-sticky-setup" data-note-setup>
+          <summary>처음 연결하기</summary>
+          <ol>
+            <li><a href="https://github.com/new" target="_blank" rel="noopener noreferrer">GitHub에서 저장소 만들기</a>: 본인 계정에 <code>Kasil_PrivateNotes</code>라는 <strong>Private</strong> 저장소를 만들고 README 추가를 선택하세요. 다른 사용자를 초대하거나 Pages를 켜지 마세요.</li>
+            <li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Fine-grained token 만들기</a>에서 본인 계정과 <strong>Only select repositories</strong>를 선택하고 <code>Kasil_PrivateNotes</code>를 지정하세요. 글쓰기에도 같은 로그인을 쓰려면 <code>Kasil_DevLog</code>도 선택하세요.</li>
+            <li>Repository permissions의 <strong>Contents: Read and write</strong>와 기본 <strong>Metadata: Read</strong>를 사용하세요. 만든 토큰은 위 로그인 칸에만 입력하세요.</li>
+          </ol>
+          <p>로그인 유지에는 토큰만 보관합니다. 메모 본문은 브라우저에 저장하지 않으며 비공개 저장소에서 불러옵니다. GitHub 웹사이트 로그인과 블로그 로그인은 별개입니다.</p>
+        </details>
+        <div class="blog-sticky-stack" data-note-list></div>
+        <p class="blog-sticky-status" data-notes-status role="status" aria-live="polite"></p>
+        <noscript><p class="blog-sticky-hint">메모를 쓰려면 JavaScript를 켜 주세요.</p></noscript>
+      </section>
       <section class="blog-profile"><div class="blog-profile-top">{% if blog.profile_image != empty %}<img src="{{ blog.profile_image | escape }}" alt="{{ blog.nickname | escape }} 프로필" width="52" height="52">{% else %}<span class="blog-avatar" aria-hidden="true">K.</span>{% endif %}<div><strong>{{ blog.nickname | escape }}</strong><span>기획 · 개발</span></div><a data-proofer-ignore href="{{ manage_url }}" aria-label="프로필 수정">수정</a></div><p>{{ blog.bio | escape }}</p><a class="blog-profile-manage" data-proofer-ignore href="{{ manage_url }}">블로그 관리 <span aria-hidden="true">↗</span></a></section>
       <section class="blog-category-panel"><div class="blog-panel-heading"><h2>카테고리</h2><a data-proofer-ignore href="{{ manage_url }}" aria-label="카테고리 수정">수정</a></div><nav aria-label="오른쪽 카테고리 목록">{% for tab in blog.tabs %}{% if tab.show_side %}<a data-blog-tab="{{ tab.id | escape }}" href="{{ '/' | relative_url }}?tab={{ tab.id | url_encode }}"><span>{{ tab.title | escape }}</span><span class="blog-category-count" data-tab-count="{{ tab.id | escape }}"></span></a>{% endif %}{% endfor %}</nav></section>
       <div class="blog-side-note"><span class="blog-kicker">KEEP A RECORD</span><p>작은 배움도, 만들어 가는 과정도.<br>하나씩 기록합니다.</p><a href="{{ '/archives/' | relative_url }}">날짜별로 모아보기 →</a></div>
@@ -49,3 +80,6 @@ layout: default
 </section>
 <script src="{{ '/assets/js/blog-model.js' | relative_url }}?v=20261027-tree-tags" defer></script>
 <script src="{{ '/assets/js/blog-board.js' | relative_url }}?v=20261027-tree-tags" defer></script>
+<script src="{{ '/admin/login-session.js' | relative_url }}?v=20261030" defer></script>
+<script src="{{ '/assets/js/sticky-notes-store.js' | relative_url }}?v=20261030" defer></script>
+<script src="{{ '/assets/js/sticky-notes.js' | relative_url }}?v=20261030" defer></script>
