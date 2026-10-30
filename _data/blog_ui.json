@@ -114,6 +114,17 @@
       },
       {
         "categories": [
+          "에이전트 사용"
+        ],
+        "all": false,
+        "show_top": true,
+        "show_side": true,
+        "id": "agent-usage",
+        "title": "에이전트 사용",
+        "parent": ""
+      },
+      {
+        "categories": [
           "데일리 로그",
           "개발일지",
           "개발 메모",
