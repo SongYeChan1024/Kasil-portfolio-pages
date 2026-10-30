@@ -97,6 +97,7 @@
   window.CMS.registerBackend("github-token", TokenBackend);
   window.KasilImagePaste.register(window.CMS, window.createClass, h);
   window.KasilBlogManager.register(window.CMS, window.createClass, h);
+  if (window.KasilTimeReadout) window.KasilTimeReadout.watch(document);
   loading.remove();
   window.CMS.init();
 })();

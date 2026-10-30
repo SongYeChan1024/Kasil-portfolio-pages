@@ -10,11 +10,26 @@ class Transfer {
   getData(type) { return this.values.get(type) || ''; }
 }
 const context = vm.createContext({ File, crypto: webcrypto, Date, DataTransfer: Transfer, btoa });
-for (const file of ['image-paste.js', 'login-session.js']) {
+for (const file of ['image-paste.js', 'login-session.js', 'time-readout.js']) {
   vm.runInContext(await readFile(new URL(`../admin/${file}`, import.meta.url), 'utf8'), context);
 }
 const paste = context.KasilImagePaste;
 const login = context.KasilLoginSession;
+const readout = context.KasilTimeReadout;
+
+test('date readout shows the saved 24-hour time with 오전/오후 and flags future times', () => {
+  const now = new Date('2026-10-30T15:50');
+  const evening = readout.describe('2026-10-30T23:30', now);
+  assert.equal(evening.future, true);
+  assert.match(evening.text, /23:30 \(오후 11시 30분\)/);
+  assert.match(evening.text, /미래/);
+  const morning = readout.describe('2026-10-30T11:30', now);
+  assert.equal(morning.future, false);
+  assert.equal(morning.text, '저장 시각: 2026-10-30 11:30 (오전 11시 30분)');
+  assert.match(readout.describe('2026-10-30T00:05', now).text, /오전 12시 5분/);
+  assert.match(readout.describe('2026-10-30T12:00', now).text, /\(오후 12시\)$/);
+  assert.equal(readout.describe('', now), null);
+});
 const png = () => new File(['fixture'], 'image.png', { type: 'image/png' });
 
 test('clipboard text and non-image files remain ordinary paste; files fallback works', () => {

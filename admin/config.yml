@@ -60,7 +60,7 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: "HH:mm"
         picker_utc: false
-        hint: "미래 시각이면 해당 시각 이후 사이트가 다시 빌드될 때 공개됩니다."
+        hint: "입력칸은 오전/오후로 보입니다. 바로 아래 「저장 시각」(24시간제)을 확인하세요. 미래 시각이면 그 시각 이후 사이트가 다시 빌드될 때 공개됩니다."
       - label: 카테고리
         name: categories
         widget: list
