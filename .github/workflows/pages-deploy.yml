@@ -39,6 +39,21 @@ jobs:
         id: pages
         uses: actions/configure-pages@v6
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install preview dependencies
+        run: |
+          npm install --global pnpm@11.25.0
+          pnpm --dir tools/category-preview install --frozen-lockfile
+
+      - name: Test blog and private notes
+        run: node --test tools/editor-regression.test.mjs tools/cache-regression.test.mjs tools/category-regression.test.mjs tools/sticky-notes-regression.test.mjs tools/sticky-notes-dom.test.mjs tools/sticky-notes-ui.test.mjs
+        env:
+          RUN_BROWSER_TESTS: '1'
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
